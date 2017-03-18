@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+}
+hr{
+    height: 1%;
+    background: #efeeec;
+    border: 0;
+}
+.malldet_div{
+    margin-top: 2%;
+    margin-left: 2.4%;
+}
+.malldet_tit{
+    /* width: 70%; */
+    height: 70%;
+    /*margin-left: 2%;*/
+    float: left;
+}
+.malldet_name{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.malldet_price{
+    color: darkturquoise;
+    font-weight: bold;
+    font-size: 24px;
+}
+.malldet_point{
+    color: darkturquoise;
+    font-weight: bold;
+    font-size: 20px
+}
+.malldet_share{
+    width: 13%;
+    /* height: 70%; */
+    float: right;
+    font-size: 1.4rem;
+    margin-right: 3%;
+    /* font-weight: bold; */
+    text-align: center;
+    line-height: 1.5rem;
+}
+.malldet_info{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+.malldet_much{
+    margin-left: 10%
+}
+.malldet_area{
+    /* margin-left: 30%; */
+    float: right;
+    margin-right: 5%;
+}
+.malldet_choose{
+    font-size: 1.7rem;
+    margin-left: 2.4%;
+    line-height: 3rem;
+    clear: both;
+}
+.malldet_flag{
+    float: right;
+    margin-right: 5%;
+    background: url(/images/mobile/arrow_icon.png) no-repeat center;
+    width: 1em;
+    height: 2em;
+}
+.malldet_intro{
+    /*width: 100%; */
+    height: 16%;
+    margin-top: 2%;
+    margin-left: 2.4%;
+}
+.malldet_img{
+    width: 30%;
+    /* height: 100%; */
+    float: left;
+}
+.malldet_add{
+    width: 5%;
+    height: 100%;
+    float: left;
+    line-height: 10rem;
+    margin-left: 1%;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.malldet_img1{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-left: 1%
+}
+.malldet_jx{
+    /*height: 15%;*/
+    /*background-color: lavender;*/
+    padding:1rem;
+    line-height: 1.5rem;
+}
+.malldet_buttom{
+    width: 100%;
+    position:fixed;
+    bottom: -.5rem;
+    overflow: hidden;
+}
+.malldet_cart{
+    width: 100%;
+    /* height: 100%; */
+    float: left;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    right: 10px;
+}
+.malldet_mallpj{
+    font-size: 1.7rem;
+    margin-left: 2.4%;
+    /* font-weight: bold; */
+    line-height: 2.5rem;
+}
+.malldet_userPJ{
+    margin-left: 2.4%;
+}
+.malldet_userHeadPic{
+    float: left;
+}
+.malldet_userName{
+    float: left;
+    margin-left: 2%;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+.malldet_pjtext{
+    margin-top: 2%;
+    font-size: 1.6rem;
+    font-family: 微软雅黑;
+    width: 95%;
+}
+.malldet_pjgoodstype{
+    color: #92908a;
+    line-height: 3rem;
+}
+.malldet_allpj{
+    font-size: 1.5rem;
+    border: 1px solid;
+    color: #10cabe;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    margin-left: 37%;
+    line-height: 5rem;
+}
+.all_userPJ{
+    margin-left: 2.4%;
+    margin-top: 5%;
+}
+.all_userHeadPic{
+    float: left;
+}
+.all_userName{
+    float: left;
+    margin-left: 2%;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+.all_pjtext{
+    margin-top: 2%;
+    font-size: 1.6rem;
+    font-family: 微软雅黑;
+    width: 95%;
+}
+.all_pjgoodstype{
+    color: #92908a;
+    line-height: 3rem;
+    font-size: 1.4rem;
+}
+/*
+* 2017-01-13   11:46
+*/
+div.title+div>img{
+    border-bottom: 1px solid #DDDDDD;
+}
+.malldet_name >a{
+    line-height:1;
+}
+.mallType{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+    height:100%;
+    width:100%;
+}
+.mallType>.ChooseType{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: #fff;
+    padding-left: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+.buy_sum {
+    position: relative;
+}
+.set_p {
+    margin-left: 9rem;
+}
+input{
+    border-radius: 0;
+}
+.ChooseType i{
+    display: block;
+    position: absolute;
+    top:1rem;
+    right:1.5rem;
+    background: url(/images/temp_mobile/colse_T.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    z-index: 11;
+    background-size: 2rem;
+}
+

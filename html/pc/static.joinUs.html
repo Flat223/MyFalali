@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-加入我们</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link  rel="stylesheet" type="text/css" href="/css/pc/style.css" />
+	<link  rel="stylesheet" type="text/css" href="/css/pc/index.css" />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/joinus.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pc/menuside.css" />
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css" />
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+			<li><i></i><a href="/static/aboutUs.html">关于实验圈</a></li>
+			<li class="menu-act"><i></i><a href="/static/joinUs.html">加入我们</a></li>
+			<li><i></i><a href="/static/report.html">寻求报道</a></li>
+			<li><i></i><a href="/static/purchase.html">采购入门</a></li>
+			<li><i></i><a href="/static/tradingGuide.html">交易指南</a></li>
+			<li><i></i><a href="/static/supplier.html">供应商入门</a></li>
+			<li><i></i><a href="/static/integralMall.html">会员积分商城</a></li>
+			<li><i></i><a href="/static/activityApply.html">活动申请</a></li>
+			<li><i></i><a href="/static/contactUs.html">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<div class="table">
+    		<div class="list-wrapp clearfix">
+    			<ul>
+    				<li>招聘岗位</li>
+    				<li>职位月薪</li>
+    				<li>工作类型</li>
+    				<li>工作地点</li>
+    				<li>发布日期</li>
+    			</ul>
+    		</div>
+			<?php
+				$data = $params['data'];
+				for($i = 0;$i<count($data);$i++){
+				?>
+					<div class="list-wrapp acc-<?php echo $i+1;?> clearfix">
+						<ul>
+							<li><?php echo $data[$i]['quarters']?></li>
+							<li><?php echo $data[$i]['salary']?></li>
+							<li><?php echo $data[$i]['type'] == 1?'全职':'兼职'?></li>
+							<li><?php echo $data[$i]['place']?></li>
+							<li><?php echo date('Y-m-d',$data[$i]['time']);?><i></i></li>
+						</ul>
+						<div class="accordion accordion<?php echo $i+1;?> clearfix" colspan="5">
+							<div class="left">
+								<p>福利 : 五险一金 升职加薪</p>
+								<p>薪资：<?php echo $data[$i]['salary']?></p>
+								<h3>岗位职责：</h3>
+								<p><?php echo $data[$i]['content']?></p>
+								<h3>要求：</h3>
+								<p><?php echo $data[$i]['require']?></p>
+							</div>
+							<!--<div class="right">
+								<button class="layui-btn apply-btn" data-type="notice">申请职位</button>
+							</div>-->
+						</div>
+					</div>
+			<?php
+				}
+			?>
+
+    		<!--<div class="list-wrapp acc-1 clearfix">
+    			<ul>
+    				<li>互联网招商储备干部（20名）</li>
+    				<li>底薪3000+提成</li>
+    				<li>全职</li>
+    				<li>苏州</li>
+    				<li>2016-12-07 <i></i></li>
+    			</ul>
+    			<div class="accordion accordion1 clearfix" colspan="5">
+					<div class="left">
+						<p>福利 : 五险一金 升职加薪</p> 
+						<p>薪资：底薪3000+提成</p>
+						<h3>岗位职责：</h3>
+						<p>1、按照公司下达的招商任务编写年度、月度招商计划书并负责具体实施；</p>
+						<p>2、掌握市场动态，积极适时、有效地开辟新的供应商，拓宽招商渠道，不断收集目标供应商信息，建立详实的供应商档案。</p>
+						<p>3、定期汇报工作情况和客户跟踪情况，定期进行工作总结，提高工作计划性和有效性；</p>
+						<p>4、管理招商团队，带领团队完成招商目标</p>
+						<p>5、领导、激励并带领招商团队达成任务目标；</p>
+						<p>6、招商人员招募、辅导及培训； </p>
+						<p>7、招商专业知识及销售技巧辅导训练； </p>
+						<p>8、带领招商团队完成月度、年度任务目标； </p>
+						<p>9、跨部门沟通协调，共同创造产品优化运作模式. </p>
+						<h3>要求：</h3>
+						<p>1、大专及以上学历，普通话标准；</p>
+						<p>2、有互联网电商招商经验2年以上；</p>
+						<p>3、优秀的沟通技巧、表达技巧和销售技巧，有良好的抗压能力，责任心强，头脑灵活，思维敏捷，具有较高的商务谈判技巧等；</p>
+						<p>4、执行力强。</p>
+					</div>
+					&lt;!&ndash;<div class="right">
+						<button class="layui-btn" data-type="notice">申请职位</button>
+					</div>&ndash;&gt;
+        		</div>
+    		</div>-->
+    	</div>
+    </div>
+</div>
+<div id="apply-position" style="display:none">
+	<form class="layui-form" action="">
+		 <div class="layui-form-item">
+			    <label class="layui-form-label">申请岗位：</label>
+			    <div class="layui-input-block">
+			      互联网招商主管
+			    </div>
+		  </div>
+		  <div class="layui-form-item">
+			    <label class="layui-form-label"><em>*</em>姓名：</label>
+			    <div class="layui-input-block">
+			      	<input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+			    </div>
+		  </div>
+		  <div class="layui-form-item">
+			    <label class="layui-form-label"><em>*</em>性别：</label>
+			    <div class="layui-input-block">
+			      	<input type="radio" name="sex" value="男" title="男">
+			      	<input type="radio" name="sex" value="女" title="女" checked>
+			    </div>
+		  </div>
+		  <div class="layui-form-item">
+			    <div class="layui-inline">
+				      <label class="layui-form-label"><em>*</em>出生日期：</label>
+				      <div class="layui-input-inline" style="width: 100px;">
+				        <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input">
+				      </div>
+				      <div class="layui-form-mid">年</div>
+				      <div class="layui-input-inline" style="width: 100px;">
+				        <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input">
+				      </div>
+				      <div class="layui-form-mid">月</div>
+			    </div>
+		  </div>
+		  <div class="layui-form-item">
+		    <label class="layui-form-label"><em>*</em>工作年限</label>
+		    <div class="layui-input-block">
+		      <select name="city" lay-verify="required">
+		        <option value=""></option>
+		        <option value="0">1</option>
+		        <option value="1">2</option>
+		        <option value="2">3</option>
+		        <option value="3">4</option>
+		        <option value="4">5</option>
+		      </select>
+		    </div>
+		  </div>
+		    <div class="layui-form-item">
+		    <label class="layui-form-label"><em>*</em>最高学历</label>
+		    <div class="layui-input-block">
+		      <select name="city" lay-verify="required">
+		        <option value=""></option>
+		        <option value="0">小学</option>
+		        <option value="1">初中</option>
+		        <option value="2">高中</option>
+		        <option value="3">大专</option>
+		        <option value="4">本科</option>
+		      </select>
+		    </div>
+		  </div>
+	   <div class="layui-form-item">
+		    <label class="layui-form-label"><em>*</em>联系电话：</label>
+		    <div class="layui-input-block">
+		      	<input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+		    </div>
+		</div>
+		<div class="layui-form-item">
+		    <label class="layui-form-label"><em>*</em>验证码：</label>
+		    <div class="layui-input-inline">
+		      <input type="password" name="password" required lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+		    </div>
+		    <div class="layui-form-mid ">
+		    	 <button class="layui-btn add-btn" style="margin: -8px 0 0;">发送验证码</button>
+		    </div>
+		</div>
+		<div class="layui-form-item">
+		    <label class="layui-form-label">电子邮箱：</label>
+		    <div class="layui-input-block">
+		      	<input type="text" name="title"  placeholder="" autocomplete="off" class="layui-input">
+		    </div>
+
+		</div>
+		
+	  <div class="layui-form-item layui-form-text" >
+	    <label class="layui-form-label">工作经历：</label>
+	    <div class="layui-input-block">
+	      <textarea name="desc" placeholder="" style="width:969px;" class="layui-textarea"></textarea>
+	      <input type="file" class="upload-attachment" />
+	      <img src="/images/pc/add.png" alt="" />
+	    </div>
+	  </div>
+	  <div class="layui-form-item">
+	    <div class="layui-input-block">
+	      <button class="layui-btn add-btn" lay-submit lay-filter="formDemo">立即提交</button>
+	      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+	    </div>
+	  </div>
+	</form>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/jsoinUs.js');
+</script>
+
+
+

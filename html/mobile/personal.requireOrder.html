@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>需求订单</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/requireOrder.css">
+
+<script type="text/javascript" src="/js/sea.js"></script>
+<script type="text/javascript" src="/js/seaconfig.js"></script>
+
+<body>
+	<?php
+		$user = UserAgent::getUser();
+	?>
+	<div style="display: none">
+		<input name="order_type" value="<?php echo $params['order_type']?>"/>
+	</div>
+    <div class="title">需求订单</div>
+    <div class="pur_type">
+        <a class="all_order" agree="0" style="margin-left: 2.4%">全部订单</a>
+        <a class="wait_check" agree="1">待审核</a>
+        <a class="agreed" agree="2">已通过</a>
+        <a class="not_agree" agree="3">未通过</a>
+    </div>
+    
+	<p class="order_hint" 
+		style="text-align: center;width: 100%;margin-top: 30% ;font-size: 18px;color: #929292;
+			display:<?php echo count($params['order'])== 0?"display":"none"?>">
+			暂无订单
+	</p>
+    
+<?php
+	foreach ($params['order'] as $order){
+?>
+  
+    <div class="pur_div">
+        <div class="pur_num">
+            订单编号:<a><?php echo $order['order_code'] ?></a><a class="pur_state">
+<!--
+	            <?php
+					switch ($order['agree']) {
+						case '1':
+							echo '待审核';
+							break;
+						case '2':
+							echo '已通过';
+							break;
+					    case '3':
+							echo '未通过';
+							break;
+					}
+				?>
+-->
+            </a>
+        </div>
+   <?php
+   		foreach ($order['product'] as $product){
+   ?>
+        <div class="pur_info">
+            <div class="pur_img"><img width="93px" height="86px" src="<?php echo $product['images'] ?>"></div>
+            <div class="pur_det">
+                <div class="pur_name"><?php echo $product['name'] ?></div>
+                <div class="pur_type1">型号分类:型号名称</div>
+                <div class="pur_price"><?php echo '¥'.$product['price'] ?></div>
+                <div class="pur_sl"><?php echo "×".$product['num'] ?></div>
+            </div>
+        </div>
+	<?php
+		}
+	?>
+        <div class="pur_count" style="margin-top: 10px">
+            <a>共</a><a><?php echo count($order['product']) ?></a>件商品 合计:￥<a><?php echo ($order['tot_fee']) ?></a>
+        </div>
+        <div class="pur_btn">
+<!--
+            <div class="pur_btn1"><input width="100%" type="image" src="/images/mobile/purBtn1.png"></div>
+            <div class="pur_btn2"><input width="100%" type="image" src="/images/mobile/purBtn2.png"></div>
+-->
+			<?php
+				if($order['agree'] == 1){
+			?>
+				<div class="pur_btn1" order_code="<?php echo $order['order_code'] ?>">
+					<input readonly unselectable="on" name="refuse" value="拒绝">
+					<input readonly unselectable="on" name="agree" value="通过">
+				</div>
+			<?php
+				} else {
+			?>
+				<div class="pur_btn2" order_code="<?php echo $order['order_code'] ?>">
+					<input readonly unselectable="on" value="<?php echo ($order['agree'] == 2 ? "已通过":"已拒绝") ?>">
+				</div>
+			<?php
+				}
+			?>
+        </div>
+    </div>
+<?php
+	}
+?>
+</body>
+</html>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	window.seajs&&seajs.use('mobile/requireOrder.js');
+</script>
+<script>
+	$(function(){
+		var flag="<?php echo isset($_GET['agree'])?$_GET['agree']:''; ?>";
+		switch(flag){
+			case '1':
+				$('.wait_check').addClass("select");
+				break;
+			case '2':
+				$('.agreed').addClass("select");
+				break;
+			case '3':
+				$('.not_agree').addClass("select");
+				break;
+			default:
+				$('.all_order').addClass("select");
+		}
+	});
+</script>

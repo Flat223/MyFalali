@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit_industry.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a><img src="/images/pc/reg.png" alt="" /></a>
+			<div class="reg right">
+				账号注册
+			</div>
+		</div>s
+	</div>
+</div>
+<div class="content w1200">
+	<div class="login_process">
+		<img src="/images/pc/process3.png" alt="" />
+	</div>
+	<section>
+		<p class="choose_type">
+			请选择您的行业（可多选）
+		</p>
+		<ul> 
+		<?php
+		 	foreach($params['industryTypes'] as $industry){	
+		?>
+			<li>
+				<dl class="industry" sid= "<?php echo $industry['industry_id']?>">
+					<dt>
+						<img src="<?php echo $industry['image'] ?>" />
+						<i></i>
+					</dt>
+					<dd><?php echo $industry['name']?></dd>
+				</dl>
+			</li>
+		<?php
+			}
+		?>
+		</ul>
+	</section>
+	<div class="clear"></div>
+	<div class="process2_bottom">
+		<a class="skip">跳过</a>
+		<a class="next">下一步</a>
+	</div>
+</div>
+
+<div style="display: none">
+	<input name="mid" type="hidden" value="<?php echo $params['mid']; ?>"/>
+	<input name="check" type="hidden" value="<?php echo $params['check']; ?>"/>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/regist',function(reg){
+		var tid = <?php echo($params['tid']); ?>;
+		var subtid = <?php echo($params['subtid']); ?>;
+		reg.setIndentType(tid,subtid);
+		reg.initIndustry();
+	});
+</script>
+
+</body>
+</html>

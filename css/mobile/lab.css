@@ -1,0 +1,75 @@
+/*.lab_img{
+    width:100%;
+    height:32%
+}*/
+.lab_type{
+    /* width: 100%; */
+    height: 18%;
+    margin-top: 2%;
+}
+.lab_lab{
+    float: left;
+    margin-left: 5%;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.lab_share{
+   /* width: 100%;*/
+    height: 6%;
+    margin-left: 2.4%;
+}
+.lab_fximg{
+    float: left;
+    height: 100%;
+}
+.lab_fxtit{
+    float: left;
+    height: 100%;
+    margin-left: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.lab_ljfx{
+    float: right;
+   /* height: 100%;
+    margin-left: 20%;*/
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-right: 5%;
+}
+.lab_gg{
+    /* width: 100%; */
+    height: 5%;
+    margin-left: 2.4%;
+    /* font-size: 1.7rem; */
+    /* font-weight: bold; */
+}
+.lab_ggimg{
+    float: left;
+    height: 100%;
+}
+.lab_ggtit{
+    float: left;
+    height: 100%;
+    margin-left: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.lab_info{
+    width: 100%;
+    height: 4%;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: 微软雅黑;
+    margin-left: 2.4%;
+}
+.lab_infotime{
+    /* margin-left: 20%; */
+    float: right;
+    margin-right: 5%;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-签到</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+
+</head>
+<body>
+	<div style="margin: 45px;float: left">
+		<?php
+			if($params['flag'] == 0){
+			?>
+				<button id="sign" class="layui-btn layui-btn-normal">
+					<i class="layui-icon">&#xe642;</i>签到
+				</button>
+			<?php
+			}else{
+			?>
+				<button class="layui-btn layui-btn-disabled">
+					<i class="layui-icon">&#xe642;</i>今日已签
+				</button>
+			<?php
+			}
+			?>
+	</div>
+	<div style="float:left;width: 150px;margin: 35px 0px">
+		<span>已连续签到<i style="color: red"><?php echo $params['count'];?></i>天！</span><br>
+		<span>每天签到可获得5积分，连续七天签到可额外获得20积分！</span>
+	</div>
+
+<div class="clear"></div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+	$("#sign").on("click",function () {
+		$.ajax({
+			type:"post",
+			dataType:"json",
+			url:"/service/SignServ.html",
+			success:function(data){
+				if(data.ret == 1){
+					layer.msg(data.msg,{icon:1});
+					window.setTimeout(widreload,2000);
+				}else if(data.ret == -1){
+					layer.msg(data.msg,{icon:5});
+				}else{
+					layer.msg(data.msg,{icon:0});
+				}
+			},
+			error:function(data){
+				layer.alert('服务器错误,请稍后再试',{offset:'200px'});
+			}
+		});
+	});
+
+	function widreload() {
+		window.location.reload();
+	}
+</script>
+</body>
+</html>
+

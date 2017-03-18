@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-付款</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/forget_password.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/pay.css" >
+
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+
+	<div class="login_process">
+		<img src="/images/temp_pc/pay3.png" alt="" />
+	</div>
+	<div class="pay_section clearfix">
+		<?php 
+			$otype=$params['otype'];
+			if($otype==1){
+			?>
+		<dl class="clearfix">
+			<dt>
+				<img src="/images/temp_pc/right-icon.png" alt="" />
+			</dt>
+			<dd>
+				<?php 
+					$type=$params['type'];
+					$offline=$params['offline'];
+					if($type>0){
+					?>
+						<p>
+							您已使用科研基金成功付款<i><?php echo($params['price']);?>元</i>
+						</p>
+					<?php
+						}else{
+							if($offline<=0){
+					?>
+						<p>
+							您已成功付款<i><?php echo($params['price']);?>元</i>
+						</p>
+					<?php
+					}else{
+					?>
+						<p>
+							线下订单已提交，请等待审核通过。
+						</p>
+
+					<?php
+					}
+					}
+				?>
+				<?php
+					$address=$params['detail']; 
+				?>
+				<p>
+					货物将送至：<?php echo($address);?>
+				</p>
+				<p>
+					实验圈赠送积分：<span>0</span>
+				</p>
+				<?php
+				?>
+			</dd>
+		</dl>
+		<p>
+			您可以查看 <a href="/user/personalOrder.html">我的订单</a> 或者 <a href="/index.html">返回首页</a>
+		</p>
+		<?php 
+		}else {
+		?>
+		<dl class="clearfix">
+			<dt>
+				<img src="/images/temp_pc/right-icon.png" alt="" />
+			</dt>
+			<dd>	
+				<p>
+					您已成功付款<i><?php echo($params['price']);?>元</i>
+				</p>
+				<p>
+					实验圈赠送积分：<span>0</span>
+				</p>
+			</dd>
+		</dl>
+		<p>
+			您可以返回 <a href="/user/index.html">个人中心</a> 或者 <a href="/index.html">返回首页</a>
+		</p>
+		<?php 
+		}
+		?>
+	</div>
+	
+	
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/swiper.min.js"></script>
+
+
+

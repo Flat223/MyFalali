@@ -1,0 +1,153 @@
+.layui-layer-content{
+	background: white;
+}
+.layui-layer-btn{
+	background: white;
+}
+.layui-elem-quote span ul li{
+	float: left;
+	margin:0 5px;
+}
+.layui-elem-quote span ul li a{
+	color: #00bfb8;
+}
+.profile>label textarea[name=detailed_address]{
+	width: 550px;
+	min-height: 30px;
+}
+.profile>label span{
+	width: 100px!important;
+}
+.profile .address_default{
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 150px;
+}	
+.tag_label{
+	cursor: pointer;
+	margin-left: 100px;
+}
+.profile>label select{
+	min-width: 160px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+}
+
+
+/*表格*/
+.tablebox{
+	margin-top: 50px;
+    padding: 10px;
+}
+caption{
+    text-align: left;
+    color: red;
+    padding: 10px 0;
+}
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;    
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;  
+}
+.zebra tbody tr:nth-child(even) {
+    /*background: #f5f5f5;*/
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+.zebra tbody tr:hover{
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+.zebra tbody tr:hover span.setDefault{
+    display: inline-block;
+	color: red;
+	text-align: center;
+}
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+    font-weight: normal;
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1; 
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+    background: #00bfb8;
+    color:white;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+.zebra .modified a{
+	color: #00bfb8
+}
+.zebra  .modified a:hover{
+	color: red;
+}
+.zebra  .modified{
+	color: #00bfb8
+}
+.zebra td:nth-of-type(6) span.default{
+	text-align: center;
+	color: white;
+	width: 85px;
+	line-height: 30px;
+    background: #00bfb8;
+}
+.zebra td:nth-of-type(6) span.setDefault{
+    cursor: pointer;
+    display: none;
+    width: 100px;
+    text-align: center;
+}

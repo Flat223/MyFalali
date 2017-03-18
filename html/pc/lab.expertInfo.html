@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-专家</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+	<style type="text/css">
+		.attr{
+			width: 70px;
+		}
+	</style>
+</head>
+<body>
+<?php
+	$exinfo = $params['exinfo'];
+?>
+<div style="margin-left: 0px" class="mainContent">
+	<div class="main-wrapp">
+		<div class="info">
+			<table style="line-height: 30px;width: 400px;">
+				<tr>
+					<td class="attr"><span>专家姓名</span></td>
+					<td><?php echo $exinfo['name']?></td>
+				</tr>
+				<tr>
+					<td class="attr"><span>专家电话</span></td>
+					<td><?php echo $exinfo['mobile']?></td>
+				</tr>
+				<tr>
+					<td class="attr"><span>专家介绍</span></td>
+					<td><?php echo $exinfo['personal_desc']?></td>
+				</tr>
+				<tr>
+					<td class="attr"><span>科研成果</span></td>
+					<td><?php echo $exinfo['research_achievement']?></td>
+				</tr>
+				<tr>
+					<td class="attr"><span>专家专利</span></td>
+					<td><?php echo $exinfo['patent']?></td>
+				</tr>
+				<tr>
+					<td class="attr"><span>科研项目</span></td>
+					<td><?php echo $exinfo['research_projects']?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

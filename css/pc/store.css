@@ -1,0 +1,19 @@
+.store-wrapp{
+	margin: 70px auto;
+	width: 200px;
+}
+.store-wrapp span{
+	display: block;
+	text-align: center;
+	width: 200px;
+}
+.apply-wrapp{
+	margin: 70px auto;
+	width: 200px;
+}
+.apply-wrapp span{
+	display: block;
+	text-align: center;
+	width: 100px;
+	margin: 5px 0;
+}

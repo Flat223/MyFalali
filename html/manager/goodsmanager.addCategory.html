@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加商品分类</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/addCate.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>添加分类</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <!--<table>
+                            <tr>
+                                <td colspan="2">
+                                    <span>图片：</span>
+                                    <div style="margin-left: 74px" class="form-group">
+                                        <div class="col-sm-6">
+                                            <button type="button" class="btn btn-primary" style="padding: 0 0;width: 100px;height: 35px;background-color: #00a0e9" id="uping" >上传图片</button>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 74px;" class="form-group" id="brand_img_wrap">
+                                        <div class="uploadfile">
+                                            <img style="width:200px;height: 200px" id="logo" src="<?php echo empty($brand['image'])?'/images/pc/upload.jpg':$brand['image'] ?>" alt="" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>-->
+                        <input style="height: 36px;" id="cate" class="easyui-combobox">
+
+
+                        <input style="display: none" id="bid" type="text" value="<?php echo empty($params['id'])? 0 : $params['id'] ;?>">
+                        <span style=""><button class="layui-btn layui-btn-warm serSave">添加</button></span>
+                    </div>
+                    <div id="bv" style="clear: both">
+                        <?php
+                            foreach($params['cate'] as $val){
+                            ?>
+                                <button value="<?php echo $val['ptid']?>" class="layui-btn"><?php echo $val['name']?></button>
+                            <?php
+                             }
+                            ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/easyui/jquery.easyui.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/cyupload.js"></script>
+<script type="text/javascript">
+    $("#cate").combobox({
+        valueField:'name',
+        textField:'name',
+        panelWidth:200,
+        panelHeight:'auto',
+        onChange:function(value){
+            $("#cate").combobox("reload","/service/GetProductCateServ.html?name="+value.trim());
+        }
+    });
+
+    $(".serSave").on('click',function () {
+        var id = $("#bid").val();
+        var cate = $("#cate").combobox('getValue');
+
+        if(cate == "" || cate == null){
+            layer.msg("分类名称为空！", {icon:5});
+            return;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/service/AddCateServ.html",
+            data: {"id":id,"cate":cate},
+            success: function (data) {
+                if(data.ret == 1) {
+                    layer.msg(data.msg, {icon:1});
+                    window.setTimeout(widreload,500);
+                }else if(data.ret == -1){
+                    layer.msg(data.msg, {icon: 2});
+                }
+            }
+        })
+    });
+
+    function widreload() {
+        window.location.reload();
+    }
+</script>
+</body>
+</html>

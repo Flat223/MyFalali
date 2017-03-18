@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<cy-filter xmlns="http://www.ichuk.com/cy-filter">
+	<filters>
+		<filter name="login" class="LoginFilter" />
+<!--
+		<filter name="login" class="LoginFilter" />
+		<filter name="ordinary" class="OrdinaryUserFilter" />
+		<filter name="uncompany" class="UnCompanyFilter" />
+		<filter name="unemployee" class="UnEmployeeFilter" />
+		<filter name="wechat" class="WechatFilter" />
+		<filter name="alipay" class="AlipayFilter" />
+		<filter name="compnay" class="CompanyFilter" />
+-->
+	</filters>
+	<filter-mappings>
+		<filter-mapping name="login" pattern="/index.html" />
+		<filter-mapping name="login" pattern="/(_common|datamanager|labmanager|msgmanager|newsmanager|order|media|pricemanager|usermanager|checkManager|circle|goodsmanager|invoice|recruit|release|rolemanager)/*.html" />
+<!--
+		<filter-mapping name="login" pattern="/handle/login.html" />
+		<filter-mapping name="ordinary" pattern="/mission/*.html" />
+		<filter-mapping name="ordinary" pattern="/user/(course|studyRecord|practice|unmarkingPractice|markingPractice|test|unmarkingTest|markingTest|qa|uncompleteqa|demand|sign|chongzhi|tixian).html" />
+		<filter-mapping name="uncompany" pattern="/user/(task|finishedTask).html" />
+		<filter-mapping name="unemployee" pattern="/user/(issuedTask|issuedTaskCpl).html" />
+		<filter-mapping name="wechat" pattern="/wechatpay/*.html" />
+		<filter-mapping name="alipay" pattern="/alipay/*.html" />
+		<filter-mapping name="compnay" pattern="/user/(employee|yuanbaochongzhi).html" />
+-->
+	</filter-mappings>
+</cy-filter>

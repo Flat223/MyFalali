@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-添加商品</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/editGroup.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+	<style>
+		.deleteimg{
+			display: block;
+			width:40px;
+			height: 25px;
+			text-align: center;
+			background-color: gainsboro;
+			position: absolute;
+			cursor:pointer;
+		}
+		.spandelete{
+		}
+		.lay-list ul li{
+			float: left;
+		}
+		
+	</style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+	        <li><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><a href="/myshop/addProduct.html" style="color: #00bfb8">添加产品</a></li>
+            <!--<li><a href="">运营管理</a></li>-->
+            <li><a href="/myshop/orderManager.html">订单管理</a></li>
+            <li><a href="/myshop/message.html">消息列表</a></li>
+			<li><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+			<li><a href="/myshop/couponList.html">优惠券列表</a></li>
+			<!--<li><a href="">退款管理</a></li>-->
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<h1>添加组合</h1>
+    	<?php 	$group=$params['group'];?>
+		<div class="proName">
+			<span>租个名称</span>
+			<input name="proName" value="<?php echo($group['name']);?>" id="groupname" type="text" placeholder="填写组合名称" />
+		</div>
+		<div class="proName">
+			<span>组合价格</span>
+			<input name="proVideo" value="<?php echo($group['price']);?>" id="groupprice" type="text" onkeyup="clearNoNum(this)" placeholder="请填写组合价格" />
+		</div>
+		<div class="proImg">
+			<span>组合产品</span>
+			<button id="uping">添加产品</button>
+			<small>（最多可以添加5个产品）</small>
+		</div>
+		
+        <div class="lay-list">
+            <ul id="grouplist">
+	            <?php 
+	            	$productlist=$group['productlist'];
+	            	if(!empty($productlist)){
+		            	foreach($productlist as $product){
+		            	$images=explode(',',$product['images']);
+					?>
+			            <li onclick="deleteLi(this)">
+				            <dl>
+				                <dt>
+				                	<img value="" src="<?php echo($images[0]);?>" width="100px"  height="101px" alt="" />
+				                	<span value="<?php echo($product['skuid']);?>" class="deleteimg">删除</span>
+				                </dt>
+				                <dd><?php echo($product['name']);?></dd>
+				                <dd><?php echo($product['price']);?></dd>
+				            </dl>
+						</li>
+						<?php
+						}
+					}
+				?>    
+            </ul>
+        </div>
+		<div class="next clearfix left">
+			<a class="nextStep" value="<?php echo($params['id']);?>">保存</a>
+		</div>
+    </div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/editGroup.js');
+	window.seajs&&seajs.use('pc/addGroupCall.js');
+	
+	var obj = document.getElementById("grouplist");  
+	function deleteLi(objs){  
+  		obj.removeChild(objs);  
+  	}
+	function clearNoNum(obj){
+		obj.value = obj.value.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符
+		obj.value = obj.value.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的
+		obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+		obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');//只能输入两个小数
+		if(obj.value.indexOf(".")< 0 && obj.value !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额
+			obj.value= parseFloat(obj.value);
+		}
+	}
+</script>
+

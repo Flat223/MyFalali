@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <title>实验室详情</title>
+</head>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=P14l8MNCnZ4XRkhvPzBvKB4B"></script>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/labDetail.css">
+<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+<link rel="stylesheet" href="/css/mobile/share.css">
+<body>
+<?php
+	$lab = $params['lab'];
+?>
+<div class="title">实验室详情</div>
+<div id="banner">
+    <!--<a><img width="100%" src="/images/temp_mobile/9302.png"></a>-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php if(!empty($lab['logo'])){
+                $logo = explode(',',$lab['logo']);
+                    for($i = 0;$i<3;$i++){
+                    ?>
+            <div class="swiper-slide"><img src="<?php echo $logo[$i];?>" alt="" /></div>
+            <div class="swiper-slide"><img src="/images/temp_mobile/myLabBanner.png" alt=""/></div>
+            <?php
+                    }
+                }else{
+                ?>
+            <div class="swiper-slide"><img src="/images/temp_mobile/myLabBanner.png" alt=""/></div>
+            <div class="swiper-slide"><img src="/images/temp_mobile/myLabBanner.png" alt=""/></div>
+            <div class="swiper-slide"><img src="/images/temp_mobile/myLabBanner.png" alt=""/></div>
+            <?php
+            }
+            ?>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+    </div>
+</div>
+<div class="labdt_info clearfix">
+    <div class="labdt_attr">
+        <div class="labdt_tit"><a><?php echo $lab['name']?></a></div>
+        <a class="labdt_pf">评分：
+            <?php
+					$starNum = $lab['stars'];
+						if($starNum%2 == 0){
+							for($k = 0; $k < $starNum/2; $k++){
+							?>
+            <img width="8%" src="/images/pc/1y.png">
+            <?php
+							}
+						}else{
+							for($k = 0; $k < floor($starNum/2); $k++){
+							?>
+            <img width="8%" src="/images/pc/1y.png">
+            <?php
+							}
+						    ?>
+            <img width="8%" src="/images/pc/1yb.png" alt="" />
+            <?php
+						}
+					?>
+        </a>
+    </div>
+    <div id="share">
+        <img src="/images/mobile/LabShare.png" alt="">
+        <span>分享</span>
+    </div>
+    <section class="screenW">
+        <div class="subW">
+            <div class="info">
+                <div class="shareBox">
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ</a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+                        <a href="#" onclick="return false;" class="popup_more" data-cmd="more">其他</a>
+                    </div>
+                </div>
+            </div>
+            <div class="close"><h5>关闭</h5></div>
+        </div>
+    </section>
+</div>
+<div class="labdt_admin clearfix">
+    <div class="labdt_adminimg"><img width="100%"  src="/images/temp_pc/head1.png"></div>
+    <div class="labdt_adminname">管理员：<span>张三</span> </div>
+    <div class="contacTa" ">联系他</div>
+    <!-- <div class="labdt_lianxi">
+         <input type="button" value="联系他">
+     </div>-->
+</div>
+
+<div class="labdt_addr">
+    <a>
+        地址：苏州星湖街3888号
+        <span class="right">  </span>
+    </a>
+
+</div>
+
+<div class="labdt_buttom">
+    <div class="labdt_btn"><input type="image" width="100%"  src="/images/mobile/xj.png"></div>
+    <div class="labdt_btn"><input type="image" width="100%"  src="/images/mobile/yy.png"></div>
+</div>
+<div style="width:100%;height:250px;" id="dituContent"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/html/mobile/foot.html'); ?>
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script src="/js/mobile/main.js" type="text/javascript"></script>
+<script src="/js/mobile/lab_detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-发布</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/issue.css" >
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css" >
+	<link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+	<link rel="stylesheet" type="text/css" href="/js/easyui/themes/icon.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<style>
+		#select{
+			height: 40px;
+			line-height: 40px;
+			margin-left: 23px;
+			width: 600px;
+			text-align: left;
+		}
+		#select select{
+			height: 40px;
+			line-height: 40px;
+			margin-right: 10px;
+			background: #ffffff !important;
+			text-indent: 1em;
+		}
+		#address{
+			width: 335px;
+			height: 40px;
+			border: 1px solid #ddd;
+			margin-left: 23px;
+			text-indent: 1em;
+			display: block;
+			margin-left: 132px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+	<div class="ui large breadcrumb">
+	  <ul>
+	     <li>
+	         <a href="/index.html">首页</a>
+	     </li>
+	     <li style="padding: 0 5px">></li>
+	     <li>
+	        <a href="/requirement/option.html">发布需求</a>
+	     </li>
+	     <li style="padding: 0 5px">></li>
+	     <li>
+	     	发布实验室共享信息
+	     </li>
+	  </ul>
+	</div>
+	<div class="clear"></div>
+	<div class="issuebox">
+		<p>
+			发布实验室共享信息
+		</p>
+		<label>
+			<span><em>*</em>实验室名称：</span>
+			<input type="text" id="labName"/>
+		</label>
+		<label>
+			<span><em>*</em>&nbsp;管理员：</span>
+			<input type="text" id="manage"/>
+		</label>
+		<label>
+			<span><em>*</em>联系电话：</span>
+			<input type="text" id="phone"/>
+		</label>
+		<label>
+			<span><em>*</em>验证码：</span>
+			<input type="number" id="validate" />
+			<span style="cursor: pointer;" class="code" id="vaildateCode">发送验证码</span>
+		</label>
+		<label>
+			<span><em>*</em>服务领域：</span>
+			<input type="text" id="serviceArea" placeholder="以英文逗号分隔"/>
+		</label>
+		<label>
+			<span><em>*</em>注册时间：</span>
+			<div class="layui-inline" style="margin-left: 20px;">
+				<input id="registerDate" type="text" class="easyui-datebox" data-options="required:false,editable:false" style="width:335px;height: 40px;" />
+			</div>
+		</label>
+		<label>
+			<span>所属机构：</span>
+			<!--<input type="text" id="belong" placeholder=""/>-->
+			<div class="layui-inline" style="margin-left: 20px;">
+				<input style="width:335px;height: 40px;" id="belong" class="easyui-combobox">
+			</div>
+			<!--<button id="addorg" class="layui-btn layui-btn-normal">
+				<i class="layui-icon">&#xe608;</i> 添加
+			</button>-->
+		</label>
+		<label>
+			<span class="left">实验室地址：</span>
+			<span style="" id="select" ></span>
+			<input style="" name="" placeholder="详细说明" id="address" />
+		</label>
+		<!--<label>
+			<span class="left">经纬度：</span>
+			<input name="" placeholder="输入详细地址自动获取经纬度" id="latlon" disabled />
+		</label>-->
+		<label>
+			<span class="left">实验室简介：</span>
+			<textarea name="" placeholder="详细说明" id="labDesc" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<span class="left">服务范围：</span>
+			<textarea name="" placeholder="详细说明" id="serviceRange" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<span class="left">仪器资源：</span>
+			<textarea name="" placeholder="详细说明" id="instrument" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<span class="left">实验室守则：</span>
+			<textarea name="" placeholder="详细说明" id="rules" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<span class="left">科研数据：</span>
+			<textarea name="" placeholder="详细说明" id="research" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<input style="cursor: pointer;" type="submit" id="sub" value="提交申请"/>
+		</label>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/labShareRelease.js');
+</script>
+</body>
+</html>
+

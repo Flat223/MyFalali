@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的实验室</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/mylab.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<div class="account">
+			<div class="account_ul">
+				<ul>
+					<li>我的实验室</li>
+				</ul>
+			</div>
+		<?php
+			if(count($params['laboratory']) == 0){
+		?>
+			<p style="text-align: center;margin-top: 20% ;font-size: 18px;color: #929292">暂无实验室</p>
+		<?php
+			} 
+		?>
+			<div class="list_wrapper clearfix">
+			    <ul>
+				<?php
+					$labArray = $params['laboratory'];
+					foreach ($labArray as $laboratory) {
+				?>
+			        <li class="clearfix">
+			            <dl class="clearfix left">
+			                <dt>
+			                	<a href="/lab/detail.html?labId=<?php echo $laboratory['lab_id'] ?>">
+				                    <img  src="<?php echo $laboratory['logo'] ?>" alt="" />
+				                </a>
+<!--
+			                    <div class="heart">
+			                        <img src="/images/pc/list-heart.png" alt="" />
+			                    </div>
+-->
+			                </dt>
+			                <dd>
+			                    <h3>
+				                    <a href="/lab/detail.html?labId=<?php echo $laboratory['lab_id'] ?>">
+					                    <?php echo $laboratory['name'] ?>
+				                    </a>
+			                    </h3>
+								<p style="margin: 6px 0">
+									<?php
+                                $starNum = $laboratory['stars'];
+                                if($starNum%2 == 0){
+                                    for($i = 0; $i < $starNum/2; $i++){
+                            ?>
+									<img src="/images/pc/1y.png" alt="" />
+									<?php
+                                    }
+                                }else{
+                                    for($i = 0; $i < floor($starNum/2); $i++){
+                            ?>
+									<img src="/images/pc/1y.png" alt="" />
+									<?php
+                                    }
+                            ?>
+									<img src="/images/pc/1yb.png" alt="" />
+									<?php
+                                }
+                            ?>
+								</p>
+
+			                    <div class="description">
+			                        <p>
+			                            <span>服务领域：</span><?php echo $laboratory['service_area'] ?>
+			                        </p>
+			                        <p>
+			                            <span>联系地址：</span><?php echo $laboratory['address'] ?>
+			                        </p>   
+			                        <p> 
+			                           <span>简介：</span> <?php echo $laboratory['intro'] ?>
+			                        </p>
+			                    </div>
+			                </dd>
+			            </dl>
+			            <span del="delete" class="right button" lid="<?php echo $laboratory['lab_id']?>" style="cursor: pointer">删除</span>
+			        </li>
+			    <?php
+			    	}
+			    ?> 
+			    </ul>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/deleteLaboratory.js');
+</script>
+

@@ -1,0 +1,33 @@
+.sf_what{
+    width: 100%;
+    /* height: 4%; */
+    margin-top: 2%;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.sf_choose{
+    width: 100%;
+    /* height: 3%; */
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.sf_type{
+    width: 100%;
+    height: 22%;
+}
+.sf_img{
+    width:29%;
+    height: 100%;
+    float: left;
+    margin-left: 3%
+}
+.sf_btn{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    margin-top: 5%;
+}

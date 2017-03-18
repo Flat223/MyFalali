@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-实验室商城</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/lab_shop.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>	
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<!--头部分类-->
+<div class="category_nav ">
+	<div class="w1200 clearfix">
+		<div class="categrory left">
+			<a class="all_prd" href="">产品分类 <i></i></a>
+			<div class="cate_down">
+				<ul>
+					<?php 
+						$typelist=$params['typelist'];
+						foreach($typelist as $first){
+					?>
+					
+					<li>
+						<a   href="/goods/productList.html?ptid=<?php echo($first['ptid'])?>"><p style="width:170px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><?php echo($first['name']);?></p><i></i></a>
+						<div class="sub_menu clearfix">
+							<ul>
+								<?php 
+									$secondq=$first['second'];
+									foreach($secondq as $second){
+								?>
+								<li>
+									<a   href="/goods/productList.html?ptid=<?php echo($second['ptid'])?>"><p style="width:170px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><?php echo($second['name']);?></p><i></i></a>
+									<div class="grandchild">
+										<ul>
+											<?php 
+											$thirdq=$second['third'];
+											foreach($thirdq as $third){
+												if($third!=""){
+											?>
+											<li><a href="/goods/productList.html?ptid=<?php echo($third['ptid'])?>"><p style="width:180px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><?php echo($third['name']);?></p></a></li>
+											<?php
+											}
+											}
+											?>
+										</ul>
+									</div>
+								</li>
+								<?php
+								}
+								?>
+							</ul>
+						</div>
+					</li>
+					<?php
+					}
+					?>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部分类End-->
+<div class="content">
+	<div class="banner_news w1200 clearfix">
+		<!--banner-->
+		<div class="banner left">
+			<div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul><li></li><li></li><li></li></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<?php
+							$piclist=$params['advertbanner'];
+							foreach($piclist as $value){ 
+							?>
+								<li><a href="<?php echo $value['url']; ?>" ><img style="width:733px;height:356px" src="<?php echo($value['image'])?>" /></a></li>
+						<?php
+						}
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="r_wrapper left">
+			<div class="top_case">
+				<h1>实验室建设咨询</h1>
+				<span class="tel_item" style="cursor: pointer">电话咨询</span>
+				<span class="online" style="cursor: pointer">在线客服</span>
+			</div>
+			<div class="bottom_case">
+				<h1>成为实验室供应商</h1>
+				<div class="ul_item clearfix">
+					<ul>
+						<li>
+							<span><p style="margin-top:15px;">注册</p></span>
+						</li>
+						<li>></li>
+						<li>
+							<span><p>资质审核</p></span>
+						</li>
+						<li>></li>
+						<li>
+							<span><p>发布产品</p></span>
+						</li>
+					</ul>
+				</div>
+				<input  style="cursor: pointer" type="submit" class="add_gy" value="我要加入" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- 设备仪器 -->
+		
+				<?php
+				$data=$params['recommendnew'];
+				foreach($data as $value){
+				?>
+				<div class="equipment_section">
+					<p>
+						<span class="left"><?php echo($value['name'])?></span>
+						<a href="/goods/productList.html?ptid=<?php echo($value['ptid'])?>" class="right">更多></a>
+					</p>
+					<div class="eq_section clearfix">
+						<ul class="eq_section_ul clearfix">
+							<?php
+								if(isset($value['second'])){
+								$seond=$value['second'];
+								foreach($seond as $key=>$value1){
+								?>
+									<li style="position: relative;">
+										<span style="position: absolute;top: 0;left: 0;">
+										<a href="/goods/productList.html?ptid=<?php echo($value1['ptid']);?>"><?php echo($value1['name'])?></a>
+										</span>
+										<div class="swiper-container box"  value="<?php echo($product['pid'])?>">
+											<div class="swiper-wrapper">
+										<?php
+											if(isset($value1['products'])){
+											foreach($value1['products'] as $product){
+												$images=explode(',',$product['images']);
+
+										?>
+
+												<div class="swiper-slide imgbox">
+													<a href="/goods/detail.html?pid=<?php echo($product['pid'])?>" target="_blank"><img src="<?php echo($images[0])?>" alt=""/></a>
+													<span style="position: absolute;bottom: 0;left: 0;">
+													<a href="/goods/detail.html?pid=<?php echo($product['pid'])?> target="_blank""><?php echo($product['pname'])?></a>
+													</span>
+												</div>
+
+										<?php
+										}
+										}
+										?>
+											</div>
+										</div>
+										<!-- Add Arrows -->
+										<div class="swiper-button-next" id="little-Arrow-right" ></div>
+										<div class="swiper-button-prev" id="little-Arrow-left"></div>
+										
+									</li>
+
+									<?php
+									}
+								}
+							?>
+						</ul>
+
+
+					</div>
+				</div>
+				<div class="clear"></div>
+				<?php
+				}
+			?>
+
+		<!-- 品牌中心 -->
+		<div class="equipment_section">
+			<p>
+				<span class="left">品牌中心</span>
+				<a href="/brand/brandList.html" id="brand_more" class="right">更多></a>
+			</p>	
+			<div class="list_r ">
+				<div class="list-wrapp">
+					<ul>
+						<?php
+							$brandlist=$params['brandlist'];
+							foreach($brandlist as $value)
+							{
+							?>
+								<li>
+									<a href="/brand/detail.html?id=<?php echo($value['brand_id']);?>&type=1&sort=1&page=1"><img width="130px" height="100px" src="<?php echo($value['image'])?>" alt="" /></a>
+								</li>
+							<?php
+							}
+						?>
+	
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/public');
+</script>
+<!--
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/pc/public.js"></script>
+<script type="text/javascript" src="/js/pc/index.js"></script>
+<script type="text/javascript" src="/js/pc/lab_shop.js"></script>
+-->
+
+</body>
+</html>

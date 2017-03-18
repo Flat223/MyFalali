@@ -1,0 +1,164 @@
+.content section{
+	margin-top: 100px;
+	text-align: center;
+}
+.content section ul{
+	display: inline-block;
+	margin: 0 auto;
+}
+.content section ul li{
+	float: left;
+	margin:0 9px; 
+	cursor: pointer;
+}
+.content section ul li dl {
+	width: 180px;
+	height: 250px;
+	border: 1px solid #ddd;
+	display: block;
+	position: relative;
+}
+.content section ul li dl i{
+	display: none;
+}
+.content section ul li dl i.selected{
+	display: block;
+}
+.content section ul li dl dt img{
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+.content section ul li dl dd{
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}
+.content section ul li dl dd._sub{
+	color: #ff4001;
+}
+.content section ul li dl dd span{
+	display: inline-block;
+	width: 124px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+.process2_bottom {
+	margin-top: 70px;
+	text-align: center;
+}
+.process2_bottom a:first-child{
+	color: #0181e2;
+	margin-right: 20px;
+}
+.process2_bottom a.ident_next{
+	display: inline-block;
+    margin: auto;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #00bfb8;
+    color: #fff;
+    background: #00bfb8;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.content section ul li dl i{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 34px;
+	height: 34px;
+	background: url(/images/pc/identity-icon.png);
+	display: none;
+}
+section img.process4{
+	display: block;
+	margin: auto;
+}
+section img.process4+p{
+	padding: 20px 0;
+	text-align: center;
+	font-size: 20px;
+}
+.process4_bottom{
+	text-align: center;
+	margin: 45px 0 50px 0;
+}
+.process4_bottom a{
+	display: inline-block;
+	width: 133px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #00cccc;
+	text-align: center;
+	margin: auto;
+}
+.process4_bottom a:last-child{
+	background: #00cccc;
+	color: #fff
+}
+.process5_bottom{
+	text-align: center;
+	padding: 45px 0 300px 0;
+}
+.process5_bottom a{
+	display: inline-block;
+	width: 133px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #00cccc;
+	text-align: center;
+	margin: auto;
+}
+.college,.company{
+	display: none;
+}
+
+
+
+
+.college,.company{
+	text-align: center;
+	padding: 5px;
+}
+.college ul,.company ul{
+	display: inline-block;
+	margin: 0 auto;
+	width: 600px;
+}
+.college ul li,.company ul li{
+	float: left;
+	margin:5px 9px; 
+	cursor: pointer;
+}
+.college ul li dl,.company ul li dl{
+	width: 180px;
+	border: 1px solid #ddd;
+	display: block;
+	position: relative;
+}
+.college ul li.cover dl,.company ul li.cover dl{
+	border: 1px solid #00cccc;
+}
+.college ul li dl dt img,.company ul li dl dt img{
+	width: 132px;
+	height: 132px;
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+.college ul li dl dd,.company ul li dl dd{
+	text-align: center;
+	padding: 20px 0 30px 0;
+}
+.college ul li dl dd span,.company ul li dl dd span{
+	display: inline-block;
+	width: 124px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ddd;
+}

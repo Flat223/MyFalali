@@ -1,0 +1,18 @@
+[2017-01-31 10:08:53][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(17): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/login.html')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'login.html', '/login.html', 'Login')
+#4 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-01-31 10:42:32][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(17): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/login.html')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'login.html', '/login.html', 'Login')
+#4 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#5 {main}

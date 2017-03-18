@@ -1,0 +1,26 @@
+.content .wrapp-404{
+    min-height: 270px;
+}
+.content .wrapp-404 .item-404{
+    margin: 97px auto;
+    width: 255px;
+    text-align: center;
+}
+.content .wrapp-404 .item-404 img{
+    display: block;
+    width: 100%;
+}
+.content .wrapp-404 .item-404 p{
+    text-align: center;
+    margin-bottom: 22px;
+}
+.content .wrapp-404 .item-404 a{
+    background: #00bfb8;
+    color: #ffffff;
+    padding:5px;
+    box-shadow: 1px 1px 1px 1px #01a49e;
+    margin: 1em;
+}
+.content .wrapp-404 .item-404 a:first-child{
+    margin-left: 3em;
+}

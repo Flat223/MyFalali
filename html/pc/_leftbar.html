@@ -1,0 +1,152 @@
+<?php
+	$user = UserAgent::getUser();
+?>
+<div class="left_bar left">
+	<ul>
+	<?php
+		if($user['type'] == 2 && $user['sub_type'] == 0){
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='companyInfo')?'companyInfo':''); ?>"
+			class="companyInfo">
+			<a href="/user/companyInfo.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle'])&&$params['substyle']=='companyMember')?'companyMember':'');?>"
+            class="companyMember">
+            <a href="/user/companyMember.html"><i></i></a>
+        </li>
+	<?php
+		} else {
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='profile')?'profile':''); ?>"
+			class="profile">
+			<a href="/user/profile.html"><i></i></a>
+		</li>	
+<!--
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='member')?'member':''); ?>"
+			class="member">
+			<a href="/user/member.html"><i></i></a>
+		</li>
+-->
+	<?php
+		}
+		 if($user['type'] == 2 && ($user['sub_type'] == 0 || $user['bind_status'] == 2)){
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='order')?'left_order':''); ?>"
+			class="left_order">
+			<a href="/user/order.html"><i></i></a>
+		<?php
+			if($params['so'] > 0){
+		?>
+			<b class="bCon"><?php echo $params['no'] ?></b>
+		<?php
+			}
+		?>
+		</li>
+	<?php
+		}
+		if($user['type']==2 && $user['sub_type']!=1 &&($user['sub_type']==0 || $user['bind_status']==2)){
+	?>
+		<li style="width: 45px;height: 45px" id="<?php echo((isset($params['substyle']) && $params['substyle']=='purchase')?'purchase':''); ?>"
+			class="purchase">
+			<a href="/user/purchase.html"><i></i></a>
+		<?php
+			if($params['so'] > 0){
+		?>
+			<b class="bCon"><?php echo $params['so'] ?></b>
+		<?php
+			}
+		?>
+		</li>
+	<?php
+		}
+		if($user['type'] == 1 && ($user['sub_type'] == 0 || $user['bind_status'] == 2)){
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='collegeOrder')?'collegeOrder':''); ?>" class="collegeOrder">
+			<a href="/user/collegeOrder.html"><i></i></a>
+		<?php
+			if($params['so'] > 0){
+		?>
+			<b class="bCon"><?php echo $params['no'] ?></b>
+		<?php
+			}
+		?>
+		</li>
+	<?php
+		}
+		if($user['type'] == 4 || $user['sub_type'] != 0){
+	?>
+		<li class="personalOrder" 
+		id="<?php echo((isset($params['substyle']) && $params['substyle']=='personalOrder')?'personalOrder':''); ?>">
+			<a href="/user/personalOrder.html"><i></i></a>
+		<?php
+			if($params['so'] > 0){
+		?>
+			<b class="bCon"><?php echo $params['no'] ?></b>
+		<?php
+			}
+		?>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='article')?'article':''); ?>"
+			class="article">
+			<a href="/user/article.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='circle')?'circle':''); ?>"
+			class="circle">
+			<a href="/user/circle.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='friends')?'friends':''); ?>"
+			class="friends">
+			<a href="/user/friends.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='lab')?'lab':''); ?>"
+			class="lab">
+			<a href="/user/lab.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='scientific')?'scientific':''); ?>"
+			class="scientific">
+			<a href="/user/scientific.html"><i></i></a>
+		</li>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='favorite')?'favorite':''); ?>"
+			class="favorite">
+			<a href="/user/favorite.html"><i></i></a>
+		</li>
+	<?php
+		}
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='message')?'message':''); ?>"
+			class="message">
+			<a href="/user/message.html"><i></i></a>
+		<?php
+			if($params['msg'] > 0){
+		?>
+			<b class="bCon"><?php echo $params['msg'] ?></b>
+		<?php
+			}
+		?>
+		</li>
+	<?php
+		if($user['type'] == 1 && $user['sub_type'] != 0){
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='binding')?'binding':''); ?>"
+			class="bindCollege" name="<?php echo $user['type']?>">
+			<a href="/user/binding.html"><i></i></a>
+		</li>
+	<?php
+		}	
+	?>
+	<?php
+		if($user['type'] == 2 && $user['sub_type'] != 0){
+	?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='binding')?'binding':''); ?>"
+			class="bindCompany" name="<?php echo $user['type']?>">
+			<a href="/user/binding.html"><i></i></a>
+		</li>
+	<?php
+		}
+    ?>
+		<li id="<?php echo((isset($params['substyle']) && $params['substyle']=='account')?'account':''); ?>"
+			class="account">
+			<a href="/user/account.html"><i></i></a>
+		</li>
+	</ul>
+</div>

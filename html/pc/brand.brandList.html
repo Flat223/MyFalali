@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-品牌</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/brand.css">
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+<div class="ui large breadcrumb">
+  <ul class="clearfix">
+     <li>
+         <a href="/index.html">首页</a>
+     </li>
+     <li>></li>
+     <li>
+        <a href="/lab/shop.html">实验室商城</a>
+     </li>
+     <li>></li>
+     <li>
+     	品牌中心
+     </li>
+  </ul>
+</div>
+<div class="brand">
+	<span>品牌：</span>
+	<?php 
+		$brandlist=$params['brandlist'];
+		foreach($brandlist as $wor)
+		{
+	?>
+	<a href="#<?php echo($wor['arabic']);?>"><?php echo($wor['arabic']);?></a>
+	<?php
+	}
+	?>
+   </div>
+<div class="brand_list ">
+	<?php 
+		foreach($brandlist as $value)
+		{
+		?>	<a name="<?php echo($value['arabic']);?>"></a>
+			<div class="clearfix" >
+				<div class="list_l left">
+					<?php echo($value['arabic'])?>
+				</div>
+				<div class="list_r right">
+					<ul>
+						<?php 
+							$brand=$value['brandlist'];
+							foreach($brand as $value1)
+							{
+						?>
+								<li>
+									<a href="/brand/detail.html?id=<?php echo($value1['brand_id']);?>&type=1&sort=1">
+										<img src="<?php echo($value1['image'])?>" alt="" />
+										<p style="text-align: center"><?php echo($value1['name']);?></p>
+										</a>
+								</li>
+							<?php
+							}
+						?>		
+					</ul>
+				</div>
+			</div>
+		<?php
+		}
+	?>	
+</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<style>
+	.fixednav{position:fixed;top:0px;left:0px;width:100%;background: #ffffff;}
+</style>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var nav = $(".content .brand"); //得到导航对象
+		var win = $(window); //得到窗口对象
+		var sc = $(document);//得到document文档对象。
+		win.scroll(function () {
+			if (sc.scrollTop() >= 60) {
+				nav.addClass("fixednav");
+			} else {
+				nav.removeClass("fixednav");
+			}
+		});
+	})
+</script>

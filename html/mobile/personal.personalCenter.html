@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的</title>
+</head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="/css/mobile/personStyle.css">
+<link rel="stylesheet" href="/css/mobile/personHome.css">
+
+<!--<link rel="stylesheet" href="/css/mobile/head.css">-->
+<!--<link rel="stylesheet" href="/css/mobile/personalCenter.css">-->
+<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#myCollection").click(function(){
+            window.location.href="/personal/myCollectionMall.html";
+        });
+        $("#myMessage").click(function(){
+            window.location.href="/personal/myMessages.html";
+        });
+        $("#myArticle").click(function(){
+            window.location.href="/personal/myArticle.html";
+        });
+        $("#myCircle").click(function(){
+            window.location.href="/circle/myCircleJoined.html";
+        });
+        $("#myFriends").click(function(){
+            window.location.href="/personal/friendsManage.html";
+        });
+        $("#bindings").click(function(){
+            window.location.href="/personal/binDingsCompany.html";
+        });
+        $(".order").click(function(){
+            window.location.href="/personal/demand.html";
+        });
+        $("#myLab").click(function(){
+            window.location.href="/personal/myLab.html";
+        });
+        $("#myInfo").click(function(){
+            window.location.href="/personal/myInfo.html";
+        })
+    })
+</script>
+<body>
+    <!--<div class="title">我的</div>-->
+    <!--<div class="pc_bg">-->
+        <!--<div class="pc_set logout">注销</div><?php $user = $params['user']?>-->
+        <!--<div class="pc_qd" id="sign">签到</div>-->
+        <!--<div class="pc_div"></div>-->
+        <!--<div id="myInfo" class="pc_headPic"><img width="100%" height="100%"  src="<?php echo empty($user['face'])?'/images/temp_mobile/head3.png':$user['face']?>"></div>-->
+        <!--<div class="pc_name"><?php echo $user['name']?></div>-->
+        <!--<div class="pc_jf">可用积分:<a><?php echo $user['accumulated_points']?></a></div>-->
+    <!--</div>-->
+    <!-- 头	 -->
+    <div style="background:url(<?php echo empty($user['face'])?'/images/temp_mobile/head3.png':$user['face']?>)" class="header clearfix">
+        <div class="pc_set logout">注销</div><?php $user = $params['user']?>
+        <div class="pc_qd" id="sign">签到</div>
+        <div class="header_img">
+            <img src="<?php echo empty($user['face'])?'/images/temp_mobile/head3.png':$user['face']?>">
+        </div>
+        <div id="pc_name"><?php echo $user['name']?></div>
+        <div id="pc_jf">可用积分:<a><?php echo $user['accumulated_points']?></a></div>
+    </div>
+    <!-- 内容 -->
+    <article>
+        <p>
+        <?php
+           	if($user['type'] == 3){
+                $ordername = "店铺订单";
+                $url = "/personal/shopOrder.html";
+            }else if ($user['type'] == 2){
+                $ordername = "需求订单";
+                $url = "/personal/requireOrder.html";    
+            } else if ($user['type'] == 1){
+                $ordername = "高校订单";
+                $url = "/personal/order.html?order_type=3";
+            } else {
+                $ordername = "个人订单";
+                $url = "/personal/order.html?order_type=4";
+            }
+        ?>
+            <span class="left"><?php echo $ordername ?></span>
+            <span class="right">
+				<a href="<?php echo $url ?>"><?php echo '查看'.$ordername ?></a>
+			</span>
+        </p>
+<!--
+        <section>
+            <a href="javascript:;">
+                <i class="iconfont"></i>
+                待付款
+            </a>
+            <a href="javascript:;">
+                <i class="iconfont" ></i>
+                待发货
+            </a>
+            <a href="javascript:;">
+                <i class="iconfont" ></i>
+                待收货
+            </a>
+            <a href="return.html">
+                <i class="iconfont"></i>
+                退款/售后
+            </a>
+        </section>
+-->
+    </article>
+    <div class="myTool">
+        <p class="myTitle">必备工具</p>
+        <table cellspacing="0" cellpadding="0">
+        <?php
+           	if($user['type'] == 1){
+	           	if($user['sub_type'] == 0){
+		           	$ordername2 = "订单列表";
+	                $url2 = "/personal/order.html?order_type=3";
+	           	} else {
+		           	$ordername2 = "个人订单";
+	                $url2 = "/personal/order.html?order_type=4";
+	           	}
+            } else if ($user['type'] == 2){
+	            if($user['sub_type'] == 1){
+		           	$ordername2 = "个人订单";
+	                $url2 = "/personal/order.html?order_type=4";
+	           	} else {
+		           	$ordername2 = "采购订单";
+	                $url2 = "/personal/order.html?order_type=2";
+	           	}
+            } else if ($user['type'] == 3){
+                $ordername2 = "订单列表";
+                $url2 = "/personal/shopOrder.html";
+            } else {
+                $ordername2 = "订单列表";
+                $url2 = "/personal/order.html?order_type=4";
+            }
+        ?>
+            <td>
+                <img src="/images/mobile/reqOrder.png" alt="">
+                <span onclick="location.href='<?php echo $url2 ?>'"><?php echo $ordername2 ?></span>
+            </td>
+            <td id="myLab">
+                <img src="/images/mobile/myLab1.png" class="myLab" alt="">
+                <span>我的实验室</span>
+            </td>
+            <td id="myCollection">
+                <img src="/images/mobile/myFavorite.png"  alt="">
+                <span>我的收藏</span>
+            </td>
+           <!-- <td>
+                <img src="/images/mobile/myMesg.png" alt="">
+                <span>我的消息</span>
+            </td>-->
+        </table>
+    </div>
+    <div class="myTool" style="margin-bottom: 1rem">
+        <p class="myTitle">我的互动</p>
+        <table cellspacing="0" cellpadding="0">
+            <td id="myArticle">
+                <img src="/images/mobile/myPen.png" alt="">
+                <span>我的文章</span>
+            </td>
+            <td id="myCircle">
+                <img src="/images/mobile/myCir.png"  alt="">
+                <span>我的圈子</span>
+            </td>
+            <td id="myFriends">
+                <img src="/images/mobile/myFri.png"  alt="">
+                <span>好友管理</span>
+            </td>
+            <!--<td id="bindings">
+                <img src="/images/mobile/myComp.png" alt="">
+                <span>绑定企业</span>
+            </td>-->
+        </table>
+    </div>
+
+
+    <!--<div class="pc_dd">-->
+        <!--<div class="dfk"><img height="100%" src="/images/mobile/dfk.png"></div>-->
+        <!--<div class="dfk"><img height="100%" src="/images/mobile/dfh.png"></div>-->
+        <!--<div class="dfk"><img height="100%" src="/images/mobile/dsh.png"></div>-->
+        <!--<div class="dfk"><img height="100%" src="/images/mobile/dpj.png"></div>-->
+        <!--<div class="dfk"><img height="100%" src="/images/mobile/sh.png"></div>-->
+    <!--</div>-->
+
+
+<!--
+    <div class="pc_cg"><span class="s1">必备工具</span></div>
+    <hr>
+    <div class="pc_bbgj" id="order" onclick="location.href='/personal/purchase.html'">
+        <div class="xqdd">
+            <div class="img"><img height="100%" src="/images/mobile/xqdd.png" /></div>
+            <div class="name">
+                	<?php
+                       	if($user['sub_type'] == 0 && $user['type'] != 2){
+                            echo "订单列表";
+                        }else if ($user['type'] == 2){
+                            echo "需求订单";
+                        } else if ($user['type'] == 1){
+                            echo "高校订单";
+                        }
+                    ?>
+            </div>
+        </div>
+    </div>
+-->
+<!--
+    <div class="pc_bbgj" id="myLab">
+        <div class="xqdd">
+	        <div class="img"><img height="100%" src="/images/mobile/wdsys.png" /></div>
+            <div class="name">我的实验室</div>
+        </div>
+    </div>
+-->
+<!--     <div class="pc_bbgj" id="myCollection"> -->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/wdss.png" /></div>-->
+            <!--<div class="name">我的收藏</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="myMessage" style="visibility: hidden">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/wdxx.png" /></div>-->
+            <!--<div class="name">我的消息</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="myArticle">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/wdwz.png" /></div>-->
+            <!--<div class="name">我的文章</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="myFriends">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/hygl.png" /></div>-->
+            <!--<div class="name">好友管理</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_cg"><span class="s1">我的互动</span></div>-->
+    <!--<div class="pc_bbgj" id="myArticle">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/wdwz.png" /></div>-->
+            <!--<div class="name">我的文章</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="myCircle">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/wdqz.png" /></div>-->
+            <!--<div class="name">我的圈子</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="myFriends">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/hygl.png" /></div>-->
+            <!--<div class="name">好友管理</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="pc_bbgj" id="bindings">-->
+        <!--<div class="xqdd">-->
+            <!--<div class="img"><img height="100%" src="/images/mobile/bdqy.png" /></div>-->
+            <!--<div class="name">绑定企业</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <br style="clear: both">
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/html/mobile/foot.html'); ?>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script src="/layui/layui.js"></script>
+    <script src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+    var questflag = 0;
+    $(".logout").on("click",function(){
+        if(questflag == 1){
+            return;
+        }
+        $.ajax({
+            type:"post",
+            dataType:"json",
+            url:"/service/logoutServ.html",
+            success:function(data){
+                if(questflag == 1){
+                    return;
+                }
+                questflag = 1;
+                if(data.ret == 1){
+                    var exdate = new Date();
+                    exdate.setDate(exdate.getDate()-1);
+                    document.cookie = "auto_login=" + ";expires=" + exdate.toGMTString() + ";path=/";
+                    location.href="/login/login.html";
+                }
+            },
+            complete:function(){
+                questflag = 0;
+            }
+        });
+    });
+
+    $("#sign").click(function () {
+        layer.open({
+            type: 2,
+            title: '签到',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['380px', '30%'],
+            content: '/sign/sign.html'
+        });
+    });
+</script>
+</body>
+</html>

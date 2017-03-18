@@ -1,0 +1,173 @@
+/*
+.favoritebox{
+	margin-top: 20px;
+}
+*/
+.layui-tab-item ul.list-ul li{
+	position: relative;
+	float: left;
+}
+.circle .caption{
+	padding: 15px 0;
+	border-bottom:1px solid #ddd; 
+	color: #00bfb8;
+	text-indent: 1em;
+}
+.layui-tab-card {
+     border: none; 
+     border-radius: 0px; 
+     box-shadow: 0 0px 0px 0 rgba(0,0,0,.1); 
+}
+.layui-tab-card .layui-tab-title {
+    background-color: #fff;
+}
+.layui-tab-title {
+    border-bottom: 0px solid #e2e2e2;
+}
+.layui-tab-card .layui-tab-title li {
+	border-left: 0px;
+	margin-right: 0px;
+    margin-left: 0px;
+    background: #e2e1df;
+	margin: 0 5px;
+}
+.layui-tab-card .layui-this {
+	background: #00bfb8 !important;
+    color: #fff;
+}
+.layui-tab-item ul.list-ul li{
+	float: left;
+	width: 72px;
+	line-height: 25px;
+    margin-left: 15px;
+	margin-bottom: 15px;
+}
+.layui-tab-item ul.list-ul li p{
+	text-align: center;
+}
+.layui-tab-item ul.list-ul li:hover i{
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background: url(/images/temp_pc/icon5.png);
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.layui-tab-item ul.list-ul li i:hover:after{
+	content: "取消关注";
+	color: black;
+	background: #fdfdfd;
+	font-size: 10px;
+	width: 60px;
+	height: 17px;
+	line-height: 17px;
+	text-align: center;
+	position: absolute;
+	z-index: 999;
+	top: 23px;	
+}
+.layui-tab-item ul li dl{
+	height: 270px;
+	padding-top: 20px;
+}
+
+.layui-tab-item ul li dl dt,
+.layui-tab-item ul li dl dd{
+	float: left;
+}
+.layui-tab-item ul li dl dd ul li{
+	float: left;
+	margin: 10px;
+}
+.layui-tab-item ul li dl dd{
+	width: 800px;
+	    position: absolute;
+    left: 100px;
+  /*  height: 500px;*/
+    z-index: 11111;
+}
+.layui-tab-item ul li dl dd p{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-align: left!important;
+}
+.layui-tab-item ul li dl dd ul li img{
+	width: 128px;
+	height: 128px;
+}
+
+.layui-tab-item ul.social>li{
+	border-bottom:1px solid #ddd; 
+}
+
+.layui-tab-item ul.social li dl dt,
+.layui-tab-item ul.social li dl dd{
+	float: left;
+}
+.layui-tab-item ul.social li dl dd{
+	width: 800px;
+}
+
+.layui-tab-item ul.social li .comment textarea{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	width: 700px;
+	text-indent: 1em;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.layui-tab-item ul.social li .comment{
+	margin-left:90px;
+	margin-top: 150px;
+}
+
+
+span.name{
+	cursor: pointer;
+}
+span.name:hover{
+	color: #00bfb8;
+}
+img.face{
+	width: 73px;
+	height: 73px;
+}
+
+
+/* 右边搜索栏*/
+.search_cont input{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 1em;
+}
+.search_cont span.search{
+	display: inline-block;
+	background: #f5f8fa;
+	border-left: 1px solid #ddd;
+	line-height: 40px;
+	height: 40px;
+	width: 80px;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0px;
+}
+.search_cont{
+	border: 1px solid #ddd;
+	margin-top: 10px;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	z-index: 20160207;
+}
+.circle{
+	position: relative;
+}
+

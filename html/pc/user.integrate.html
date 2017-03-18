@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>我的积分</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/order.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>	
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>积分</span>
+		</p>
+		<?php
+			$user = UserAgent :: getUser();
+		?>
+		<div class="username clearfix" >
+			<dl class="left">
+				<dt>
+					<img src="/images/temp_pc/home1.png" alt="" />
+				</dt>
+				<dd>
+					<p class="name" style="font-size: 17px;"><?php echo ($user['nickname']) ?></p>
+					<p>积分:<?php echo ($user['accumulated_points']);?></p>
+<!-- 					<p class="exchange_integrate">积分兑换</p> -->
+				</dd>
+			</dl>
+		<?php
+			if($params['is_sign']){
+		?>
+			<div class="signed right">已签到</div>
+		<?php
+			} else {
+		?>
+			<div class="sign right">签到+5积分</div>
+		<?php
+			}
+		?>
+		</div>
+
+		<div class="recode">
+			<p class="caption">交易记录</p>
+			<table>
+				<tr>
+					<th>日期</th>
+					<th>商品名称</th>
+					<th>积分</th>
+					<th>状态</th>
+				</tr>
+			<?php
+				foreach ($params['transaction'] as $transaction) {
+			?>	
+				<tr>
+					<td><?php echo(date("Y-m-d H:i",$transaction['time'])); ?></td>
+					<td><?php echo($transaction['remarks']); ?></td>
+					<td>
+						<span style="font-size: 17px"><?php echo($transaction['pay_type'] == 2 ? "-" : "+") ?></span>
+						<span><?php echo($transaction['number']);  ?></span>
+					</td>
+					<td>交易成功</td>
+				</tr>
+			<?php
+				}
+			?>
+			</table>
+		</div>
+	</div>	
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<div class="sing_success">
+	<h2>签到成功！</h2>
+	<p class="sign_desc"></p>
+<!-- 	<input type="submit" value="" /> -->
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/integrate.js');
+</script>

@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="/css/mobile/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile/tab.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile/regedit.css" >
+	<link rel="stylesheet" type="text/css" href="/css/mobile/forget_password.css" >
+	<link rel="stylesheet" type="text/css" href="/css/mobile/shop_car.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<style>
+	.content{
+		padding:1rem;
+	}
+</style>
+<body>
+<div class="content ">
+
+	<!--<div class="login_process">-->
+		<!--<img src="/images/temp_pc/pay2.png" alt="" />-->
+	<!--</div>-->
+	<div class="manage_address ">
+		<p class="clearfix">
+			<span class="left">确认收货地址</span>
+			<!--<span class="right" style="cursor: pointer">管理收货地址</span>-->
+		</p>
+		<?php 
+			$addresslist=$params['addresslist'];
+			$totalmoney=$params['totalmoney'];
+				foreach($addresslist as $key=>$address){
+					if($address['is_default']==1){
+				?>
+						<p class="radio">
+							<input type="radio" class="address" name="radio"   value="<?php echo($address['id']);?>"/>
+							<?php echo($address['detail_address']);?>(<?php echo($address['name']);?>)收  <?php echo($address['mobile']);?><i style="color: red">（默认）</i>
+						</p>
+					<?php
+					}else{
+					?>	
+						<p class="radio" style="border: 0px solid rgb(0, 204, 204);">
+							<input type="radio" name="radio" class="address" value="<?php echo($address['id']);?>" /><?php echo($address['detail_address']);?>(<?php echo($address['name']);?>)收  <?php echo($address['mobile']);?>
+						</p>
+					<?php
+					}
+			}
+		?>
+	</div>
+	<div class="comfire_info">
+		<p class="clearfix">
+			<span class="left">商品详情</span>
+		</p>
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>商品信息</th>
+				<th>单价(元)</th>
+				<th>数量</th>
+				<th>总价(元)</th>
+			</tr>
+			<?php 
+				$cartlist=$params['productlist'];
+				foreach($cartlist as $key=>$shop)
+				{
+			?>
+			<tr class="cells">
+				<td class=""><?php echo($shop['shop_name']);?></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+				<?php 
+					foreach($shop['product'] as $key2=>$product){
+						$images=explode(',',$product['images']);
+				?>
+			<tr>
+				<td class="commodity_inof" value="<?php echo($product['skuid'])?>_<?php echo($product['num'])?>">
+					<dl>
+						<dt>
+							<img style="width:5rem;" src="<?php echo($images[0]);?>" alt="" />
+						</dt>
+						<dd>
+							<a href="#"><?php echo($product['name']);?></a>
+							<?php 
+								foreach($product['property'] as $key3=>$property){
+							?>
+							<p>
+								<span><?php echo($property['pname'])?>：</span><?php echo($property['name']);?>
+							</p>
+							<?php
+								}
+							?>
+						</dd>
+					</dl>
+				</td>
+				<td><?php echo($product['pprice']);?></td>
+				<td><?php echo($product['num']);?></td>
+				<td class="total_pri"><?php echo($product['pprice']*$product['num']);?></td>
+			</tr>
+			<?php
+			}
+			?>
+			<tr>
+				<td colspan="4">
+					<div class="extUser clearfix">
+						<div class="text_user left" >
+							<span class="left">给卖家留言：</span>
+							<textarea style="margin: 0px" name="" placeholder="" value="<?php echo($shop['sid']);?>" class="remarks" cols="30" rows="10"></textarea>
+						</div>
+						<div class="right way">
+							<span class="left">运送方式：</span>
+							    <select name="quiz" class="etype" style="margin-top: 8px">
+								    <?php 
+								    	$freight=$shop['freight'];
+								    	if($freight['expressp']>=0&&$shop['exp']==0){
+								    ?>
+                                    		<option value="1">快递 ￥<?php echo($freight['expressp']);?></option>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+								    	if($freight['emsp']>=0&&$shop['ems']==0){
+								    ?>
+                                   			<option value="2">ems   ￥<?php echo($freight['emsp']);?></option>
+                                    <?php 
+                                    }
+                                    ?>
+                                    <?php 
+								    	if($freight['mailp']>=0&&$shop['mail']==0){
+								    ?>
+                                    		<option value="3">邮寄   ￥<?php echo($freight['mailp']);?></option>
+                                    <?php 
+                                    }
+                                    ?>
+                                </select>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<?php
+			}
+			?>
+		</table>
+		<!--<div class="extUser clearfix">-->
+			<!--<div class="text_user left" >-->
+				<!--<span class="left">给卖家留言：</span>-->
+				<!--<textarea name="" placeholder="" id="remarks" cols="30" rows="10"></textarea>-->
+			<!--</div>-->
+			<!--<div class="right way">-->
+				<!--<span class="left">运送方式：</span>-->
+				<!--普通配送 快递免邮-->
+			<!--</div>-->
+		<!--</div>-->
+		<p style="line-height: 40px;">订单类型</p>
+		<?php 
+			$type=$params['type'];
+			$sub_type=$params['sub_type'];
+			if($type==1){
+		?>
+				<div class="chice-item">
+					<input type="radio" class="ordert" value="4" name="order">个人订单
+					<input type="radio" class="ordert" value="3" name="order">高校订单
+				</div>
+		<?php 
+			}else if($type==2&&$sub_type!=1){
+		?>
+				<div class="chice-item">
+					<input type="radio" class="ordert" value="2" name="order">采购订单
+					<input type="radio" class="ordert" value="4" name="order">个人订单
+				</div>
+		<?php
+			}else if($type==2&&$sub_type==1){
+		?>
+				<div class="chice-item">
+					<input type="radio" class="ordert" value="1" name="order">需求订单
+					<input type="radio" class="ordert" value="4" name="order">个人订单
+				</div>
+		<?php
+			}else {
+		?>
+				<div class="chice-item">
+					<input type="radio" class="ordert" value="4" name="order">个人订单
+				</div>
+
+		<?php
+			}
+		?>
+		<div class="invoice">
+			<p>
+				<input type="checkbox" id="invoice" name="checkbox" style="margin-right:1em" />发票信息
+			</p>
+			<div class="ul_invoice ">
+				<ul class="clearfix">
+					<li>
+						普通发票
+					</li>
+					<li id="intitle">
+						个人
+					</li>
+					<li id="intype">
+						明细
+					</li>
+					<li class="invoice_this">
+						修改
+					</li>
+				</ul>
+				<p>
+					使用优惠券和代金券
+				</p>
+				<?php $discount=$params['discount'];$cash=$params['cash'];?>
+				<div class="type_item">
+					<input <?php echo empty($discount)? 'style="display:none"':''?> type="radio" name="radio1" id="discount" style="margin-right:1em" value="1" />
+					<span>使用优惠券：</span>
+					<select id="discount1">
+						<option value='' disabled selected style='display:none;'><?php echo empty($discount)?'无优惠券':'请选择您的优惠券'?></option>
+						<?php
+							foreach($discount as $key=>$dis){
+							?>
+								<option value='<?php echo($dis['id']);?>'><?php echo($dis['money']);?></option>	
+							<?php
+							}
+						?>
+					</select>
+				</div>
+				<div class="type_item">
+					<input <?php echo empty($cash)? 'style="display:none"':''?> type="radio" name="radio1" id="cashinput" style="margin-right:1em"  value="2"/>
+					<span>使用代金券：</span>
+					<select id="cash">
+						<option value='' disabled selected style='display:none;'><?php echo empty($cash)?'无代金券':'请选择您的代金券'?></option>
+						<?php
+							foreach($cash as $key=>$ca){
+							?>
+								<option value='<?php echo($ca['id']);?>'><?php echo($ca['money']);?></option>	
+							<?php
+							}
+						?>
+					</select>
+				</div>
+				<?php
+				 	$left=$params['left'];
+				 	if($left>0){
+
+				?>
+					<div class="type_item">
+							<?php 
+								if($left>=$totalmoney){
+							?>
+							<div class="found">
+								<input <?php echo empty($left)? 'style="display:none"':''?> type="radio" name="radio1" class="foundRa" value="3" />
+								<span>使用科研基金：</span>
+								<span>您还有科研基金<i>￥<?php echo($left);?></i></span>
+							</div>
+							<?php 
+							}else{
+							?>
+							<div class="found">
+								<input <?php echo empty($left)? 'style="display:none"':''?> type="radio" name="radio1" class="foundRa" disabled="true"/>
+								<span>使用科研基金：</span>
+								<span>您还有科研基金<i>￥<?php echo($left);?>(不足)</i></span>
+							</div>
+							<?php
+								}
+							?>
+						
+					</div>
+					<?php
+					}
+				?>
+				<div class="type_item">
+					<div class="found">
+						<input type="radio" name="radio1" class="foundRaNO" checked="true" value="4" />
+						<span>不使用优惠</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="order_facility ">
+<!--
+				<div class="freight ">
+					<span >店铺合计（含运费）：<i>￥122.40</i></span>
+					<p>
+						<?php
+							$left=$params['left'];
+							if($left>0){
+							?>
+								<span>
+								<input type="checkbox"  />
+								使用科研基金
+								</span>
+							<?php
+							}
+						?>
+					</p>
+				</div>
+-->
+				<div class="clearfix">
+					<div class="payinfo right">
+						<label class="pay_total" value="<?php echo($totalmoney);?>">
+							<span>合计：</span><b id="tmoney">￥<?php echo($totalmoney);?></b>
+						</label>
+<!--
+						<label class="pay_add">
+							<span>寄送至：</span>江苏省苏州市腾飞创新园A座502
+						</label>
+						<label class="pay_user">
+							<span>收货人：</span>某某某 15151011120
+						</label>
+-->
+						<label>
+<!-- 							<a href="shop_car.html">返回购物车</a> -->
+							<input type="submit"  id="submit" value="提交订单" />
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<div class="invoice-wrapp" style="display: none;">
+	<ul class="tab-ul clearfix" >
+		<li value="1" class="tab-this"><i></i>普通发票</li>
+		<li value="2"><i></i>电子发票</li>
+		<li value="3"><i></i>增值税发票</li>
+	</ul>
+	<div class="tab-con">
+		<!--普通发票-->
+		<div class="tab-item tab-show">
+			<div class="invoice-title clearfix">
+				<span class="left">发票抬头：</span>
+				<div class="right">
+					<ul class="input-wrapp normal-ul">
+						<?php $invoices=$params['invoices'];
+							foreach($invoices as $key1=>$invoice){
+								if($key1==0){	
+						?>
+						<li class="input-this">
+							<?php
+								}else{
+							?>
+							<li >
+							<?php 
+							}
+							?>
+							<input type="text" class="input-this" value="<?php echo($invoice['title']);?>" readonly="readonly">
+							<i></i>
+							<div class="edt-del" value="<?php echo($invoice['id']);?>">
+								<span  style="cursor: pointer" class="del" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#000000'"  style="color:#000000;">删除</span>
+							</div>
+						</li>
+						<?php
+						}
+						?>
+					</ul>
+					<p class="add-invoice" style="cursor: pointer;">新增单位发票</p>
+				</div>
+			</div>
+			<div class="invoice-content clearfix">
+				<div class="item-l left"><span>发票内容：</span></div>
+				<div class="item-r item1 left">
+					<li value="1" class="li-this"><i></i>明细</li>
+					<li value="2"><i></i>办公用品</li>
+					<li value="3"><i></i>电脑配件</li>
+					<li value="4"><i></i>耗材</li>
+				</div>
+			</div>
+			<div class="tab-submit">
+				<button class="tab-btn tabs tab-normal">保存</button>
+				<button class="tab-btn tabq tab-default">取消</button>
+			</div>
+		</div>
+		<!--电子发票-->
+		<div class="tab-item">
+			<div class="invoice-title clearfix">
+				<span class="left">发票抬头：</span>
+				<div class="right">
+					<div class="input-wrapp invoice-info input-this1">
+						<input type="text" value="个人" readonly="readonly">
+						<i></i>
+					</div>
+					<p style="margin-bottom: 10px;" class="add-input">
+						<input type="text" placeholder="请填写公司发票抬头">
+						<i></i>
+					</p>
+				</div>
+			</div>
+			<div class="invoice-content clearfix">
+				<div class="item-l left"><span>发票内容：</span></div>
+				<div class="item-r item2 left">
+					<li value="1" class="li-this1"><i></i>明细</li>
+					<li value="2"><i></i>办公用品</li>
+					<li value="3"><i></i>电脑配件</li>
+					<li value="4"><i></i>耗材</li>
+				</div>
+			</div>
+			<div class="invoice-title clearfix">
+				<span class="left"><em>*</em>收票人手机：</span>
+				<div class="right" style="margin-right:34px;">
+					<input type="text" id="emobile" value="<?php echo($params['mobile']);?>">
+				</div>
+			</div>
+			<div class="invoice-title clearfix">
+				<span class="left">收票人邮箱：</span>
+				<div class="right" style="margin-right:34px;">
+					<input type="text" id="eemail" value="">
+				</div>
+			</div>
+			<div class="tab-submit">
+				<button class="tab-btn tabs tab-normal">保存</button>
+				<button class="tab-btn tabq tab-default">取消</button>
+			</div>
+		</div>
+		<!--增值税发票-->
+		<div class="tab-item">
+			<div class="invoice-content clearfix">
+				<div class="item-l left"><span>发票方式：</span></div>
+				<div class="item-r left">
+					<li class="li-this invoice-choice"><i></i>订单完成后开票</li>
+				</div>
+			</div>
+			<div class="invoice-content form-con clearfix">
+				<div class="item-l left"><span>发票内容：</span></div>
+				<div class="item-r left">
+					<li class="li-this"><i></i>明细</li>
+				</div>
+			</div>
+			<ul class="invoice-status clearfix">
+				<li class="fore curr">1.选择开票方式</li>
+				<li class="gap curr"></li>
+				<li class="fore ">2.填写或核对公司信息</li>
+				<li class="gap"></li>
+				<li class="fore">3.填写收票人信息</li>
+			</ul>
+			<div class="item step1">
+				发票将在订单完成之后7-15个工作日寄出
+				<div class="tab-submit" style="margin-left: 0">
+					<button class="tab-btn tab-normal">下一步</button>
+					<button class="tab-btn tabq tab-default">取消</button>
+				</div>
+			</div>
+			<div class="form-item step2">
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>单位名称：</span>
+					<div class="right" >
+						<input type="text" id="zcname" value="">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left" style="width: 106px;margin-left: 1.5rem;"><em>*</em>纳税人识别码：</span>
+					<div class="right" >
+						<input class="text" type="text" id="zcode" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"  
+                        onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>注册地址：</span>
+					<div class="right" >
+						<input type="text" id="zrelocation" value="">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>注册电话：</span>
+					<div class="right" >
+						<input type="text" id="zremobile" value="">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>开户银行：</span>
+					<div class="right">
+						<input type="text" id="zbankname" value="">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>银行账户：</span>
+					<div class="right" >
+						<input type="text" id="zbankaccount" value="">
+					</div>
+				</div>
+				<div class="tab-submit">
+					<button class="tab-btn tab-normal">下一步</button>
+					<button class="tab-btn tab-default">返回</button>
+				</div>
+			</div>
+			<div class="resv step3">
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>收票人姓名：</span>
+					<div class="right" >
+						<input type="text" id="zname" value="">
+					</div>
+				</div>
+				<div class="invoice-title clearfix">
+					<span class="left"><em>*</em>收票人电话：</span>
+					<div class="right">
+						<input type="text" id="zmobile" value="">
+					</div>
+				</div>
+				<div class="tab-submit">
+					<button class="tab-btn tabs tab-normal">保存</button>
+					<button class="tab-btn tab-default">返回</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('mobile/buyprogress.js');
+</script>
+
+

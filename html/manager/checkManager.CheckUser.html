@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-实名认证</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>审核实名验证</a></li>
+            <li><span>/</span></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div style="margin-top:12px;margin-left: 10px">
+                        <span><a style="text-align:center;cursor: pointer;color: white;background: <?php echo (($_GET['sta'])==0)?'coral':'grey'; ?>;width: 100px;height: 30px;line-height: 30px;display: inline-block;" href="../checkManager/CheckUser.html?sta=0">未审核</a></span>
+                        <span><a style="text-align:center;cursor: pointer;color: white;background: <?php echo (($_GET['sta'])==1)?'coral':'grey'; ?>;width: 100px;height: 30px;line-height: 30px;display: inline-block;" href="../checkManager/CheckUser.html?sta=1">已审核</a></span>
+                        <span><a style="text-align:center;cursor: pointer;color: white;background: <?php echo (($_GET['sta'])==-1)?'coral':'grey'; ?>;width: 100px;height: 30px;line-height: 30px;display: inline-block;" href="../checkManager/CheckUser.html?sta=-1">已拒绝</a></span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" placeholder="输入商家名称或关键词搜索">
+                        <span>搜索</span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--<th width="5%">ID</th>-->
+                    <th width="30%">证件图</th>
+                    <th width="15%">发起人</th>
+                    <th width="15%">审核证件号</th>
+                    <th width="15%">审核姓名</th>
+                    <th width="15%">审核手机</th>
+                    <th width="20%">操作</th>
+                </tr>
+                <?php foreach($params['identity'] as $v){ ?>
+                <tr>
+                    <!--<td><?php echo $v['id']; ?></td>-->
+                    <td>
+                        <img style="width:240px;height:160px" src="<?php echo $v['cardphoto']; ?>" alt="">
+                    </td>
+                    <td><?php echo $v['nickname']; ?></td>
+                    <td><?php echo $v['cardnum']; ?></td>
+                    <td><?php echo $v['name']; ?></td>
+                    <td><?php echo $v['mobile']; ?></td>
+                    <td>
+                        <!--<button class="layui-btn layui-btn-small layui-btn-look">
+                          <i class="layui-icon"></i>
+                        </button>-->
+                        <?php if($v['is_certificate']==1 && $v['status']==1){ ?>
+                        <span mid="<?php echo $v['mid']; ?>" cid="<?php echo $v['id']; ?>"  style="text-align:center;cursor: pointer;color: white;background: yellowgreen;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								已经审核
+                        </span>
+                        <?php }else if($v['status']==-1){ ?>
+                        <span mid="<?php echo $v['mid']; ?>" cid="<?php echo $v['id']; ?>"  style="text-align:center;cursor: pointer;color: white;background: yellowgreen;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								已经拒绝
+                        </span>
+                        <?php }else{ ?>
+                        <span mid="<?php echo $v['mid']; ?>" status='1' cid="<?php echo $v['id']; ?>" username="<?php echo $v['name']?>" name="check" style="text-align:center;cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								审核
+                        </span>
+                        <span mid="<?php echo $v['mid']; ?>" status='-1' cid="<?php echo $v['id']; ?>" name="check" style="text-align:center;cursor: pointer;color: white;background: coral;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								拒绝
+                        </span>
+                        <?php } ?>
+                        <!--<span newsid="<?php echo  $v['id']?>" class="del" style="text-align:center;margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">-->
+								<!--删除-->
+							<!--</span>-->
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <input type="hidden" name="count" value="<?php echo ceil($params['count']/10); ?>"/>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    window.seajs&&seajs.use('manager/companynews.js');
+</script>
+<script type="text/javascript">
+    var pages=$('input[name=count]').val();
+    var page=GetQueryString('page');
+    var sta=GetQueryString('sta');
+    $(".menu-wrapp li").on("click",function() {
+        $(this).find("ul").slideToggle("slow");
+    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = '../checkManager/CheckUser.html?page='+obj.curr+'sta='+sta;
+                }
+            }
+        });
+    });
+
+    $(document).on("click","span[name=check]",function(){
+        var id=$(this).attr('cid');
+        var mid=$(this).attr('mid');
+        var status=$(this).attr('status');
+        var name=$(this).attr('username');
+        var url="/service/CheckUserServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"id":id,"mid":mid,"status":status,"name":name},
+            dataType: "json",
+            success: function(data){
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+    })
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+</script>

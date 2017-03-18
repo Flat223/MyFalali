@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-优惠券</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/setaccount.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+		?>
+		<div class="account">
+			<div class="account_ul">
+				<ul>
+					<li>我的资产</li>
+				</ul>
+			</div>
+			<div class="layui-tab layui-tab-card" lay-filter="demo" >
+			  <ul class="layui-tab-title">
+			<?php
+				if($user['type'] == 1 && $user['bind_status'] == 2){
+			?>
+				<li class="layui-this">科研基金</li>
+			    <li>我的优惠券</li>
+			<?php
+				} else {
+			?>
+			    <li class="layui-this">我的优惠券</li>
+			<?php
+				}
+			?>
+			    <li>我的代金券</li>
+			  </ul>
+			  <div class="layui-tab-content" style="padding: 10px;">
+			<?php
+				if($user['type'] == 1 && $user['bind_status'] == 2){
+			?>
+				<div class="layui-tab-item layui-show"> <!科研资产!>
+				<?php
+					if($params['apply_state'] == 0){ 
+				?>
+					<p class="coupon_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;">
+							暂未申请科研基金
+					</p> 
+					<div class="apply_cont">
+						<span class="apply">立即申请</span>
+					</div>
+				<?php
+					} else if(!($params['is_have_fund']) && $params['apply_state'] == 1){
+				?>
+					<p class="coupon_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;">
+							<img src="/images/temp_pc/right1.png" alt=" ">
+							申请提交成功,请等待管理员审核!
+					</p> 
+				<?php
+					} else if(!($params['is_have_fund']) && $params['apply_state'] == 3){
+				?>
+				
+					<p class="coupon_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;">
+							申请科研基金被拒绝
+					</p>
+					<div class="apply_cont">
+						<span class="apply">再次申请</span>
+					</div>
+				<?php 
+					} else {
+				?> 
+					<p class="science-p" style="margin-top: 10px">
+						<span>可用科研基金：<i><?php echo ($params['research_fund']);?></i>元</span>
+					<?php
+						if($params['apply_state'] == 1){
+					?>
+						<span class="apply_info" style="margin-left: 20px">等待审核</span>
+					<?php
+						} else {
+					?>
+						<span class="apply" style="margin-left: 20px">再次申请</span>
+					<?php
+						}
+					?>
+					</p>
+				<?php
+					}
+				?>
+				<?php
+					if($params['apply_state'] != 0 &&($params['is_have_fund'])){
+				?>
+					<div class="recode">
+						<p class="caption">订单记录</p>
+						<table>
+							<tr>
+								<th>订单号</th>
+								<th>日期</th>
+<!-- 								<th>商品</th> -->
+								<th>金额</th>
+								<th>状态</th>
+							</tr>
+						<?php
+							foreach ($params['orderRecord'] as $order){
+				  		?>
+							<tr>
+								<td><?php echo($order['order_code']); ?></td>
+								<td><?php echo(date("Y-m-d H:i",$order['time'])); ?></td>
+								<td><?php echo("￥".$order['tot_fee']);  ?></td>							
+								<td>
+								<?php
+									$state = $order['state'];
+									if ($state == 1){
+										echo ("待付款") ;
+									} else if ($state == 2){
+										echo ("待发货") ;
+									} else if ($state == 3){
+										echo ("待收货") ;
+									} else if ($state == 4){
+										echo ("已收货,待评价") ;
+									} else {
+										echo ("交易完成") ;
+									} 
+								?>
+								</td>
+							</tr>
+						<?php
+				  			}
+				  		?>
+						</table>
+						<p class="coupon_hint" 
+							style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;
+								display:<?php echo count($params['orderRecord'])== 0?"display":"none"?>">
+								暂无科研基金使用记录
+						</p>
+					</div>
+				<?php
+					}
+				?>
+				
+				
+				</div>
+				
+				<div class="layui-tab-item "> <!  优惠券在第二列  !>
+			<?php
+				} else {
+			?>
+				<div class="layui-tab-item layui-show"> <!  优惠券在第一列  !>
+			<?php
+				}
+			?>
+			    	<ul class="na-ul clearfix" coupon_type = "1">
+			    		<li class="na-li-this" use_status = "1">未使用</li>
+			    		<li use_status = "2">已使用</li>
+			    		<li use_status = "3">已过期</li>
+			    	</ul>
+			    	<table border="0" >
+			    		<thead>
+			    			<th>优惠券券号</th>
+			    			<th>优惠券名称</th>
+			    			<th>面额(元)</th>
+			    			<th>有效期</th>
+			    			<th>使用说明</th>
+			    		</thead>
+			    		<tbody class="coupon_container">
+		    	<?php
+		    		foreach ($params['coupon'] as $coupon) {
+		    	?>
+				    	<tr>	
+			    			<td><?php echo($coupon['number']); ?></td>
+			    			<td><?php echo($coupon['name']); ?></td>
+			    			<td><?php echo($coupon['money']); ?></td>
+			    			<td><?php echo($coupon['validity']);?></td>
+			    			<td><?php echo($coupon['intro']); ?></td>
+		    			</tr>
+		    	<?php 
+		    		}
+		    	?>
+				    	</tbody>
+			    	</table>
+	    		<p class="coupon_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;
+							display:<?php echo count($params['coupon'])== 0?"display":"none"?>">
+							暂无未使用的优惠券
+				</p> 	
+			    </div>
+			    <div class="layui-tab-item"> <!  代金券  !>
+			    	<ul class="na-ul clearfix" coupon_type = '2' >
+						<li class="na-li-this" use_status = "1">未使用</li>
+			    		<li use_status = "2">已使用</li>
+			    		<li use_status = "3">已过期</li>
+			    	</ul>
+			    	<table border="0" >
+			    		<thead>
+			    			<th>代金券券号</th>
+			    			<th>代金券名称</th>
+			    			<th>面额(元)</th>
+			    			<th>有效期</th>
+			    			<th>使用说明</th>
+			    		</thead>
+			    		<tbody class="crash_container">
+				<?php
+	    			foreach ($params['crash'] as $crash) {
+				?>
+			    		<tr>
+			    			<td><?php echo($crash['number']); ?></td>
+			    			<td><?php echo($crash['name']); ?></td>
+			    			<td><?php echo($crash['money']); ?></td>
+			    			<td><?php echo($crash['validity']); ?></td>
+			    			<td><?php echo($crash['intro']); ?></td>
+			    		</tr>
+		    	<?php 
+		    		}
+		    	?>		
+		    			</tbody>
+			    	</table>
+			    <p class="crash_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;
+							display:<?php echo count($params['crash'])== 0?"display":"none"?>">
+							暂无未使用的代金券
+				</p> 
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script>
+	window.seajs&&seajs.use('pc/user/coupon.js');
+</script>
+
+

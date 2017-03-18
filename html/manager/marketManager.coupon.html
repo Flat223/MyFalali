@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-优惠券</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <link href="/css/pc/ichuk.com.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>发放优惠券</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="content-item" style="padding-left: 20px;">
+                <div class="_addtourist_wrap">
+                    <input  name="shopid" type="hidden" value="<?php print_r($params['shop']['sid']); ?>"/>
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            优惠券标题
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="chinesename"
+                                   type="text" placeholder="输入中文名称"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+                    <!--<div class="_addtourist_section name">
+                        -<div class="_section_item _section_title">
+                            满减临界点
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="uselimit" type="number" placeholder="0.00"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+                            当设定为0时，则此优惠券没有使用门槛
+                        </div>
+                    </div>-->
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            面额
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="price" type="number" placeholder="0.00"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+                        </div>
+                    </div>
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            最低使用额度
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="uselimit" type="number" placeholder="0.00"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            库存
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="stock" type="number" placeholder="0"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            生效时间
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="_saletime" type="text" value="" id="starttime"
+                                   onClick=""/>
+                            <input name="starttime" type="hidden"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            截止时间
+                        </div>
+                        <div class="_section_item _section_input">
+                            <input name="_saletime2" type="text" value="" id="endtime"
+                                   onClick=""/>
+                            <input name="endtime" type="hidden"/>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+                    <!--<div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            类型
+                        </div>
+                        <div class="_section_item _section_input">
+                            <select name="type">
+                                <option value="1" selected="selected">店铺优惠券[本店使用]</option>
+
+                            </select>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            限领
+                        </div>
+                        <div class="_section_item _section_input">
+                            <select name="onebyone">
+                                <option value="1" selected="selected">限领[一人只能领取一次]</option>
+                                <option value="0">不限领[一人可以多次领取]</option>
+                            </select>
+                        </div>
+                        <div class="_section_item _section_notice">
+                            不限领一般用于商家促销或需要印制多渠道优惠码时设定。
+                        </div>
+                    </div>-->
+
+
+                    <div class="_addtourist_section name">
+                        <div class="_section_item _section_title">
+                            优惠券内容
+                        </div>
+                        <div class="_section_item _section_input">
+                            <script id="container" name="content" type="text/plain"></script>
+                            <script type="text/javascript">
+                                var ue = UE.getEditor('container',{
+                                    enableAutoSave:false,
+                                    autoHeightEnabled:true,
+                                    initialFrameHeight:300,
+                                    initialFrameWidth:800,
+                                    autoWidthEnabled:true
+                                });
+                            </script>
+                        </div>
+                        <div class="_section_item _section_notice">
+
+                        </div>
+                    </div>
+
+
+                    <div class="_addtourist_section status">
+                        <div class="_section_item _section_title">
+                            &nbsp;
+                        </div>
+                        <div class="_section_item _section_input">
+                            <div id="_submit_tourist" class="_submit_tourist">添加</div>
+                        </div>
+                        <div class="_section_item _section_notice">
+                            注意：优惠券添加后将不可修改，仅允许删除，请核实内容。删除前被申请的优惠券，除非到期否则依然可用。请商家再次核实。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+	
+	
+    $(function () {
+        $("#_submit_tourist").click(function () {
+            var post = {};
+            post.sid=0;
+            post.name = $("input[name=chinesename]").val();
+            post.uselimit = $("input[name=uselimit]").val();
+            post.money = $("input[name=price]").val();
+            post.num = $("input[name=stock]").val();
+            post.stime = $("input[id=starttime]").val();
+            post.etime = $("input[id=endtime]").val();
+            post.type = 2;
+            post.intro = ue.getContent();
+            console.log(post);
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                url:"/service/InsertCouponServ.html",
+                data:post,
+                success:function(data){
+                    if(data.ret == 1){
+	                	var alert = layer.confirm(data.msg, {
+		                    title:"温馨提示",
+		                    btn: ['确认'],
+		                    closeBtn:0 //按钮
+		                }, function(){
+		                    location.reload(true);
+		                });
+                       
+                    }else{
+                        layer.alert(data.msg,{offset:'200px'});
+                    }
+                },
+                error:function(data){
+                    layer.alert('服务器错误,请稍后再试',{offset:'200px'});
+                },
+//                http:num=100&stime=2016-01-12&etime=2018-01-12&money=100&type=1&name=&intro=
+
+                complete:function(){
+
+                }
+            });
+
+        });
+	
+	
+	
+    laydate({
+        elem: '#starttime',
+        event: 'click',
+        skin:'molv',
+        path:"js/laydate/"
+    });
+
+    laydate({
+        elem: '#endtime',
+        event: 'click',
+        skin:'molv',
+        path:"js/laydate/"
+    });
+    
+    });
+
+</script>

@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-商品详情</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/card.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/product_detail.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/product_list.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oB79ynpsHK4AdN7ruMOZuE4hseLYGW7c"></script>
+		<style>
+		.pp_number ul li.disable{
+			border:1px dashed #cbcbcb;
+			cursor:not-allowed;
+			/*pointer-events: none;*/
+		}
+		.zoomdiv{
+			left: 50%!important;
+			top: 200px!important;;
+		}
+		.srviceAfter{
+			line-height: 29px;
+			margin-top: 22px;
+		}
+		.srviceAfter dt {
+			width: 85px;
+			display: inline-block;
+			color: #666;
+			line-height: 36px;
+		}
+		.srviceAfter dd select {
+			border: 1px solid #d1d1d1;
+			width: 100px;
+			text-indent: 1em;
+			line-height: 30px;
+			height: 30px;
+		}
+		.srviceAfter dd select option{
+			line-height: 30px;
+			height: 30px;
+		}
+		.borderColor{
+				border-color: #00bfb8 !important;
+			}
+        .layui-form-select ul li.layui-this {
+            background-color: #00bfb8;
+        }
+		.layui-input-block {
+			margin-left: 0px!important;
+			margin-top: 20px;
+		}
+		.layui-input:hover {
+			border-color: #d2d2d3 !important;
+		}
+		input.borderColor:hover{
+			border-color: #00bfb8 !important;
+		}
+
+	</style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params['product']['property']);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<?php 
+	$product=$params['product'];
+	$images=explode(',',$product['images']);
+?>
+	<div id="allmap"></div>
+	<div class="content w1200" >
+		<div class="custom_caption">
+			<a href="/lab/shop.html">实验室商城 </a>
+			<span> &gt; </span>
+			<?php
+				$type=$params['type'];
+				foreach($type as $sintype){		
+				?>
+					<a href="/goods/productList.html?ptid=<?php echo($sintype['ptid']);?>"><?php echo($sintype['name']);?> </a>
+					<span> &gt; </span>
+				<?php
+				}
+			?>
+			<?php echo($product['name']);?>
+		</div>
+		<div class="product_details clearfix">
+			<!--放大镜-->
+			<div class="zoom left" style="width: 380px;">
+				<!-- 大图 -->
+				<div class=jqzoom id="spec-n1" >
+					<img height="350" id="bigimg" src="<?php echo($images[0])?>" jqimg="<?php echo($images[0])?>" width="350">
+				</div>
+				<!-- 小图 -->
+				<div id="spec-n5">
+					<div id="spec-list">
+						<ul class="list-h">
+							<?php
+								
+								foreach($images as $key=>$value)
+								{
+									if($key<5)
+									{
+									?>
+										<li><img class="littleimg" src="<?php echo($value);?>" style="cursor: pointer"></li>
+									<?php
+									}
+								}
+							?>
+						</ul>
+					</div>
+				</div>
+                <div class="shae clearfix">
+                    <span style="cursor: pointer" value="<?php echo($product['pid']);?>" id="add_collect">收藏</span>
+					<div style="float: left; display: block; padding: 5px 0px;">
+						<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+						<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					</div>
+                </div>
+			</div>
+			<!--商品信息-->
+			<div class="details left">
+				<input type="hidden" name="proid" value="<?php echo $product['pid']; ?>" />
+				<h2><?php echo($product['name'].'  ');?><span class="myself">自营</span></h2>
+				<span class="price_money">¥<i id="proprice"><?php echo($product['price']);?></i></span>
+				<div class="prod_area clearfix"> 
+					<span class="prd_det left">订货编号：</span>
+					<p class="left">
+						<?php echo($product['code'])?>
+					</p>
+				</div>	
+				<div class="prod_area clearfix">  
+					<span class="prd_det left">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</span>
+					<p class="left">
+						<?php echo($product['brandname'])?>
+					</p>
+				</div>		
+				<div class="prod_area clearfix"> 
+					<span class="prd_det left">货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+					<p class="left">
+						<?php echo($product['goods_code'])?>
+					</p>
+				</div>			
+				<div class="prod_area clearfix"> 
+					<span class="prd_det left">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;送：</span>
+					<div class="p-pl left" style="position: relative;">
+						<!--<select name="" id="area" onmousedown="return false;">-->
+                            <!--<option id="place"  value=""></option>-->
+                        <!--</select>-->
+						<div id="area" onmousedown="return false;">
+							<div id="place"></div>
+							<s></s>
+						</div>
+                        <div class="free"><span class="freight1">免运费</span> <s></s></div>
+						<div class="address-con">
+							<e></e>
+							<div class="add-place">
+								<div class="lab-tab">
+									<ul class="lab-title">
+										<li class="lab-this lab-province">请选择</li>
+										<li class="lab-this lab-city">请选择</li>
+										<li class="lab-this lab-town">请选择</li>
+									</ul>
+									<div class="lab-con">
+										<div class="lab-con-item lab-province-item lab-show">
+											<?php 
+												$province=$params['province'];
+												foreach($province as $sing){
+											?>
+												<span class="province" value="<?php echo($sing['id'])?>" value2="<?php echo($sing['name']);?>"><?php echo($sing['name']);?></span>
+											<?php 
+												}
+											?>
+										</div>
+										<div class="lab-con-item lab-city-item" id="labcity">
+
+										</div>
+										<div class="lab-con-item lab-town-item">
+											<span>333</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="free-con">
+							<ul class="freight">
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<?php
+					$property=$product['property'];
+					foreach($property as $key=>$value){
+					?>
+						<div class="pp_number color_cap" >
+		                    <span class="prd_det left"><?php echo($value['name']);?>:</span>
+		                    <ul class="num clearfix" id="property" value="<?php echo($key)?>" >
+
+		                        <?php
+		                        	if($value['propertyval']!=""){
+		                        	$vallist=$value['propertyval'];
+		                        	for($i=0;$i<count($vallist);$i++){			                        	
+		                        	?>
+		                        		<li id="<?php echo($vallist[$i]['id']); ?>" type="<?php echo $value['id']; ?>"  value="<?php echo($vallist[$i]['id'])?>"><?php echo($vallist[$i]['name']);?></li>
+									<?php
+		                        	}
+		                        	}
+		                        ?>
+		                    </ul>
+		                </div>
+					<?php
+					}
+                ?>
+                <?php 
+               		 if($product['can_testing']>0){
+                ?>
+                <dl class="clearfix srviceAfter">
+					<dt class="left">
+						售后服务：
+					</dt>
+					<dd class="left">
+						<form action="" class="layui-form">
+                            <div class="layui-input-inline">
+                                <select name="quiz">
+                                    <option value="">请选择</option>
+                                    <option value="0">不使用</option>
+                                    <option value="1">延保1年 ￥<?php echo($product['guarantee_1']);?></option>
+                                    <option value="2">延保2年 ￥<?php echo($product['guarantee_2']);?></option>
+                                    <option value="5">延保3年 ￥<?php echo($product['guarantee_5']);?></option>
+                                </select>
+                            </div>
+                        </form>
+					</dd>
+				</dl>
+				<?php
+				}
+				?>
+				
+				<?php 
+					if($product['can_guarantee']>0){
+				?>
+				<dl class="clearfix srviceAfter">
+					<dt class="left">
+						保障服务：
+					</dt>
+					<dd class="left">
+						<div class="layui-input-block" style="cursor: pointer">
+							<input style="cursor: pointer" type=" text"autocomplete="off" value2="1" value="产品质量检测 &nbsp;&nbsp;￥<?php echo($product['quality_testing'])?>" disabled  class="layui-input" id="quaInput">
+						</div>
+					</dd>	
+				</dl>
+				<?php
+				}
+				?>
+                
+				<div class="buy_sum clearfix">
+					<span class="prd_det left">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</span>
+					<p class="set_p clearfix">
+                        <span class="down">-</span>
+                        <input class="text" type="text"  onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="5" value="1">
+                        <span class="up">+</span>
+                    </p>
+					<span class="prd">(库存<?php echo($product['inventory']);?>)</span>
+				</div>
+				<div class="buy_box" >
+					<span id="buy_now" style="cursor: pointer">立即购买</span>
+					<span class="Add_cart" id="add_cart" value="<?php echo($product['pid']);?>" style="cursor: pointer">加入购物车</span>
+				</div>
+			</div>
+
+			<div class="recommend right">
+				<div class="recom_list">
+					<div class="imgb">
+                        <img src="<?php echo($product['logo'])?>" alt="" />
+                    </div>
+                    <div class="des-company">
+<!--
+                        <p>
+                            <?php echo($product['brandname'])?>
+                        </p>
+-->
+                        <!--<span class="contact-company">联系商家</span>-->
+<!--                         <span class="more" value="<?php echo($product['brand_id'])?>">查看更多</span> -->
+						<span style="text-align:center;cursor:pointer" onclick='window.location.href="../brand/seller.html?sort=1&type=1&id=<?php echo $product['sid'];?>"' >查看店家</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php 
+			$prolist1=$params['prolist'];
+			if(count($prolist1)>0){
+		?>
+        <div class="recomment_group">
+            <div class="bar-p clearfix">
+                <span>推荐组合</span>
+                <p class="place"></p>
+            </div>
+            <div class="layui-tab layui-tab-card" lay-filter="demo" style="height:213px;">
+              	<ul class="layui-tab-title">
+	              	<?php
+	              		foreach($prolist1 as $key=>$list){
+		              	if($key==0){
+					  	?>
+		                	<li class="layui-this">推荐组合<?php echo($key+1)?></li>
+						<?php
+						}else{
+						?>
+							<li>推荐组合<?php echo($key+1)?></li>
+						<?php
+						}
+					}
+				?>
+				</ul>
+				<div class="layui-tab-content" style="padding: 10px;">
+	              	<?php
+	              		$prolist=$params['prolist'];
+	              		foreach($prolist as $key=>$value){
+		              		if($key==0){
+				  		?>
+			                <div class="layui-tab-item layui-show">
+				            <?php
+				            }else{
+				            ?>
+				            <div class="layui-tab-item">
+				            <?php
+				            }
+				            ?>
+			                    <div class="lay-list">
+			                        <ul>
+				                        <?php
+				                        	foreach($value['product'] as $key1=>$product){
+					                        	$images=explode(',',$product['images']);
+				                        	?>
+						                        <li>
+					                                <dl>
+					                                    <dt><a href="/goods/detail.html?pid=<?php echo md5($product['pid'])?>&skuid=<?php echo($product['skuid'])?>"><img value="<?php echo ($product['pid'])?>" src="<?php echo($images[0])?>" width="100px" height="101px" alt="" /></a></dt>
+					                                    <dd><a href="/goods/detail.html?pid=<?php echo md5($product['pid'])?>&skuid=<?php echo($product['skuid'])?>"><?php echo($product['name'])?></a></dd>
+					                                </dl>
+					                            </li>
+					                            <?php
+					                            	if($key1!=count($value['product'])-1){
+					                            	?>
+														<li>
+															<img src="/images/pc/plus.png" alt="" />
+														</li>
+													<?php
+													}else{
+					                            ?>
+					                            		<li>
+															<img src="/images/pc/dy.png" alt="" />
+														</li>
+													<?php
+													}
+											}
+										?>
+			                            <li>
+			                                <p>
+			                                    组合价：<span><?php echo($value['total_money'])?></span>
+			                                </p>
+			                                <input type="submt" class="groupbuy" style="cursor: pointer" value2="<?php echo($value['id']);?>" value="立即购买" />
+			                            </li>
+			                        </ul>
+			                    </div>
+			                </div>
+	                    <?php
+	                    }
+	                ?>
+              	</div>
+            </div>
+
+        </div>
+        <?php
+        }?>
+        <div class="wrapp">
+            <div class="wrapp_l left">
+                <div class="prodcut_l">
+                    <h4>热卖商品</h4>
+                    <?php
+                    	$hotsell=$params['hotsell'];
+                    	foreach($hotsell as $valuep){
+                    		$images=explode(',',$valuep['images']);
+						?>
+		                    <div class="curs" value="<?php echo($valuep['pid']);?>" style="cursor: pointer">
+		                        <img src="<?php echo($images[0]);?>" alt="" />
+		                        <i>￥<?php echo($valuep['price']);?></i>
+		                        <span><?php echo($valuep['name']);?></span>
+		                    </div>
+						<?php
+						}
+					?>
+                </div>
+            </div>
+            <div class="wrapp_r right">
+            <div class="prod_detales_box">
+            <div class="tab_nav clearfix" id="tab_nav">
+                <p class="act">商品详情</p>
+                <p>商品评价</p>
+                <p>规格参数</p>
+            </div>
+            <div class="tab_box_all">
+                <div class="tab_box"   style="display: block">
+                    <!--商品详情-->
+                    <?php 
+                    	if(!empty($product['video_url'])){
+                    		$url=$product['video_url'];                    	
+						?>
+							<iframe height=498 width=700 src="<?php echo($product['video_url']);?>" frameborder=0 allowFullScreen="true"></iframe>
+					<?php
+						}
+					?>
+                    <div class="product_des">
+						<?php 
+							if(!empty($product['intro'])){
+								echo($product['intro']);
+							}
+						?>
+                    </div>
+                </div>
+                
+                <div class="tab_box">
+                    <!--累计评价-->
+	                    <?php
+	                    
+	                    	$comment=$params['comment'];
+	                    	foreach($comment as $value)
+	                    	{
+							?>
+							<div class="eva_list">
+		                        <div class="eva_head clearfix">
+		                            <div class="head_img left">
+		                                <dl class="clearfix">
+		                                    <dt><img style="height: 50px;width: 50px" src="<?php echo($value['face']); ?>" alt=""></dt>
+		                                    <dd><span><?php echo($value['nickname']); ?></span></dd>
+		                                </dl>
+		                                <span class="start">
+		                                	<?php 
+		                                		$point=$value['score'];
+												for($i=0;$i<$point;$i++){
+												?>
+		                                    		<img src="/images/pc/star-on-big.png" alt="">
+												<?php
+												}
+		                                    ?>
+		                                </span>
+		                                <p class="time1"><?php echo(date("Y-m-d h:i:s", $value['time']));?></p>
+		                            </div>
+		                            <div class="head_txt right">
+		                                <span class="descr"><?php echo($value['content']);?></span>
+		                                <span class="display">
+		                                <?php
+		                                	$img=$value['images'];
+		                                	$imgs=explode(',',$img);
+		                                	foreach($imgs as $value)
+		                                	{
+		                                	?>
+		                                    	<img src="<?php echo($value);?>" alt="" />
+											<?php
+											}
+		                                ?>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </div>
+							<?php
+							}
+						?>
+                </div>
+                
+                <div class="tab_box">
+	                <table class="detai" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th colspan="4">规格参数</th>
+                        </tr>
+                        <tr>
+                            <td>计量单位</td>
+                            <td><?php echo($product['unit'])?></td>
+                        </tr> 
+                        <tr>
+                            <td>存储条件</td>
+                            <td><?php echo($product['store'])?></td>
+                        </tr> 
+                        <tr>
+                            <td>运输条件</td>
+                            <td><?php echo($product['traffic'])?></td>
+                        </tr> 
+                        <tr>
+                            <td>质保</td>
+                            <td><?php echo($product['shelf_life'])?></td>
+                        </tr> 
+                        <tr>
+                            <td>产品包装</td>
+                            <td><?php echo($product['packing'])?></td>
+                        </tr> 
+                        <tr>
+                            <td>供应商/产地</td>
+                            <td><?php echo($product['producer'])?></td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<div class="w1200">
+	<div class="constr " style="display: none">
+		<p class="clearfix">
+			<span>对比栏</span>
+			<span class="line"></span>
+		</p>
+		<div class="constr-list">
+			<ul id="compare_add">
+
+			</ul>
+			<div class="clear-r right">
+				<a style="cursor: pointer" id="compare">对比</a>
+				<p class="clear_compare" style="cursor: pointer">清空对比</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(116.331398,39.897445);
+	map.centerAndZoom(point,12);
+	var r1={};
+	var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r){
+		if(this.getStatus() == BMAP_STATUS_SUCCESS){
+			var mk = new BMap.Marker(r.point);
+			map.addOverlay(mk);
+			map.panTo(r.point);
+			r1=r;
+			showPosition(r);
+		}
+		else {
+			alert('failed'+this.getStatus());
+		}
+	},{enableHighAccuracy: true});
+	function showPosition(r) {
+        var url = 'http://api.map.baidu.com/geocoder/v2/?ak=oB79ynpsHK4AdN7ruMOZuE4hseLYGW7c&callback=?&location=' + r.point.lat + ',' + r.point.lng + '&output=json&pois=1';
+        $.getJSON(url, function (res) {
+            $("#msg").html(url);
+            $("#place").text( res.result.addressComponent.city);
+            var pid=$(".Add_cart").attr("value");
+            $.ajax({
+	        	type:"post",
+				dataType:"json",
+				url:"/service/GetLocationFreServ.html",
+				data:{'name':res.result.addressComponent.city,'pid':pid},
+				success:function(data){
+					var str="";
+					if(data.ret == 2){
+						var d=data.data;
+						str+="<li>"+d['mode']+"<d></d></li>\
+						";
+						$('.freight').find('li').remove();
+						$('.freight').append(str);
+					}else if(data.ret==1){
+						if(data['expressp']>=0){
+							str+="<li>快递 ￥"+data['expressp']+"<d></d></li>\
+							";
+						}
+						if(data['emsp']>=0){
+							str+="<li>ems ￥"+data['emsp']+"<d></d></li>\
+							";
+						}
+						if(data['mailp']>=0){
+							str+="<li>邮寄 ￥"+data['mailp']+"<d></d></li>\
+							";
+						}
+						$('.freight').find('li').remove();
+						$('.freight').append(str);
+						$('.freight1').text("快递 ￥"+data['expressp']);
+					}
+				},
+				error:function(data){
+					alert("服务器错误,请稍后再试");
+				}
+ 
+            });
+        });
+    }
+
+</script>
+
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/pc/product_details.js"></script>
+<script type="text/javascript" src="/js/jquery.jqzoom.js"></script>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/goode-detail.js');
+</script>
+
+

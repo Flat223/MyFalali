@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-对比</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/brand_detail.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/duibi.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200" >
+    <div style="margin: 10px 0;font-size: 14px;" class="ui large breadcrumb">
+        <ul class="clearfix">
+            <li style="float: left;">
+                <a href="/lab/shop.html">实验室商城</a>
+            </li>
+            <li style="float: left;">></li>
+            <li style="float: left;">
+                对比
+            </li>
+
+        </ul>
+    </div>
+    <table class="duibi-list" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="title">
+                <div>
+                    <input type="checkbox" />高亮不同项
+                </div>
+                 <div>
+                    <input type="checkbox" />隐藏相同项
+                </div>
+            </td>
+            <?php 
+            	$products=$params['products'];
+            	foreach($products as $key=>$product){
+	            	$images=explode(',',$product['images']);
+	            	
+				?>
+		            <td>
+		                <dl>
+		                    <dt>
+		                       <a href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>" target="_blank"> <img style="cursor: pointer" src="<?php echo($images[0]);?>" alt="" /></a>
+		                    </dt>
+		                    <dd>
+		                        <h3><?php echo($product['name']);?></h3>
+		                      <a href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>" target="_blank">  <span style="cursor: pointer"><i>￥</i><?php echo($product['price']);?></span></a>
+		                        <a href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>" target="_blank"><input style="cursor: pointer" type="submit" value="立即查看" /></a>
+		                    </dd>
+		                </dl>
+		            </td>
+		        <?php
+		        }
+		    ?>
+		    <?php 
+		    	$blank=4-count($products);
+		    	if($blank>=1){
+			    	for($a=0;$a<$blank;$a++)
+			    	{
+		    		?>
+			            <td style="width:282px;">
+			                <p class="add" style="cursor: pointer" value="<?php echo($products[0]['ptid']);?>">
+			                    +添加同类商品
+			                </p>
+			            </td>
+					<?php
+					}
+				}
+            ?>
+        </tr>
+        <tr>
+            <td class="title">
+                店铺
+            </td>
+            <?php 
+              	foreach($products as $value){ 	
+			  	?>
+		            <td class="td2">
+					<?php echo($value['shop_name']);?>
+		            </td>
+				<?php
+				}
+				for($a=0;$a<$blank;$a++){	
+				?>
+					<td class="td2" >
+		            </td>
+				<?php
+				}
+			?>
+        </tr>
+        <tr>
+            <td class="title">
+                评价
+            </td>
+            <?php 
+              	foreach($products as $value){ 	
+			  	?>
+		         	<td class="td2">
+					 	<div class="td2_div">
+					 		<span><?php echo($value['percent'])?><i>%</i></span>
+					 		<p>好评度</p>
+					 		<p>累计评价  <?php echo($value['comment_num'])?></p>
+                		</div>
+            		</td>
+
+				<?php
+				}
+				for($a=0;$a<$blank;$a++){	
+				?>
+					<td class="td2">
+						
+		            </td>
+				<?php
+				}
+			?>
+        </tr>
+        <tr>
+            <td class="title">
+                品牌
+            </td>
+            <?php 
+            	foreach($products as $single){
+				?>
+		            <td class="td2">
+		               <?php echo($single['brandname']);?>
+		            </td>
+				<?php
+				}
+				for($a=0;$a<$blank;$a++){	
+				?>
+					<td class="td2" >
+		            </td>
+				<?php
+				}
+            ?>
+        </tr>
+<!--
+        <tr>
+            <td class="title">
+                产地
+            </td>
+            <td class="td2">
+               -
+            </td>
+            <td class="td2">
+                -
+            </td>
+            <td class="td2">
+                
+            </td>
+            <td class="td2">
+                
+            </td>
+        </tr>
+-->
+
+        <tr>
+            <td class="title">
+                售后服务
+            </td>
+            <?php 
+            	foreach($products as $single){
+				?>
+		            <td class="td2">
+		               <?php echo($single['shelf_life']);?>
+		            </td>
+				<?php
+				}
+				for($a=0;$a<$blank;$a++){	
+				?>
+					<td class="td2" >
+		            </td>
+				<?php
+				}
+            ?>
+        </tr>
+        <tr>
+            <td class="title">
+                包装规格
+            </td>
+           <?php 
+            	foreach($products as $single){
+				?>
+		            <td class="td2">
+		               <?php echo($single['packing']);?>
+		            </td>
+				<?php
+				}
+				for($a=0;$a<$blank;$a++){	
+				?>
+					<td class="td2" >
+		            </td>
+				<?php
+				}
+            ?>
+        </tr>
+        
+<!--
+        <tr>
+            <td class="title">
+                产品毛重
+            </td>
+            <td class="td2">
+               375.00g
+            </td>
+            <td class="td2">
+                90.00g
+            </td>
+            <td class="td2">
+                
+            </td>
+            <td class="td2">
+                
+            </td>
+        </tr>
+-->
+    </table>
+    <table class="recomment-table" cellspacing="0" cellpadding="0" width="100%">
+        <caption class="clearfix">
+            <h2 class="left">同类商品推荐</h2>
+            <span class="right more" style="cursor: pointer" value="<?php echo($products[0]['ptid']);?>">查看更多>></span>
+        </caption>
+        <tr>
+	        <?php 
+	        	$reproduct=$params['reproducts'];
+	        	foreach($reproduct as $recommend){
+		        	$images=explode(',',$recommend['images']);
+		        	
+				?>
+		            <td>
+		                <dl value="<?php echo(md5($recommend['pid'])); ?>">
+		                    <dt >
+		                        <img src="<?php echo($images[0])?>" class="img" alt="" />
+		                    </dt>
+		                    <dd>
+		                        <h3><?php echo($recommend['name']);?></h3>
+		                        <span><i>￥</i><?php echo($recommend['price']);?></span>
+		                        <input type="submit" class="add_compare" value="加入对比" />
+		                    </dd>
+		                </dl>
+		            </td>
+				<?php
+				}
+            ?>
+        </tr>
+    </table>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/product_compare.js');
+</script>
+

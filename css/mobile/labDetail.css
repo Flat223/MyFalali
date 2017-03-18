@@ -1,0 +1,102 @@
+
+.labdt_info{
+    background: #ffffff;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #d9d9d9;
+}
+.labdt_info a.labdt_pf{
+    font-size: 1.5rem;
+    color: #a2a2a2;;
+    margin: 1rem 1rem 0.5rem 0;
+}
+.labdt_attr{
+    width: 70%;
+    height: 100%;
+    margin-left: 2%;
+    float: left;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.labdt_tit{
+    height: 50%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.labdt_share{
+    font-size: 1.6rem;
+    font-weight: bold;
+    float: right;
+    margin-right: 5%;
+}
+.labdt_admin{
+    background-color: #fff;
+    width:100%;
+    padding:1rem;
+}
+.labdt_admin  .contacTa{
+    float: right;
+    padding: 0.6rem;
+    background: #00bfb8;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.labdt_adminimg{
+    float: left;
+    margin-left: 2%;
+    width: 12%;
+}
+.labdt_adminname{
+    font-size: 1.6rem;
+    float: left;
+    margin-left: 2%;
+    line-height: 3rem;
+}
+.labdt_lianxi{
+    height: 35%;
+    width: 18%;
+    margin-top: 5%;
+    float: right;
+    margin-right: 5%;
+}
+.labdt_lianxi input{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    outline: none;
+}
+.labdt_addr{
+    margin: 1rem 0;
+    font-size: 1.6rem!important;
+    background: #ffffff;
+    padding: 1rem;
+}
+.labdt_see{
+    float: right;
+    margin-right: 5%;
+}
+.labdt_other{
+    background-color: lavender;
+    text-align: center;
+    line-height: 8rem;
+    margin-top: 2%;
+}
+.labdt_buttom{
+    position: fixed;
+    bottom: 0;
+    outline: none;
+}
+.labdt_btn{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.labdt_addr>a>span{
+    background: url("/images/mobile/arrow_icon.png") no-repeat center;
+    display: inline-block;
+    width: 1em;
+    height: 2em;
+    background-size: 80%;
+    margin-top: -1%;
+}

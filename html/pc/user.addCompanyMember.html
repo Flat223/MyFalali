@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-添加公司成员</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/addCompanyMember.css">
+    
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    
+    <script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+		?>
+		<div class="bread">
+			<ul>
+				<li><i class="layui-icon">&#xe603;</i><a href="/user/companyMember.html">返回</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<table border="0" cellpadding="0" cellspacing="0" style="width:550px">
+					<tr>
+						<td>昵称：</td>
+						<td><input type="text" name="nickname"></td>
+					</tr>
+					<tr>
+						<td>真实姓名：</td>
+						<td><input type="text" name="realname"></td>
+
+					</tr>
+					<tr>
+						<td>身份：</td>
+						<td>
+							<select name="sub_ident">
+								<option sub_type="1">科研人员</option>
+								<option sub_type="2">采购员</option>
+							</select>
+						</td>
+					</tr>
+						
+					<tr>
+						<td>手机号码：</td>
+						<td><input type="text" name="mobile"></td>
+					</tr>
+					<tr>
+						<td>密码：</td>
+						<td><input type="password" name="psw" placeholder="6-16位字母数字符号组合"></td>
+					</tr>
+					<tr>
+						<td>确认密码：</td>
+						<td><input type="password" name="confirm_psw" placeholder="6-16位字母数字符号组合"></td>
+					</tr>
+				</table>
+				<div class="submit-item">
+			       <button class="add layui-com"><i class="layui-icon">&#xe605;</i>确定</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/addCompanyMember.js');
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+.layui-tab-brief .layui-this {
+    color: #00bfb8!important;
+}
+.layui-tab-brief .layui-this:after {
+    border-bottom: 3px solid #00bfb8!important;
+}
+.img-wrapp,.find-wrapp{
+	margin-top:17px;
+	height: auto; 
+}
+.img-wrapp >.shopimg{
+	display: block;
+	width: 100%;
+}
+.img-wrapp .shopimg + img{
+	display: block;
+	margin: 24px auto
+}
+.layui-tab-content{
+	padding: 0!important;
+}
+.way-item .first{
+	color: #00bfb8;
+	height: 42px;
+	line-height: 42px;
+}
+.way-item .first>i{
+	display: inline-block;
+	width: 14px;
+	height: 15px;
+	background: url(/images/pc/way-icon.png) no-repeat ;
+	vertical-align: middle;
+	padding: 0 5px
+}
+.way-item .desc{
+	background-color: #eeeeee;
+	height: 42px;
+	line-height: 42px;
+	width: 940px;
+	text-indent: 2em;
+	margin-bottom:15px; 
+}
+.way-item .desc+img{
+	margin-bottom: 31px;
+}
+
+.enquiry-wrapp{
+	margin-top: 35px;
+	padding: 0 50px;
+}
+.enquiry-wrapp p.caption{
+	text-align: center;
+	color: #787878;
+}
+.enquiry-wrapp .consult-item{
+	text-align: center;
+	color: #00bfb8;
+	height: 42px;
+	line-height: 42px;
+	margin-bottom: 30px;
+}
+em{
+	color: #ff0000;
+	padding: 0 3px;
+}
+.input-item{
+	margin-bottom: 13px;
+}
+.input-item input{
+	height: 36px;
+	width: 308px;
+	line-height: 36px;
+	border: 1px solid #d2d2d2;
+}
+.input-item span,.textarea-item span{
+	display: inline-block;
+	height: 36px;
+	width: 100px;
+	line-height: 36px;
+	text-align: right;
+}
+.textarea-item textarea{
+	height: 200px;
+	width: 745px;
+	line-height: 36px;
+	border: 1px solid #d2d2d2;
+	float: right;
+}
+.button-item button{
+	margin: 36px 0 0 100px;
+	background-color: #00bfb8!important;
+	border-radius: 0px !important;
+}
+.reg-wrapp,.ser-item,.pay-item,.scien-item,.bengin-wrapp{
+	line-height: 30px;
+	margin-top: 17px;
+}
+.reg-wrapp h1,.ser-item h1,.scien-item h1{
+	font-size: 15px;
+}
+.mode img{
+	display: block;
+	width: 100%;
+	margin: 17px 0 ;
+}
+.mode-desc{
+	line-height: 30px;
+}
+.mode-desc h1,.pay-item h1{
+	font-size: 15px;
+}
+.return-pro img{
+	margin: 16px 0;
+}
+.addr-item{
+	line-height: 30px;
+	color: #ff0000;
+}
+
+.bengin-wrapp .bengin-item h1{
+	font-size: 15px;
+}
+.bengin-item{
+	margin-bottom: 17px;
+}

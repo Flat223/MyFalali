@@ -1,0 +1,157 @@
+.mainContent .main-wrapp{
+	background: #ffffff;
+	padding: 1em;
+}
+.mainContent .main-wrapp table {
+	margin: 1em 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+.mainContent .main-wrapp table td{
+	position: relative;
+}
+.mainContent .main-wrapp table td:not(:nth-of-type(2)){
+	padding: 0.5em 1em;
+	line-height: 45px;
+	border:1px solid #dddddd;
+}
+.mainContent .main-wrapp table td:nth-of-type(1){
+	width: 12%;
+}
+.mainContent .main-wrapp table td:nth-of-type(2){
+	padding: 0 1em;
+	line-height: 45px;
+	border:1px solid #dddddd;
+	width: 20%;
+}
+.mainContent .main-wrapp table td:nth-of-type(3){
+	width: 30%;
+}
+.mainContent .main-wrapp table td > input[type=text]{
+	height: 32px;
+	line-height: 32px;
+	text-indent: 1em;
+	border:1px solid #dddddd;
+	width: 100%;
+	display: block;
+}
+.mainContent .main-wrapp table td > select{
+	height: 32px;
+	line-height: 32px;
+	text-indent: 1em;
+	border:1px solid #dddddd;
+	width: 100%;
+	display: block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/*.mainContent .main-wrapp table td input[type=file]{
+	opacity: 0;
+    width: 62px;
+    height: 62px;
+    float: left;
+    position: absolute;
+    top: 1em;
+}*/
+.mainContent .main-wrapp table td .classify{
+	border-right-width:0!important; 
+	background: url(/images/manager/triangle-in.png)no-repeat right;
+}
+.mainContent .main-wrapp table td .file{
+		height: 32px;
+	line-height: 32px;
+	text-indent: 1em;
+	border:1px solid #dddddd;
+	width: 100%;
+	display: block;
+}
+.mainContent .main-wrapp table td textarea{
+	min-height: 100px;
+	line-height: 25px;
+	padding: .5em;
+	margin: 1em 0;
+	border:1px solid #dddddd;
+	width: 99%;
+	display: block;
+   
+}
+.mainContent .main-wrapp table td img{
+    margin: 1em 10px 1em 0;
+    float: left;
+}
+.submit-item button.layui-com{
+	display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 10px;
+    background-color: #f23e47;
+    color: #fff;
+    white-space: nowrap;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+    filter: alpha(opacity=90);
+}
+.submit-item button.layui-com i{
+	margin-right:5px;
+}
+.submit-item button.layui-res{
+	display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    color: #000;
+    white-space: nowrap;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    opacity: .9;
+    filter: alpha(opacity=90);
+    margin-left: 10px;
+}
+.submit-item button:hover{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.mainContent .main-wrapp table td > .level >input[type=text]{
+    height: 32px;
+    line-height: 32px;
+    text-indent: 1em;
+    border:1px solid #dddddd;
+    border-right: 0px;
+    width: 90%;
+    display: inline-block;
+    float: left;
+}
+.mainContent .main-wrapp table td > .level >span{
+    height: 32px;
+    line-height: 32px;
+    text-indent: 1em;
+    border:1px solid #ecedef;
+    width: 9%;
+    display: inline-block;
+    float: left;
+    background: #ecedef;
+    color: #ffffff;
+       -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.mainContent .main-wrapp table td > .level >span>i{
+    margin:  0 -6px;
+}
+.mainContent .main-wrapp table td>input[type=checkbox],
+.mainContent .main-wrapp table td>span>input[type=checkbox]{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+.mainContent .main-wrapp table td>span{
+    margin-right: 10px;
+    display: inline-block;
+}

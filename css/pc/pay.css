@@ -1,0 +1,105 @@
+.pay_section dl dd
+,.pay_section dl dt{
+	float: left;
+}
+.pay_section {
+	width: 650px;
+	margin: auto;
+	padding: 100px 0
+}
+.pay_section dl dd{
+	line-height: 25px;
+	font-size: 16px;
+	margin-left: 10px;
+}
+.pay_section dl dd p i{
+	color: red;
+}
+
+.bank_ol_detail, .pay .balance_detail {
+    width: 530px;
+    margin-top: 30px;
+    border: 1px solid #e3e3e3;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pay_section>p{
+	margin-left: 88px;
+	margin-top: 40px;
+	font-size: 16px;
+}
+.pay_section>p a{
+	color: #00bfb8;
+}
+.pay_section >p span{
+	display: block;
+	background: #00bfb8;
+	color: #fff;
+	width: 140px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.tip_section{
+	height: 80px;
+	background: #E9F6FF;
+	margin-top: 56px;
+	padding: 20px;
+}
+.tip_section p{
+	line-height: 30px;
+}
+.tip_section p i{
+	color: red;
+	font-size: 18px;
+	font-weight: 400;
+}
+.tip_section p.title{
+	font-size: 18px;
+}
+.tip_section p .arrow_right{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 50%;
+	color: #66B204;
+	border: 1px solid #66B204;
+	text-align: center;
+}
+.choosetype {
+	margin-top: 50px;
+}
+.choosetype  h3{
+	padding: 10px 0;
+}
+.choosetype p {
+	height: 60px;
+	line-height: 60px;
+	border: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.choosetype p img{
+/* 	width: 60px; */
+	height: 60px;
+}
+.choosetype p input[type=radio]{
+	margin-left: 20px;
+}
+.choosetype input[type=submit]{
+	width: 146px;
+	height: 48px;
+	line-height: 48px;
+	background: #00bfb8;
+	color: #fff;
+	margin: auto;
+	display: block;
+}
+.choosetype p input[type=radio]:checked+a,
+.choosetype p input[type=radio]:checked:hover+a
+{
+background: #821134;
+}

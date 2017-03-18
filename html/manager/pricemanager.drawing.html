@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/drawing.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>竞价管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>图纸输入</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="chart-wrapp clearfix">
+					<ul class="clearfix">
+						<li class="chart-this">单图纸上传</li>
+						<li>批量上传</li>
+					</ul>
+				</div>
+				<div class="chart-content">
+					<div class="chart-item chart-show">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>产品名称：</td>
+								<td><input type="text"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>缩略图：</td>
+								<td>
+									<input type="text">
+									<img src="" alt="">
+								</td>
+								<td>最佳尺寸500*500，或者等比例</td>
+							</tr>
+							<tr>
+								<td>工艺：</td>
+								<td>
+									<span><input type="radio">材料</span>
+									<span><input type="radio">热处理</span>
+									<span><input type="radio">表面处理</span>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>产品个数：</td>
+								<td>
+									<div class="clearfix number-item">
+										<div class="left number-l">
+											<input type="text">
+										</div>
+										<div class="right number-r clearfix">
+											<input type="text" class="left">
+											<span class="left"><i></i></span>
+										</div>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>需求数量：</td>
+								<td>
+									<input type="text">
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>报价截止日期：</td>
+								<td> <input type="text" class="date"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>交货日期：</td>
+								<td> <input type="text" class="date"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>图纸附件：</td>
+								<td> 
+									<input type="file">
+									<img src="/images/manager/upload01.jpg" alt="">
+								</td>
+								<td>支持jpg、png、pdf格式</td>
+							</tr>
+							<tr>
+								<td>交易货币：</td>
+								<td>
+									<select name="" id="">
+										<option value="">人民币</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>支付方式：</td>
+								<td>
+									<select name="" id="">
+										<option value="">转账</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>供应商所在区域限定：</td>
+								<td>
+									<select name="" id="">
+										<option value="">不限</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>企业类型：</td>
+								<td>
+									<select name="" id="">
+										<option value="">不限</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>资质认证：</td>
+								<td>
+									<select name="" id="">
+										<option value="">ISO 9001</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="chart-item">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>模板下载：</td>
+								<td><a href="#">点击下载Excel模板</a> </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>上传：</td>
+								<td>
+									<div class="file">
+										<input type="file">
+									</div> 
+								</td>
+								<td>上传表格需按照模板要求填写信息</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="submit-item" style="margin:1em;">
+			       <button class="layui-com"><i class="layui-icon">&#xe605;</i>确定</button>
+			       <button class="layui-res">重置</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find(".accordion-ul").slideToggle("slow");
+//	})
+	$(".chart-wrapp ul li").on("click",function() {
+		$(this).addClass("chart-this").siblings().removeClass("chart-this");
+		var $now = $(".chart-item").eq($(".chart-wrapp ul li").index(this)); 
+		$now.addClass("chart-show").siblings().removeClass("chart-show");
+	})
+</script>

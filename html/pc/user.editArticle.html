@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的文章</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myarticle.css" >
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<div class="article">
+			<p class="caption">
+				<span class="lef" style="color: #00bfb8">我的文章>编辑文章
+				</span>
+			</p>
+		<?php
+			$article = $params['article'];
+		?>
+			<div class="publish">
+				<label>
+					<span>分类：</span>
+					<select name="category">
+				<?php
+					$categoryArray = $params['category'];
+					foreach ($categoryArray as $category) {	
+				?>
+						<option 
+						
+						<?php
+							if($article['categoryId'] == $category['id']) {
+						?>
+							selected="selected"
+						<?php
+							}
+						?>
+							value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>	
+				<?php
+					}	
+				?>		
+						<option 
+						<?php
+							if($article['categoryId'] == -1) {
+						?>
+							selected="selected"
+						<?php
+							}
+						?>
+							 value="-1">其他</option>	
+						
+					</select>
+				</label>
+
+				<label style="width: 320px;margin-left: 28px;">
+					<span style="width: 58px; cursor: pointer">展示图：</span>
+					<img  style="height:150px;width:250px;cursor: pointer" id="images" src="<?php echo $article['images']; ?>" style="max-width: 100%;"/>
+				</label>
+				
+				<label>
+					<span>标题：</span>
+					<input type="text" name="title" value="<?php echo $article['title'] ?>"/>
+				</label>
+				<label>
+					<span>前言：</span>
+					<textarea name="intro" cols="10" rows="5"><?php echo $article['intro'] ?></textarea>
+				</label>
+				<label>
+					<span>文章内容：</span>
+					<div name="content" style="margin-left:90px;width:800px">
+						<script id="container" name="content"  type="text/plain"></script>
+		                <script type="text/javascript">
+		                    var ue = UE.getEditor('container',{
+		                        enableAutoSave:false,
+		                        autoHeightEnabled:true,
+		                        initialFrameHeight:300,
+		                        initialFrameWidth:800,
+		                        autoWidthEnabled:true
+		                    });
+		                    ue.addListener("ready",function(){
+		                        ue.setContent(<?php echo json_encode($article['content']);?>);
+		                    })
+		                </script>
+					</div>
+				</label>
+				<input style="margin-left: 400px" type="submit" name="submit" handleType="2" value="更新文章"
+					aid="<?php echo($article['id'] )?>"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/publishArticle.js');
+</script>

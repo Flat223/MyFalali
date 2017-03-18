@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-基金审核</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/fundmanager.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="/js/layer/css/layer.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css" >
+    
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+	<div class="bread">
+		<ul>
+			<li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>审核管理</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>科研基金审核</a></li>
+		</ul>
+	</div>
+	<div class="mainContent">
+		<div class="main-wrapp">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<th width="10%">头像</th>
+					<th width="10%">申请人昵称</th>
+					<th width="10%">真实姓名</th>
+					<th width="10%">身份</th>
+					<th width="10%">所在高校</th>
+					<th width="10%">职业</th>
+					<th width="10%">科研项目</th>
+					<th width="	10%">申请时间</th>
+<!-- 					<th width="15%">申请次数</th> -->
+					<th width="10%">状态</th>
+					<th width="10%">操作</th>
+				</tr>
+			<?php
+				foreach ($params['record'] as $researchfund){
+					$sub_type = $researchfund['sub_type'];
+					$state = $researchfund['state'];
+			?>
+				<tr>
+					<td>
+						<div class="logoimg">
+							<img src="<?php echo $researchfund['face']?>" alt=""
+								style="width: 76px;height: 76px;float: left">
+						</div>
+					</td>
+					<td><?php echo $researchfund['nickname'] ?></td>
+					<td><?php echo $researchfund['name'] ?></td>
+					<td>
+						<?php
+							$sub_type = $researchfund['sub_type'];
+							foreach ($params['sub_type'] as $sub_user){
+								if($sub_user['sub_type'] == $sub_type){
+									echo $sub_user['name'];
+								}
+							}
+						?>
+					</td>
+					<td><?php echo $researchfund['collegename'] ?></td>
+					<td><?php echo $researchfund['career'] ?></td>
+					<td><?php echo $researchfund['research_projects'] ?></td>
+					<td><?php echo date('Y-m-d H:i:s',$researchfund['apply_time']); ?></td>
+					<td style="color: gray">
+						<?php
+							if($state == 1){
+								echo '待审核';
+							} else if($state == 2){
+								echo '已通过';
+							} else {
+								echo '已拒绝';
+							}
+						?>
+					</td>
+					<td class="operatefund" mid="<?php echo $researchfund['mid']?>" college_mid="<?php echo $researchfund['college_mid']?>">						
+					<?php
+						if($state == 1){
+					?>
+						<span class="agree">通过</span>
+						<span class="refuse">拒绝</span>
+					<?php
+						} else if($state == 2){
+					?>
+						<span class="funddetail" fund="<?php echo $researchfund['fund']?>">查看金额</span>
+						<span class="delete">删除</span>
+					<?php
+						} else if($state == 3){
+					?>
+						<span class="delete">删除</span>
+					<?php
+						}
+					?>
+					</td>
+				</tr>
+			<?php
+				}
+			?>
+			</table>
+		</div>
+	<?php
+		if($params['pager'] != "" && count($params['record'])>0){		
+	?>
+		<div class=" clearfix" id="page">
+			<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+			<p class="">
+				共<?php echo($params['pager']->getPageCount()); ?>页，到第
+				<input type="text" maxlength="4" id="page_num">页
+				<input class="sub" type="butston" id="goto" value="确定">
+				<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+			</p>
+		</div>
+	<?php
+		}
+	?>
+	</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="/js/manager/researchfund.js"></script>
+<script type="text/javascript" src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	});
+</script>

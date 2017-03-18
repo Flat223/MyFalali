@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<cy-mapping xmlns="http://www.ichuk.com/cy-mapping">
+	<entity table="luqiwang_course_type">
+		<id column="ctid">ctid</id>
+		<field column="name" type="string">name</field>
+		<field column="parentid" type="integer">parentid</field>
+		<field column="status" type="string">status</field>
+		<field column="sort" type="string">sort</field>
+	</entity>
+</cy-mapping>
+
+
+

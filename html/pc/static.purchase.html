@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-采购入门</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link  rel="stylesheet" type="text/css" href="/css/pc/style.css" />
+	<link  rel="stylesheet" type="text/css" href="/css/pc/index.css" />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/staic.purchase.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pc/menuside.css" />
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css" />
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+			<li><i></i><a href="/static/aboutUs.html">关于实验圈</a></li>
+			<li><i></i><a href="/static/joinUs.html">加入我们</a></li>
+			<li><i></i><a href="/static/report.html">寻求报道</a></li>
+			<li class="menu-act"><i></i><a href="/static/purchase.html">采购入门</a></li>
+			<li><i></i><a href="/static/tradingGuide.html">交易指南</a></li>
+			<li><i></i><a href="/static/supplier.html">供应商入门</a></li>
+			<li><i></i><a href="/static/integralMall.html">会员积分商城</a></li>
+			<li><i></i><a href="/static/activityApply.html">活动申请</a></li>
+			<li><i></i><a href="/static/contactUs.html">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    	  <ul class="layui-tab-title">
+    	    <li class="layui-this">购物流程</li>
+    	    <li>产品查找</li>
+    	    <li>产品询价</li>
+    	    <li>注册会员</li>
+    	    <li>配送方式</li>
+    	    <li>售后服务</li>
+    	  </ul>
+    	  <div class="layui-tab-content" style="height: auto;">
+    	    <div class="layui-tab-item layui-show">
+    	    	<div class="img-wrapp">
+    	    		<img src="/images/pc/shopstep.png" class="shopimg" alt="" />
+    	    		<img src="/images/pc/shopprocess.png" alt="" />
+    	    	</div>
+    	    </div>
+    	    <div class="layui-tab-item">
+    	    	<div class="find-wrapp">
+    	    		<div class="way-item">
+    	    			<p class="first">
+    	    				<i></i>方法1：搜索查找检索法
+    	    			</p>
+    	    			<p class="desc">
+    	    				通过产品名称、cas号等关键词查找您需要的产品
+    	    			</p>
+    	    			<img src="/images/pc/way01.png" alt="" />
+    	    			<p class="first">
+    	    				<i></i>方法2：目录检索法
+    	    			</p>
+    	    			<p class="desc">
+    	    				通过产品目录分类查找，经过产品属性逐一进入对应的目录
+    	    			</p>
+    	    			<img src="/images/pc/way02.png" alt="" />
+    	    		</div>
+    	    	</div>
+    	    </div>
+    	    <div class="layui-tab-item">
+    	    	<div class="enquiry-wrapp">
+    	    		<p class="caption">
+    	    			实验圈商城专家组将您的询价进行评估，24小时内给予回复，请提交详情！
+    	    		</p>
+    	    		<!--<div class="consult-item">
+    	    			<span>咨询产品类型：</span>
+    	    			<input type="radio" name="radio" class="radio1-1" value="1" checked="checked" />试剂
+    	    			<input type="radio" name="radio" class="radio1-2" value="2"/>仪器耗材
+    	    		</div>-->
+    	    		<div class="form-item radio1">
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span><em>*</em>品名：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span>CAS：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span>规格：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span><em>*</em>数量：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item ">
+	    					<span>期望交期：</span>
+	    					<input type="text" />
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span><em>*</em>联系人：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span><em>*</em>电话：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span>单位名称：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span>E-MAIL：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="textarea-item clearfix">
+    	    				<span class="left">备注信息：</span>
+    	    				<textarea name="" id="" cols="30" rows="10"></textarea>	
+    	    			</div>
+    	    			<!--<div class="button-item">
+    	    				<button class="layui-btn">提交</button>
+    	    			</div>-->
+    	    		</div>
+    	    		<div class="form-item radio2" style="display: none;">
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span><em>*</em>品名：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span>型号：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span><em>*</em>数量：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span>期望交期：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span><em>*</em>联系人：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span><em>*</em>电话：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="input-item clearfix">
+    	    				<div class="left">
+    	    					<span>单位名称：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    				<div class="right">
+    	    					<span>E-MAIL：</span>
+    	    					<input type="text" />
+    	    				</div>
+    	    			</div>
+    	    			<div class="textarea-item clearfix">
+    	    				<span class="left">备注信息：</span>
+    	    				<textarea name="" id="" cols="30" rows="10"></textarea>	
+    	    			</div>
+    	    			<!--<div class="button-item">
+    	    				<button class="layui-btn">提交</button>
+    	    			</div>-->
+    	    		</div>
+    	    	</div>
+    	    </div>
+    	    <div class="layui-tab-item">
+    	    	<div class="reg-wrapp">
+    	    		<h1>为什么要注册会员</h1>
+    	    		<p>注册会员可以更加便利您的使用体验：</p>
+    	    		<p>会员登录后可以直接通过网银、余额、信用额度等方式在线支付；</p>
+    	    		<p>会员可以有效保存您的交易记录、历史订单，并及时查看订单状态；</p>
+    	    		<p>会员购物消费、每日签到，均可获取积分，免费兑换礼品；</p>
+    	    		<p>注册成为会员，可以参加商城活动，专享会员礼遇！</p>
+    	    		<h1>如何注册会员</h1>
+    	    		<p>会员只要一次注册，就可得到专属账户。</p>
+    	    		<p>我们的注册流程分为2步：</p>
+    	    	</div>
+    	    	<div class="way-item">
+    	    			<p class="first">
+    	    				<i></i>方法1：进入“实验圈商城官方网站”顶部右上角点击“注册”即可注册 
+    	    			</p>
+    	    			<img src="/images/pc/login-process.jpg" alt="" />
+    	    			<p class="first">
+    	    				<i></i>方法2：进入”账号注册“页面，编辑填写相关信息，进行注册
+    	    			</p>
+    	    			<img src="/images/pc/reg-process.jpg" alt="" />
+    	    		</div>
+    	    </div>
+    	    <div class="layui-tab-item">
+    	    	<div class="mode">
+    	    		<img src="/images/pc/mode.jpg" />
+    	    	</div>
+    	    	<div class="mode-desc">
+    	    		<h1>配送时间</h1>
+    	    		<p><b>现货</b>：防护用品类产品：在16:00前完成支付的订单，可当天发货，否则次日发货（遇节假日顺延）化学试剂、仪器耗材类产品：在12:00前完成支付的订单，可当天发货，否则次日发货（遇节假日顺延）。</p>
+    	    		<p><b>期货</b>：期货商品根据约定的货期发货。</p>
+    	    		<h1>配送范围</h1>
+    	    		<p>根据产品的性质及客户需求选择快递或物流配送(全国均可送达)。</p>
+    	    		<h1>配送费用</h1>
+    	    		<p>配送费用根据产品的重量及路程收取相应的费用(特殊产品需低温存储运输的，需要加收干冰费用)。</p>
+    	    	</div>
+    	    </div>
+    	    <div class="layui-tab-item">
+    	    	<div class="ser-item">
+    	    		<h1>退换货政策</h1>
+    	    		<p>客户收到货物时发现包装破损，请拒绝签收，拍照取证，及时与我客服联系退换货事宜。</p>
+    	    		<p>客户收到货后，7天之内对产品质量提出疑异，并举证产品质量存在问题，同时与我客服人员取得联系，办理退换货事宜。</p>
+    	    		<p>确认下单后，如无质量问题，不得退货。</p>
+    	    		<h1>退货流程</h1>
+    	    		<div class="return-pro">
+    	    			<img src="/images/pc/return.jpg" alt="" />
+    	    		</div>
+    	    		<h1>发票服务</h1>
+    	    		<p>本商城可以提供一般纳税人可开具增值税专用发票（含17%的增值税）和普通发票，非一般纳税人或个人只可开具普通发票。</p>
+    	    		<p>普通发票客户只需要提供企业名称或个人名称 </p>
+    	    		<p>增值税发票，客户需要提供完整的开票资料。（户名、开户行、账号、税号、注册地址、注册电话）</p>
+    	    		<p>发票会根据客户要求寄送，可按每张定单开票，也可以多张订单一个月开一次。</p>
+    	    		<p>如果发票需要更换重开，请务必在当月将发票寄回来。</p>
+    	    	</div>
+    	    </div>
+    	    <!-- end	 -->
+    	  </div>
+    	</div> 
+    </div>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript">
+	layui.use('element', function(){
+	  var $ = layui.jquery
+	  ,element = layui.element();
+	});
+	$(".radio1-1").on("click",function () {
+		if ($(this).is(":checked")){
+			$(".radio2").hide();
+			$(".radio1").show();
+		}
+	})
+	$(".radio1-2").on("click",function () {
+		if ($(this).is(":checked")){
+			$(".radio1").hide();
+			$(".radio2").show();
+		}
+	})
+</script>
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>商品</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/mallDetail.css">
+<body>
+    <div class="title">商品评价(<span><?php echo($params['count'])?></span>)</div>
+	<?php
+		$comment=$params['comment'];
+		foreach($comment as $sing){ 
+	?>
+    <div class="all_userPJ">
+        <div class="all_userHeadPic"><img height="49px" width="47px" src="<?php echo($sing['face']);?>"></div>
+        <div class="all_userName"><span><?php echo($sing['nickname']);?></span></div><br style="clear: both">
+        <div class="all_pjtext">
+            <span class="all_pjgoodstype"><?php echo($sing['time']);?></span>
+<!--             <span class="all_pjgoodstype"style="margin-left: 2%">型号分类：<a>LD123456</a></span> -->
+            <br>
+            <span><?php echo($sing['content']);?></span>
+        </div>
+    </div>
+    <hr>
+	<?php
+	}
+	?>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>	
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a href='/index.html'><img src="/images/pc/reg.png" class="logo" alt="" /></a>
+			<div class="reg right">账号注册</div>
+		</div>
+		<div class="right">
+			<span>已有实验圈账号？</span>
+			<a href="/member/login.html" class="login">登录</a>
+		</div>
+	</div>
+</div>
+<div class="content w1200">
+	<div class="login_process">
+		<img src="/images/pc/process1.png" alt="" />
+	</div>
+	<div class="outbox">
+		<div class="regbox">
+			<h1>账号注册</h1>
+			<label>
+				<input type="number" placeholder="手机号码" maxlength="11" id="mobile" autocomplete="new-password" />
+			</label>
+			<label>
+				<input type="number" placeholder="验证码" maxlength="6" id="validcode" autocomplete="new-password" />
+				<span class="getCode" style="cursor: pointer">获取手机验证码</span>
+			</label>
+			<label>
+				<input type="password" placeholder="密码" maxlength="40" id="psd" autocomplete="new-password"/>
+			</label>
+			<label>
+				<input type="password" placeholder="确认密码" maxlength="40" id="confirm_psd" autocomplete="new-password"/>
+			</label>
+			<label>
+				<input class="regbtn" type="button" value="立即注册" />
+			</label>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/regist',function(reg){
+		reg.initReg();
+	});
+</script>
+</body>
+</html>

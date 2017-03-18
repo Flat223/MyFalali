@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url(ichuk.com.css); 
+/* CSS Document */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, form, fieldset, legend, input, select, textarea, button, caption, th, td, blockquote, pre {
+	margin: 0;
+	padding: 0
+}
+body{ 
+
+	background: #f2f2f2;
+	color:#000;
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53'; 
+	font-size:14px;
+    font-weight: 200!important;
+}
+/*让ie支持rgba*/
+.filter{ 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#4C000000); 
+}
+input, select, textarea, button {
+	vertical-align: middle;
+	font-size: 100%;
+	outline: 0;
+	font-family: 'Microsoft YaHei', Arial, sans-serif;
+	
+}
+
+li{
+	list-style:none;
+}
+
+img {
+	border: 0 none;
+	vertical-align: top;
+}
+em {
+	font-style: normal;
+}
+input,select,textarea{
+	outline:none;
+	border:none;
+}
+textarea{
+	resize:none;
+}
+.clearfix:after {
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+.clear{
+	height:0; 
+	overflow:hidden; 
+	clear:both;
+}
+a {
+	text-decoration: none;
+	color: #525252;
+}
+a:hover {
+	text-decoration: none;
+}
+em,i{
+	font-style: normal;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.w1200 {
+	width: 1200px;
+	margin: 0 auto;
+}
+.color{
+	color: #e60012;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #e70000!important;
+}
+

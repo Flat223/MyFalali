@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>绑定企业</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1">
+        <!--<link rel="shortcut icon" href="/favicon.ico">-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+        <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">-->
+        <link rel="stylesheet" href="/css/mobile/sm.css">
+        <link rel="stylesheet" href="/css/mobile/sm-extend.min.css">
+        <link rel="stylesheet" href="/css/mobile/my.css">
+    </head>
+    <body>
+        <div class="page-group">
+             <div class="page page-current">
+                  <div class="bar bar-nav titleBackground">
+                    <a class="button button-link button-nav pull-left external" href="#">
+                        <img class="bar-icon-left" src="/images/mobile/50_1.png">
+                    </a>
+                    <header class="title titleColor">绑定企业</header>
+                    <a class="button button-link button-nav pull-right external" href="#" >
+                        <img class="bar-icon-right" src="/images/mobile/50_3.png">
+                    </a> 
+                </div>
+                  <div class="content pageBackGround">
+                      <div class="div-search">
+                          <div class="search-box">
+                           <span class="company">企业</span>
+                           <input type="text" id="search-input" placeholder="请搜索您想找的企业">
+                           <input type="button" id="search-btn">
+                          </div>
+                       
+                      </div>
+                      <div class="list-block contacts-block my-new">
+                        <div class="list-group">
+                          <ul>
+                             <?php $org = $params['org']?>
+                                <?php
+                                    for($i = 0;$i<count($org);$i++){
+                                    ?>
+                                      <li>
+                                          <div class="item-content">
+                                              <div class="item-inner">
+                                                  <div class="company-left">
+                                                      <img class="company-icon" src="/images/temp_mobile/49_2.png">
+                                                  </div>
+                                                  <div class="company-center">
+                                                      <div class="company-center-top"><?php echo $org[$i]['name']?></div>
+                                                      <div class="color-gray company-center-bottom">
+                                                          地址：<?php echo $org[$i]['address']?>
+                                                      </div>
+                                                  </div>
+                                                  <div class="company-right">
+                                                      <a href="/personal/binDingsSuccess.html" class="button active-btn external">申请绑定</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </li>
+                                <?php
+                                    }
+                                ?>
+                              <!--<li>
+                                  <div class="item-content">
+                                      <div class="item-inner">
+                                          <div class="company-left">
+                                              <img class="company-icon" src="/images/temp_mobile/49_2.png">
+                                          </div>
+                                          <div class="company-center">
+                                              <div class="company-center-top">企业名称</div>
+                                              <div class="color-gray company-center-bottom">
+                                                  地址：苏州工业园区星湖街287号
+                                              </div>
+                                          </div>
+                                          <div class="company-right">
+                                              <a href="/personal/binDingsSuccess.html" class="button active-btn external">申请绑定</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>-->
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </body>
+</html>

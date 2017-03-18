@@ -1,0 +1,72 @@
+
+.choose_type{
+	text-align: center;
+	padding: 0px 0 54px 0;
+	font-size: 20px;
+}
+.content section ul li{
+	float: left;
+	width: 25%;
+	margin: 0 0 30px 0;
+}
+.content section ul li dl{
+	height: 55px;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+
+.content section ul li dl dd{
+	width: 120px;
+	height: 55px;
+	line-height: 55px;
+	padding-left: 10px;
+	margin-left: 55px;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+.content section ul li dl dt{
+	width: 55px;
+	height: 55px;
+	display: inline;
+	position: absolute;
+}
+.content section ul li dl dt img{
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+}
+.content section ul li dl dt i{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	background: url(/images/temp_pc/choose-type.png);
+	display: none;
+}
+.content section ul li dl.sel_Industry dt i{
+	display: block!important;
+}
+
+.process2_bottom {
+	text-align: center;
+	margin: 60px 0 30px 0;
+}
+.process2_bottom a.skip{
+	color: #0181e2;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.process2_bottom a.next{
+	width: 250px;
+	height: 35px;
+	display: inline-block;
+	text-align: center;
+	line-height: 35px;
+	background: #E4E4E4;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1),
+	-1px -1px 2px rgba(0,0,0,0.1);
+	cursor: pointer;
+}

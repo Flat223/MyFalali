@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-添加商品</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css" >
+	<link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php 
+	include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php');
+	include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); 
+	$user = UserAgent::getUser();
+?>
+<div style="display: none">
+	<input name="address_type" type="hidden" value="<?php echo empty($params['address'])?0:1 ?>" />
+	<input name="mid" type="hidden" value="<?php echo $user['mid'] ?>" />
+</div>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+	        <li><i class="myshopinfo"></i><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><i class="shoppro"></i><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><i class="shopgroup"></i><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><i class="shopadd"></i><a href="/myshop/addProduct.html" style="color: #00bfb8">添加产品</a></li>
+            <li><i class="shoporder"></i><a href="/myshop/orderManager.html">订单管理</a></li>
+<!--             <li><i class="shopfreight"></i><a href="/myshop/freight.html">运费管理</a></li> -->
+            <li><i class="shopaddress"></i><a href="/myshop/addressManager.html">发货地址管理</a></li>
+            <li><i class="shopmes"></i><a href="/myshop/message.html">消息列表</a></li>
+            <li><i class="shopcoupon"></i><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+            <li><i class="shopcouponlist"></i><a href="/myshop/couponList.html">优惠券列表</a></li>
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<h1>
+	    	添加产品
+<!-- 	    	<span class="import"></span> -->
+    	</h1>
+    	
+    	<div class="proType">
+			<span>类型</span>
+			<select name="first_type">
+		<?php
+			foreach ($params['first_type'] as $first){
+		?>	
+				<option value="<?php echo $first['ptid']?>"><?php echo $first['name']?></option>
+		<?php
+			}
+		?>
+			</select>
+			<select name="second_type">
+		<?php
+			$firstPtid = $params['first_type'][0]['ptid'];	
+			foreach ($params['second_type'] as $second){
+				if($second['parentid'] == $firstPtid){
+		?>	
+				<option value="<?php echo $second['ptid']?>"><?php echo $second['name']?></option>
+		<?php
+				}
+			}
+		?>
+			</select>
+			<select name="third_type">
+		<?php
+			$secondPtid = $params['second_type'][0]['ptid'];
+			foreach ($params['third_type'] as $third){
+				if($third['parentid'] == $secondPtid){
+		?>	
+				<option value="<?php echo $third['ptid']?>"><?php echo $third['name']?></option>
+		<?php
+				}
+			}
+		?>
+			</select>
+			
+		<?php
+			$thirdPtid = $params['third_type'][0]['ptid'];
+			$forthType = array();
+			foreach ($params['forth_type'] as $forth){
+				if($forth['parentid'] == $thirdPtid){
+					$forthType[] = $forth;
+				}
+			}
+		?>
+			<select name="forth_type" style="display: <?php echo empty($forthType)?'none':'inline' ?>">
+			<?php
+				foreach ($forthType as $forth){
+			?>	
+				<option value="<?php echo $forth['ptid']?>"><?php echo $forth['name']?></option>
+			<?php
+				}
+			?>
+			</select>
+			
+		<?php
+			$forthPtid = $params['forth_type'][0]['ptid'];
+			$fifthType = array();
+			foreach ($params['fifth_type'] as $fifth){
+				if($fifth['parentid'] == $forthPtid){
+					$fifthType[] = $fifth;
+				}
+			}
+		?>	
+			<select name="fifth_type" style="display: <?php echo empty($fifthType)?'none':'inline' ?>">
+			<?php
+				foreach ($fifthType as $fifth){
+			?>	
+				<option value="<?php echo $fifth['ptid']?>"><?php echo $fifth['name']?></option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+    	<div class="proName proType">
+			<span><i>*</i>产品品牌</span>
+			<div class="layui-inline" style="margin-top: 10px;">
+				<input style="width:335px;height: 40px;" id="brand" class="easyui-combobox">
+			</div>
+		</div>
+		<div class="proName">
+			<span><i>*</i>产品名称</span>
+			<input name="proName" type="text" placeholder="请填写产品名称" />
+		</div>
+		<div class="proName proAlias" style="display: none">
+			<span>产品别名</span>
+			<input name="proAlias" type="text" placeholder="请填写产品别名" />
+		</div>
+		<div class="proName EnglishName">
+			<span>英文名称</span>
+			<input name="EnglishName" type="text" placeholder="请填写产品英文名称" />
+		</div>
+		<div class="proName CASnumber" style="display: none">
+			<span><i>*</i>CAS号</span>
+			<input name="CASnumber" type="text" placeholder="请填写产品CAS号" />
+		</div>
+		<div class="proName goods_code">
+			<span><i>*</i>货号</span>
+			<input name="goods_code" type="text" placeholder="请填写产品货号" />
+		</div>
+		<div class="proName size">
+			<span class="size" style="width: 76px;margin-left: -7px"><i>*</i>规格</span>
+			<input name="size" type="text" placeholder="请填写产品规格" />
+		</div>
+		<div class="proName purity" style="display: none">
+			<span><i>*</i>含量</span>
+			<input name="purity" type="text" placeholder="请填写产品含量" />
+		</div>
+		
+		<div class="proName proImg">
+			<span><i>*</i>产品图片</span>
+			<button id="uping">添加图片</button>
+			<small>（最多可以添加5张产品图片）</small>
+		</div>
+		<div class="uploadfile" style="height: 180px">
+			<div name='uping' style="float: left">
+				<span class="deleteimg">删除</span>
+				<img name="uping" src="/images/pc/upload.jpg" alt="" />
+			</div>
+			<div name='uping' style="float: left">
+				<span class="deleteimg">删除</span>
+				<img name="uping" src="/images/pc/upload.jpg" alt="" />
+			</div>
+			<div name='uping' style="float: left">
+				<span class="deleteimg">删除</span>
+				<img name="uping" src="/images/pc/upload.jpg" alt="" />
+			</div>
+			<div name='uping' style="float: left">
+				<span class="deleteimg">删除</span>
+				<img name="uping" src="/images/pc/upload.jpg" alt="" />
+			</div>
+			<div name='uping' style="float: left">
+				<span class="deleteimg" >删除</span>
+				<img name="uping" src="/images/pc/upload.jpg" alt="" />
+			</div>
+		</div>
+		
+		<?php
+			$unitArray = array("盒","套","支","只","kg","把","张","卷","副","包","本","g","台","m","瓶","桶","箱","吨","件","kit","ml","ul","L","mg","㎡","cm","mm","um");
+		?>
+		<div class="proName unit">
+			<span>计量单位</span>
+			<select name="unit">
+			<?php
+				foreach ($unitArray as $unit){
+			?>	
+				<option <?php echo ($unit=='瓶')?"selected='selected'":'' ?>>
+					<?php echo $unit ?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+		
+		<?php
+			$storeArray = array("常温保存","零下20℃保存","零下40℃保存","远离火源","填充氮气","真空保存","恒温恒湿保存");
+		?>
+		<div class="proName store">
+			<span>存储条件</span>
+			<select name="store">	
+			<?php
+				foreach ($storeArray as $store){
+			?>	
+				<option value=""><?php echo $store ?></option>
+			<?php
+				}
+			?>
+			</select>
+
+			</select>
+		</div>
+		
+		<?php
+			$trafficArray = array("常温运输","危险品车运输","零下20℃运输","液封运输");
+		?>
+		<div class="proName traffic">
+			<span>运输条件</span>
+			<select name="traffic">	
+			<?php
+				foreach ($trafficArray as $traffic){
+			?>	
+				<option value=""><?php echo $traffic ?></option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+		
+		<?php
+			$lifeArray = array("三个月以上","六个月以上","一年以上","两年以上");
+		?>
+		<div class="proName shelf_life">
+			<span style="margin-left: -32px;width: 102px">质保期</span>
+			<select name="shelf_life">	
+			<?php
+				foreach ($lifeArray as $shelf_life){
+			?>	
+				<option value=""><?php echo $shelf_life ?></option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+		
+		<div class="proName freight">
+			<span style="margin-left: -32px;width: 102px"><i>*</i>运费设置</span>
+			<select name="freight_way">		
+				<option value="2">卖家承担运费</option>
+				<option value="1">使用运费模板</option>
+			</select>
+			<div class="freight_intro" style="display: none">
+		<?php
+			if(empty($params['freight'])){
+		?>
+				<span class="noFreight" style="width: 100px">暂无运费模板</span>
+				<a class="addFreight" href="/myshop/freight.html">前往添加</a>
+		<?php
+			} else {
+		?>
+				<select name="freight" style="margin-left: 20px;min-width: 20px;">	
+			<?php
+				foreach ($params['freight'] as $freight){
+			?>	
+					<option value="<?php echo $freight['fre_id'] ?>"
+						valuation_unit="<?php echo $freight['valuation_unit'] ?>"
+						>
+						<?php echo $freight['name'] ?>
+					</option>
+			<?php
+				}
+			?>
+				</select>
+				<div class="weight_info" style="display: none">
+					<span>产品重量:</span>
+					<input name="weight" placeholder="请填写产品重量 (数字形式,单位:kg)" onkeyup="clearNoNum(this)" />
+				</div>
+				
+				<div class="volume_info" style="display: none">
+					<span>产品体积:</span>
+					<input name="volume" placeholder="请填写产品体积 (数字形式,单位:m³)" onkeyup="clearNoNum(this)" />
+				</div>
+		<?php
+			}
+		?>
+			</div>
+		</div>
+		
+		<div class="proName address">
+			<span><i>*</i>发货地址</span>
+		<?php
+			$addressArray = $params['address'];
+			if(empty($addressArray)){
+		?>
+			<div class="noAddressInfo">
+				<span class="noAddress">暂无发货地址</span>
+				<a class="addAddress" href="/myshop/addressManager.html">前往添加</a>
+			</div>
+		<?php
+			} else {
+		?>
+			<select name="address">	
+				<?php
+					foreach($addressArray as $address){
+				?>	
+				<option value="<?php echo $address['id'] ?>">
+					<?php 
+						echo $address['province_name']." ".$address['city_name']." ".$address['country_name']." ".$address['detail_address'];
+					?>
+				</option>
+				<?php
+					}
+				?>
+			</select>
+			<a class="setAddress" href="/myshop/addressManager.html">管理发货地址</a>
+		<?php
+			}
+		?>
+		</div>	
+			
+		<div class="proName packing">
+			<span>产品包装</span>
+			<input type="radio" name="packing" value="无包装" checked="checked" style="width: 25px"/>无包装
+			<input type="radio" name="packing" value="散装" style="width: 25px;margin-left: 25px"/>散装
+			<input type="radio" checked="true" name="packing" value="独立包装" style="width: 25px;margin-left: 25px"/>独立包装
+			<input type="radio" name="packing" value="普通包装" style="width: 25px;margin-left: 25px"/>普通包装
+		</div>
+		<div class="proName producer">
+			<span style="width: 80px;margin-left: -10px">生产商/产地</span>
+			<input type="radio" name="producer" value="国产" checked="checked" style="width: 25px"/>国产
+			<input type="radio" name="producer" value="进口" style="width: 25px;margin-left: 25px"/>进口
+		</div>
+		
+		<div class="proName">
+			<span>VIP折扣:</span>
+			<b>请填写0-1的数字</b>
+		</div>
+		<div class="proName">
+			<span>一级VIP</span>
+			<input name="vipone" type="text" placeholder="一级VIP折扣,默认1.0"  onkeyup="clearNoNum(this)"  />
+		</div>
+		<div class="proName">
+			<span>二级VIP</span>
+			<input name="viptwo" type="text" placeholder="二级VIP折扣,默认1.0" onkeyup="clearNoNum(this)" />
+		</div>
+		<div class="proName">
+			<span>三级VIP</span>
+			<input name="vipthree" type="text" placeholder="三级VIP折扣,默认1.0" onkeyup="clearNoNum(this)" />
+		</div>
+		<div class="proName">
+			<span>四级VIP</span>
+			<input name="vipfour" type="text" placeholder="四级VIP折扣,默认1.0" onkeyup="clearNoNum(this)" />
+		</div>
+		
+		<div class="proName is_harmful"  style="margin-top: 10px;display: none">
+			<span style="width: 113px; margin-left: -45px">易制毒、制爆</span>
+			<input type="radio" name="is_harmful" value="0" checked="checked" style="width: 25px" />否
+			<input type="radio" name="is_harmful" value="1" style="width: 25px;margin-left: 38px"/>是
+		</div>
+		
+		<div class="proName" style="margin-top: 10px">
+			<span style="width: 118px; margin-left: -50px">是否支持质量检测</span>
+			<input type="radio" name="can_testing" value="0" checked="checked" style="width: 25px" />不支持
+			<input type="radio" name="can_testing" value="1" style="width: 25px;margin-left: 10px"/>支持
+			<span class="quality_price" style="margin-left: 20px;display: none">质检价格:</span>
+			<input name="quality_testing" type="text" placeholder="设定质检价格" onkeyup="clearNoNum(this)" 
+					style="display: none"/>
+		</div>
+	
+		<div class="proName" style="margin-top: 10px">
+			<span style="width: 113px; margin-left: -45px">是否支持延保</span>
+			<input type="radio" name="can_guarantee" value="0" checked="checked" style="width: 25px" />不支持
+			<input type="radio" name="can_guarantee" value="1" style="width: 25px;margin-left: 10px"/>支持
+		</div>
+	
+		<div class="proName guarantee" style="display: none">
+			<span style="width: 113px; margin-left: -45px">保修一年的价格</span>
+			<input name="guarantee_1" type="text" placeholder="请输入保修一年的价格" onkeyup="clearNoNum(this)" />
+		</div>
+		<div class="proName guarantee" style="display: none">
+			<span style="width: 113px; margin-left: -45px">保修两年的价格</span>
+			<input name="guarantee_2" type="text" placeholder="请输入保修两年的价格" onkeyup="clearNoNum(this)" />
+		</div>
+		<div class="proName guarantee" style="display: none">
+			<span style="width: 113px; margin-left: -45px">保修五年的价格</span>
+			<input name="guarantee_5" type="text" placeholder="请输入保修五年的价格" onkeyup="clearNoNum(this)" />
+		</div>
+		
+		<div class="proName">
+			<span>视频地址</span>
+			<input name="proVideo" type="text" placeholder="填写产品视频地址" />
+		</div>
+		
+		<div class="proName">
+			<span>视频展示图</span>
+			<div id="uploadimg" style="display: none"></div>
+			<img class="proShowImage"  src="http://d27.ichuk.com/images/pc/upload.jpg" alt="" />
+		</div>
+		
+		<div class="proName">
+			<span style="width: 95px;margin-left: -23px">产品说明(电脑)</span>
+			<div name="content" style="margin-left:90px;width:800px">
+				<script id="container" name="content" type="text/plain"></script>
+				<script type="text/javascript">
+					var ue = UE.getEditor('container',{
+						toolbars:[['fullscreen', 'undo', 'redo', 'bold','simpleupload','attachment']],
+						enableAutoSave:false,
+						autoHeightEnabled:true,
+						initialFrameHeight:600,
+						initialFrameWidth:800,
+						autoWidthEnabled:true
+					});
+				</script>
+			</div>
+		</div>
+		
+		<div class="proName">
+			<span style="width: 95px;margin-left: -23px">产品说明(手机)</span>
+			<div name="content" style="margin-left:90px;width:800px">
+				<script id="container2" name="content" type="text/plain"></script>
+				<script type="text/javascript">
+					var uc = UE.getEditor('container2',{
+						toolbars:[['fullscreen', 'undo', 'redo', 'bold','simpleupload','attachment']],
+						enableAutoSave:false,
+						autoHeightEnabled:true,
+						initialFrameHeight:600,
+						initialFrameWidth:800,
+						autoWidthEnabled:true
+					});
+				</script>
+			</div>
+		</div>
+		
+		<div class="next clearfix">
+			<a class="nextStep">保存并下一步</a>
+		</div>
+    </div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/addproduct',function(pro){
+		var properties = <?php echo (json_encode($params['property'])) ?>;
+		var secondTypes = <?php echo (json_encode($params['second_type'])) ?>;
+		var thirdTypes = <?php echo (json_encode($params['third_type'])) ?>;
+		var forthTypes = <?php echo (json_encode($params['forth_type'])) ?>;
+		var fifthTypes = <?php echo (json_encode($params['fifth_type'])) ?>;
+		
+		pro.setProPerty(properties);
+		pro.setProType(secondTypes,thirdTypes,forthTypes,fifthTypes);
+	});
+
+	function clearNoNum(obj){
+		obj.value = obj.value.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符
+		obj.value = obj.value.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的
+		obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+		obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');//只能输入两个小数
+		if(obj.value.indexOf(".")< 0 && obj.value !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额
+			obj.value= parseFloat(obj.value);
+		}
+	}
+</script>
+

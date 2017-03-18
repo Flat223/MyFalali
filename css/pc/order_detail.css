@@ -1,0 +1,337 @@
+.order-process  img{
+	display: block;
+	margin: auto;
+	padding: 40px 0;
+}
+.tips-wrap >dl{
+	/*margin-left: 260px;
+	margin-bottom: 30px;*/
+	width: 50%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.tips-wrap >dl dt,
+.tips-wrap >dl dd{
+	padding: 10px;
+}
+.tips-wrap >dl dd h2{
+	font-weight: normal;
+	font-size: 16px;
+}
+input[name=submit_voucher]{
+	color: white;
+    background: #00bfb8;
+    display: inline-block;
+    width: 110px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.tips-wrap >dl dd{
+	margin-top: 10px;
+	line-height: 35px;
+}
+.tips-wrap >dl dd p i{
+	color: #00bfb8;
+	padding: 0 5px;
+}
+.submit-button{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	background: #00bfb8;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #00bfb8;
+	cursor: pointer;
+}
+.submit-button2{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	color: #000;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+.submit-button+.submit-button2{
+	margin-left: 10px;
+}
+table.order-title{
+	text-align: left!important;
+}
+
+/*评价*/
+.comment-wrap{
+	margin-top: 20px;
+}
+.comment-wrap-l img{
+	display: block;
+	margin: auto;
+	width:80px;
+	height: 80px;
+	padding: 20px;
+}
+.comment-des{
+	text-align: center;
+	width: 220px;
+}
+.comment-pri{
+	display: block;
+	text-align: center;
+	padding: 15px 0;
+}
+.comment-wrap-r{
+	width: 735px;
+}
+.comment-wrap-r textarea{
+	width: 600px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	text-indent: 1em;
+}
+.comment-wrap-r span{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width:80px;
+}
+.comment-submit span{
+	width: 220px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	margin-top: 60px;
+}
+.comment-img{
+	position: relative;
+	margin: 15px 0;
+}
+.comment-img input{
+	position: absolute;
+	left: 85px;
+	top: 0;
+	opacity: 0;
+}
+.comment-img .upload{
+	border: 1px solid #ddd;
+	text-align: center;
+	background: #f8f8f9;
+}
+#star{
+    width: 200px!important;
+}
+#star img{
+	margin-top: 5px;
+	width: 25px;
+	height: 25px;
+}
+
+/*查看物流详情*/
+.see-title{
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+.see-ul{
+	padding-left: 10px;
+	position: relative;
+}
+.see-ul ul li{
+	position: relative;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.see-ul ul li >i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top: 0;
+	left: -21px;
+	z-index: 12;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.see-ul .line{
+	position: absolute;
+	width: 1px ;
+	background: #ddd;
+	top: 0;
+	left:-5px;
+	height: 330px;
+	z-index: 11;
+}
+.see-ul  ul .see-this{
+	color: #00bfb8;
+}
+.see-ul  ul .see-this>i{
+	border-color: #00bfb8;
+	background: #00bfb8;
+}
+
+/*表格*/
+.order_p{
+	color: #00bfb8;
+	padding: 20px 0px 10px 10px;
+	border-bottom: 1px solid #ddd;
+}
+.order{
+	margin: 20px;
+	background: #f5f8fa;
+	border: 1px solid #ddd;
+}
+.order label{
+	display: block;
+	margin: 20px;
+}
+.order label span{
+	display: inline-block;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+}
+.order label input{
+	border: 1px solid #ddd;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 1em;
+	width: 212px;
+}
+.tag_submit{
+	background: #00bfb8;
+	color: #ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center !important;
+}
+.tag_submit2{
+	background: #e4e4e4;
+	color: #ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center !important;
+}
+/*.laydate{*/
+	/*background: #fff url(../images/date.png) no-repeat 185px;*/
+
+/*}*/
+
+.all_order ul.all_order_ul li{
+	float: left;
+	width: 85px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+}
+.all_order ul.all_order_ul li.this_or{
+	border-bottom:2px solid #00bfb8
+}
+.all_order ul.all_order_ul{
+	padding: 10px 20px;
+}
+
+
+table{
+	margin:0 20px;
+	width: 97%;
+	border: 1px solid #ddd;
+	border-width:0px 1px 1px 1px;
+}
+table th{
+	font-weight: normal;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+	border-width:1px 0px 0px 0px;
+}
+table th:first-child{
+	width: 30%
+}
+table td{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-width: 1px 0px 0px 0px;
+}
+table td.merge{
+	border: 1px solid #ddd;
+	border-width: 1px 0px 0px 1px;
+	position: relative;
+	width: 120px;
+}
+table td.merge span{
+	position: absolute;
+	top: 0;
+	left: 58px;
+}
+table td.merge .order_state{
+	position: absolute;
+	top: 7px;
+	right: 97px;
+	
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center !important;
+}
+table td.merge .reject{
+	position: absolute;
+	top: 50px;
+	right: 15px;
+}
+table tr.cells td{
+	border: 1px solid #ddd;
+	border-width: 1px 0px 0px 0px;
+	padding-left: 1em;
+	text-align: left;
+	background: #f5f8fa;
+	position: relative;
+}
+table tr.cells td i{
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	background: url(../images/del.png);
+	position: absolute;
+	right: 60px;
+	top: 10px;
+}
+table td.total_pri{
+	color: red;
+}
+table td.commodity_inof >dl dt,
+table td.commodity_inof >dl dd{
+	float: left;
+}
+table td.commodity_inof >dl dt img{
+	padding: 20px 0px 20px 20px;
+}
+table td.commodity_inof >dl dd{
+	padding: 20px 0px 20px 15px;
+	text-align: left;
+}
+table td.commodity_inof >dl dd a{
+	width: 180px;
+	display: block;
+	line-height: 25px;
+}
+table{
+	margin-bottom: 40px
+}
+table tr.hide >th{
+	height: 0px;
+}
+/*table tr td.number_td{
+	width: 70px;
+}*/
+
+

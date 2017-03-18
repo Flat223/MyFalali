@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-公司资料</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myprofile.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<blockquote class="layui-elem-quote">
+		  <span class="left">公司资料</span>
+		</blockquote>
+		<div class="profile">
+			<?php
+				$company = UserAgent::getUser();
+			?>
+			<label style="margin-top: 20px">
+				<span><em>*</em>公司名称：</span>
+				<input id="name" type="text" value="<?php echo $company['name']; ?>"/>
+			</label>
+			<label class="select_city" style="margin-top: 20px">
+				<span><em>*</em>所在地：</span>
+				<select class="s_province" real="<?php echo $company['province']?>"></select>
+				<select class="s_city" real="<?php echo $company['city']?>"></select>
+				<select class="s_country" real="<?php echo $company['country']?>"></select>
+			</label>
+			<label style="margin-top: 20px">
+				<span><em>*</em>地址：</span>
+				<input id="address" type="text" value="<?php echo $company['address']; ?>"/>
+			</label>
+			
+			<div style="margin-top: 20px">
+				<div id="uploadimg" style="display: none;">上传图像</div>
+				<span class="left"><em style="color: red">*</em>营业执照：</span>
+				<img id="bussinessImage" style="cursor: pointer" width="250px" height="150px" src="<?php echo $company['face']; ?>"/>
+			</div>
+			
+			<label style="margin-top: 20px">
+				<span class="left">公司简介：</span>
+				<textarea name="" id="personal_desc" cols="30" rows="10"><?php echo $company['personal_desc']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">科研成果：</span>
+				<textarea name="" id="research_achievement" cols="30" rows="10"><?php echo $company['research_achievement']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">专利：</span>
+				<textarea name="" id="patent" cols="30" rows="10"><?php echo $company['patent']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">科研项目：</span>
+				<textarea name="" id="research_projects" cols="30" rows="10"><?php echo $company['research_projects']; ?></textarea>
+			</label>
+		</div>
+		<div class="save" style="margin-top: 30px">
+			<input type="submit" class="tag_label" id="saveChange" value="保存修改" />
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/companyInfo.js');
+</script>

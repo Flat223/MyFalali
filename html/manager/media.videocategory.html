@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-视频分类</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($paramsa);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="../media/video.html"><i></i>视频管理</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>视频分类</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <!--<div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span><a href="addnews.html">+添加新闻</a></span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" placeholder="输入商家名称或关键词搜索">
+                        <span>搜索</span>
+                    </div>
+                </div>
+            </div>
+            <span style="color: gray;">**首页只能展示三类视频**</span>-->
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="15%">缩略图</th>
+                    <th width="20%">标题</th>
+                    <th width="40%">简介</th>
+                    <th width="20%">操作</th>
+                </tr>
+                <?php foreach($params['article'] as $v){ ?>
+                <tr>
+                    <td><?php echo $v['id']; ?></td>
+                    <td>
+                        <img style="width:139px;height:105px" src="<?php echo empty($v['images'])?'/images/temp_pc/0.jpg':$v['images']; ?>" alt="">
+                    </td>
+                    <td><a href="http://d27.ichuk.com/info/news.html?id=<?php echo $v['id']; ?>" ><?php echo $v['title']; ?></a></td>
+                    <td><?php echo $v['intro']; ?></td>
+                    <td>
+                        <!--<button class="layui-btn layui-btn-small layui-btn-look">
+                            <i class="layui-icon"></i>
+                        </button>-->
+                        <!--<button class="layui-btn layui-btn-small layui-btn-edit" onclick="window.location.href='../media/updatevideocategory.html?id='+<?php echo $v['id']; ?>">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>-->
+                        <span onclick="window.location.href='../media/updatevideocategory.html?id='+<?php echo $v['id']; ?>" style="margin-right: 0px; cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">修改</span>
+                        <!--<button name="delete" newsid="<?php echo $v['id']; ?>" class="layui-btn layui-btn-small layui-btn-del">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>-->
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script type="text/javascript">
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    });
+</script>

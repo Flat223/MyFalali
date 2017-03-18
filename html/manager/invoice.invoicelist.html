@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-发票列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+    <style>
+        td div ul{
+            margin:0 10px;
+            display: block;
+            line-height:25px;
+            text-align: left;
+        }
+        .thebutton{
+            width: 107px;
+            height: 32px;
+            line-height: 32px;
+            margin: 13px;
+            background: #f23e47;
+            display: inline-block;
+            text-align: center;
+            color: #ffffff;
+            border: 1px solid #f23e47;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>发票管理</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>发票列表</a></li>
+
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <select  name="invoice" style=" width: 120px;height: 34px;line-height: 34px;border: 1px solid #ddd;" >
+                            <option value="1">普通</option>
+                            <option value="2">电子</option>
+                            <option value="3">增值</option>
+                        </select>
+                        <span style="cursor: pointer" class="screen">筛选</span>
+                    </div>
+                </div>
+                <!--<div class="right">
+                    <div class="sear-item">
+                        <input type="text" placeholder="输入商家名称或关键词搜索">
+                        <span>搜索</span>
+                    </div>
+                </div>-->
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <input name="pages" type="hidden" value="<?php echo ceil($params['count']/10); ?>" />
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="8%">发票抬头</th>
+                    <th width="10%">票号</th>
+                    <th width="10%">收票人</th>
+                    <th width="10%">类型/内容</th>
+                    <th width="47%">信息</th>
+                    <th width="10%">操作</th>
+                </tr>
+                <?php foreach($params['invoice'] as $v){ ?>
+                <tr>
+                    <td><?php echo $v['id']; ?></td>
+                    <td><?php echo $v['title']; ?>
+                    </td>
+                    <td><?php echo $v['invoice_code']; ?></a></td>
+                    <td><?php echo $v['name']; ?></td>
+                    <td><?php switch ($v['type'])
+                            {
+                            case 1:
+                              echo '普通';
+                              break;
+                            case 2:
+                              echo '电子';
+                              break;
+                            case 3:
+                              echo '增值';
+                              break;
+                            default:
+                              echo '其他';
+                            }?>
+                        /
+                        <?php switch ($v['content'])
+                            {
+                            case 1:
+                              echo '明细';
+                              break;
+                            case 2:
+                              echo '办公';
+                              break;
+                            case 3:
+                              echo '电脑';
+                              break;
+                            case 4:
+                            echo '耗材';
+                            break;
+                            default:
+                              echo '其他';
+                            }?></td>
+                    <td >
+                        <div style="background-color:#FCF4D7;border:1px solid #FFD500">
+                        <ul>收票人手机:<?php echo $v['mobile']; ?></ul>
+                        <ul>收票人邮箱:<?php echo $v['email']; ?></ul>
+                        <ul>收票人单位:<?php echo $v['company_name']; ?></ul>
+                        <ul>纳税人识别码:<?php echo $v['company_name']; ?></ul>
+                        <ul>注册地址:<?php echo $v['re_location']; ?></ul>
+                        <ul>注册电话:<?php echo $v['re_mobile']; ?></ul>
+                        <ul>银行/卡号:<?php echo $v['bank_name']; ?>/<?php echo $v['bank_account']; ?></ul>
+                        </div>
+                    </td>
+
+                    <td>
+                        <?php if($v['type']==3 && $v['status']==1){ ?>
+                        <span style="cursor: pointer" class="thebutton" name="pass" status="2" vid="<?php echo $v['id']?>">通过</span>
+                        <span style="cursor: pointer" class="thebutton" name="pass" status="-1" vid="<?php echo $v['id']?>">拒绝</span>
+                        <?php }else if($v['type']==3 && $v['status']==2){?>
+                        <span style="cursor: pointer" class="thebutton" >已通过</span>
+                        <?php }else if($v['type']==3 && $v['status']=='-1') {?>
+                        <span style="cursor: pointer" class="thebutton" >已拒绝</span>
+                        <?php } ?>
+
+
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script type="text/javascript">
+    var pages=$('input[name=pages]').val();
+    var type=GetQueryString('type');
+    var page=GetQueryString('page');
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage,
+            layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    var url='../invoice/invoicelist.html?';
+                    if(type){
+                        url+='type='+type;
+                    }
+                    window.location.href = url+'&page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    $("span[name=pass]").on("click",function(){
+        var vid=$(this).attr("vid");
+        var status=$(this).attr("status");
+        var url='/service/checkinvoicelistServ.html';
+        $.ajax({
+            type: "POST",
+            url: url,
+            data:{"vid":vid,"status":status},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    alert(data.msg);
+                    window.location.reload(-1);
+                }else{
+                    alert(data.msg);
+                }
+            },
+            error:function(data){
+                alert("error");
+            }
+        });
+    })
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+    $(".screen").on('click',function(){
+        var type=$('select[name=invoice]').val();
+        window.location.href="../invoice/invoicelist.html?type="+type;
+    })
+
+</script>

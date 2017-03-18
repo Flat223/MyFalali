@@ -1,0 +1,132 @@
+.fpxx_type{
+    width: 100%;
+    height:12%;
+    margin-left: 2%;
+    margin-top: 2%
+}
+.fpxx_tit{
+    font-size: 1.5rem!important;
+    font-weight: bold;
+}
+.fpxx_index{
+    width: 50%;
+    height: 40%;
+    margin-top: 4%;
+}
+.fpxx_zzfp{
+    height: 100%;
+    width: 45%;
+    border: solid 1px aquamarine;
+    border-radius: 1.3rem;
+    text-align: center;
+    line-height: 2.8rem;
+    float: left;
+}
+.fpxx_zzfp a{
+    color: aqua
+}
+.fpxx_other{
+    height: 100%;
+    width: 45%;
+    border: solid 1px aquamarine;
+    border-radius: 1.3rem;
+    text-align: center;
+    line-height: 2.8rem;
+    float: left;
+    margin-left: 2%
+}
+.fpxx_other a{
+    color: aqua
+}
+.fpxx_detail{
+    width: 100%;
+    height:10%;
+    margin-left: 2%
+}
+.fpxx_fptt{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.fpxx_gr{
+    width: 30%;
+    height: 50%;
+    float: left;
+    margin-top: 3%;
+}
+.fpxx_grpic{
+    width: 28%;
+    height:90%;
+    float: left
+}
+.fpxx_geren{
+    width: 40%;
+    height: 100%;
+    float: left;
+    font-size: 1.6rem;
+    margin-left: 3%;
+    line-height: 3rem;
+}
+.fpxx_dw{
+    width: 30%;
+    height: 50%;
+    float: left;
+    margin-top: 3%;
+}
+.fpxx_dwpic{
+    width: 28%;
+    height:90%;
+    float: left
+}
+.fpxx_danwei{
+    width: 40%;
+    height: 100%;
+    float: left;
+    font-size: 1.6rem!important;
+    margin-left: 3%;
+    line-height: 3rem;
+}
+.fpxx_sprinfo{
+    width: 100%;
+    height: 5%;
+    margin-left: 2%;
+    font-size: 1.5rem!important;
+    font-weight: 900;
+}
+.fpxx_mail{
+    overflow: auto;
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    border-style: solid;
+    border-color: #FFFFFF;
+    outline: none;
+
+}
+.fpxx_infppic{
+    width: 8%;
+    height:90%;
+    float: left
+}
+.fpxx_fptit{
+    width: 60%;
+    height: 100%;
+    float: left;
+    margin-left: 3%
+}
+.fpxx_queren{
+    width: 100%;
+    height: 10%;
+    background-color: #dfdfdf
+}
+.fpxx_block{
+    width: 100%;
+    height: 15%
+}
+.fpxx_qrbtn{
+    width: 40%;
+    height: 70%;
+    background-color: cyan;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 30%
+}

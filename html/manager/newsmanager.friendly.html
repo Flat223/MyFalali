@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-链接列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <!--<script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><i class="layui-icon">&#xe603;</i><a href="../">返回</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <!--<div class="search-item">
+                        <span>关键字：</span>
+                        <input type="text" >
+                    </div>
+                    <div class="search-item">
+                        <span style="margin-left: 0px;" class="sear-span">搜索</span>
+                    </div>-->
+                    <div class="search-item">
+                        <span style="margin-left:20px;background-color:red;cursor:pointer" class="sear-span" onclick="window.location.href='../newsmanager/addlink.html'">添加链接</span>
+                    </div>
+                    <div style="float: right">
+                        <span>共<?php echo $params['count']?>条记录</span><br>
+                        <!--<button value="0" style="margin-top: 5px;float: right" class="layui-btn layui-btn-small layui-btn-normal edit">
+                            <i class="layui-icon">&#xe608;</i>
+                        </button>-->
+                    </div>
+                </div>
+            </div>
+            <?php $link = $params['friendly']; ?>
+            <div class="chart-content">
+                <div class="chart-item chart-show">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th width="5%">ID</th>
+                            <th width="10%">名字</th>
+                            <th width="10%">logo</th>
+                            <th width="50%">链接</th>
+                            <th width="15%">加入时间</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                        <?php
+                         foreach($link as $v){
+                            ?>
+                        <tr>
+                            <td><?php echo $v['lid']; ?></td>
+                            <td><?php echo $v['name']; ?></td>
+                            <td><img style="width:100px;height:100px" src="<?php echo $v['logo']; ?>" /></td>
+                            <td><?php echo $v['link']; ?></td>
+                            <td><?php echo date('Y-m-d H-i-s',$v['createtime']); ?></td>
+
+                            <td>
+                                <!--<button value="<?php echo  $advert[$i]['id']?>" class="layui-btn layui-btn-small layui-btn-look edit">
+                                    <i class="layui-icon"></i>
+                                </button>
+                                <button style="cursor:pointer;background-color:lightgreen;idth:30px;height:30px;border:none" value="<?php echo  $advert[$i]['images']?>" >
+                                    <i class="layui-icon">图</i>
+                                </button>-->
+                                <span value="<?php echo  $v['lid']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                                    删除
+                                </span>
+                                <input name="pages" type="hidden" value="<?php echo ceil($params['count']/10); ?>">
+                            </td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </table>
+                    <div class="boot-wrapp clearfix">
+                        <div id="page" class="left"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script>
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    });
+
+    var pages=$('input[name=pages]').val();
+    var page=GetQueryString('page');
+    var url='../newsmanager/friendly.html?';
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = url+'&page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+    $(".del").on("click",function(){
+        var lid=$(this).attr('value');
+        var url="/service/DeletefriendlyServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"lid":lid},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+    })
+</script>

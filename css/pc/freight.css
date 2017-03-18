@@ -1,0 +1,190 @@
+.freight_edit label.label_name{
+	height: 30px;
+    width: 75px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 16px;
+    margin-bottom: 10px;
+}
+.freight_edit input[type='text']{
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	text-indent: 5px;
+}
+.freight_edit select{
+	border: 1px solid #ccc;
+	height: 30px;
+	min-width: 85px;
+	margin-right: 5px;
+}
+.freight_edit .options{
+	margin-right: 15px;
+	cursor: pointer;
+}
+.freight_edit input[type='radio']{
+	margin-right: 3px;
+}
+.freight_edit .tips{
+	color: #9d9d9d;
+	font-size: 13px;
+}
+.freight_edit .delivery{
+	margin-left: 91px;
+	margin-bottom: 15px;
+}
+.freight_edit .delivery input[type='checkbox']{
+	margin-right: 5px;
+	cursor: pointer;
+}
+.freight_edit .delivery label{
+	cursor: pointer;
+}
+.freight_edit .delivery .delivery_type_set{
+	border: 1px solid #00bfb8;
+	margin-top: 5px;
+	min-height: 75px;
+	font-size: 13px;
+}
+.freight_edit .delivery .delivery_type_set .default{
+	background-color: #f3feed;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 20px;
+}
+.freight_edit .delivery .delivery_type_set input[type='text']{
+	height: 20px;
+	line-height: 20px;
+	width: 80px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.freight_edit .delivery .delivery_type_set .add_freight_list table{
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.add_freight_list table td,.add_freight_list table th{
+	text-align: center;
+	height: 30px;
+	line-height: 20px;
+}
+.add_freight_list table thead tr{
+	background-color: #f4f4f4;
+}
+.add_freight_list table input[type='text']{
+	width: 65px!important;
+}
+.add_freight_list table tbody tr:hover{
+	background: #f5f8fa;
+}
+.add_spec {
+	height: 40px;
+	line-height: 40px;
+	text-indent: 20px;
+}
+.delivery a{
+	color: #3379ff;
+}
+.delivery a:hover{
+	color: #1c21ff;
+}
+.freight_del a:hover{
+	color: #ff4001;
+}
+.delivery_area{
+	border-right: none;
+}
+.delivery_area_edit{
+	border-left: none;
+}
+.freight_edit .btn_save{
+	width: 100px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00bfb8;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 91px;
+}
+.freight_edit .btn_save:hover{
+	background-color: #12cfc8;
+}
+.area_option{
+	display: none;
+	padding: 5px 10px;
+}
+.area_option i{
+	background: url('/images/pc/drop-down.png') no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-size: 11px 11px;
+	background-position:4px 6px;
+	cursor: pointer;
+}
+.area_option .area_province{
+	display: inline-block;
+	margin: 3px 5px;
+	min-width: 115px;
+	position: relative;
+}
+.area_option .area_province .province_tit{
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 2;
+	position: relative;
+}
+.area_option .area_province.drop-down .province_tit{
+	border: 1px solid #ccc;
+	border-bottom-color: #88e3c3;
+	background-color: #88e3c3;
+}
+.area_option .area_province input{
+	margin: 3px;
+}
+.area_option .area_province .city_num{
+	color: red;
+}
+.area_option .area_province .area_cities{
+	position: absolute;
+	min-width: 300px;
+	min-height: 50px;
+	z-index: 3;
+	background: #88e3c3;
+	border: 1px solid #ccc;
+	margin-top: -1px;
+	display: none;
+	padding: 5px;
+}
+.area_option .area_province.drop-down .area_cities{
+	display: block;
+}
+.area_option .area_cities label{
+	display: inline-block;
+	margin: 3px;
+}
+.area_option .area_cities input[type=button]{
+	float: right;
+    height: 23px;
+    line-height: 23px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #2e8ded;
+    color: #fff;
+    border: 1px solid #4898d5;
+    font-size: 12px;
+    margin: 0 6px;
+    padding: 0 15px;
+    font-weight: 100;
+}
+.area_option .area_cities input[type=button]:hover{
+	opacity: .9;
+}
+.area_option .area_cities .unavailable,.area_option .province_tit .unavailable{
+	color: #8d8d8d;
+}

@@ -1,0 +1,15 @@
+#grouplist li>dl>dt{
+    position: relative;
+}
+#grouplist li>dl>dt>span.deleteimg{
+    position: absolute;
+    right:0;
+    top: 0;
+    line-height: 25px;
+}
+#grouplist li>dl>dd{
+    text-align: center;
+}
+#grouplist li{
+    margin-right: 10px;
+}

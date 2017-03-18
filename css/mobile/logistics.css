@@ -1,0 +1,68 @@
+.wuliu_info{
+    height: 15%;
+    /* width: 100%; */
+    margin-left: 2%;
+}
+.wuliu_img{
+    width: 25%;
+    /* height: 90%; */
+    float: left;
+    margin-top: 2%;
+}
+.wuliu_progress{
+    margin-top: 2%;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    margin-left: 2%;
+    float: left;
+}
+.wuliu_state{
+    width: 100%;
+    margin-top: 1%;
+    height: 32%
+}
+.wuliu_state a{
+    color: cyan
+}
+.wuliu_from{
+    width: 100%;
+    height: 32%
+}
+.wuliu_num{
+    width: 100%;
+    height: 32%;
+}
+.wuliu_genz{
+    /* width: 100%;
+    height: 4%; */
+    font-size: 1.7rem;
+    margin-left: 2%;
+    font-weight: bold;
+}
+.wuliu_jc{
+    /*width: 100%; */
+    height: 6%;
+    margin-left: 2%;
+    /* color: cyan; */
+    margin-top: 2%;
+}
+.wuliu_jcimg{
+    width: 15%;
+    height: 100%;
+    float: left
+}
+.wuliu_jctit{
+    width: 85%;
+    height: 100%;
+    float: left
+}
+.wuliu_jcdet{
+    /* width: 100%; */
+    height: 55%;
+    font-size: 1.7rem;
+}
+.wuliu_jctime{
+    /*width: 100%;*/
+    /*height: 45%;*/
+    font-size: 1.6rem;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit_identity.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a><img src="/images/pc/reg.png" alt="" /></a>
+			<div class="reg right">账号注册</div>
+		</div>
+		
+	</div>
+</div>
+<div class="content w1200">
+	<div class="login_process">
+		<img src="/images/pc/process1.png" alt="" />
+	</div>
+	<section id="identities">
+		<ul> 
+			<li ref-tid="1">
+				<dl>
+					<dt>
+						<img src="/images/pc/college.jpeg" alt="" />
+					</dt>
+					<dd>高校</dd>
+					<dd class="_sub"></dd>
+					<i></i>
+				</dl>
+			</li>
+			<li ref-tid="2">
+				<dl>
+					<dt>
+						<img src="/images/pc/company.jpeg" alt="" />
+					</dt>
+					<dd>公司</dd>
+					<dd class="_sub"></dd>
+					<i></i>
+				</dl>
+			</li>
+			<li ref-tid="3">
+				<dl>
+					<dt>
+						<img src="/images/pc/supplier.jpeg" alt="" />
+					</dt>
+					<dd>供应商</dd>
+					<i></i>
+				</dl>
+			</li>
+			<li ref-tid="4">
+				<dl>
+					<dt>
+						<img src="/images/pc/identity5.png" style="width: 132px;margin-top: 45px;" />
+					</dt>
+					<dd>个人</dd>
+					<i></i>
+				</dl>
+			</li>
+			<div class="clear"></div>
+		</ul>
+		<div class="clear"></div>
+	</section>
+	<div class="clear"></div>
+	<div class="process2_bottom">
+		<a href="/regist/stepIndustry.html?mid=<?php echo $params['mid'] ?>">跳过</a>
+		<a class="ident_next">下一步</a>
+	</div>
+</div>
+<div style="display: none">
+	<input name="mid" type="hidden" value="<?php echo $params['mid'] ?>"/>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<div class="college">
+	<ul>
+		<li ref-stid="0">
+			<dl>
+				<dt>
+					<img src="/images/pc/college_reg.png" alt="" />
+				</dt>
+				<dd>高校注册</dd>
+			</dl>
+		</li>	
+<?php
+	if(!empty($params['collegeTypes'])){
+		foreach($params['collegeTypes'] as $val){
+?>
+		<li ref-stid="<?php echo($val['sub_type']); ?>">
+			<dl>
+				<dt>
+					<img src="/images/pc/identity2.png" alt="" />
+				</dt>
+				<dd><?php echo($val['name']); ?></dd>
+			</dl>
+		</li>	
+<?php			
+		}
+	}
+?>
+		<div class="clear"></div>
+	</ul>
+</div>
+<div class="company">
+	<ul>
+		<div class="clear"></div>
+	</ul>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/regist',function(reg){
+		var collegeTypes = <?php echo(json_encode($params['collegeTypes'])); ?>;
+		reg.setCollegeTypes(collegeTypes);
+		reg.initIndentities();
+	});
+</script>
+</body>
+</html>

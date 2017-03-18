@@ -1,0 +1,114 @@
+.profile>div{
+	display: block;
+	margin: 10px 0;
+	padding: 0 20px
+}
+.profile>div span{
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+.profile>label{
+	display: block;
+	margin: 10px 0;
+	padding: 0 20px
+}
+.profile>label span{
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+.profile>label span em{
+	color: red
+}
+
+.profile>label input[type=text]{
+	text-indent: 1em;
+	width: 300px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+}  
+.profile>label input[type=radio]:nth-of-type(2){
+	margin-left: 10px;
+}
+
+.profile>label span:nth-of-type(2){
+	margin-left: 80px;
+}
+.profile>label span.school{
+	margin-left: 316px
+}
+.profile>label textarea{
+	width: 878px;
+	min-height: 161px;
+	border: 1px solid #ddd;
+	padding: 1em;
+}
+.profile>label textarea:{
+	mheight: 161px;
+}
+.profile>label.select_city select{
+	min-width: 98px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #ddd;
+}
+.profile>label select.interest{
+	min-width: 160px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+}
+.tag_label{
+	width: 100px!important;
+	height: 30px;
+	line-height: 30px;
+	text-align: center!important;
+	color: #fff;
+	background: #00bfb8 ;
+}
+.tag{
+	margin-top: 10px;
+	margin-left: 60px;
+}
+.profile>label span.add{
+	margin-left: 20px;
+}
+#lab_container ul li{
+	float: left;
+	width: 120px;
+	height: 30px;
+	margin-bottom: 20px;
+	line-height: 30px;
+    margin-left: 20px;
+}
+#lab_container ul li i{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: url(/images/pc/del_label.png);
+    float: right;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+}
+.putIn{
+	margin-left: 100px;
+	position: relative;
+	margin-top: 25px;
+}
+.save{
+	position: relative;
+	margin-top: 110px;
+	text-align: center;
+}
+.save input{
+	cursor: pointer;
+	background: #ddd;
+	color: black;
+	width: 120px !important;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 2px;
+}

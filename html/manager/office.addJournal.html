@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加品牌</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>添加日志</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <div name="content">
+                            <script id="container" name="content" type="text/plain"></script>
+                            <script type="text/javascript">
+                                var ue = UE.getEditor('container',{
+                                    enableAutoSave:false,
+                                    autoHeightEnabled:true,
+                                    initialFrameHeight:600,
+                                    initialFrameWidth:800,
+                                    autoWidthEnabled:true
+                                });
+                                ue.addListener("ready",function(){
+                                    ue.setContent(<?php echo json_encode($params['journal']['content']);?>);
+                                })
+                            </script>
+                        </div>
+                        <input style="display: none" id="bid" type="text" >
+                        <span style="margin-left:300px;margin-top: 10px"><button class="layui-btn layui-btn-warm save">保存</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="jid" type="hidden" value="<?php echo $params['journal']['id']?>"/>
+<!--<script src="/js/jquery.min.js"></script>-->
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<!--<script src="/js/manager/cyupload.js"></script>-->
+<script type="text/javascript">
+    $(".save").on('click',function () {
+        var content = ue.getContent();
+        var id = $("#jid").val();
+        console.log(id);
+        if(content == ""){
+            layer.alert("有未填写的信息！", {offset: '200px'});
+            return;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/service/AddJournalServ.html",
+            data: {"content":content,"id":id},
+            success: function (data) {
+                if(data.ret == 1) {
+                    layer.msg(data.msg, {icon: 1});
+                    window.setTimeout(widreload,700);
+                }else if(data.ret == -1){
+                    layer.alert(data.msg, {offset: '200px'});
+                }else if(data.ret == -2){
+                    layer.alert(data.msg, {offset: '200px'});
+                }else if(data.ret == -3){
+                    layer.alert(data.msg, {offset: '200px'});
+                }
+            }
+        })
+    });
+
+    function widreload() {
+        window.location.href="/office/journal.html";
+    }
+</script>
+</body>
+</html>

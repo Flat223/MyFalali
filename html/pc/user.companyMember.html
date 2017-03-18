@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-成员管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+
+	<link type="text/css" rel="stylesheet" href="/css/pc/companyMember.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+		?>
+		<div>
+			<div class="company_member">
+				<ul>
+					<li>成员管理</li>
+					<li>></li>
+					<li name="titletip">查看成员</li>
+				</ul>
+			</div>
+			<div class="mainContent">
+				<div class="main-wrapp">
+					<div class="chart-wrapp clearfix">
+						<ul class="check_state clearfix">
+							<li name="wait" value="1" >待审核</li>
+							<li name="agree" value="2" >已通过</li>
+							<li name="refuse" value="3" >已拒绝</li>
+							<li style="float: right">
+                                 <button id="add" class="layui-btn layui-btn-normal">
+                                     <a href="/user/addCompanyMember.html"><i class="layui-icon">&#xe608;</i> 添加</a>
+                                 </button>
+                             </li>
+						</ul>
+					</div>
+
+					<div class="chart-content">
+						<div class="chart-item chart-show">
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<th width="14%">头像</th>
+									<th width="14%">申请人昵称</th>
+									<th width="14%">真实姓名</th>
+									<th width="14%">身份</th>
+									<th width="14%">状态</th>
+									<th width="16%">操作</th>
+								</tr>
+							<?php
+                        		foreach ($params['member'] as $member){
+	                        		$state = $member['bind_status'];
+                    		?>
+								<tr>
+									<td>
+										<div class="face">
+											<img 
+												src="<?php echo empty($member['face'])?'/images/pc/face_default.png':$member['face']; ?>"
+												style="width: 76px;height: 76px;float: left">
+										</div>
+									</td>
+									<td><?php echo $member['nickname'] ?></td>
+									<td><?php echo $member['name'] ?></td>
+									<td><?php echo $member['sub_type'] == 1 ? '科研人员' : '采购员' ?></td>
+									<td>
+										<?php
+											if($state == 1){
+												echo '待审核';
+											} else if($state == 2){
+												echo '已通过';
+											} else {
+												echo '已拒绝';
+											}
+										?>
+									</td>
+									
+									<td class="operate" 
+										mid="<?php echo $member['mid']?>" 
+										>						
+									<?php
+										if($state == 1){
+									?>
+										<span class="agree">通过</span>
+										<span class="refuse" style="margin-top: 10px">拒绝</span>
+									<?php
+										} else if($state == 2){
+									?>
+										<span class="delete">删除</span>
+									<?php
+										}
+									?>
+									</td>
+								</tr>
+							<?php
+	                            }
+	                        ?>
+							</table>
+						</div>
+						<div class=" clearfix" id="page">
+							<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+							<p class="">
+								共<?php echo($params['pager']->getPageCount()); ?>页
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/companyMember.js');
+</script>
+<script>
+	$(function(){
+		var flag="<?php echo isset($_GET['state'])?$_GET['state']:'1'; ?>";
+		switch(flag){
+			case '1':
+				$('.check_state li[name=wait]').addClass("chart-this");
+				break;
+			case '2':
+				$('.check_state li[name=agree]').addClass("chart-this");
+				break;
+			case '3':
+				$('.check_state li[name=refuse]').addClass("chart-this");
+				break;
+			default:
+				$('.check_state li[name=wait]').addClass("chart-this");
+		}
+	});
+</script>
+
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-发布文章</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myarticle.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<div class="article">
+			<p class="caption">
+				<a href="/user/article.html" class="lef" style="color: #00bfb8">我的文章
+				</a>
+			</p>
+			<div class="publish">
+				<label>
+					<span>分类：</span>
+					<select id="sc">
+					<?php
+						$categoryArray = $params['category'];
+						foreach ($categoryArray as $category) {	
+						?>
+							<option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+						<?php
+							}
+						?>
+							<option value="-1">其他</option>
+					</select>
+					<select style="" id="cc" name="category">
+						<?php
+							$child = $params['child'];
+							foreach ($child as $ct) {
+							?>
+								<option value="<?php echo $ct['id'] ?>"><?php echo $ct['name'] ?></option>
+							<?php
+							}
+						?>
+					</select>
+				</label> 
+				
+				<label style="width: 320px;margin-left: 28px;">
+					<span style="width: 58px; cursor: pointer">展示图：</span>
+					<img style="cursor: pointer;width: 200px;height: 200px;border: 1px solid #ddd;" id="images" src="/images/pc/upload.jpg" />
+				</label>
+				
+				<label>
+					<span>标题：</span>
+					<input type="text" name="title" placeholder="请填写标题"/>
+				</label>
+				<label>
+					<span>视频地址：</span>
+					<input id="proVideo" type="text" placeholder="请填写产品视频地址" />
+				</label>
+				<label>
+					<span>前言：</span>
+					<textarea name="intro" cols="30" rows="10"></textarea>
+				</label>
+				<label>
+					<span>文章内容：</span>
+					<div name="content" style="margin-left:90px;width:800px">
+
+						<script id="container" name="content" type="text/plain"></script>
+						<script type="text/javascript">
+							var ue = UE.getEditor('container',{
+								enableAutoSave:false,
+								autoHeightEnabled:true,
+								initialFrameHeight:600,
+								initialFrameWidth:800,
+								autoWidthEnabled:true
+							});
+						</script>
+					</div>
+				</label>
+				<input style="margin-left: 400px" type="submit" name="submit" handleType="1" value="立即发布"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script src="/js/manager/cyupload.js"></script>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/publishArticle.js');
+	$.cyupload({
+		elem: '#images',
+		btnName: "请选择",		//按键名称
+		infoElementId: "",	//上传状态信息包装元素id
+		maxFilesize: 10485760,
+		uploadUrl: '/service/uploadimgServ.html',
+		fileFilter: '',
+		upfileParam: 'upload_file_input',
+		success: function (url) {
+			$('#images').attr('src', url['file_url']);
+		}
+	});
+</script>
+<!--<script type="text/javascript" src="/js/oldArea.js"></script>-->
+<!--<script type="text/javascript">_init_area();</script>-->
+

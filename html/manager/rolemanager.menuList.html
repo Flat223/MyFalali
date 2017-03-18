@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css"> 
+    <link type="text/css" rel="stylesheet" href="/css/manager/ichuk.com.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title>菜单管理-菜单列表</title>
+    <script type="text/javascript">
+		var iChuk; 
+	</script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>权限管理</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>菜单管理</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">  
+                    <div class="search-item">
+                        <span style="margin-left:0;background-color:#58c2f4;cursor:pointer" class="sear-span" onclick="window.location.href='../rolemanager/addMenu.html'">添加菜单</span>
+                    </div>
+                    <div style="float: right"> 
+                        <span>共<?php echo empty($params['total'])?0:$params['total']?>条记录</span><br>
+                        <!--<button value="0" style="margin-top: 5px;float: right" class="layui-btn layui-btn-small layui-btn-normal edit">
+                            <i class="layui-icon">&#xe608;</i>
+                        </button>--> 
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($params['ret'] == 1)
+                {
+	                $advert = $params['data'];
+	                $pid = $params['pid'];
+	                $page = $params['page'];
+	                $pagesize = $params['pagesize'];
+	                $total = $params['total'];
+                }
+                else
+                {
+	                $advert = array();
+	                $pid = 0;
+	                $page = 1;
+	                $pagesize = 10;
+	                $total = 0;
+                } 
+                $tableheader = array("ID","名称","ICON","URL","描述","父菜单","状态","操作");
+				$tablecellwidth = array("10%","20%","10%","20%","10%","10%","10%","10%");
+				$tablefooter = array();
+				$tabletbody = array();
+				
+				if(!empty($advert))
+                {
+	                foreach($advert as $value)
+	                {
+		                $tempitem = array();
+						$tempitem[] = $value['id']; 
+						$tempitem[] = $value['name']; 
+						$tempitem[] = !empty($value['icon'])?"<div class='".$value['icon']."'></div>":-""; 
+						$tempitem[] = !empty($value['url'])?$value['url']:"-"; 
+						$tempitem[] = !empty($value['remark'])?$value['remark']:"-"; 
+						$tempitem[] = !empty($value['pid'])?$value['pid']:"根目录";
+						$tempitem[] = $value['status']==1?"<i style='color:green;'>有效</i>":"<i style='color:red;'>无效</i>";
+						$handle = "";
+						$handle .= '<a class="user-handle" data-id="'.$value['id'].'" href="../rolemanager/editMenu.html?id='.$value['id'].'" data-type="edit" style="background-color: #00b3ff ;padding:5px 10px;color: white;border-radius: 3px;cursor: pointer; display: block; height: 20px; line-height: 20px; margin: 0 0 10px 0;">修改</a>';
+		                $handle .= ($value['status']==1)?'<a class="user-handle" data-id="'.$value['id'].'" data-type="delete" style="background-color: red ;padding:5px 10px;color: white;border-radius: 3px;cursor: pointer; display: block; height: 20px; line-height: 20px; margin: 0 0 10px 0;">删除</a>':'<a class="user-handle" data-id="'.$value['id'].'" data-type="reuse" style="background-color: green ;padding:5px 10px;color: white;border-radius: 3px;cursor: pointer; display: block; height: 20px; line-height: 20px; margin: 0 0 10px 0;">启用</a>'; 
+		                $tempitem[] = $handle;
+						$tabletbody[] = $tempitem; 
+						
+	                } 
+                }
+				 
+                $table = CommonFunc::GenTableView($tableheader,$tabletbody,$tablefooter,$tablecellwidth);
+                echo $table;
+            ?>
+            
+            <?php
+				$pagehtml = CommonFunc::GenPageBreakHtml($page,$pagesize,$total,'../rolemanager/menuList.html?page={page}&pagesize={pagesize}&pid='.$pid,'{page}','{pagesize}','console_listitem table_footer','pageitem');
+				echo $pagehtml;
+			?>
+        </div>
+    </div>
+</div> 
+<script src="/js/jquery.min.js"></script>
+<script src="/js/ichuk.com.js"></script> 
+<script src="../../js/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/role_menulist.js"></script>
+</body>
+</html>

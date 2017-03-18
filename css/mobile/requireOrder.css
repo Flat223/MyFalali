@@ -1,0 +1,138 @@
+.pur_type{
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+.pur_type a{
+    margin-left: 7%
+}
+a.select{
+    color: #44C9CE;
+    text-decoration: none;
+}
+.pur_div{
+    width: 100%;
+    /*height: 30%;*/
+    margin-left: 2.4%;
+}
+.pur_num{
+    height: 12%;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.pur_state{
+    color: cyan;
+    float: right;
+    margin-right: 3%;
+}
+.pur_info{
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke
+}
+.pur_img{
+    width:25%;
+    height: 90%;
+    float: left;
+    margin: 1% 0;
+}
+.pur_det{
+    width: 72%;
+    height: 100%;
+    float: left;
+    margin-left: 3%;
+    font-size: 1.6rem;
+    margin-top: 1%;
+    font-weight: bold;
+}
+.pur_name{
+    width: 100%;
+    margin-top: 1%;
+    height: 32%
+}
+.pur_type1{
+    width: 100%;
+    height: 32%
+}
+.pur_price{
+    width: 40%;
+    height: 32%;
+    float: left
+}
+.pur_sl{
+    width: 10%;
+    float: left;
+    margin-left: 40%
+}
+.pur_count{
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 2% 0;
+}
+.pur_btn{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.pur_btn2,.pur_btn1{
+    display: block;
+    padding: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-width: 1px 0px 1px 0px;
+}
+.pur_btn2:after,.pur_btn:after,.pur_btn1:after,.pur_info:after,.pur_div:after {
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+
+.pur_btn1 input[name=agree]{
+	float: right;
+    display: block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    background: white;
+    text-align: center;
+    border: 1px solid #00bfb8;
+    color: #00bfb8;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+.pur_btn1 input[name=refuse]{
+	float: right;
+    display: block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    background: white;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: gray;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.pur_btn2 input{
+	float: right;
+    display: block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 15px;
+    
+    color: white;
+    background-color: #ddd;
+    cursor: auto;
+}

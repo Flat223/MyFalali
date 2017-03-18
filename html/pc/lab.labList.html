@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-实验室</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/lab_list.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/toolbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+    <style type="text/css">
+        .view{
+            margin-top: -20px;
+            /* background: #1a5454; */
+            color: #000000;
+            font-size: 1px;
+            text-align: center;
+        }.num{
+             color: red;
+         }
+        .heart{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="tool-bar">
+    <ul>
+        <li>
+            <a href=""><i></i></a>
+        </li>
+        <li>
+            <a href=""><i></i></a>
+        </li>
+        <li>
+            <a href=""><i></i></a>
+        </li>
+        <li>
+            <a href=""><i></i></a>
+        </li>
+        <li>
+            <a href=""><i></i></a>
+        </li>
+    </ul>
+</div>
+<div class="content w1200">
+    <div class="section clearfix  ">
+       <div class="ui large breadcrumb">
+         <ul>
+            <li>
+                <a href="/lab/share.html">实验室共享</a>
+            </li>
+            <li>></li>
+            <li>
+                <?php echo $params['typeName']; ?>
+            </li>
+         </ul>
+       </div>
+    </div>
+
+    <div class="category clearfix">
+        <p class="clearfix">
+            <span class="left">分类：</span>
+            <label class="label-item1">
+                <?php
+				$parentType = $params['partypeList'];
+				if(!empty($parentType)){
+					for($i = 0; $i<count($parentType); $i++ ){
+                    ?>
+                <a class="colorValue" value="<?php echo($parentType[$i]['lab_tid'])?>" href="/lab/labList.html?labtId=<?php echo($parentType[$i]['lab_tid']); ?>"><?php echo $parentType[$i]['name']; ?></a>
+                <?php
+                    }
+                }
+            ?>
+            </label>
+        </p>
+        <p class="clearfix">
+            <span class="left">二级分类：</span>
+            <label class="label-item1">
+                <?php
+				$childType = $params['childtypeList'];
+				if(!empty($childType)){
+					for($i = 0; $i<count($childType); $i++ ){
+                    ?>
+                <a  class="colorValue" value="<?php echo($childType[$i]['lab_tid'])?>" href="/lab/labList.html?labtId=<?php echo($childType[$i]['lab_tid']); ?>&parentId=<?php echo($childType[$i]['parentid']); ?>"><?php echo $childType[$i]['name']; ?></a>
+                <?php
+                    }
+                }
+            ?>
+            </label>
+        </p>
+    </div>
+    <div class="sort">
+        <div class="left">
+            <ul>
+                <li value="1"><a href="/lab/labList.html?labtId=<?php echo $params['labtId']; ?>&parentId=<?php echo $params['parentId']; ?>&obtype=1">综合排序</a></li>
+               <!-- <li>价格</li>-->
+                <li value="2"><a href="/lab/labList.html?labtId=<?php echo $params['labtId']; ?>&parentId=<?php echo $params['parentId']; ?>&obtype=2">热度</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <span class="left">共<a class="act-a"><?php echo ($params['count']);?></a>家实验室</span>
+            <p class="page left">
+
+            </p>
+
+            <p class="arrow left">
+               <!-- <a href="" class="next"><i></i></a>
+                <a href="" class="prev"><i></i></a>-->
+            </p>
+        </div>
+    </div>
+    <div class="list_wrapper">
+        <ul>
+            <?php
+                $labArr = $params['labArr'];
+                $labArr = array_filter($labArr);
+				if(!empty($labArr)){
+					for($i = 0; $i<count($labArr); $i++ ){
+						for($j = 0;$j <count($labArr[$i]); $j++){
+                        ?>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <img src="<?php echo empty($labArr[$i][$j]['logo'])?'/images/temp_pc/list1.png': explode(',',$labArr[$i][$j]['logo'])[0]; ?>" alt="" />
+                                        <div class="heart" value="<?php echo $labArr[$i][$j]['lab_id']?>">
+                                            <img class="ht<?php echo $labArr[$i][$j]['lab_id'];?>" src="<?php echo (in_array($labArr[$i][$j]['lab_id'],$params['cl'])? '/images/temp_pc/list-heart.png':'/images/temp_pc/list-hollow.png') ;?>"  alt="" />
+                                        </div>
+                                        <div class="view"><span class="num"><?php echo $labArr[$i][$j]['view_num']?></span>次浏览</div>
+                                        </dt>
+                                        <dd>
+                                            <h3><a href="/lab/detail.html?labId=<?php echo $labArr[$i][$j]['lab_id']; ?>"><?php echo ($labArr[$i][$j]['name']); ?></a></h3>
+                                            <!--<img src="/images/temp_pc/list-star.jpg" alt="" />-->
+                                            <?php
+											    $starNum = $labArr[$i][$j]['stars'];
+												if($starNum%2 == 0){
+												 	for($k = 0; $k < $starNum/2; $k++){
+													?>
+                                                        <img src="/images/pc/1y.png" alt="" />
+                                                    <?php
+												 	}
+												}else{
+												 	for($k = 0; $k < floor($starNum/2); $k++){
+													?>
+                                                        <img src="/images/pc/1y.png" alt="" />
+                                                    <?php
+												}
+											        ?>
+                                                        <img src="/images/pc/1yb.png" alt="" />
+                                                    <?php
+												 }
+											?>
+                                            <div class="description">
+                                                <p>
+                                                    <span>服务领域：</span><?php echo $labArr[$i][$j]['service_area'];?>
+                                                </p>
+                                                <p>
+                                                    <span>联系地址：</span><?php echo $labArr[$i][$j]['address']; ?>
+                                                </p>
+                                                <p>
+                                                    <span>简介：</span> <?php echo $labArr[$i][$j]['intro']; ?>
+                                                </p>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            <?php
+					    }
+				    }
+				}else{
+				?>
+                    <li>
+                        <dl>
+                            <dd style="    font-size: 20px;margin-left: 500px;width: 500px;margin-top: 50px;">
+                                <span>抱歉！没有找到相关实验室内容！</span>
+                            </dd>
+                        </dl>
+                    </li>
+            <?php
+				}
+			?>
+        </ul>
+        <div id="demo" class="right"></div>
+    </div>
+</div>
+
+<div class="clear"></div>
+    <?php
+        $labArr = $params['labArr'];
+        $labArr = array_filter($labArr);
+        if(!empty($labArr)){
+        ?>
+            <div class=" clearfix" id="page">
+                <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+                <p class="">
+                    共<?php echo($params['pager']->getPageCount()); ?>页<!--，到第
+                    <input type="text" maxlength="4" id="page_num">页
+                    <input class="sub" type="button" id="goto" value="确定">-->
+                </p>
+            </div>
+        <?php
+        }
+    ?>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+    window.seajs&&seajs.use('pc/lab_list.js');
+</script>
+</body>
+</html>
+

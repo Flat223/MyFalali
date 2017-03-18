@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-付款</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/back.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/order_detail.css"  />
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<div class="back-warp">
+		<div class="back-process back-item">
+			<img src="images/back4.png" alt="" />
+		</div>
+		
+	<div class="comment-wrap-r ">
+		<p>
+			请退货并填写物流信息
+		</p>
+		<div class="comment-star">
+			<span><em>*</em>物流公司</span>
+			<select name="" id="">
+				<option value="">请选择物流公司</option>
+				<option value="">顺丰</option>
+				<option value="">圆通</option>
+			</select>
+		</div>
+		<div class="comment-star">
+			<span><em>*</em>运单号码</span>
+			<input type="text" />
+			
+		</div>
+		<div class="commemt-text clearfix">
+			<span class="left">退款说明</span>
+			<textarea name="" id="" placeholder="" cols="30" rows="10"></textarea>
+		</div>
+		<div class="comment-img">
+			<span>上传凭证</span>
+			<input type="file" value="" />
+			<span class="upload">上传图片</span>	
+		</div>
+		<div class="comment-submit submit-apply">
+			<span class="submit-button">确认退货</span>
+			<span class="submit-button2">取消</span>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+
+
+
+
+

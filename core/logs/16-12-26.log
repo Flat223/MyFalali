@@ -1,0 +1,827 @@
+[2016-12-26 00:20:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 00:23:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 07:02:30][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('62')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 09:00:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty(0)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 09:27:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('1', '100', '1', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 09:36:47][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 09:38:17][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 09:58:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 10:02:44][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status =1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(246): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddCollectionServ.php(18): UserServ->getCollection('8', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddCollectionServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddColl...', '/service/AddCol...', 'AddCollectionSe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:04:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status =1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(246): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddCollectionServ.php(18): UserServ->getCollection('8', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddCollectionServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddColl...', '/service/AddCol...', 'AddCollectionSe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:05:28][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status =1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(246): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddCollectionServ.php(18): UserServ->getCollection('8', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddCollectionServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddColl...', '/service/AddCol...', 'AddCollectionSe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:05:47][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status =1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(246): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddCollectionServ.php(18): UserServ->getCollection('8', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddCollectionServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddColl...', '/service/AddCol...', 'AddCollectionSe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:07:49][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(182): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/service/OrderServ.php(230): OrderServ->searchByCondition('', Array, 'select b.name a...', 2, NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getCompanyOrder('2', '100', '2', '', 1)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 10:55:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:28][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:36][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:42][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 10:55:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('64')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:10:17][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Purchase.php(59): OrderServ->getOrderByOrderCode('1482399505385', '2', '100', '2', 2)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Purchase->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.purchase.h...', '/user/purchase....', 'Purchase', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:10:23][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Purchase.php(59): OrderServ->getOrderByOrderCode('1482399505385', '2', '100', '2', 2)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Purchase->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.purchase.h...', '/user/purchase....', 'Purchase', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:10:40][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:10:52][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:13:27][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:13:39][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:15:06][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 order by view_num desc limit 4' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(81): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(12): ArticleServ->getArticleByView(4, 'view_num desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:15:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=1 order by view_num desc limit 4' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(81): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(12): ArticleServ->getArticleByView(4, 'view_num desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:16:11][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:16:13][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:16:29][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:19:01][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:19:46][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:19:48][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:20:00][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:20:01][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:20:02][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:20:52][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:03][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:39][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:39][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:40][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:41][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:21:46][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:23:08][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(62): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:23:46][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '1', '100', '1', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:24:02][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:24:22][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(61): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:25:44][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:27:14][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:27:15][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:27:16][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:27:39][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:28:18][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:29:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.mid = '100' and a.status = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 11:29:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.mid = '100' and a.status = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(71): DBAgent->querySingleRecord('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(18): OrderServ->getOrderByOrderCode('1482399505387', '2', '100', '2', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 12:34:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('15')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 13:40:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('80')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 14:20:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = NULL and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy(NULL)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:20:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = NULL and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy(NULL)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:20:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = '3' and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy('3')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:22:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = '3' and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy('3')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:23:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = '3' and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy('3')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:23:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = '3' and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy('3')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:23:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_article_category where id = '3' and status = '1' and 1 = 1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select  from la...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(91): DBAgent->getSingleRecordFromTable('article_categor...', 'name', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->getThisCategroy('3')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-26 14:49:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join labring_member where a.mid=b.mid' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select b.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(10): ArticleServ->GetAriticle_Writer('5')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 14:49:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 14:57:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 16:51:41][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 16:51:51][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:16:55][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:17:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('65')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 17:17:15][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:18:58][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:19:41][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:19:47][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:19:52][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:21:47][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:23:41][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:23:56][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:24:07][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:24:20][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:25:34][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:30:46][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:38:02][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:38:03][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 17:38:04][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-26 18:23:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('42')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 18:29:42][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'time' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(7): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('time desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 18:31:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desclimit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('time desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 18:31:20][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'time' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('time desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 20:40:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('50')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 23:50:41][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: user in <b>/ichukdata1/html/project/labring/html/pc/info.news.html</b> on line <b>54</b>' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(16): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 23:50:49][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: user in <b>/ichukdata1/html/project/labring/html/pc/info.news.html</b> on line <b>54</b>' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(16): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 23:56:05][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: user in <b>/ichukdata1/html/project/labring/html/pc/info.news.html</b> on line <b>54</b>' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(16): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 23:56:24][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: user in <b>/ichukdata1/html/project/labring/html/pc/info.news.html</b> on line <b>54</b>' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(16): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-26 23:59:02][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: user in <b>/ichukdata1/html/project/labring/html/pc/info.news.html</b> on line <b>54</b>' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(17): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

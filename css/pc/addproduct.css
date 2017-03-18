@@ -1,0 +1,309 @@
+.content{
+	margin-top: 20px;
+}
+.menu-item ul li{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+	width: 215px;
+	text-align: left;
+	position: relative;
+}
+.menu-item ul li i{
+	display: inline-block;
+	width: 20px;
+	height:20px;
+    position: absolute;
+    top: 16px;
+    margin: 0 5px;
+}
+.menu-item ul li i.myshopinfo{
+     background: url("/images/pc/myshop.png") no-repeat;
+    background-size: 16px;
+ }
+.menu-item ul li i.shoppro{
+    background: url("/images/pc/shop_product.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopgroup{
+    background: url("/images/pc/shopgroup.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopadd{
+    background: url("/images/pc/shopadd.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopfreight{
+    background: url("/images/pc/shop_freight.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shoporder{
+    background: url("/images/pc/shoporder.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopaddress{
+    background: url("/images/pc/shop_address.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopmes{
+    background: url("/images/pc/shopmes.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopcoupon{
+    background: url("/images/pc/shopcoupon.png") no-repeat;
+    background-size: 16px;
+}
+.menu-item ul li i.shopcouponlist{
+    background: url("/images/pc/shopcoupon.png") no-repeat;
+    background-size: 16px;
+}
+
+.menu-item ul li a{
+	padding-left:30px;
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 14px;
+    text-indent: 30px;
+}
+.menu-item ul li a:hover{
+	color: #525252; 
+}
+.menu-item ul .menu-act a{
+	color: #00bfb8;
+}
+.content-item{
+	width: 950px;
+	min-height: 524px;
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 14px;
+}
+.content-item>h1{
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: 1px solid #cccccc;
+	line-height: 30px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-indent: 5px;
+	color: #00bfb8;
+}
+.content-item h1 span.import{
+	float: right;
+	margin-top: 8px;
+	margin-right: 50px;
+	width: 125px;
+	font-size: 16px;
+	color: orange;
+	cursor: pointer;
+}
+
+.content-item>.proName
+,.content-item>.proType
+,.content-item>.proImg{
+	margin-bottom: 15px;
+}
+
+.content-item>div span i{
+	color: red;
+}
+.proShowImage{
+	border: 1px solid #ddd;
+	cursor: pointer;
+	width: 240px;
+	height: 160px;
+}
+
+.content-item>.proName>span
+,.content-item>.proType>span
+,.content-item>.proImg>span{
+	display: inline-block;
+    width: 70px;
+    text-align: right;
+    line-height: 40px;
+    margin-right: 2em;
+}
+.content-item>.proName>input{
+	padding: 5px;
+	border: 1px solid #ddd;
+	width: 300px;
+	line-height: 30px;
+	text-indent: 0.6em;
+}
+.content-item>.proName>textarea{
+	width: 650px;
+	min-height: 161px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	text-indent: 0.6em;
+}
+.content-item>.proType select,.content-item>.proName select{
+	cursor: pointer;
+	padding: 5px;
+	border: 1px solid #ddd;
+	min-width: 120px;
+	max-width: 165px;
+	height: 35px;
+	line-height: 35px;
+}
+.content-item>.proImg>button{
+    border: 1px solid #00bfb8;
+    background: #00bfb8;
+    border-radius: 3px;
+    width: 78px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.content-item> .uploadfile{
+	margin-left: 98px;
+}
+.content-item> .uploadfile img{
+    border: 1px solid #ddd;
+    display: inline-block;
+    width: 160px;
+    margin-right: 5px;
+    height: 160px;
+}
+.deleteimg{
+	display: block;
+	width:40px;
+	height: 25px;
+	text-align: center;
+	background-color: gainsboro;
+	position: absolute;
+	cursor:pointer;
+}
+.next{
+	margin: 20px 0;
+}
+.next a{
+	cursor: pointer;
+	background: #00bfb8;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	height: 35px;
+	margin-left: 96px;
+	line-height: 35px;
+	margin-top: 20px;
+}
+/* Table Head */
+#table-5 thead th {
+	background-color: #00BFB8;
+	color: #fff;
+	border-bottom-width: 0;
+}
+
+/* Column Style */
+#table-5 td {
+	color: #000;
+	text-align: center;
+	bord
+}
+/* Heading and Column Style */
+#table-5 tr, #table-5 th {
+	border-width: 1px;
+	border-style: solid;
+	/*border-color: #00BFB8;*/
+}
+
+/* Padding and font style */
+#table-5 td, #table-5 th {
+	padding: 10px;
+	font-size: 12px;
+	font-family: Verdana;
+	font-weight: bold;
+}
+.select {
+	float: right;
+}
+.button{
+	cursor: pointer;
+	width: 100px;
+	line-height: 25px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	text-shadow:1px 1px 1px #333;
+	border-radius: 5px;
+	margin:0 auto 3px;
+	position: relative;
+	overflow: hidden;
+}.button.red{
+	 border:1px solid #b42323;
+	 box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+	 background: -webkit-linear-gradient(top,#d53939,#b92929);
+	 background: -moz-linear-gradient(top,#d53939,#b92929);
+	 background: linear-gradient(top,#d53939,#b92929);
+ }
+.button.yellow{
+	border:1px solid #d2a000;
+	box-shadow: 0 1px 2px #fedd71 inset,0 -1px 0 #a38b39 inset,0 -2px 3px #fedd71 inset;
+	background: -webkit-linear-gradient(top,#fece34,#d8a605);
+	background: -moz-linear-gradient(top,#fece34,#d8a605);
+	background: linear-gradient(top,#fece34,#d8a605);
+}
+.button.green{
+	border:1px solid #64c878;
+	box-shadow: 0 1px 2px #b9ecc4 inset,0 -1px 0 #6c9f76 inset,0 -2px 3px #b9ecc4 inset;
+	background: -webkit-linear-gradient(top,#90dfa2,#84d494);
+	background: -moz-linear-gradient(top,#90dfa2,#84d494);
+	background: linear-gradient(top,#90dfa2,#84d494);
+}
+.productmove{
+	background-color: #FFFFCC;
+}
+#_submit_tourist{
+	width: 30%;
+	margin: auto;
+}
+
+.noFreight,.noAddress{
+	color: gray;
+	text-align: center !important;
+	width: 100px !important;
+}
+.noFreight{
+	margin-left: 20px;
+}
+.noAddressInfo{
+	display: inline;
+}
+a.addFreight,a.addAddress{
+	background: #00bfb8;
+    color: white;
+    width: 100px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+a.addAddress{
+	margin-left: 23px;
+}
+.weight_info,.volume_info{
+	display: inline;
+}
+.weight_info span,.volume_info span{
+	margin-left: 20px;	
+	color: gray;
+}
+input[name=weight],input[name=volume]{
+	padding: 2px;
+    border: 1px solid #ddd;
+    width: 300px;
+    line-height: 30px;
+    text-indent: 0.6em;
+}
+select[name=address]{
+	max-width: inherit !important;
+}
+a.setAddress{
+	margin-left: 10px;
+	color: #258;;
+}
+a.setAddress:hover{
+	color: #00bfb8;
+}

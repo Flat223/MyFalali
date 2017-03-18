@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈--登录</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/login.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css">	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a href="http://d27.ichuk.com"><img src="/images/pc/reg.png" alt="" /></a>
+			<div class="reg right">后台登录</div>
+		</div>
+	</div>
+</div>
+<div class="content w1200">
+	<div class="login_l left">
+		<img src="/images/pc/login_bg.png" alt="" />
+	</div>
+	<input name="redirect" type="hidden" value="<?php echo $params['redirect'] ?>">
+	<div class="login_r right" style="margin-bottom: 50px">
+		<p style="text-align: center">
+			<span>后台登录</span>
+		</p>
+		<div class="traditional_login" style="display: block">
+			<div style="margin-top: 10px"><input type="text" placeholder="手机号码" id="mobile2" maxlength="11" /></div>
+			<div style="margin-top: 25px"><input type="password" placeholder="密码" id="password" maxlength="40" /></div>
+		</div>
+		<input type="button" style="margin-top: 50px;" value="立即登录" id="login_btn"/>
+	</div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('manager/login.js');
+</script>
+</body>
+</html>

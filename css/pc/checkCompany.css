@@ -1,0 +1,87 @@
+.outbox{
+	width: 620px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+label{
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+}
+label span{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+ label input[type=submit]{
+	
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+#confirmUpload{
+	display: inline-block;
+	margin: auto;
+	width:250px;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 1em;
+	border: 1px solid #00bfb8;
+	color: #fff;
+	background: #00bfb8;
+	margin-left: 124px;
+	cursor: pointer;
+}
+ label input[type=text]{
+	display: inline-block;
+	margin: auto;
+	width:250px;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 1em;
+	border: 1px solid #ddd;
+	margin-left: 20px;
+ }
+ label input[type=text]+span{
+	display: inline-block;
+	margin: auto;
+	width: 130px;
+	height: 35px;
+	text-indent: 1em;
+	line-height: 35px;
+	border: 1px solid #ddd;
+	text-align: center;
+	background: #ededed;
+	margin-left: 20px;
+}
+
+em{
+	color: red
+}
+.login_process img{
+	display: block;
+	margin: auto;
+	margin-top: 71px;
+}
+div.com_image{
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;	
+}
+div.com_image span{
+	display: inline-block;
+	width: 100px;
+	text-align: right;	
+}
+#faceimage{
+	width: 250px;
+	height: 150px;
+	cursor: pointer;
+	margin-left: 20px;
+	max-width: 100%;
+	border: 1px solid #ddd;
+}

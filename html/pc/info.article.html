@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-文章</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link href="/css/pc/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pc/common.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pc/card.css" rel="stylesheet" type="text/css">
+    <link href="/css/pc/zx-detail.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+
+    <style>
+        #imgh{
+            width: 256px;
+            height: 170px;
+            overflow: hidden;
+        }
+        img#carimghover{
+            -webkit-transition: .7s;
+            transition: .7s;
+        }
+        img#carimghover:hover{
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content">
+    <div class="contain w1200">
+        <div style="margin: 10px 0;font-size: 14px;" class="ui large breadcrumb">
+            <ul class="clearfix">
+                <li style="float: left;">
+                    <a href="/index.html">首页</a>
+                </li>
+                <li style="float: left;">></li>
+                <li style="float: left;">
+                    文章
+                </li>
+
+            </ul>
+        </div>
+        <div class="contain_l left">
+            <h1><?php echo $params['article']['title']; ?></h1>
+            <p class="author-panel">
+                <span><?php echo $params['category']; ?></span>
+                <span class="right">
+					<span><?php echo empty($params['article']['wname'])? '实验圈':$params['article']['wname']; ?></span>
+					<span class="dot">&nbsp;•&nbsp;</span>
+					<span class="time"><?php $tm=time()-$params['article']['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                                {
+                                echo floor($tm/60).'分钟前';
+                                }
+                                else if($tm<(24*3600) && $tm>7200)
+                                {
+                                echo floor($tm/3600).'小时前';
+                                }
+                                else if($tm<(30*24*3600) && $tm>(24*3600))
+                                {
+                                echo floor($tm/(24*3600)).'天前';
+                                }
+                                else
+                                {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                                }
+                                ?></span>
+
+				</span>
+            </p>
+            <section class="summary">
+                <?php echo $params['article']['intro']; ?>
+            </section>
+            <?php
+                if(!empty($params['article']['video_url'])){
+            ?>
+            <section class="headimg">
+                <iframe height=498 width=700 src="<?php echo $params['article']['video_url']; ?>" frameborder=0 allowFullScreen="true" style="margin: auto;padding-bottom: 10px;display: block;"></iframe>
+            </section>
+            <?php
+            }
+            ?>
+            <?php
+                if($params['article']['type'] == 5){
+            ?>
+                <div style="margin: 20px 70px;">
+                    <img src="<?php echo $params['article']['images'];?>" alt="">
+                </div>
+            <?php
+                }
+            ?>
+            <div>
+                <section class="textblock">
+                    <?php echo $params['article']['content']; ?>
+                </section>
+                <section class="article-footer-label">
+                    <div>
+                        原创文章，作者：<?php echo empty($params['article']['wname'])?'实验圈':$params['article']['wname']; ?>，如若转载，请注明出处：
+                        <a href="<?php echo '..'.$_SERVER['REQUEST_URI']; ?>" target="_blank" rel="nofollow"><?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?></a>
+                    </div>
+                </section>
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+            </div>
+            <section class="single-post-comment">
+                <h4><a   name="comment">精彩评论</a></h4>
+            </section>
+            <?php $comment = $params['comment']?>
+            <?php $userList = $params['userList']?>
+            <div>
+                <ul style="line-height: 35px;">
+                    <?php if(!empty($comment)){
+                        for($i = 0;$i<count($comment);$i++){
+                        ?>
+                    <li style="border-bottom: 1px dashed #ddd">
+                        <span>
+                            <a style="color: #00bfb8;" href="../user/friendhome.html?mid=<?php echo $userList[$i]['mid']; ?>" >
+                             <?php
+						if(!empty( $userList[$i]['nickname'])){
+						echo $userList[$i]['nickname'];
+						}else if(!empty( $userList[$i]['name'])){
+						echo $userList[$i]['name'];
+						}else{
+						echo '本站用户';
+						}
+										?>
+                        </a>
+                        </span>
+                        <span class="dot">&nbsp;•&nbsp;</span>
+                        <span style="color: #a6a6a6;font-size: 10px;">
+                                <?php $tm=time()-$comment[$i]['time'];
+                                    if($tm<60)
+                                    {
+                                        echo '刚刚发布';
+                                    }
+                                    else if($tm<7200 && $tm>60)
+                                        {
+                                        echo floor($tm/60).'分钟前';
+                                        }
+                                        else if($tm<(24*3600) && $tm>7200)
+                                        {
+                                        echo floor($tm/3600).'小时前';
+                                        }
+                                        else if($tm<(30*24*3600) && $tm>(24*3600))
+                                        {
+                                        echo floor($tm/(24*3600)).'天前';
+                                        }
+                                        else
+                                        {
+                                        echo floor($tm/(30*24*3600)).'个月前';
+                                        }
+                                        ?>
+                            </span><br>
+                        <p style="margin-left: 10px;margin-bottom: 10px;text-indent: 2em"><?php echo $comment[$i]['content']?></p>
+                    </li>
+                    <?php
+                        }
+                    }else{
+                    ?>
+                    <li><h3 style="text-align: center;color: #666;margin-top: 10px">还未有人评论~</h3></li>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <section class="single-post-comment">
+                <h4><a name="comment">参与讨论</a></h4>
+                <div class="input-module notlogin">
+                    <textarea   name="comment" placeholder="请登录后参与评论..."></textarea>
+                    <input type="hidden" name="mid" value="<?php echo $params['user']['mid']; ?>">
+                    <input type="hidden" name="aid" value="<?php echo $params['article']['id']; ?>">
+
+                    <div class="user">
+                        <button type="button" disabled="" >
+                            <a  name="button">提交评论</a>
+                        </button>
+                        <div class="current-user">
+                            <?php if(empty($params['user']['mid'])){ ?>
+						<span class="img" style="background: url(&quot;/images/temp_pc/icon-com.png&quot;) center center / 80% no-repeat rgb(241, 241, 241);">
+
+						</span>
+
+                            <a href="../member/login.html" class="name">登录</a><span>后参与讨论</span>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          <div class="related-articles">
+                <h2>相关文章</h2>
+                <div class="ui three cards">
+                    <?php foreach($params['aboutA'] as $v){ ?>
+                    <a class="card" titleid="<?php echo $v['id']; ?>">
+                        <div class="image" id="imgh">
+                            <img style="width: 248px;height: 165px" src="<?php echo empty($v['images'])?'/images/temp_pc/0.jpg':$v['images']; ?>" alt="" titleid="<?php echo $v['id']; ?>" id="carimghover" />
+                        </div>
+                        <div class="content-des">
+                            <span><?php echo mb_substr($v['title'],0,45,'utf-8'); ?></span>
+                        </div>
+                    </a>
+                    <?php } ?>
+                </div>
+              <div class=" clearfix" id="page">
+                  <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+                  <p class="">
+                      共<?php echo($params['pager']->getPageCount()); ?>页
+                  </p>
+              </div>
+            </div>
+            <input name="amid" type="hidden" value="<?php echo $params['article']['mid']; ?>" />
+        </div>
+        <?php if ($params['article']['mid']!=0){ ?>
+        <div class="contain_r right">
+            <div class="author-info">
+                <div class="author-avatar">
+                    <a href="../user/friendhome.html?mid=<?php echo $params['article']['mid']; ?>" target="_blank" class="pointer" style="cursor:pointer;background-image: url(<?php echo $params['article']['face']; ?>);"></a>
+                </div>
+                <p class="name">
+                    <?php echo $params['article']['wname']; ?>
+                </p>
+                <p>
+                    关注作者可以获得更多文章
+                </p>
+                <p class="post-count">
+                    <span>共发表<?php echo $params['wcount']; ?>篇</span>
+                </p>
+                <div class="newest-article">
+                    <h4>最近文章</h4>
+                    <ul class="list">
+                        <?php if(count($params['warticle'])>0){
+                        foreach($params['warticle'] as $v){
+                        ?>
+                        <li class="clearfix">
+                            <p class="title">
+                                <a href="../info/article.html?id=<?php echo $v['id']; ?>">
+									<span>
+										<?php echo $v['title']; ?>
+									</span>
+                                </a>
+                            </p>
+                            <p class="note am-cf">
+                                <span class="time am-fl"><?php $tm=time()-$v['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                                {
+                                echo floor($tm/60).'分钟前';
+                                }
+                                else if($tm<(24*3600) && $tm>7200)
+                                {
+                                echo floor($tm/3600).'小时前';
+                                }
+                                else if($tm<(30*24*3600) && $tm>(24*3600))
+                                {
+                                echo floor($tm/(24*3600)).'天前';
+                                }
+                                else
+                                {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                                }
+                                ?></span>
+                                <span class="tag am-fr"><?php echo $v['category']; ?></span>
+                            </p>
+                        </li>
+
+
+                    <?php } } ?>  </ul>
+                    <section class="enter-report">
+                        <a  rel="nofollow" href="../info/morearticle.html" target="_blank">点击查看更多文章</a>
+                    </section>
+                </div>
+            </div>
+            <!--<div class="adbox">-->
+                <!--<img src="/images/temp_pc/0.jpg" alt="" />-->
+            <!--</div>-->
+            <!--<div class="guess-posts-list">-->
+                <!--<h4>您可能感兴趣的文章</h4>-->
+                <!--<ul>-->
+                    <!--<li class="top">-->
+                        <!--<a href="#" target="_blank" class="item" ">-->
+                        <!--<span class="desc">在读取唇语方面，人工智能已经战胜了人类</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <?php if(!empty($params['next']) && $params['next']['type']==1){ ?>
+            <div class="next-post-wrapper show">
+                <h4>下一篇</h4>
+                <div class="item">
+                    <p>
+                        <a href="../info/article.html?id=<?php echo $params['next']['id']; ?>" class="title"><?php echo $params['next']['title']; ?></a>
+                    </p>
+                    <p class="tags-list">
+                        <span><?php echo $params['next']['wname']; ?></span>
+                    </p>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script>
+    window.seajs&&seajs.use('pc/article.js');
+
+    $(".card").click(function(){
+        var id=$(this).attr('titleid');
+        window.location.href="../info/article.html?id="+id;
+    })
+</script>
+
+
+
+

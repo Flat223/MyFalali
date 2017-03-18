@@ -1,0 +1,74 @@
+.circle .caption{
+	padding: 15px 0;
+	border-bottom:1px solid #ddd; 
+}
+.circle .caption span:first-child{
+	color: #00bfb8;
+}	
+.circle .caption a i{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background: url(/images/temp_pc/circle.png) no-repeat;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.circle_list ul li dl dt,
+.circle_list ul li dl dd{
+	float: left;
+}
+.circle_list ul li dl >dt a img{
+	padding: 20px;
+	cursor: pointer;
+}
+.circle_list ul li dl dd{
+	padding-top: 20px;
+	width: 800px;	
+}
+.circle_list ul li dl dd h5{
+	margin-bottom: 20px;
+	font-weight: normal;
+	font-size: 16px;
+	width: 150px;
+	cursor: pointer;
+}
+.circle_list ul li dl dd h5:hover{
+	color: #00bfb8;
+}
+.circle_list ul li dl dd >dl dd{
+	width: 700px;
+}
+.circle_list ul li dl dd >dl dt,
+.circle_list ul li dl dd >dl dd{
+	float: left;
+}
+.circle_list ul li dl dd >dl dt a img{
+	padding: 20px;
+	margin-left: -20px;
+	width: 73px;
+	height: 73px;
+}
+.circle_list ul li{
+	border-bottom: 1px solid #ddd;
+}
+span.name{
+	cursor: pointer;
+	font-size: 17px;
+}
+span.name:hover{
+	color: #00bfb8;
+}
+.circle_list ul li dl dd >dl dd >p{
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.circle_list ul li dl dd >dl dd >p:first-child{
+	 margin-bottom: 10px;
+ }
+.circle_list ul li dl dd >dl dd >p:not(:first-child){
+	color: #999999;
+}

@@ -1,0 +1,131 @@
+.article .caption{
+	padding: 15px 0;
+	border-bottom:1px solid #ddd; 
+}
+.article .caption span:first-child{
+	color: #00bfb8;
+}	
+.article .caption a i{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background: url(/images/temp_pc/wz.png);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.article ul li dl dt,
+.article ul li dl dd{
+	float: left;
+}
+.article ul li dl dt a img{
+	padding: 20px;
+	width: 250px;
+	height: 150px;
+}
+.article ul li dl dd{
+	width: 750px;
+	padding: 20px 0;
+	height: 150px;
+	position: relative;
+}
+.article ul li dl dd p.describe{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-indent: 2em;
+    line-height: 25px;
+}
+.article ul li dl dd h2{
+	top: 25px;
+}
+.article ul li dl dd .boot{
+	bottom: 25px;
+	position: absolute;
+}
+.article ul li dl dd .boot span{
+	min-width: 80px;
+	display: inline-block;
+	margin: 0 5px;
+}
+.article ul li dl dd .boot a{
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 5px;
+}
+.article ul li dl dd .boot a:hover{
+	color: #00bfb8;
+}
+.article ul li dl dd .boot span i{
+	display: inline-block;
+	background: url(/images/temp_pc/icon4.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 18px;
+	vertical-align: middle;
+}
+.article ul li{
+	border-bottom: 1px solid #ddd;
+}
+
+
+/* 发布/编辑文章 */
+.publish{
+	margin-top: 20px;
+}
+.publish label{
+	display: block;
+	margin-bottom: 20px;
+}
+.publish label span{
+	display: inline-block;
+	width: 85px;
+	text-align: right;
+	float: left;
+	line-height:40px;
+}
+.publish label input[type=text]{
+	width: 810px;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 1em;
+	border: 1px solid #ddd;
+}
+
+.publish label select{	
+	min-width: 200px;
+	height: 40px;
+	line-height:40px;
+	text-indent: 1em;
+	border: 1px solid #ddd;
+}
+.publish label textarea{
+	padding: 10px 0 0 10px;
+	text-indent: 1em;
+	width: 800px;
+	min-height: 200px;
+	border: 1px solid #ddd;
+}
+.publish input[name=submit]{
+	background: #00bfb8;
+	color: #fff;
+	width: 110px;
+	height: 32px;
+	line-height: 30px;
+	border:1px solid #00bfb8;
+	margin-left: 86px;
+	cursor: pointer;
+}
+
+.publish input[name=reEdit]{
+	background: #e4e4e4;
+	color: #000;
+	width: 110px;
+	height: 32px;
+	margin-left: 20px;
+	line-height: 30px;
+	border:1px solid #e4e4e4;
+	cursor: pointer;
+}

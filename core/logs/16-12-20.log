@@ -1,0 +1,168 @@
+[2016-12-20 14:04:24][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.sale_num' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(99): DBAgent->querySingleRecord('select a.*,b.na...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(26): ProductServ->getProductDetail('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 14:04:25][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.sale_num' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(99): DBAgent->querySingleRecord('select a.*,b.na...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(26): ProductServ->getProductDetail('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 16:16:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 16:16:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 16:43:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 16:44:13][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 18:01:08][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:01:09][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:01:10][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:01:12][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:01:50][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:01:53][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:02:05][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/pcfilter.xml
+[2016-12-20 18:09:33][error] /ichukdata1/html/project/labring/core/filter/instances/pc/UnloginFilter.php 文件未找到
+[2016-12-20 18:09:33][error] /ichukdata1/html/project/labring/core/filter/instances/pc/UnloginFilter.php 文件未找到
+[2016-12-20 18:17:35][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.sub_type' in 'on clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(10): DBAgent->querySingleRecord('select b.used_m...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(9): CollegeServ->getResearchFund('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:25:47][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'name like '%大%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(26): DBAgent->queryRecords('select mid,name...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SearchCompanyServ.php(16): CompanyServ->searchCompanyList('???', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SearchCompanyServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.searchC...', '/service/search...', 'SearchCompanySe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:26:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'name like '%大%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(26): DBAgent->queryRecords('select mid,name...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SearchCompanyServ.php(16): CompanyServ->searchCompanyList('???', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SearchCompanyServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.searchC...', '/service/search...', 'SearchCompanySe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:26:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'name like '%大%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(26): DBAgent->queryRecords('select mid,name...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SearchCompanyServ.php(16): CompanyServ->searchCompanyList('???', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SearchCompanyServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.searchC...', '/service/search...', 'SearchCompanySe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:27:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'name like '%大%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(26): DBAgent->queryRecords('select mid,name...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SearchCompanyServ.php(16): CompanyServ->searchCompanyList('???', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SearchCompanyServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.searchC...', '/service/search...', 'SearchCompanySe...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:28:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'name like '%大%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(26): DBAgent->queryRecords('select mid,name...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(9): CompanyServ->searchCompanyList('???', 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:54:24][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.sid' in 'on clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(289): DBAgent->querySingleRecord('select a.*,b.pr...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/ShopCart.php(24): ProductServ->getCartProduct('1', '3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ShopCart->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.shopCart.h...', '/user/shopCart....', 'ShopCart', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:54:27][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.sid' in 'on clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(289): DBAgent->querySingleRecord('select a.*,b.pr...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/ShopCart.php(24): ProductServ->getCartProduct('1', '3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ShopCart->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.shopCart.h...', '/user/shopCart....', 'ShopCart', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 19:55:14][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.sid' in 'on clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(289): DBAgent->querySingleRecord('select a.*,b.pr...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/ShopCart.php(24): ProductServ->getCartProduct('1', '3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ShopCart->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.shopCart.h...', '/user/shopCart....', 'ShopCart', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-20 22:10:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by id DESC' at line 2
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(45): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}

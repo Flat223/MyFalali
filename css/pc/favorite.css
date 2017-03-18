@@ -1,0 +1,100 @@
+.order_p {
+    color: #00bfb8;
+    padding: 20px 0px 10px 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.layui-tab-card .layui-tab-title li {
+    margin: 0 5px;
+}
+.layui-tab-card {
+     border: none; 
+     border-radius: 0px; 
+     box-shadow: 0 0px 0px 0 rgba(0,0,0,.1); 
+}
+.layui-tab-card .layui-tab-title {
+    background-color: #fff;
+}
+.layui-tab-title {
+    border-bottom: 0px solid #e2e2e2;
+}
+.layui-tab-card .layui-tab-title li {
+	border-left: 0px;
+	margin-right: 0px;
+    margin-left: 0px;
+    background: #e2e1df
+    
+}
+.layui-tab-card .layui-this {
+background: #00bfb8 !important;
+    color: #fff;
+}
+.layui-tab-item{
+	margin-left: -20px;
+}
+.layui-tab-item ul li{
+	float: left;
+	width: 168px;
+    height: 262px;
+	line-height: 25px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+.layui-tab-item ul li p{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.layui-tab-item ul li span{
+	color: red;
+	display: block;
+}
+.layui-tab-item ul li span i{
+    width: 20px;
+    height: 16px;
+    display: inline-block;
+    background: url(/images/temp_pc/cart.png);
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.layui-tab-item ul li .star img{
+	margin-left: 0;
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;
+}
+.layui-tab-item ul li h3{
+	font-weight: normal;
+}
+.layui-tab-item ul li  >i{
+    position: absolute;
+    top:0;
+    right:7px;
+    background: url("/images/pc/img-cancel-gray.jpg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    z-index: 11;
+    cursor: pointer;
+}
+.layui-tab-item ul li  >i:hover{
+    background: url("/images/pc/img-cancel-red.jpg");
+}
+.layui-tab-item ul li.lab-like  >i{
+    position: absolute;
+    top:0;
+    right:32px;
+    background: url("/images/pc/img-cancel-gray.jpg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    z-index: 11;
+    cursor: pointer;
+}
+.layui-tab-item ul li.lab-like  >i:hover{
+    background: url("/images/pc/img-cancel-red.jpg");
+}

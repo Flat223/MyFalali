@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加属性</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/addProperty.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">	
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <title></title>
+</head>
+<body>
+	
+<div style="display: none">
+	<input type="hidden" name="ptid" value="<?php echo $params['ptid']; ?>" />
+</div>
+
+<div class="handle_type">
+	<span class="del_type" style="margin-right: 10px">删除该分类</span>
+	<span class="add_property">添加属性</span>
+</div>	
+
+<table class="property_container">
+    <tr style="border-bottom: 1px solid grey">
+        <th width="20%">ID</th>
+        <th width="60%">名称</th>
+        <th width="20%">操作</th>
+    </tr>
+<?php 
+	if(count($params['property']) > 0){ 
+		foreach ($params['property'] as $property){
+?>
+    <tr style="border-bottom: 1px solid grey">
+        <td><?php echo $property['id']; ?></td>
+        <td><?php echo $property['name']; ?></td>
+        <td class="handle_property">
+	        <span class="del_property" 
+	        	proid="<?php echo $property['id']; ?>">
+	        	删除
+            </span>
+            |
+            <span class="update"
+            	proid="<?php echo $property['id']; ?>" 
+            	proname="<?php echo $property['name']; ?>" 
+            	>
+            	修改
+            </span>
+        </td>
+    </tr>
+<?php
+		}
+	} 
+?>
+    <tr>
+        <td>新属性</td>
+        <td>
+	        <input name="propertyname" type="text">
+	    </td>
+		<td>
+			<span class="del_addedPro">删除</span>
+		</td>
+    </tr>
+</table>
+<hr/>
+<div class="submit">
+	<span class="save">保存</span>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript" src="/js/manager/addProperty.js"></script>
+</body>
+</html>

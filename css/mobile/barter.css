@@ -1,0 +1,57 @@
+.bar_type{
+    width: 96%;
+    height: 5%;
+    background-color: #dfdfdf;
+    margin-left: 2.4%;
+    line-height: 3rem;
+    margin-top: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.bar_title{
+    width: 25%;
+    float: left;
+    margin-left: 2%;
+    font-size: 1.4rem;
+}
+.bar_title a{
+    color: red;
+    margin-left: 2%;
+}
+.bar_input{
+    width: 70%;
+    float: left;
+    margin-left:2%
+}
+.bar_input input{
+    overflow:auto;
+    border:0px;
+    background-color:transparent;
+    width:100%;
+    outline: none;
+}
+/*.bar_file{
+    width: 100%;
+    height:20%;
+    margin-left: 2%;
+    outline: none;
+
+}*/
+.fileInputContainer{
+    height:179px;
+    background:url("/images/mobile/uploadPZ.png");
+    position:relative;
+    width: 181px;
+    margin-top: 2%;
+    margin-left: 2.4%;
+}
+.fileInput{
+    height:178px;
+    font-size: 181px;
+    position:absolute;
+    right:0;
+    top:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer;
+}

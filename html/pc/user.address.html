@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的地址</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+ 	<link rel="stylesheet" type="text/css" href="/css/pc/myprofile.css">
+ 	<link rel="stylesheet" type="text/css" href="/css/pc/address.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="/js/layer/skin/default/layer.css">-->
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<blockquote class="layui-elem-quote">
+		  <span class="left">
+		  	<ul>
+		  		<li><a href="myprofile.html">我的资料</a></li>
+		  		<li>></li>
+		  		<li><a href="#">收货地址管理</a></li>
+		  	</ul>
+		  </span>
+		  <span class="right"></span>
+		</blockquote>
+		<div class="profile">
+			<label>
+				<span><em>*</em>所在地区：</span>
+					<select class="s_province"></select>
+					<select class="s_city"></select>
+					<select class="s_country"></select>
+			</label>
+			
+			<label >
+				<span><em>*</em>详细地址：</span>
+				<textarea name="detailed_address" id="" cols="30" rows="3"></textarea>
+			</label>
+			<label>
+				<span class="receiving_user"><em>*</em>收货人姓名：</span>
+				<input type="text" name="user_name"/>
+			</label>
+			<label>
+				<span><em>*</em>手机号码：</span>
+				<input type="text" name="mobile"/>
+			</label>
+			<div class="address_default">
+				<input type="checkbox" name="is_default" style="margin-right: 5px;" />设置为默认收货地址
+			</div>
+			<div class="putIn" style="margin: 20px 0">
+				<input type="submit" class="tag_label" handleType="1" value="保存" />
+			</div>
+			<div class="tablebox">
+				<table class="zebra">
+					<thead>
+			        	<tr>
+							<th>收货人</th>
+							<th>所在地区</th>
+							<th>详细地址</th>
+							<th>电话/手机</th>
+							<th>操作</th>
+							<th style="width: 90px"></th>	
+			            </tr>
+					</thead>
+			        <tbody>
+				     <?php
+				     	foreach ($params['address'] as $address){
+				     ?>
+			        	<tr class="table_line">
+			            	<td><?php echo($address['name']); ?></td>
+			                <td style="max-width: 180px; word-break:break-all">
+				                <?php echo $address['province_name'].$address['city_name'] ?>
+			                </td>
+			                <td style="max-width: 280px; word-break:break-all">
+				                <?php echo($address['detail_address']); ?>
+			                </td>
+			                <td>
+				                <?php echo(substr_replace($address['mobile'],'****',3,4)); ?>
+			                </td>
+			                <td class="modified">
+				                <a href="/user/editAddress.html?aid=<?php echo $address['id'] ?>">修改</a> 
+				                |
+				                <a href="javascript:;" class="del" aid="<?php echo($address['id']);?>">删除</a>
+				            </td>
+			                <td>
+								<?php
+									if($address['is_default'] == 1){
+								?>
+					            	<span class="default">默认地址</span> 
+					            <?php
+					            	} else {
+					            ?>
+					            	<span class="setDefault" aid="<?php echo($address['id']) ?>">设为默认地址</span> 
+					            <?php
+					            	}
+					            ?>
+				            </td>
+			            </tr>
+		            <?php
+		            	}
+		            ?>
+			        </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/address.js');
+</script>
+

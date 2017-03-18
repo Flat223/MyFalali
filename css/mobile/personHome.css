@@ -1,0 +1,182 @@
+.header{
+    height: 1.8rem;
+    background: url(/images/mobile/personBg.png)no-repeat 0px -52px;
+    background-size: 100%;
+    position: relative;
+}
+.header_img{
+    height: 1rem;
+    width: 1rem;
+    margin: auto;
+    position: relative;
+    top: 0.2rem;
+    background: url(/images/mobile/head_bg.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.header_img img{
+    position: absolute;
+    height:0.9rem;
+    width:0.9rem;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.header p{
+    text-align: center;
+    font-size: 0.2rem;
+    color: #fff;
+    margin: 0.3rem
+}	font-size: 0.2rem;
+color: #fff;
+padding: 0.1rem
+}
+article{
+    font-size: 0.13rem;
+}
+article p{
+    background: #fff;
+    height: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+
+}
+article p span{
+    margin: 0.1em 0.6rem  0 0.3rem;
+}
+article p >span{
+    margin-left: 0.1rem;
+}
+article p a{
+    font-size:0.14rem;
+    color: #adadad!important;
+}
+article p span:nth-of-type(1){
+    font-size: 0.14rem;
+}
+article p span:nth-of-type(2){
+    font-size: 0.1rem;
+    color: #BABBBA;
+    background: url("/images/mobile/left_icon.png") no-repeat right;
+    background-size: 0.12rem;
+    text-indent: -1.15rem;
+    margin-right: 0.1rem;
+}
+section{
+    display: -webkit-box;
+    width: 100%;
+    height: 0.8rem;
+    background: #fff;
+}
+section a{
+    -webkit-box-flex: 1;
+    text-align: center;
+    display: block;
+}
+section a i{
+    border-radius: 100%;
+    width: .3rem;
+    /*background: #2fb8ce;*/
+    margin: .15rem auto .1rem auto;
+    display: block;
+    font-size: .35rem;
+    color: #fff;
+    height: .3rem;
+    line-height: .3rem;
+}
+section a:nth-of-type(1) i{
+    background: url("/images/mobile/daifukuan.png") no-repeat center;
+    background-size: 0.25rem;
+}
+section a:nth-of-type(2) i{
+    background: url("/images/mobile/daifahuo.png") no-repeat center;
+    background-size: 0.25rem;
+}
+section a:nth-of-type(3) i{
+    background: url("/images/mobile/daishouhuo.png") no-repeat center;
+    background-size: 0.25rem;
+}
+section a:nth-of-type(4) i{
+    background: url("/images/mobile/shouhou.png") no-repeat center;
+    background-size: 0.25rem;
+}
+
+/*改*/
+.header >#pc_jf{
+    color: #ff5000;
+    width: 32%;
+    background: url(/images/mobile/scoreBg.png) no-repeat center;
+    background-size: 85%;
+    margin: .1rem auto;
+    text-indent: 0.28rem;
+    font-size: .9em;
+}
+.header >#pc_jf a{
+    color: #ff5000;
+}
+#pc_name{
+    font-size: .15rem!important;
+    margin:auto;
+    padding: 0.2rem 0 0;
+    width: 30%;
+    text-align: center;
+    color: #ffffff;
+}
+.pc_set{
+    float: right;
+    margin: 0.1rem ;
+    border: 1px solid #fff;
+    border-radius: 5px ;
+    color: #ffffff;
+    padding: 3px;
+}
+#sign{
+    float: right;
+    border: 1px solid #fff;
+    border-radius: 5px ;
+    margin: 0.1rem 0 ;
+    padding: 3px;
+    color: #ffffff;
+}
+.myTool{
+    background-color: #fff;
+    margin-top: 0.1rem;
+}
+.myTool .myTitle{
+    background: #fff;
+    height: 0.5rem;
+    text-indent: 0.1rem;
+    line-height: 0.5rem;
+}
+.myTool table{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+.myTool table td:first-child{
+    border-left-width:0px ;
+}
+.myTool table td:last-child{
+    border-right-width:0px ;
+}
+.myTool table td{
+    background-color: #fff;
+    width: 25%;
+    border: 1px solid #ddd;
+    padding: 0.1rem;
+}
+.myTool table td>img{
+    width: 0.25rem;
+    display: block;
+    margin: auto;
+}
+.myTool table td>span{
+    display: block;
+    text-align: center;
+    padding-top: 0.1rem;
+}
+.myTool table td>img.myLab{
+    width:0.4rem!important;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-文章</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/more.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <link href="/css/pc/zx-detail.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<div class="content w1200 clearfix">
+    <div class="article-l left">
+        <div class="choice-item clearfix">
+            <span class="left"><h2><?php echo $params['circle']['name']; ?></h2></span>
+            <!--<ul>-->
+            <!--<li>明星公司</li>-->
+            <!--<li>产品</li>-->
+            <!--<li>资本</li>-->
+            <!--<li>政策</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="section">
+            <?php foreach($params['article'] as $v){ ?>
+            <ul>
+                <li>
+                    <div class="section-item">
+                        <h3><a href="../info/article.html?id=<?php echo $v['id']; ?>"><?php echo $v['title']; ?></a></h3>
+                        <p class="section-p">
+                            <?php echo mb_substr($v['content'],0,160,'utf-8').'...'; ?>
+                        </p>
+                        <p class="extra">
+                            <span>文</span>
+                            <span>/</span>
+                            <b>实验圈发布</b>
+                            <span>·<?php $tm=time()-$v['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                            {
+                                echo floor($tm/60).'分钟前';
+                            }
+                            else if($tm<(24*3600) && $tm>7200)
+                            {
+                                echo floor($tm/3600).'小时前';
+                            }
+                            else if($tm<(30*24*3600) && $tm>(24*3600))
+                            {
+                                echo floor($tm/(24*3600)).'天前';
+                            }
+                            else
+                            {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                            }
+                        ?></span>
+                            <!--<span><?php echo $v['cname']; ?></span>-->
+                        </p>
+                    </div>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
+    <div style="width: 320px;padding:20px 20px 25px;border: 1px solid #d3d7db;border-radius: 5px;" class="article-r right">
+        <div class="author-info">
+            <div class="author-avatar">
+                <a  style="width: 70px;height: 70px" target="_blank" class="pointer" style="background-image: url(&quot;<?php echo $params['circle']['logo']; ?>;);"></a>
+            </div>
+            <p class="name">
+                <?php echo $params['circle']['name'];?>
+            </p>
+            <p>
+                <?php echo $params['circle']['intro'];?>
+            </p>
+            <p class="post-count">
+                <span>共<?php echo $params['count']; ?>篇文章</span>
+            </p>
+            <div class="newest-article">
+                <h4>最热文章</h4>
+                <ul class="list">
+                    <?php foreach($params['hot'] as $v){ ?>
+                    <li class="clearfix">
+                        <p class="title">
+                            <a href="../info/article.html?id=<?php echo $v['id']; ?>">
+									<span >
+										<?php echo $v['title']?>
+									</span>
+                            </a>
+                        </p>
+                        <p class="note am-cf">
+                            <span class="time am-fl"><?php $tm=time()-$v['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                            {
+                                echo floor($tm/60).'分钟前';
+                            }
+                            else if($tm<(24*3600) && $tm>7200)
+                            {
+                                echo floor($tm/3600).'小时前';
+                            }
+                            else if($tm<(30*24*3600) && $tm>(24*3600))
+                            {
+                                echo floor($tm/(24*3600)).'天前';
+                            }
+                            else
+                            {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                            }
+                        ?></span>
+                            <!--<span class="tag am-fr">化工化学</span>-->
+                        </p>
+                    </li>
+
+                    <?php } ?>
+                </ul>
+                <section class="enter-report">
+                    <a data-stat-click="youcezuozhe.xunqiubaodao" rel="nofollow" href="../info/morearticle.html" target="_blank">点击更多精彩文章</a>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<div class="clear">-->
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['count']/10); ?>页
+    </p>
+</div>
+<!--</div>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script>
+</script>
+
+
+

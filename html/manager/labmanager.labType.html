@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-实验室分类</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/labType.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>实验室分类</a></li>
+			</ul>
+		</div>
+		<?php $type1 = $params['type1'] ?>
+		<?php $type2 = $params['type2'] ?>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-container">
+					<div class="sear-wrapp clearfix">
+						<div class="search-item">
+							<ul id="t1" class="t1">
+								<?php
+									for($i = 0;$i<count($type1);$i++){
+									?>
+									<a href="javascript:void(0)"><li value="<?php echo $type1[$i]['lab_tid']?>"><?php echo $type1[$i]['name']?></li></a>
+								<?php
+									}
+								?>
+							</ul>
+							<ul id="t2" class="t2">
+								<?php
+									for($i = 0;$i<count($type2);$i++){
+									?>
+									<a href="javascript:void(0)"><li value="<?php echo $type2[$i]['lab_tid']?>"><?php echo $type2[$i]['name']?></li></a>
+									<?php
+									}
+								?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/lab_type.js"></script>

@@ -1,0 +1,65 @@
+.account_ul{
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+	height: 10px;
+}
+.account_ul ul li{
+	float: left;
+	color: #00bfb8
+}
+.list_wrapper ul li dl dt{
+	position: relative;
+}
+.list_wrapper ul li dl dt a{
+	display: block;
+    width: 150px;
+    height: 150px;
+}
+.list_wrapper ul li dl dt a>img{
+    display: block;
+	width: 100%;
+	height: 100%;
+}
+.list_wrapper ul li dl dt
+,.list_wrapper ul li dl dd{
+	float: left;
+	margin: 20px 20px 20px 0;
+}
+.list_wrapper ul li dl dd{
+	line-height: 25px;
+	width: 60%;
+    position: relative;
+    height: 150px;
+}
+.list_wrapper ul li dl dt .heart{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.button{
+	width: 100px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #00bfb8;
+	color: #00bfb8;
+	background: #fff;
+	text-align: center;
+	margin-top: 80px;
+}
+.list_wrapper ul li dl dd p{
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.list_wrapper ul li dl dd .description{
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 97px;
+}
+.list_wrapper> ul >li >dl{
+    width: 85%;
+}

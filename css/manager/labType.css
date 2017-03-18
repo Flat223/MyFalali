@@ -1,0 +1,22 @@
+.t1{
+    float: left;
+    width: 100px;
+    margin-left: 20px;
+    line-height: 30px;
+}
+.t1 li{
+    background: #c9cdc9;
+    margin-top: 5px;
+    text-align: center;
+}
+.t2{
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+    line-height: 30px;
+}
+.t2 li{
+    background: #c9cdc9;
+    margin-top: 5px;
+    text-align: center;
+}

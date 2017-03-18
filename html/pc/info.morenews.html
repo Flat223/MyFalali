@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-更多新闻</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/more.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <link href="/css/pc/zx-detail.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .con{
+            color: #828a92;
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 25px;
+            margin-top: .75rem;
+            word-break: break-all;}
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<div class="content w1200 clearfix">
+    <div class="article-l left">
+        <div class="choice-item clearfix">
+            <span class="left"><h2>精选新闻</h2></span>
+            <!--<ul>-->
+            <!--<li>明星公司</li>-->
+            <!--<li>产品</li>-->
+            <!--<li>资本</li>-->
+            <!--<li>政策</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="section">
+            <?php foreach($params['news'] as $v){ ?>
+            <ul>
+                <li>
+                    <div class="section-item">
+                        <h3><a><?php echo $v['title']; ?></a></h3>
+                        <div value="<?php echo $v['id']; ?>" class="con">
+                            <?php echo $v['content']; ?><a style="color:#4285f4;" href="<?php echo $v['url']; ?>" target="_blank">[原文链接]</a>
+                        </div>
+                        <p class="extra">
+                            <span>文</span>
+                            <span>/</span>
+                            <b>实验圈发布</b>
+                            <span>·<?php $tm=time()-$v['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                            {
+                                echo floor($tm/60).'分钟前';
+                            }
+                            else if($tm<(24*3600) && $tm>7200)
+                            {
+                                echo floor($tm/3600).'小时前';
+                            }
+                            else if($tm<(30*24*3600) && $tm>(24*3600))
+                            {
+                                echo floor($tm/(24*3600)).'天前';
+                            }
+                            else
+                            {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                            }
+                        ?></span>
+                            <!--<span><?php echo $v['cname']; ?></span>-->
+                        </p>
+                    </div>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
+    <div class="article-r right">
+        <h2>热门文章</h2>
+        <div class="hot-list">
+            <div id="hot1" style="cursor: pointer" class="hot-1" value="<?php echo $params['hotart'][0]['id']; ?>">
+                <img style="width:315px;height:187px " src="<?php echo empty($params['hotart'][0]['images'])?'/images/temp_pc/near-term.png':$params['hotart'][0]['images']; ?>" alt="" />
+                <div class="des">
+                    <span><a style="color:honeydew"><?php echo mb_substr($params['hotart'][0]['title'],0,42,'utf-8'); ?></a></span>
+                </div>
+                <span class="top_num"><img alt="" src="/images/pc/top1.png" /></span>
+            </div>
+        </div>
+        <div class="hot-list">
+            <div id="hot2" style="cursor: pointer" class="hot-1" value="<?php echo $params['hotart'][1]['id']; ?>">
+                <img style="width:315px;height:187px " src="<?php echo empty($params['hotart'][1]['images'])?'/images/temp_pc/near-term.png':$params['hotart'][1]['images']; ?>" alt="" />
+                <div class="des">
+                    <span><a  style="color:honeydew"><?php echo mb_substr($params['hotart'][1]['title'],0,42,'utf-8'); ?></a></span>
+                </div>
+                <span class="top_num"><img src="/images/pc/top2.png" alt="" /></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<div class="clear">-->
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['count']/10); ?>页
+    </p>
+</div>
+<!--</div>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#hot1").on('click',function () {
+        var id = $(this).attr('value');
+        window.location.href="/info/article.html?id="+id;
+    })
+    $("#hot2").on('click',function () {
+        var id = $(this).attr('value');
+        window.location.href="/info/article.html?id="+id;
+    })
+</script>
+
+

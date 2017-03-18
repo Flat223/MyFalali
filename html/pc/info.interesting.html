@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-圈子</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link href="/css/pc/style.css" rel="stylesheet" type="text/css" />
+	<link href="/css/pc/common.css" rel="stylesheet" type="text/css" />
+	<link href="/css/pc/interestring.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params['topic']);-->
+<!--exit();-->
+<!--?>-->
+<div class="content">
+	<div class="box w1200 clearfix">
+		<div class="box_l left">
+			<div class="list-one">
+				<dl class="clearfix">
+					<dt>
+						<img style="width:80px;height:80px" src="<?php echo empty($params['circle']['logo'])?'/images/temp_pc/head1.png':$params['circle']['logo']; ?>" alt="" />
+					</dt>
+					<dd>
+						<h3><?php echo $params['circle']['name']; ?></h3>
+						<!--<span>生物医药</span>-->
+					</dd>
+					<?php if($params['check']=='1'){ ?>
+					<span name="joincircle" class="app-join right" circle_id="<?php echo $params['circle']['circle_id']; ?>" >
+						申请加入
+					</span>
+					<?php }else{ ?>
+					<span name="deletecircle" class="app-join right"  circle_id="<?php echo $params['circle']['circle_id']; ?>" style="background-color: orange" >
+						取消关注
+					</span>
+					<?php } ?>
+				</dl>
+				<p class="title">
+					<?php echo $params['circle']['intro']; ?>
+				</p>
+			</div>
+
+
+			<div class="dynamic">
+				<?php if(count($params['topic'])>0){ ?>
+
+				<p style="padding-left: 18px">最新动态</p>
+				<?php foreach($params['topic'] as $v){ ?>
+				<dl class="clearfix">
+					<dt class="left toPicImg">
+						<img style="width: 70px;height: 70px" src="<?php echo empty($v['face'])?'/images/pc/face_default.png':$v['face']; ?>" alt="" />
+					</dt>
+					<dd class="left toPiCon" topicid="<?php echo $v['mmid']?>" >
+						<p style="font-size:11px"><a href="../user/friendhome.html?mid=<?php echo $v['mid']; ?>"><?php
+						if(!empty($v['nickname'])){
+						echo mb_substr($v['nickname'],0,10,'utf-8');
+						}else if(!empty($v['name'])){
+						echo mb_substr($v['name'],0,10,'utf-8');
+						}else{
+						echo '本站用户';
+						}
+										?></a>
+						<?php echo date('Y-m-d',$v['time']); ?>&nbsp;&nbsp;<?php echo date('H:i:s',$v['time']); ?></p>
+						<p><a href="../info/topic.html?id=<?php echo $v['topic_id']; ?>"><?php echo mb_substr($v['title'],0,50,'utf-8'); ?></a></p>
+						<ul class="clearfix">
+							<li>
+								<p style="color:gray"><?php echo mb_substr(strip_tags($v['content']),0,200,'utf-8').'..'; ?></p>
+								<?php if(!empty($v['pic'])){
+								$pic=array_slice($v['pic'],0,3);
+								foreach($pic as $p){
+								?>
+								<img style="width:210px;height:135px" src="<?php echo $p?>" />
+								<?php } } ?>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<?php } }else{ ?>
+				<li><h3 style="text-align: center;color: #666;margin-top: 20px;">暂无帖子~</h3></li>
+
+				<?php } ?>
+			</div>
+			<div class="comm-item clearfix">
+				<span name="sendtopic" class="app-join right"  style="background-color:#00C1B9" >
+						发表帖子
+				</span>
+			</div>
+
+			<div class="comm-item clearfix" name="usertopic" style="display:none">
+				<?php if(!empty($params['user'])){ ?>
+				<div class="left">
+					<img style="width:70px;height:70px" src="<?php echo empty($params['user']['face'])?'/images/pc/face_default.png':$params['user']['face']; ?>" alt="" />
+					<input type="hidden" name="userid" value="<?php echo $params['user']['mid']; ?>">
+					<input type="hidden" name="circle_id" value="<?php echo $params['circle']['circle_id']; ?>">
+				</div>
+				<div class="right">
+					<input type="text" style="border:1px #DDDDDD solid;height:25px;width:100%;margin-bottom:10px" name="topictitle" placeholder="标题" />
+					<script id="container" name="content" type="text/plain"></script>
+					<script type="text/javascript">
+						var ue = UE.getEditor('container',{
+							enableAutoSave:false,
+							autoHeightEnabled:true,
+							initialFrameHeight:600,
+							initialFrameWidth:750,
+							autoWidthEnabled:true
+						});
+					</script>
+					<div style="margin-top:1em;" class="clearfix">
+						<span class="emoji-item"></span>
+						<span class="img-item"></span>
+						<span class="video-item"></span>
+						<span name="topic" class="push-item">发布</span>
+					</div>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="box_r right">
+			<div class="fr_case">
+				<?php if(count($params['friends'])>0){ ?>
+				<p class="fr">
+					推荐好友
+				</p>
+				<ul>
+					<?php foreach($params['friends'] as $v){ ?>
+					<li  onclick="location.href='/user/friendhome.html?mid=<?php echo $v['mid']; ?>'" >
+						<img style="width:60px;height:60px" src="<?php echo empty($v['face'])?'/images/temp_pc/headimg2.png':$v['face']; ?>" alt="" />
+						<p style="font-size: 12px;"><?php
+						if(!empty($v['nickname'])){
+						echo mb_substr($v['nickname'],0,4,'utf-8');
+						}else if(!empty($v['name'])){
+						echo mb_substr($v['name'],0,4,'utf-8');
+						}else{
+						echo '本站用户';
+						}
+										?></p>
+					</li>
+					<?php } ?>
+				</ul>
+				<?php } ?>
+			</div>
+			<div class="recomment-c">
+			<p class="rec-p">
+				推荐圈子<a style="margin-left: 80px" href="../user/joinNewCircle.html">更多>></a>
+			</p>
+				<?php $recommend=array_slice($params['recommend'],0,5);
+					foreach($recommend as $v){
+			?>
+				<dl class="clearfix">
+					<dt><img style="cursor:pointer;width:70px;height:70px" onclick="window.location.href='../info/interesting.html?id=<?php echo $v['circle_id']; ?>'" style="cursor:pointer;width: 100px;height: 100px" src="<?php echo empty($v['logo'])?'/images/temp_pc/head1.png':$v['logo']; ?>" alt="" /></dt>
+					<dd>
+						<h1><?php echo $v['name']; ?></h1>
+						<span class="button" name="focus" circle_id="<?php echo $v['circle_id']?>" style="cursor: pointer">关注</span>
+					</dd>
+				</dl>
+				<?php } ?>
+			</div>
+		</div>
+	</div>			
+</div>
+<!--<div class="clear">-->
+<div class=" clearfix" id="page">
+	<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+	<p class="">
+		共<?php echo ceil($params['count']/10); ?>页
+	</p>
+</div>
+<!--</div>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script>
+	var userid="<?php echo $params['user']['mid'];?>";
+	window.seajs&&seajs.use('pc/user/interestcircle.js');
+
+</script>
+
+

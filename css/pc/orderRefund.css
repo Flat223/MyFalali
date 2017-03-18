@@ -1,0 +1,123 @@
+select[name=reason]{
+	min-width: 120px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #ddd;
+}
+
+.comment-wrap{
+	margin-top: 20px;
+}
+.comment-wrap-l img{
+	display: block;
+	margin: auto;
+	width:80px;
+	height: 80px;
+	padding: 20px;
+}
+.comment-des{
+	text-align: center;
+	width: 220px;
+}
+.comment-pri{
+	display: block;
+	text-align: center;
+	padding: 15px 0;
+}
+.comment-wrap-r{
+	width: 735px;
+}
+.comment-wrap-r textarea{
+	width: 600px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	text-indent: 1em;
+}
+.comment-wrap-r span{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width:80px;
+}
+.comment-submit span{
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	margin-top: 40px;
+	margin-left: 81px;
+	display: inline-block;
+	background: #00bfb8;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+.comment-img{
+	position: relative;
+	margin: 15px 0;
+}
+.comment-img input{
+	position: absolute;
+	left: 85px;
+	top: 0;
+	opacity: 0;
+}
+.comment-img .upload{
+	border: 1px solid #ddd;
+	text-align: center;
+	background: #f8f8f9;
+}
+#star{
+    width: 200px!important;
+}
+#star img{
+	margin-top: 5px;
+	width: 25px;
+	height: 25px;
+}
+
+/*查看物流详情*/
+.see-title{
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+.see-ul{
+	padding-left: 10px;
+	position: relative;
+}
+.see-ul ul li{
+	position: relative;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.see-ul ul li >i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	top: 0;
+	left: -21px;
+	z-index: 12;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.see-ul .line{
+	position: absolute;
+	width: 1px ;
+	background: #ddd;
+	top: 0;
+	left:-5px;
+	height: 330px;
+	z-index: 11;
+}
+.see-ul  ul .see-this{
+	color: #00bfb8;
+}
+.see-ul  ul .see-this>i{
+	border-color: #00bfb8;
+	background: #00bfb8;
+}
+
+

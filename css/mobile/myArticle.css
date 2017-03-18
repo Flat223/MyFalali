@@ -1,0 +1,43 @@
+.wz_div{
+    height: 13%;
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.wz_img{
+    width:30%;
+    /*height: 90%;*/
+    float: left
+}
+.wz_info{
+    width: 62%;
+    height: 100%;
+    float: left;
+    margin-left: 3%;
+    font-size: 14px;
+    margin-right: 3%;
+    position: relative;
+}
+.wz_tit{
+    /*width: 100%;*/
+    height: 60%;
+    /*font-weight: bold;*/
+}
+.wz_time{
+    /* width: 55%; */
+    /* height: 40%; */
+    font-size: 13px;
+    /* float: left; */
+    color: darkgrey;
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    left: 0;
+}
+.wz_zan{
+    /*width: 40%; */
+    height: 40%;
+    font-size: 1.4rem;
+    float: right;
+    margin-right: 5%;
+}

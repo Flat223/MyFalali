@@ -1,0 +1,103 @@
+<?php
+ini_set('date.timezone','Asia/Shanghai');
+//error_reporting(E_ERROR);
+
+require_once $_SERVER['DOCUMENT_ROOT']."/core/module/wechatpay/lib/WxPay.Api.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/core/module/wechatpay/unit/WxPay.NativePay.php";
+require_once $_SERVER['DOCUMENT_ROOT'].'/core/module/wechatpay/unit/log.php';
+
+$ordercode = $params['order']['order_code'];
+$fee = floatval($params['order']['money']);
+
+
+//模式二
+/**
+ * 流程：
+ * 1、调用统一下单，取得code_url，生成二维码
+ * 2、用户扫描二维码，进行支付
+ * 3、支付完成之后，微信服务器会通知支付成功
+ * 4、在支付成功通知中需要查单确认是否真正支付成功（见：notify.php）
+ */
+$notify = new NativePay();
+$input = new WxPayUnifiedOrder();
+$input->SetBody("订单号：".$ordercode);
+$input->SetAttach($ordercode);
+$input->SetOut_trade_no($ordercode);
+$input->SetTotal_fee("".($fee*100));
+$input->SetTime_start(date("YmdHis"));
+$input->SetTime_expire(date("YmdHis", time() + 60));
+$input->SetGoods_tag("ordercode");
+$input->SetNotify_url('http://'.$_SERVER['HTTP_HOST'].'/wechatpay/notify.html');
+$input->SetTrade_type("NATIVE");
+$input->SetProduct_id($ordercode);
+$result = $notify->GetPayUrl($input);
+$url = $result["code_url"];
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实验圈-充值</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/info.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<style type="text/css" >
+		.qrcode_order{
+			margin: 20px auto 0;
+			width: 300px;
+		}
+		.qrcode_order p{
+			line-height: 30px;
+		}
+		#sec_count{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/_common/header.php'); ?>
+	<div class="content w1200 clearfix">
+		<p class="caption">
+			<i></i><a href="/">路企网</a>><a href="/user/myinfo.html">个人中心</a>&gt;<span>我的信息</span>
+		</p>
+		<div class="lucky_box clearfix">
+			<?php include($_SERVER['DOCUMENT_ROOT'].'/html/'.Theme.'/user_sidebar.html'); ?>
+			<div class="lucky_r right clearfix">
+				<div class="qrcode_order">
+					<p>订单号：<?php echo($ordercode); ?></p>
+					<?php
+						$type = $params['order']['type'];
+						if($type == 1){
+					?>
+						<p>充值金币：<?php echo($params['order']['virtual_currency']); ?></p>
+					<?php		
+						}else if($type == 2){
+					?>
+						<p>充值元宝：<?php echo($params['order']['virtual_currency']); ?></p>	
+					<?php		
+						}else if($type == 3 || $type == 4){
+					?>
+						<p>托管资金项目：<?php echo($params['order']['pjname']); ?></p>
+					<?php		
+						}
+					?>
+					<p>付款金额：<?php echo($fee); ?></p>
+					<p id="setRefresh">微信支付 距离二维码过期还剩<i id="sec_count">60</i>秒<br/>过期后请刷新页面重新获取二维码</p>
+					<img  src="http://<?php echo($_SERVER['HTTP_HOST'].'/wechatpay/qrcode.html'); ?>?data=<?php echo urlencode($url);?>" width="200" height="200">
+					<p>请使用微信扫一扫，扫描二维码支付</p>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="ordercode" value="<?php echo($ordercode); ?>" />
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/_common/footer.php'); ?>
+	<script type="text/javascript">
+		window.seajs && seajs.use(['pc/wechatpay.js']);
+	</script>
+</body>
+</html>

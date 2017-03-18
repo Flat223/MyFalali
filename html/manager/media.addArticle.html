@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-发布文章</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myarticle.css">
+
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content w1200 clearfix">
+	<div class="wrapper_r right">
+		<div class="article">
+			<p class="caption">
+				<a href="/user/article.html" class="lef" style="margin-left: 20px; color: #00bfb8">添加文章
+				</a>
+			</p>
+			<div class="publish">
+				<label>
+					<span>分类：</span>
+					<select id="sc">
+					<?php
+						$categoryArray = $params['category'];
+						foreach ($categoryArray as $category) {	
+					?>
+						<option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>	
+					<?php
+						}	
+					?>	
+						<option value="-1">其他</option>	
+					</select>
+					<select style="" id="cc" name="category">
+						<?php
+							$child = $params['child'];
+							foreach ($child as $ct) {
+							?>
+						<option value="<?php echo $ct['id'] ?>"><?php echo $ct['name'] ?></option>
+						<?php
+							}
+						?>
+					</select>
+				</label>
+				
+				<label style="width: 320px;margin-left: 28px;">
+					<span style="width: 58px; cursor: pointer">展示图：</span>
+					<img style="cursor: pointer;width: 200px;height: 200px;border: 1px solid #ddd;" id="images" src="/images/pc/upload.jpg" />
+				</label>
+				
+				<label>
+					<span>标题：</span>
+					<input type="text" name="title" placeholder="请填写标题"/>
+				</label>
+				<label>
+					<span>视频地址：</span>
+					<input id="proVideo" type="text" placeholder="请填写产品视频地址" />
+				</label>
+				<label>
+					<span>前言：</span>
+					<textarea name="intro" cols="30" rows="10"></textarea>
+				</label>
+				<!--<label>
+					<span>展示图：</span>
+						<div>
+							<img style="height:160px;width:240px" id="images" src='' style="max-width: 100%;"/>
+							<button type="button" class="btn btn-primary" style="padding: 0 0;width: 100px;height: 35px;" id="brand_upimg" >上传图片</button>
+						</div>
+				</label>-->
+				<label>
+					<span>文章内容：</span>
+					<div name="content" style="margin-left:90px;width:800px">
+
+						<script id="container" name="content" type="text/plain"></script>
+						<script type="text/javascript">
+							var ue = UE.getEditor('container',{
+								enableAutoSave:false,
+								autoHeightEnabled:true,
+								initialFrameHeight:600,
+								initialFrameWidth:800,
+								autoWidthEnabled:true
+							});
+						</script>
+					</div>
+				</label>
+				<input style="margin-left: 400px" type="submit" name="submit" handleType="1" value="立即发布"/>
+				<input type="hidden" name="reEdit" value="重新编辑"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<!--<script src="/js/manager/cyupload.js"></script>-->
+<!--<script src="/js/manager/addArticle.js"></script>-->
+<script type="text/javascript">
+	$.cyupload({
+		elem: '#images',
+		btnName: "请选择",		//按键名称
+		infoElementId: "",	//上传状态信息包装元素id
+		maxFilesize: 10485760,
+		uploadUrl: '/service/uploadimgServ.html',
+		fileFilter: '',
+		upfileParam: 'upload_file_input',
+		success: function (url) {
+			$('#images').attr('src', url['file_url']);
+		}
+	});
+
+	$("#sc").bind("change",function(){
+		var id = $(this).val();
+		$.ajax({
+			type: "post",
+			dataType: "json",
+			url: "/service/GetArticleTypeServ.html",
+			data: {"id":id},
+			success: function (data) {
+				$("#cc").empty();
+				$("#cc").hide();
+				if(id != -1){
+					$("#cc").show();
+					for (var i = 0; i<data.length;i++){
+						var str = "<option value='"+data[i].id+"'>"+data[i].name+"</option>";
+						$("#cc").append(str);
+					}
+				}
+			},
+			error:function (msg) {
+				alert(msg);
+			}
+		});
+	});
+
+	$("input[name=submit]").on("click",function(){
+
+		var aid = $(this).attr("aid");
+		var category = $("select[name=category] option:selected");
+		var id = category.val();
+		if(typeof(id) == "undefined"){
+			id = -1;
+		}
+		// var s_province = $("select[name=s_province]");
+		// var s_city = $("select[name=s_city]");
+		// var s_county = $("select[name=s_county]");
+		var images=$("#images")[0].src;
+		var title = $("input[name=title]");
+		var intro = $("textarea[name=intro]");
+		var video_url = $('#proVideo').val();
+		var content =ue.getContent();
+		if (title == ""){
+			layer.alert('请填写标题',{offset:'200px'});
+			return ;
+		} else if (content == ""){
+			layer.alert('请填写文章内容',{offset:'200px'});
+			return ;
+		}
+		var params = {};
+		params.categoryId = id;
+		// params.province = s_province.val();
+		// params.city = s_city.val();
+		// params.country = s_county.val();
+		params.images=images;
+		params.title = title.val();
+		params.intro = intro.val();
+		params.content = content;
+		params.video = video_url;
+		$.ajax({
+			type:"post",
+			dataType:"json",
+			url:"/service/AddArticleServ.html",
+			data:params,
+			success:function(data){
+				layer.alert(data.msg,{offset:'200px'},function(){
+					window.history.go(-1);
+				});
+			},
+			error:function(data){
+				layer.alert("服务器错误,请稍后再试",{offset:'200px'});
+			}
+		})
+
+	});
+</script>
+<!--<script type="text/javascript" src="/js/oldArea.js"></script>-->
+<!--<script type="text/javascript">_init_area();</script>-->
+

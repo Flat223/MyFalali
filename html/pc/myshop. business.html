@@ -1,0 +1,176 @@
+<?php
+	$freights = $params['freight'];
+	$pagination = $params['pagination'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>实验圈-我的商铺</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" href="/adminLTE/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/adminLTE/font-awesome-4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/ionicons.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/skins/skin-blue.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="/css/shop_open.css"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+	<!--header-->
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/html/'.Theme.'/common_header.html'); ?>
+	<!--sidebar-->
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/html/'.Theme.'/common_sidebar.html'); ?>
+	<div class="content-wrapper" style="min-height: 615px;">
+		<section class="content-header">
+			<!--只是标题-->
+			<h1>
+				运费管理
+				<small>运费模板</small>
+			</h1>
+			<!--面包屑导航-->
+			<ol class="breadcrumb">
+				<li><a href="#"><i class="fa fa-dashboard"></i>我的店铺管理r</a></li>
+				<li class="active">运费模板</li>
+			</ol>
+		</section>
+		<!--content-->
+		<section class="content">
+			<div>
+				<a href="<?php echo '//'.$_SERVER['HTTP_HOST'].'/myshop/addFreight.html'; ?>" type="button"
+				   class="btn btn-success" style="margin-bottom: 10px;">新增模板</a>
+			</div>
+			<div class="row">
+				<?php if(!empty($freights)){ ?>
+				<?php
+					 foreach($freights as $item =>$freight){
+						$tempName = $freight['temp_name'];
+						$bearFreight = $freight['bear_freight'];
+						$calRuleName = $freight['calRuleName'];
+						$deliverys = $freight['delivery'];
+						$freID = $freight['fre_id'];
+						$sid = $freight['sid'];
+						$last_edit_time= $freight['last_edit_time'];
+
+
+				?>
+				<div class="col-sm-12">
+					<div class="box box-info">
+						<div class="box-header with-border">
+							<span class="box-title"><?php echo $tempName; ?></span>
+							<span class="pull-right">
+								<span>最后编辑时间</span><span class="last-edit-time"><?php echo $last_edit_time; ?></span>
+								<span><a href="<?php echo '//'.$_SERVER['HTTP_HOST'].'/myshop/editFreight.html?id='.$freID.'&sid='.$sid; ?>"
+								         class="btn btn-warning btn-edit" data-id="<?php echo $freID; ?>"
+								         data-sid="<?php echo $sid; ?>">修改</a></span>
+								<span><a href="#!" class="btn btn-danger btn-del" data-id="<?php echo $freID; ?>"
+								         data-sid="<?php echo $sid; ?>">删除</a></span>
+							</span>
+						</div>
+						<!-- /.box-header -->
+						<!-- form start -->
+						<form class="form-horizontal">
+							<span class="tips errorTip"></span>
+							<div class="box-body table-responsive no-padding">
+								<table class="table table-hover table-bordered">
+									<thead>
+									<tr>
+										<th>运送方式</th>
+										<th>运送到</th>
+										<th>首<?php echo $calRuleName; ?></th>
+										<th>首费(元)</th>
+										<th>续<?php echo $calRuleName; ?></th>
+										<th>续费</th>
+										<!--<th>操作</th>-->
+									</tr>
+									</thead>
+									<tbody>
+									<!--多种运送方式-》默认。特殊-》多种特殊，多个省市-->
+									<?php if($bearFreight==1){ ?>
+
+									<?php if(!empty($deliverys)){ ?>
+									<?php foreach($deliverys as $express){ ?>
+
+									<?php if(!empty($express)){?>
+									<?php $default = $express['data']['default']; ?>
+									<tr>
+										<td><?php echo $express['type']; ?></td>
+										<td><?php echo $default['citys']; ?></td>
+										<td><?php echo $default['firstUnit']; ?></td>
+										<td><?php echo $default['firstPostage']; ?></td>
+										<td><?php echo $default['plusUnit']; ?></td>
+										<td><?php echo $default['plusPostage']; ?></td>
+									</tr>
+
+									<?php $specials = isset($express['data']['special'])?$express['data']['special']:''; ?>
+									<?php if(!empty($specials)){ ?>
+									<?php foreach($specials as $item => $special){ ?>
+										<?php $cityIDs = $special['cityIDs']; ?>
+									<tr>
+										<td><?php echo $express['type']; ?></td>
+										<td>
+											<?php foreach($cityIDs as $item2 => $cityID){ ?>
+
+												<?php
+													$sep = '';
+													if($item2 !=0){
+														$sep=',';
+													}
+													echo $sep.$cityID;
+												?>
+											<?php } ?>
+										</td>
+										<td><?php echo $special['firstUnit']; ?></td>
+										<td><?php echo $special['firstPostage']; ?></td>
+										<td><?php echo $special['plusUnit']; ?></td>
+										<td><?php echo $special['plusPostage']; ?></td>
+									</tr>
+
+									<?php }}}}}}else{ ?>
+
+									<tr>
+										<td>卖家承担运费</td>
+										<td>全国</td>
+										<td>1</td>
+										<td>0.00</td>
+										<td>1</td>
+										<td>0.00</td>
+									</tr>
+									<?php } ?>
+									</tbody>
+								</table>
+							</div>
+							<!-- /.box-body -->
+							<div class="box-footer">
+							</div>
+							<!-- /.box-footer -->
+						</form>
+					</div>
+				</div>
+
+				<?php }} ?>
+
+			</div>
+		</section>
+		<div class="container" style="text-align: center">
+			<ul class="pagination">
+				<?php echo $pagination; ?>
+			</ul>
+		</div>
+		<!--</div>-->
+	</div><!-- /.content-wrapper -->
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/html/'.Theme.'/common_footer.html'); ?>
+</div><!-- ./wrapper -->
+<script src="/js/sea.js"></script>
+<script src="/js/seaconfig.js"></script>
+<script>
+	seajs.use ('myshop_freight_list', function (freight_list) {
+		freight_list.init ();
+	});
+</script>
+</body>
+</html>

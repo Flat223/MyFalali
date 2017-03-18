@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的圈子</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/mycircle.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$circleArray = $params['circle'];
+		?>
+		<div class="circle">
+			<p class="caption">
+				<span class="lef">我的圈子</span>
+				<a href="/user/joinNewCircle.html" class="right"><i></i>加入新圈子</a>
+			</p>
+			
+		<?php
+			if(count($circleArray) == 0){
+		?>
+				<p style="text-align: center;margin-top: 20% ;font-size: 18px;color: #929292">还没有加入圈子哦!</p>
+		<?php
+			}
+		?>
+			<div class="circle_list">
+				<ul>
+			<?php
+				foreach ($circleArray as $circle){
+					$cid = $circle['circle_id'];
+					$dynamicArray = $circle['dynamic'];
+			?>
+					<li>
+						<dl class="clearfix">
+							<dt>
+								<a href="/info/interesting.html?id=<?php echo $cid?>">
+									<img width="100px" height="100px" 
+									src="<?php echo $circle['logo'] ?>" alt="" />
+								</a>
+							</dt>
+							<dd>
+								<h5 onclick="location.href='/info/interesting.html?id=<?php echo $cid?>'">
+									<?php echo $circle['name']?>
+								</h5>
+						<?php
+							if(count($dynamicArray) == 0){
+						?>
+								<p style="color: gray">暂无动态</p>
+						<?php
+							} else {
+						?>
+								<p>最新动态</p>
+							<?php 
+								foreach ($dynamicArray as $dynamic) {	
+							?>
+								<dl class="clearfix">
+									<dt>
+										<a href="/user/friendhome.html?mid=<?php echo $dynamic['mid']?>">
+										<img class="face" src="<?php echo empty($dynamic['face'])?'/images/pc/face_default.png':$dynamic['face']; ?>" alt="" />
+				    					</a>
+									</dt>
+									<dd>
+										<p>
+											<span class="name" 
+											onclick="location.href='/user/friendhome.html?mid=<?php echo $dynamic['mid'] ?>'">
+												<?php echo ($dynamic['author']);?>
+											</span>
+											<span class="time"><?php echo (date("Y-m-d:H:i:s",$dynamic['time']));?></span>
+										</p>
+										<p style="cursor: pointer" 
+											onclick="location.href='/info/topic.html?id=<?php echo $dynamic['topic_id'] ?>'">
+											<?php echo ($dynamic['content']);?>
+										</p>
+									</dd>
+								</dl>
+						<?php
+								}
+							}
+						?>
+							</dd>
+						</dl>
+					</li>
+				<?php
+					}
+				?>
+				</ul>
+			</div>
+		</div>
+		
+	<?php
+		if($params['pager'] != "" && count($circleArray)>0){		
+	?>
+		<div class=" clearfix" id="page">
+			<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+			<p class="">
+				共<?php echo($params['pager']->getPageCount()); ?>页，到第
+				<input type="text" maxlength="4" id="page_num">页
+				<input class="sub" type="butston" id="goto" value="确定">
+				<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+			</p>
+		</div>
+	<?php
+		}
+	?>	
+	
+	</div>
+	
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/circle.js');
+</script>

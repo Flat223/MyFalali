@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/checkCompany.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a><img src="/images/pc/reg.png" alt="" /></a>
+			<div class="reg right">上传资料</div>
+		</div>
+	</div>
+</div>
+
+<div class="content w1200">
+	<div class="outbox">			
+			<label class="tel-label">
+				<span>公司名称</span>
+				<input id="company_name" type="text"/>
+			</label>		
+			<div class="com_image">
+				<span>营业执照</span>
+				<div id="uploadimg" style="display: none"></div>
+				<img id="faceimage" src="http://d27.ichuk.com/images/pc/upload.jpg"/>
+			</div>
+			
+			<div>
+				<input type="submit" id="confirmUpload" value="确认上传" />
+			</div>
+	</div>
+</div>
+
+<div style="display: none">
+	<input name="mid" type="hidden" value="<?php echo $params['mid'] ?>"/>
+	<input name="check" type="hidden" value="<?php echo $params['check'] ?>"/>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/checkCompany.js');
+</script>

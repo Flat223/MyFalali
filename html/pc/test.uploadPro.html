@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>批量导入</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	
+</head>
+<body>
+	<?php
+		$id = $params['id'];
+		echo '正在插入id为'.$id.'的数据'.'<br/>';
+	?>
+</body>
+</html>
+
+<script src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var id = "<?php echo $params['id'] ?>";
+		id ++;
+		if(id < 50000){
+			window.location.href = "/test/uploadPro.html?id="+id;				
+		}
+	});
+</script>

@@ -1,0 +1,133 @@
+/*提示弹窗的背景色*/
+.layui-layer-content{
+    background: white;
+}
+.layui-layer-btn{
+    background: white;
+}
+.order_p{
+    color: #00bfb8;
+    padding: 20px 0px 10px 10px;
+    border-bottom: 1px solid #ddd;
+}
+.openmember{
+    padding: 1em;
+}
+.openmember dl dt>img{
+    height:36px;
+    width:36px;
+    border-radius: 50%;
+}
+.openmember dl dd{
+    line-height:36px;
+    padding-left: 1em;
+}
+.openmember ul.date-choice{
+    width: 107%;
+    margin-left: -21px;
+    margin-top: 20px;
+}
+.openmember ul.date-choice li{
+    float: left;
+    margin-left: 23px;
+    cursor: pointer;
+}
+.openmember ul.date-choice li .month{
+    position: relative;
+    width: 147px;
+    height: 78px;
+    border: 1px solid #d3d7db;
+}
+.openmember ul.date-choice li .month i{
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("/images/pc/identity-icon.png")no-repeat;
+    width: 34px;
+    height:34px;
+    display: none;
+}
+.openmember ul.date-choice li.border-color .month i{
+    display: inline-block;
+}
+.openmember ul.date-choice li.border-color .month{
+    border-color: #00bfb8;
+    border-width: 2px;
+}
+.openmember ul.date-choice li .month span.left{
+    background-color: #fff;
+    font-size: 28px;
+    color: #00bfb8;
+    line-height: 71px;
+    text-align: center;
+    display: inline-block;
+    width: 113px;
+}
+.openmember ul.date-choice li .month span.right{
+    background-color: #ededed;
+    width: 33px;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.openmember ul.date-choice li .month span.left>b{
+    font-weight: normal;
+    font-size: 14px;
+}
+.openmember .cash-item{
+    margin-top: 20px;
+    border: 1px solid #d3d7db;
+    height:30px;
+    line-height:30px;
+}
+.openmember .cash-item span{
+    width:100px;
+    height:100%;
+    text-align: center;
+    background-color: #fafafa;
+    border-right: 1px solid #d3d7db;
+    display: inline-block;
+    margin-right: 1em;
+}
+.openmember .payfor{
+/*
+    margin: 40px 127px;
+    width: 300px;
+*/
+	margin-top: 120px;
+	text-align: center;
+}
+.openmember .payfor span.pay{
+	background: #00bfb8;
+	color: white;
+	display: inline-block;	
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 2px;
+	cursor: pointer;	
+}
+.openmember .payfor .payimg .face{
+    background: url("/images/pc/border.png")no-repeat;
+    background-size: 100%;
+}
+.openmember .payfor .payimg .face>img{
+    width: 110px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+.openmember .payfor .payimg span{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+.openmember .payfor div.right{
+    line-height: 25px;
+    margin-top: 40px;
+    margin-right: 63px;
+}
+.openmember .payfor div.right p.price{
+    font-size: 28px;
+    color: #00bfb8;
+}

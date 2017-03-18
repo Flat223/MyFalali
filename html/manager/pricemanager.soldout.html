@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/soldout.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>竞价管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>合同签订</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-container">
+					<div class="sear-wrapp clearfix">
+						<div class="search-item">
+							<span>商品名称：</span>
+							<input type="text">
+						</div>
+						<div class="search-item">
+							<span>发布时间：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span>到：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span>订单数：</span>
+							<select name="" id="">
+								<option value="">1~10</option>
+								<option value=""></option>
+								<option value=""></option>
+							</select>
+						</div>
+					</div>
+					<div class="sear-wrapp clearfix">
+						<div class="search-item">
+							<span>图号：</span>
+							<input type="text">
+						</div>
+						<div class="search-item">
+							<span>截止时间：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span>到：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span class="sear-span">搜索</span>
+						</div>
+					</div>
+				</div>
+				<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th width="10%">图号</th>
+							<th width="10%">名称</th>
+							<th width="10%">发布时间</th>
+							<th width="10%">截止时间</th>
+							<th width="10%">需求数量</th>
+							<th width="10%">状态</th>
+							<th width="10%">操作</th>
+						</tr>
+						<tr>
+							<td>201611122345</td>
+							<td>
+								<dl class="clearfix">
+									<dt class="left">
+										<img src="/images/manager/product.jpg" alt="">
+									</dt>
+									<dd class="left">
+										名称名称
+									</dd>
+								</dl>
+							</td>
+							<td>2016-10-10</td>
+							<td>2016-10-10</td>
+							<td>1500件</td>
+							<td style="color:#fd8900">已下架</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+								<button class="layui-btn layui-btn-small lay-btn-up">
+								  <i class="layui-icon"></i>
+								</button>
+								<button class="layui-btn layui-btn-small layui-btn-edit">
+								  <i class="layui-icon">&#xe642;</i>
+								</button>
+								<button class="layui-btn layui-btn-small layui-btn-del">
+								  <i class="layui-icon">&#xe640;</i>
+								</button>
+							</td>
+						</tr>
+				</table>
+
+				<div class="boot-wrapp clearfix">
+					<div id="page" class="left"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find(".accordion-ul").slideToggle("slow");
+//	})
+	layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+});
+</script>

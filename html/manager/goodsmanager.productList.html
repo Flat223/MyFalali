@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-商品列表</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($paramsa);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="../"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="javascript:;"><i></i>商品管理</a></li>
+				<li><span>/</span></li>
+				<li name="count" ><a>共<span id="num"><?php echo $params['count']; ?></span>个产品</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-wrapp clearfix">
+					<div class="right">
+						<div class="sear-item">
+							<input value="<?php echo $params['info']?>" type="text" name="info" placeholder="输入商品名称进行搜索">
+							<span value="<?php echo $params['ch']?>" style="cursor: pointer" name="search">搜索</span>
+						</div>
+					</div>
+				</div>
+				<div class="chart-wrapp clearfix">
+					<ul class="clearfix">
+						<li value="1"><a href="/goodsmanager/productList.html?ch=1">上架商品</a></li>
+						<li value="2"><a href="/goodsmanager/productList.html?ch=2">下架产品</a></li>
+						<li value="3"><a href="/goodsmanager/productList.html?ch=3">推荐产品</a></li>
+					</ul>
+				</div>
+				<?php
+					if($params['ch'] == 3){
+						$pt = $params['protype'];
+					?>
+						<div class="chart-wrapp clearfix">
+							<ul class="clearfix">
+								<?php
+									for($i = 0;$i<count($pt);$i++){
+									?>
+										<li class="ptype" value="<?php echo $pt[$i]['ptid']?>" style="width: 110px; background: #87c7ff;margin: 1px;overflow: hidden;"><?php echo $pt[$i]['name']?></li>
+								<?php
+									}
+								?>
+
+							</ul>
+						</div>
+				<?php
+					}
+				?>
+				<table border="0" cellpadding="0" cellspacing="0" id="tab">
+					<tr>
+						<!--<th width="5%">ID</th>-->
+						<th width="15%">图片</th>
+						<th width="10%">名称</th>
+						<th width="8%">价格</th>
+						<th width="10%">品牌</th>
+						<th width="6%">销售</th>
+						<?php
+							if($params['ch'] == 3){
+							?>
+						<th width="13%">二级名</th>
+						<?php
+							}else{
+							?>
+						<th width="6%">浏览</th>
+						<?php
+							}
+						?>
+						<th width="15%">时间</th>
+						<th width="15%">操作</th>
+					</tr>
+					<?php
+					 	$val = $params['product'];
+					 	$bd = $params['brand'];
+						for($i = 0;$i<count($val);$i++){
+						?>
+					<tr class="pinfo">
+						<!--<td><?php echo $v['id']; ?></td>-->
+						<td>
+							<img style="width:139px;height:105px" src="<?php echo empty($val[$i]['images'])?'':explode(',',$val[$i]['images'])[0]; ?>" alt="">
+						</td>
+						<td><?php echo $val[$i]['name']; ?></td>
+						<td style="text-align: center"><?php echo $val[$i]['price']; ?></td>
+						<td><?php echo $bd[$i]['name']; ?></td>
+						<td><?php echo $val[$i]['sale_num']; ?></td>
+						<td style="text-align: center"><?php echo ($params['ch'] == 3)?$val[$i]['cname']:$val[$i]['view_num'] ; ?></td>
+						<td><?php echo date('Y-m-d H:i:s',$val[$i]['time']); ?></td>
+						<td style="text-align: center">
+							<!--<button class="layui-btn layui-btn-small layui-btn-look">
+							  <i class="layui-icon"></i>
+							</button>-->
+							<span <?php echo $params['ch'] == 2 ? "style='display:none'":'' ?> class="look" value="<?php echo $val[$i]['pid']; ?>" style="text-align:center;cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								查看
+							</span><br>
+							<?php
+								if($params['ch'] == 1){
+								?>
+									<span class="rmd" value="<?php echo $val[$i]['pid']; ?>" style="text-align:center;cursor: pointer;color: white;background: #f23e47;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+										推荐
+									</span><br>
+							<?php
+								}else if($params['ch'] == 3){
+								?>
+									<span class="rmdNo" value="<?php echo $val[$i]['pid']; ?>" style="text-align:center;cursor: pointer;color: white;background: #f23e47;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+										取消推荐
+									</span><br>
+							<?php
+								}
+							?>
+							<span <?php echo $params['ch'] == 2 || $params['ch'] == 3 ? "style='display:none'":'' ?> value="<?php echo  $val[$i]['pid']?>" class="down" style="text-align:center;cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								下架
+							</span>
+							<span <?php echo $params['ch'] == 1 || $params['ch'] == 3 ? "style='display:none'":'' ?> value="<?php echo  $val[$i]['pid']?>" class="del" style="text-align:center;cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								删除
+							</span>
+						</td>
+					</tr>
+					<?php } ?>
+				</table>
+				<div class=" clearfix" id="page">
+					<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+					<p class="">
+						共<?php echo($params['pager']->getPageCount()); ?>页
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/md5.js"></script>
+<script src="/js/manager/product_list.js"></script>

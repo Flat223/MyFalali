@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-添加商品</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addpronext.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addnav.css">
+	
+	<link rel="stylesheet" href="/adminLTE/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/adminLTE/font-awesome-4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/ionicons.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="/adminLTE/dist/css/skins/skin-blue.min.css">
+
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<?php
+	$user = UserAgent::getUser();	    	
+?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+	        <li><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><a href="/myshop/addProduct.html" style="color: #00bfb8">添加产品</a></li>
+            <li><a href="/myshop/freight.html">运费管理</a></li>
+            <li><a href="/myshop/orderManager.html">订单管理</a></li>
+			<li><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+			<li><a href="/myshop/couponList.html">优惠券列表</a></li>
+<!--             <li><a href="">退款管理</a></li> -->
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<section class="content-header">
+			<h1>
+				添加产品
+				<small>添加产品的属性信息</small>
+			</h1>
+		</section>
+		<section class="content">
+			<div class="row">
+				<div class="col-md-8">
+					<!-- Horizontal Form -->
+					<div class="box box-info">
+						<div class="box-header with-border">
+							<h3 class="box-title">基本信息</h3>
+	            		</div>
+						<div class="form-horizontal">
+							<div class="box-body">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">产品名称</label>
+									<div class="col-sm-5">
+										<span style="display: block;padding-top: 5px;font-size: 15px;">
+											<?php echo($params['product']['name']); ?>
+										</span>
+	                  				</div>
+	                			</div>
+	                			
+	                			<div class="form-group">
+		                			<label class="col-sm-2 control-label">所属分类</label>
+										<div class="col-sm-5">
+											<span style="display: block;padding-top: 5px;font-size: 15px;">
+												<?php echo($params['product_type']['name']); ?>
+											</span>
+		                  				</div>
+	                			</div>
+	                  		</div>
+	            		</div>
+	          		</div>
+	        	</div>
+			</div>
+			
+<!--
+			<div class="col-sm-8" style="margin-bottom: 20px;">
+				<div class="col-lg-3">
+					<div class="radio">
+					<label style="min-width: 120px">
+					<input type="radio" class="pro_prop" name="pro_prop" value="1" checked="checked" />产品有关联属性
+					</label>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="radio">
+					<label style="min-width: 140px">
+						<input type="radio" class="pro_prop" name="pro_prop" value="2" />产品没有关联属性
+					</label>
+					</div>
+				</div>
+			</div>
+-->
+			
+			<div class="row pro_prop1" style="display:<?php echo ($params['proptype']==1)?'block':'none' ?> ">
+				<div class="col-md-8">
+					<div class="box box-info">
+						<h3 class="box-title" style="margin-left: 15px;font-size: 16px;">产品属性</h3>
+						<button type="button" class="btn btn-primary pull-right" style="padding: 5px 25px; margin-top: -25px" id="props_save" >保存并生成属性对应关联</button>
+					<?php 
+						foreach($params['property'] as $property){
+					?>
+						<div class="box-header with-border" style="line-height: 20px">
+							<button type="button" 
+								class="prop_add btn btn-primary pull-right"  
+								pro_id="<?php echo $property['id']?>"
+								pro_name="<?php echo $property['name']?>">
+								添加属性内容
+							</button>
+							<button class="property"><?php echo $property['name']?></button>
+	            		</div>
+            		<?php
+						}
+					?>
+						<table class="table table-bordered table-hover dataTable" role="grid">
+		            		<thead>
+		            			<tr role="row">
+			            			<th class="col-sm-3">属性名称</th>
+			            			<th class="col-sm-6">属性内容</th>
+			            			<th class="col-sm-3">操作</th>
+		            			</tr>
+		            		</thead>
+		            		<tbody class="prop_body"></tbody>
+	            		</table>
+					</div>
+				</div>
+			</div>
+			<div class="row sku_add_ui">
+				<div class="col-md-8">
+					<div class="box box-info" style="border-top-color: #fff;">
+						<div class="box-header with-border" style="line-height: 32px;">
+							<h3 class="box-title">属性关联</h3>
+							<button type="button" class="btn btn-primary pull-right" style="padding: 5px 25px;margin-right: 10px;" id="sku_add" >添加属性关联</button>
+	            		</div>
+						<table style="width: 604px" class="table table-bordered table-hover dataTable" role="grid">
+		            		<thead class="sku_tit"></thead>
+		            		<tbody class="sku_body"></tbody>
+	            		</table>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row pro_prop2" style="display:<?php echo ($params['proptype']==2)?'block':'none' ?> ">
+				<div class="col-md-8">
+					<div class="box box-info" style="border-top-color: #fff;">
+						<div class="box-header with-border" style="line-height: 32px;">
+							<h3 class="box-title">产品属性</h3>
+	            		</div>
+						<div class="form-horizontal">
+							<div class="box-body">
+								<div class="form-group">
+									<label style="min-width: 115px;" for="pro_name" class="col-sm-2 control-label">产品价格</label>
+									<div class="col-sm-3">
+										<input type="input" class="form-control" id="pro_price" placeholder="填写产品价格" maxlength="8" >
+	                  				</div>
+	                			</div>
+	                			<div class="form-group">
+									<label style="min-width: 115px;" for="pro_name" class="col-sm-2 control-label">产品库存</label>
+									<div class="col-sm-3">
+										<input type="input" class="form-control" id="pro_inventory" placeholder="填写产品库存" maxlength="10" >
+	                  				</div>
+	                			</div>
+	                			<div class="form-group">
+									<label style="min-width: 115px;" for="pro_name" class="col-sm-2 control-label">产品库存预警</label>
+									<div class="col-sm-3">
+										<input type="input" class="form-control" id="pro_inventory_warn" placeholder="填写产品库存预警" maxlength="10" >
+	                  				</div>
+	                			</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8" style="text-align: center;">
+					<button type="button" class="btn btn-primary" style="padding: 10px 45px;" id="save" >保存</button>
+				</div>
+			</div>
+		</section>
+    </div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<div class="cover" id="cover" style="display: none;"></div>
+<div class="prop_op row">
+	<div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+		<!-- Horizontal Form -->
+		<div class="box box-info" style="border:3px solid #3c8dbc;margin-bottom: 0;">
+			<div class="box-header with-border" style="line-height: 32px;">
+				<h3 class="box-title">产品属性</h3>
+				<button type="button" class="btn btn-primary pull-right" style="padding: 5px 25px;margin-right: 10px;" id="addPropVal">添加属性内容</button>
+    		</div>
+    		<div class="form-horizontal">
+				<div class="box-body">
+					<div class="form-group">
+						<label class="col-sm-3 control-label">属性名称</label>
+						<div class="col-sm-7">
+							<input readonly="only" name="pro_name" class="form-control" pro_id="">
+          				</div>
+        			</div>
+				</div>
+    		</div>
+    		<div style="max-height: 300px;overflow-y: auto;">
+				<table class="table table-bordered table-hover dataTable" role="grid">
+	        		<thead>
+	        			<tr role="row">
+	            			<tr role="row">
+		            			<th class="col-sm-8">属性内容</th>
+		            			<th class="col-sm-4">操作</th>
+	            			</tr>
+	        			</tr>
+	        		</thead>
+	        		<tbody class="propvals_body"></tbody>
+	    		</table>
+    		</div>
+    		<div style="text-align: center;padding-bottom:20px;">
+				<button type="button" class="btn btn-primary" style="padding: 5px 35px;margin: 0 5px;" id="prop_ok" >确定</button>
+				<button type="button" class="btn btn-primary" style="padding: 5px 35px;margin: 0 5px;" id="prop_cancel" >取消</button>
+				<input type="hidden" id="propid" value="" />
+				<input type="hidden" id="prop_stat" value="" />
+			</div>
+  		</div>
+	</div>
+</div>
+<div class="sku_op row">
+	<div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+		<!-- Horizontal Form -->
+		<div class="box box-info" style="border:3px solid #3c8dbc;margin-bottom: 0;">
+			<div class="box-header with-border" style="line-height: 32px;">
+				<h3 class="box-title">属性关联</h3>
+    		</div>
+    		<div class="form-horizontal">
+				<div class="box-body" id="sku_op_body"></div>
+    		</div>
+    		<div style="text-align: center;padding-bottom:20px;">
+				<button type="button" class="btn btn-primary" style="padding: 5px 35px;margin: 0 5px;" id="sku_ok" >确定</button>
+				<button type="button" class="btn btn-primary" style="padding: 5px 35px;margin: 0 5px;" id="sku_cancel" >取消</button>
+			</div>
+  		</div>
+	</div>
+</div>
+<div style="display: none;">
+	<input type="hidden" id="pid" value="<?php echo($params['product']['pid']) ?>" />
+	<input type="hidden" id="ptid" value="<?php echo($params['product']['ptid']) ?>" />
+	<input type="hidden" id="proptype" value="<?php echo($params['proptype']) ?>" />
+	<input type="hidden" id="propCount" value="<?php echo count(($params['property'])) ?>"/>
+	
+	<input type="hidden" name="mid" value="<?php echo($user['mid']) ?>"/>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/addProNext.js');
+</script>
+

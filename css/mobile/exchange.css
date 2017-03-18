@@ -1,0 +1,141 @@
+.ex_address{
+   /* width: 100%;*/
+    height: 13%;
+    font-size: 1.4rem!important;
+    margin-left: 2.4%;
+    margin-top: 2%;
+    font-weight: bold;
+}
+.ex_name{
+    width: 55%;
+    height: 40%;
+    float: left
+}
+.ex_tel{
+    width: 40%;
+    height: 40% ;
+    float: left
+}
+.ex_addr_detail{
+    width: 90%;
+    height: 50%
+}
+/*.ex_flag{
+    height: 1%;
+    width: 100%
+}*/
+.ex_detail{
+    height: 15%;
+    margin-left: 2.4%;
+}
+.ex_img{
+    width:25%;
+    height: 90%;
+    float: left
+}
+.ex_attr{
+    width: 69%;
+    height: 100%;
+    float: left;
+    margin-left: 5%;
+    font-size: 1.4rem!important;
+    margin-top: 1%;
+    line-height: 2rem;
+}
+/*.ex_goods_name{
+    width: 100%;
+    margin-top: 1%;
+    height: 32%
+}
+.ex_type{
+    width: 100%;
+    height: 32%
+}*/
+.ex_integra{
+    /*width: 30%;
+    height: 32%;*/
+    color: aquamarine;
+   /* float: left*/
+}
+.ex_num{
+    /*width: 10%;*/
+    float: right;
+    margin-right: 3%;
+    /*margin-left: 40%*/
+}
+.ex_count_div{
+   /* width: 100%;*/
+    height: 4%;
+    margin-left: 2.4%;
+}
+.ex_count{
+    width: 70%;
+    height: 100%;
+    float: left;
+    font-size: 1.4rem!important;
+    font-weight: bold;
+    line-height: 2rem;
+}
+/*.ex_count a{
+    font-size:18px
+}*/
+.ex_reduce{
+    width: 30%;
+    float: left;
+    outline: none;
+}
+.ex_nu{
+    width: 30%;
+    float: left;
+    margin-top: 5%;
+    margin-left: 2.5%
+}
+.ex_add{
+    width: 30%;
+    float: left
+}
+.ex_peisong{
+    font-size: 1.4rem!important;
+    font-weight: bold;
+    line-height: 2.5rem;
+    margin-left: 2.4%;
+}
+.ex_ps_type{
+    width: 70%;
+    /*height: 100%;*/
+    float: left
+}
+.ex_ps_value{
+    width: 30%;
+    float: left;
+    color: #9e9e9e;
+}
+.ex_bottom{
+    width: 100%;
+    height: 7.5%;
+    position: fixed;
+    bottom: 0;
+    font-size: 1.6rem;
+    line-height: 4rem;
+}
+
+.ex_jf{
+    width: 60%;
+    /* height: 100%; */
+    float: left;
+    text-align: center;
+    /* line-height: 2.5rem; */
+    margin-left: 2.4%;
+}
+.ex_jf a{
+    color: cyan
+}
+.ex_exBtm{
+    width: 29%;
+    float: left
+}
+.ex_peisong_pri{
+    float: right;
+    margin-right: 3%;
+    color: #9e9e9e;
+}

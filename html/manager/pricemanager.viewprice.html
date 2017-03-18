@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/viewprice.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>竞价管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>竞价中图纸</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="status">
+					<div class="status-1">
+						<span class="order-number"><i></i>201610123456789</span>
+						图纸名称						
+					</div>
+					<div class="status-1">
+						<span>当前状态：</span>
+						<span class="statu-now">竞价中</span>						
+					</div>
+					<div class="status-1">
+						<span>报价截止还剩：</span>1天14小时
+					</div>
+				</div>
+			</div>
+			<div class="table-wrapp">
+				<table border="0" cellpadding="0" cellpadding="0">
+					<tr>
+						<th width="12%">报价供应商(<span style="color:#ff0000;">23</span>)</th>
+						<th width="12%">报价金额</th>
+						<th width="12%">报价时间</th>
+						<th width="12%">交货日期</th>
+						<th width="12%">发货地</th>
+						<th width="12%">操作</th>
+					</tr>
+					<tr>
+						<td class="company">某某公司</td>
+						<td class="money"><span>160000.00</span>元</td>
+						<td class="time">2016-10-10&nbsp;&nbsp;23:23:23</td>
+						<td class="date">2016-11-11</td>
+						<td class="address">上海-上海是-虹口区</td>
+						<td class="">
+							<button class="layui-btn layui-btn-small lay-btn-bidding">
+								<i class="layui-icon"></i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-edit">
+							  <i class="layui-icon">&#xe642;</i>
+							</button>
+						</td>
+					</tr>
+				</table>
+				<div id="page"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find(".accordion-ul").slideToggle("slow");
+//	})
+layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+  
+  
+});
+</script>

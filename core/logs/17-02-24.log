@@ -1,0 +1,1667 @@
+[2017-02-24 00:26:00][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 00:50:32][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 05:00:14][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 05:07:45][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/GoodsServ.php(351): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(87): GoodsServ->getProductListCount(0, '25', 0, 999999, '', NULL, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 05:07:45][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/GoodsServ.php(166): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(90): GoodsServ->getProductListO(0, '25', 0, 999999, 1, 0, 15, '', NULL, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 05:41:15][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 07:23:51][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 07:56:41][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:25:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:25:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:25:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:25:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:26:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:26:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->query('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:31:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:31:44][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 09:32:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestUploadProServ.php(15): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): TestUploadProServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.TestUpl...', '/service/TestUp...', 'TestUploadProSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 10:47:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('1b3873559536983...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 10:47:55][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '1b38735595369838f208dd2b25315195' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 10:48:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('1b3873559536983...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 12:11:32][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 12:56:40][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:10:17][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'from_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/AccessCommon.php(16): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): AccessCommon::addAccessLog('/member/login.h...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'member.login.ht...', '/member/login.h...', 'Login', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:28:04][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(139): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:28:04][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(139): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:28:11][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(139): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:09][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:09][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:16][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:21][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:21][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 14:40:28][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/a/B.php(166): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): B->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'a.b.html', '/a/b.html', 'B', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 15:29:21][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('331316d4efb4468...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 15:29:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('331316d4efb4468...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 15:30:05][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '331316d4efb44682092a006307b9ae3a' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 15:56:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('936824c01919536...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 15:56:41][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '936824c0191953647ec609b4f49bc964' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 15:57:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('b7ee0d0d4d5ef99...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 15:57:17][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b7ee0d0d4d5ef995aae0fc691e6d840d' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:00:13][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('3c59dc048e88502...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 17:02:50][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:02:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:05:09][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:05:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:13:58][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:13:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:02][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:02][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:03][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:03][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:14:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:15:50][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:15:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:15:56][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:15:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:39][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:40][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:40][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:41][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:41][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:16:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:28][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:28][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:31][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:32][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:32][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:49][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:18:49][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:22:11][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:22:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:23:22][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:23:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:24:29][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:24:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:57][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:58][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:58][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:25:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:27:58][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:27:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:27:58][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:27:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:29:22][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(38): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:29:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(97): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:36:55][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(37): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:36:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(96): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:36:56][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(37): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:36:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(96): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:37:07][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(37): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:37:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(96): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:40:13][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'TCI' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(41): DBAgent->querySingleRecord('select brand_id...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:41:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(100): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:41:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(100): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:42:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(102): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:42:26][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(102): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:42:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(102): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:42:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(102): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:47:33][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('8e296a067a37563...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 17:48:20][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide,Propylene Oxide,Propylene Oxide,/images/temp_pc/goods.jpg,75-56-9,&gt;99.0' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:52:21][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"品牌":"TCI","CASNo.":"75-56-9","中文名称":"环氧丙烷","英文名称":"' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:52:21][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"品牌":"TCI","CASNo.":"75-56-9","中文名称":"环氧丙烷","英文名称":"' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:56:35][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '$ptid' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:59:18][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oxide)' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(86): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 17:59:41][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(95): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:00:09][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(95): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:02:32][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '$ptid' for column 'ptid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:02:35][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '$ptid' for column 'ptid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:03:40][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '$ptid' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:04:00][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '$ptid' for column 'ptid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:05:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"品牌":"J&K","CASNo.":"14781-45-4","中文名称":"(六氟-2,4-戊烷二酮)' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:14:30][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"品牌":"J&K","CASNo.":"14781-45-4","中文名称":"(六氟-2,4-戊烷二酮)' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:14:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"品牌":"J&K","CASNo.":"14781-45-4","中文名称":"(六氟-2,4-戊烷二酮)' at line 7
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(94): DBAgent->query('insert into #__...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:15:41][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(103): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:22:49][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('dba132f6ab6a3e3...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:22:50][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dba132f6ab6a3e3d17a8d59e82105f4c' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:26:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('af81edaf550496b...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:27:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:32:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('8c26d2fad09dc76...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:32:26][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '8c26d2fad09dc76f3ff36b6ea752b0e1' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:32:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('8c26d2fad09dc76...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:32:40][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '8c26d2fad09dc76f3ff36b6ea752b0e1' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:32:45][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:33:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:41:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('d67d8ab4f4c10bf...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:50:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('dba132f6ab6a3e3...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:50:13][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dba132f6ab6a3e3d17a8d59e82105f4c' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:50:17][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:50:18][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '5f245ebebce62ddcfacd1b6292c69392' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:55:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('dba132f6ab6a3e3...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:55:08][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dba132f6ab6a3e3d17a8d59e82105f4c' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 18:55:10][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 18:55:11][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '5f245ebebce62ddcfacd1b6292c69392' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:12:19][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('3ce6d3c8830d27e...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:12:20][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '3ce6d3c8830d27ec2e6a1936ecbaa514' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:12:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('4248')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:12:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:12:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5f245ebebce62dd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:12:40][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '5f245ebebce62ddcfacd1b6292c69392' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:14:45][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(109): DBAgent->query('insert #__sku (...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:17:23][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/test/UploadPro.php(109): DBAgent->query('insert #__sku (...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): UploadPro->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'test.uploadPro....', '/test/uploadPro...', 'UploadPro', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:19:47][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('dba132f6ab6a3e3...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:19:48][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dba132f6ab6a3e3d17a8d59e82105f4c' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:19:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:20:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:20:10][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:20:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:20:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('8c26d2fad09dc76...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:21:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('8c26d2fad09dc76...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:21:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:21:09][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '7bfa32686d200c64cb46de03ac2eac0d' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:21:13][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7bfa32686d200c6...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:21:15][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '7bfa32686d200c64cb46de03ac2eac0d' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:25:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('5101a4796c51271...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:25:55][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '5101a4796c5127131b2112e2bc6fe02b' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:02][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('eaa1da31f799174...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('87db7e7138edb20...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:03][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'eaa1da31f7991743d18dadcf5fd1336f' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:04][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '87db7e7138edb20aec02bb8ca2281dd0' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:06][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('97e48472142cfdd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:07][error] errCode:22007
+errMsg:SQLSTATE[22007]: Invalid datetime format: 1367 Illegal double '97e48472142' value found during parsing
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('97e48472142cfdd...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:13][error] errCode:22007
+errMsg:SQLSTATE[22007]: Invalid datetime format: 1367 Illegal double '97e48472142' value found during parsing
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:18][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('3e1953b572576cc...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:19][error] errCode:22007
+errMsg:SQLSTATE[22007]: Invalid datetime format: 1367 Illegal double '3e1953' value found during parsing
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:26:21][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('be3ac64e67e8419...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:26:22][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'be3ac64e67e84198f03f45b661f2124a' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 19:28:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('b74084f67608d5d...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:29:15][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('02e74f10e0327ad...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:29:17][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('244edd7e85dc816...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 19:29:18][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column '244edd7e85dc81602b7615cd705545f5' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-24 20:23:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('d3d9446802a4425...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-24 21:16:36][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(12): ProductServ->updateSee('7f5d04d189dfb63...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-付款方式</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/add-company.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><i class="layui-icon">&#xe603;</i><a href="">返回</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>支付方式：</td>
+						<td>
+							<span>
+								<input type="radio" name="radio">支付宝
+							</span>
+							<span>
+								<input type="radio" name="radio">微信
+							</span>
+							<span>
+								<input type="radio" name="radio">线下转账
+							</span>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>上传凭证：</td>
+						<td>
+							<input type="file">
+							<img src="/images/manager/upload.jpg" alt="">
+						</td>
+						<td>线下转账请上传相关凭证</td>
+					</tr>
+				</table>
+				<div class="submit-item">
+			       <button class="layui-com"><i class="layui-icon">&#xe605;</i>确定</button>
+			       <button class="layui-res">重置</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find(".accordion-ul").slideToggle("slow");
+//	})
+</script>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-实验室</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/card.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/lab_list.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+
+    <style>
+        .nolab{
+            display: block;
+            width:800px;
+            /*border:1px solid gainsboro;*/
+            height: 200px;
+            text-align: center;
+            padding-top:150px;
+            font-size: 20px;
+            color: #1CB177;
+            margin: auto;
+            border-radius: 4px;
+            /*background-color: gainsboro;*/
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<?php $lab = $params['lab'];?>
+<div class="content w1200">
+    <div class="sort">
+        <div class="right">
+            <span class="left">共<a class="act-a"><?php echo count($lab);?></a>家实验室</span>
+            <p class="page left">
+            </p>
+            <p class="arrow left">
+            </p>
+        </div>
+    </div>
+    <div class="list_wrapper">
+        <ul>
+            <?php
+				if(!empty($lab)){
+					foreach($lab as $v){
+                    ?>
+                        <li>
+                            <dl>
+                                <dt>
+                                    <img src="<?php echo empty($v['logo'])?'/images/temp_pc/list1.png':$v['logo']; ?>" alt="" />
+                                    <div class="heart">
+                                        <img src="/images/pc/list-heart.png" alt="" />
+                                    </div>
+                                </dt>
+                                <dd>
+                                    <h3><a href="/lab/detail.html?labId=<?php echo $v['lab_id']; ?>"><?php echo ($v['name']); ?></a></h3>
+                                    <?php
+                                        $starNum = $v['stars'];
+                                        if($starNum%2 == 0){
+                                            for($i = 0; $i < $starNum/2; $i++){
+                                            ?>
+                                                <img src="/images/pc/1y.png" alt="" />
+                                            <?php
+                                            }
+                                        }else{
+                                            for($i = 0; $i < floor($starNum/2); $i++){
+                                            ?>
+                                                <img src="/images/pc/1y.png" alt="" />
+                                            <?php
+                                            }
+                                            ?>
+                                                <img src="/images/pc/1yb.png" alt="" />
+                                            <?php
+                                        }
+                                        ?>
+                                        <div class="description">
+                                            <p>
+                                                <span>服务领域：</span><?php echo $v['service_area'];?>
+                                            </p>
+                                            <p>
+                                                <span>联系地址：</span><?php echo $v['address']; ?>
+                                            </p>
+                                            <p>
+                                                <span>简介：</span> <?php echo $v['intro']; ?>
+                                            </p>
+                                        </div>
+                                </dd>
+                            </dl>
+                        </li>
+                    <?php
+				    }
+                }else{
+			?>
+            <div class="nolab">抱歉，没有搜到您需要的实验室</div>
+            <?php } ?>
+        </ul>
+        <div id="demo" class="right"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['info']['count']/6); ?>页<!--，到第
+        <input type="text" maxlength="4" id="page_num">页
+        <input class="sub" type="button" id="goto" value="确定">-->
+    </p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+</script>
+</body>
+</html>
+

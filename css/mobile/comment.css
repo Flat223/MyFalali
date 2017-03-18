@@ -1,0 +1,104 @@
+hr{
+    height: 1%;
+    background: #efeeec;
+    border: 0;
+}
+.com_value{
+    margin-top: 5%;
+    margin-left: 2.4%;
+    height: 12%;
+}
+.com_img{
+    float: left;
+    height: 80%;
+    width: 20%;
+}
+.com_content{
+    float: left;
+    height: 80%;
+    width: 71%;
+    margin-left: 5%;
+}
+.com_ara{
+   /* height: 40;*/
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 0px;
+    overflow: hidden;
+    resize: none;
+}
+.fileInputContainer{
+    height:100px;
+    background:url("/images/mobile/commentImg1.jpg");
+    position:relative;
+    width: 100px;
+    margin-top: 2%;
+    margin-left: 2.4%;
+    float: left;
+}
+.fileInput{
+    height:100%;
+    font-size: 100%;
+    position:absolute;
+    right:0;
+    top:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer;
+}
+.com_photo{
+    /* margin-top: 20%; */
+    line-height: 10rem;
+    margin-left: 2%;
+    font-size: 1.6rem;
+    color: #9e9e9e;
+    font-family: 微软雅黑;
+}
+.com_tit{
+    font-size: 1.8rem;
+    line-height: 4rem;
+    height: 8%;
+}
+.com_starimg{
+    height: 45%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+.cart_buttom{
+    width: 100%;
+    /* height: 7%; */
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+}
+.cart_index{
+    width: 65%;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.cart_indeximg{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.cart_choose{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+    font-size: 20px;
+    margin-top: 3%
+}
+.cart_jiesuan{
+    width: 28%;
+    height: 100%;
+    float: left;
+    background-color: #00c3b5;;
+    font-size: large;
+    text-align: center;
+    line-height: 50px
+}

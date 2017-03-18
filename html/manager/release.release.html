@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-需求列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>需求列表</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <span>需求标题：</span>
+                        <input id="resdata" type="text" value="<?php echo $params['data']?>" >
+                    </div>
+
+                    <div class="search-item">
+                        <span id="serlab" style="margin-left: 0px;cursor: pointer" class="sear-span">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-wrapp clearfix">
+                <ul class="clearfix">
+                    <li value="1"><a href="/release/release.html?ch=1&data=<?php echo $params['data']?>">待审核</a></li>
+                    <li value="2"><a href="/release/release.html?ch=2&data=<?php echo $params['data']?>">审核通过</a></li>
+                    <!--<li style="float: right">
+                        <button id="add" class="layui-btn layui-btn-normal">
+                            <a href="/labmanager/addLab.html"><i class="layui-icon">&#xe608;</i> 添加</a>
+                        </button>
+                    </li>-->
+                </ul>
+            </div>
+            <?php $lab = $params['lab'];?>
+            <div class="chart-content">
+                <div class="chart-item chart-show">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th width="10%">标题</th>
+                            <th width="6%">类型</th>
+                            <th width="6%">联系人</th>
+                            <th width="7%">电话</th>
+                            <th width="10%">交易条件</th>
+                            <th width="15%">描述</th>
+                            <th width="7%">过期时间</th>
+                            <!--<th width="10%">数量</th>
+                            <th width="10%">状态</th>-->
+                            <th width="10%">操作</th>
+                        </tr>
+                        <?php
+                            for($i = 0;$i<count($lab);$i++){
+                            ?>
+                                <tr><?php $tn = $lab[$i]['type']?>
+                                    <td><?php echo  $lab[$i]['title']?></td>
+                                    <td><?php
+                                        if($tn == 1){
+                                            echo "求购" ;
+                                        }else if($tn == 2){
+                                            echo "求介绍";
+                                        }else if($tn == 3){
+                                            echo "求购二手";
+                                        }else if($tn == 4){
+                                            echo "寻求加工";
+                                        }else if($tn == 5){
+                                            echo "寻求合作";
+                                        }else{
+                                            echo "招标";
+                                         }?></td>
+                                    <td><?php echo  $lab[$i]['linkman']?></td>
+                                    <td><?php echo  $lab[$i]['phone']?></td>
+                                    <td><?php echo  $lab[$i]['trade']?></td>
+                                    <td><?php echo  $lab[$i]['description']?></td>
+                                    <td><?php echo  date('Y-m-d',$lab[$i]['endDate']);?></td>
+                                    <td>
+                                       <!-- <button class="layui-btn layui-btn-small layui-btn-look">
+                                            <a"><i class="layui-icon"></i></a>
+                                        </button>-->
+                                        <span value="<?php echo  $lab[$i]['id']?>" class="del" style="cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                                            删除
+                                        </span>
+                                        <span <?php echo ($lab[$i]['is_check'] == 1)? "style='display:none'" : ''?> value="<?php echo  $lab[$i]['id']?>" class="check" style="cursor: pointer;color: white;background:#f7bf3a;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                                           审核
+                                        </span>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        ?>
+                    </table>
+                </div>
+                <div class=" clearfix" id="page">
+                    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+                    <p class="">
+                        共<?php echo($params['pager']->getPageCount()); ?>页
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/release.js"></script>
+</body>
+</html>

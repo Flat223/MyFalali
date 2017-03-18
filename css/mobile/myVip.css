@@ -1,0 +1,63 @@
+.vip_top{
+    width: 100%;
+    height: 22%;
+    background-color: skyblue
+}
+.vip_img{
+    width: 23%;
+    height:70%;
+    float: left;
+    margin-top: 5%;
+    margin-left:9%;
+}
+.vip_info{
+    width: 60%;
+    height: 70%;
+    color: white;
+    float: left;
+    margin-top: 5%;
+    margin-left: 6%;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+.vip_info div{
+    width: 100%;
+    /*height: 25%*/
+}
+.vip_qd{
+    width: 100%;
+    height: 10%;
+    margin-top: 2%;
+}
+.vip_qdimg{
+    width: 15%;
+    height: 45%;
+    float: left;
+    margin-left: 10%;
+    margin-top:5%
+}
+.vip_qdtit{
+    width: 60%;
+    height: 50%;
+    float:left;
+    margin-left: 5%;
+    margin-top: 4%;
+    color: cyan;
+    font-size: 1.6rem;
+}
+.vip_ques{
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+}
+.vip_ques div{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.vip_btn{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    margin-top: 2%;
+}

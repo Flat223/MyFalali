@@ -1,0 +1,116 @@
+p.noPro_info{
+	text-align: center;
+    font-size: 18px;
+    color: #929292;
+}
+.search-container .sear-wrapp {
+    margin-bottom: 10px;
+}
+.search-container .sear-wrapp .search-item {
+    float: left;
+    width: 200px;
+}
+.search-container .sear-wrapp .search-item span {
+    display: inline-block;
+    width: 72px;
+}
+.search-container .sear-wrapp .search-item input {
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #dddddd;
+    margin-right: 40px;
+    text-indent: 1em;
+}
+.search-container .sear-wrapp span.search {
+    background: #f23e47;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    float: right;
+    margin-right: 40px;
+}
+.search-container .sear-wrapp .search-item span {
+	display: inline-block;
+    width: 72px;
+}
+
+.selectAll {
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+}
+
+.leftStatus{
+	float: left;
+	margin-top: 5px;	
+}
+.leftStatus button{
+	margin-left: 12px;
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    color: #3c3c3c;
+    height: 26px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.update_selPro:hover{
+	color: #00bfb8;
+	border: 1px solid #00bfb8;
+}
+.delete_selPro:hover{
+	color: #f23e47;
+	border: 1px solid #f23e47;
+}
+
+.rightStatus{
+	float: right;
+	margin-right: 25px;
+}
+.rightStatus span{
+	font-size: 15px;
+	margin-right: 10px;
+}
+.rightStatus select[name=proStatus]{
+	min-width: 80px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #d2d6de;
+	border-radius: 5px;
+}
+button.proUp{
+	background: -webkit-linear-gradient(top,burlywood,burlywood);
+}
+
+a.skus_detail{
+	cursor: pointer;
+}
+
+table.skuInfo{
+	width: 590px;
+	margin: 0 5px 0 5px;
+	border: 1px solid #f4f4f4;
+	table-layout: fixed;
+}
+
+.skuInfo tr th{
+	border: 1px solid #f4f4f4;
+	border-bottom-width: 2px;
+	height: 40px;
+	color: #333;
+}
+
+.skuInfo tr td{	
+	word-wrap: break-word;
+	text-align: center;
+	border: 1px solid #f4f4f4;
+	height: 36px;
+	font-style: normal;
+	color: #555;
+}	

@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-搜索商品</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link href="/css/pc/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pc/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pc/card.css" rel="stylesheet" type="text/css">
+    <link href="/css/pc/common.css" rel="stylesheet" type="text/css">
+    <link href="/css/pc/product_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <style>
+        .nolab{
+            display: block;
+            width:800px;
+            /*border:1px solid gainsboro;*/
+            height: 200px;
+            text-align: center;
+            padding-top:150px;
+            font-size: 20px;
+            color: #1CB177;
+            margin: auto;
+            border-radius: 4px;
+            /*background-color: gainsboro;*/
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+
+    <div style="width: 1200px;margin:auto;height: auto" class="prodcut_r1 category">    
+	    
+	    <?php 
+			$brandlist=$params['brandlist'];
+			if(count($brandlist)>0){
+		?>
+				<div class="brand clearfix">
+					<label class="ite left">
+						品牌:
+					</label>
+					<div class="brand_list left clearfix">
+						<div class="list left">
+							<ul class="brand-ul clearfix">
+								<?php
+									foreach($brandlist as $brand)
+									{
+									?>
+										<li style="cursor: pointer" value="<?php echo($brand['brand_id']);?>"><?php echo($brand['name']);?></li>
+									<?php
+									}
+								?>
+							</ul>
+						</div>
+		                <label class="more">
+		                    更多
+		                </label>
+		               
+					</div>
+		
+				</div>
+			<?php
+         	}
+        ?>
+	    
+	    
+	        
+           	<?php
+				$typelist=$params['typelist'];
+				if(count($typelist)>0){
+				?>
+					<p class="clearfix classify-p">
+						<span class="left">分类：</span>
+						<span class="right classify-con">
+						<label class="label-item classify">
+						<?php	
+							foreach($typelist as $value)
+							{
+							?>
+								
+								<span  class="protype" style="cursor: pointer" value2="<?php echo($params['data'])?>" value="<?php echo($value['ptid'])?>"><?php echo($value['name']);?></span>
+							<?php
+						}
+						?>
+						</label>
+						</span>
+					</p>
+        
+        <div class="sort">
+            <div class="left goods">
+                <ul class="sort-ul">
+                        <li value="1">综合排序</li>
+    	                <li value="2">销量</li>
+    	                <li value="3" class="sortprice pricedown"><span class="sortarrow sortpricedown"></span>价格</li>
+    	                <li value="5" style="display: none" class="sortprice priceup"><span class="sortarrow sortpriceup"></span>价格</li>
+<!--     	                <li value="4">评论数</li> -->                
+    	        </ul>
+            </div>
+            <div class="right">
+                <span class="left">共<?php echo($params['info']['count']);?>个商品</span>
+            </div>
+        </div>
+        <?php } ?>
+        <div class="list_wrapper">
+            <ul>
+                <?php
+	    		    $productlist=$params['info']['data'];
+	    		    if(count($productlist)>0){
+	    		    	foreach($productlist as $key=>$product){
+							$images=explode(',',$product['images']);
+                ?>
+			                <li>
+			                    <div class="ui card">
+			                        <a class="image" href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>" target="_blank">
+			                            <img src="<?php echo($images[0])?>">
+			                        </a>
+			                        <div class="content">
+			                            <a class="header1" href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>"><span><i>￥</i><?php echo($product['price']);?></span></a>
+			                            <div class="meta">
+			                                <a><?php echo($product['name'])?></a>
+			                            </div>
+			                        </div>
+			                        <!--<i class="compare" style="cursor: pointer" value="<?php echo($product['pid'])?>"> </i>-->
+			                    </div>
+			                </li>
+				<?php
+						}
+					}else{
+				?>
+                <div class="nolab">抱歉，没有搜到您需要的商品</div>
+                <?php 
+               		}
+                 ?>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo($params['pager']->getPageCount()); ?>页
+    </p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+		var ptid=GetQueryString("ptid");
+		var key= GetQueryString("info");
+		var brand=GetQueryString('brand');
+		var sortype=GetQueryString('ob');
+		$(".category p .label-item span.protype").each(function(){
+			if($(this).attr('value')==ptid){
+				$(this).addClass("act-a");
+			}	
+		});
+		
+		$(".category p .label-item span.protype").click(function(){
+			ptid=$(this).attr('value');
+			var key=$(this).attr('value2');
+			var url="/goods/productList.html?ptid="+ptid+"&key="+key;
+			window.location.href=url;
+		});
+		
+		$(".brand-ul li").click(function(){
+			$(this).addClass("act-a").siblings().removeClass("act-a");
+			var bid=$(this).attr("value");
+			var url="";
+			if(ptid!=null){
+				url="/goods/search.html?type=goods&info="+escape(key)+"&ptid="+ptid+"&brand="+bid;
+			}else{
+				url="/goods/search.html?type=goods&info="+escape(key)+"&brand="+bid;
+			}
+			
+			window.location.href=url;
+		});
+		$(".brand-ul li").each(function(){
+			if($(this).attr('value')==brand){
+				$(this).addClass("act-a").siblings().removeClass("act-a");
+			}
+		});
+		
+	    $(".sort-ul li").each(function(){
+			var type=$(this).attr("value");
+			if(sortype==type){
+				if(sortype==3){
+					$(this).show();
+					$(this).addClass("sort-this").siblings().removeClass("sort-this");
+					$(".priceup").hide();
+				}else if(sortype==5){
+					$(this).show();
+					$(this).addClass("sort-this").siblings().removeClass("sort-this");
+					$(".pricedown").hide();
+				}else {
+					$(this).addClass("sort-this").siblings().removeClass("sort-this");
+				}
+			}			
+		});
+		$(".sort-ul li").click(function(){
+			$(this).addClass("sort-this").siblings().removeClass("sort-this");
+			var  stype=$(this).attr("value");
+			if(sortype==3&&stype==3){
+				sortype=5;
+			}else if(sortype==5&&stype==5){
+				sortype=3;
+			}else {
+				sortype=stype;
+			}
+			var url="";
+			url="/goods/search.html?type=goods&info="+escape(key)+"&ob="+sortype;
+			if(ptid!=null){
+				url+="&ptid="+ptid;
+			}
+			if(brand!=null){
+				url+="&brand="+brand;
+			}
+			
+			window.location.href=url;
+		});
+
+		$(".more").on("click",function () {
+			if($(".list").hasClass("list")){
+				$(".list").removeClass("list").addClass("listauto");
+				$(".more").html("收起&and;");
+			}else{
+				$(".listauto").removeClass("listauto").addClass("list");
+				$(".more").html("更多&or;");
+			}
+		});
+		
+		function GetQueryString(name){
+	    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  unescape(r[2]); return null;
+	};
+
+		
+		
+</script>
+
+

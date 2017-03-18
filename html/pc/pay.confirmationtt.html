@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/pay.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+
+	<div class="login_process">
+		<img src="/images/temp_pc/pay2.png" alt="" />
+	</div>
+	<div class="tip_section">
+		<p class="title">
+			<span class="arrow_right">&radic;</span>需求订单提交成功，请等待审核通过~
+		</p>
+		<?php
+			$totprice=$params['totalprice'];
+			$codes=$params['codes'];
+		?>
+		<p>
+			订单号：<span><?php echo($codes);?></span>
+		</p>
+	</div>	
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+

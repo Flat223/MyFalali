@@ -1,0 +1,628 @@
+[2017-01-16 00:39:33][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'face' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/AdminServ.php(279): DBAgent->insertRecord('admin', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/AddAdminServ.php(58): AdminServ->addAdmin(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddAdminServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addAdmi...', '/service/addAdm...', 'AddAdminServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 08:37:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('4', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 08:37:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=4' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '4')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 08:50:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('16', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 08:50:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=16' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '16')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 09:25:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'like '%哈哈哈%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(100): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/media/Articles.php(13): ArticleServ->getAllArticleCount('1', '?????????')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Articles->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'media.articles....', '/media/articles...', 'Articles', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 09:28:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('8', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 09:28:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '8')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 09:55:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('183')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:24:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('183')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:24:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('183')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:30:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('183')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:44:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('183')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:48:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('194')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:48:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('194')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:50:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id not in(select circle_id from labring_notinterest_mem' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(75): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/MyCircleJoined.php(32): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): MyCircleJoined->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.myCircle...', '/circle/myCircl...', 'MyCircleJoined', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:50:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id in(select circle_id from labring_notinterest_member ' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(82): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/MyCircleJoined.php(36): InterestServ->GetBynotinterest(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): MyCircleJoined->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.myCircle...', '/circle/myCircl...', 'MyCircleJoined', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:51:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id not in(select circle_id from labring_notinterest_mem' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(67): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/MyCircleJoined.php(27): InterestServ->GetIndustryIds('5', NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): MyCircleJoined->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.myCircle...', '/circle/myCircl...', 'MyCircleJoined', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:51:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id not in(select circle_id from labring_notinterest_mem' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(75): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/MyCircleJoined.php(32): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): MyCircleJoined->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.myCircle...', '/circle/myCircl...', 'MyCircleJoined', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 10:51:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id in(select circle_id from labring_notinterest_member ' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(82): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/MyCircleJoined.php(36): InterestServ->GetBynotinterest(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): MyCircleJoined->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.myCircle...', '/circle/myCircl...', 'MyCircleJoined', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:27:44][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(52): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/CircleDetail.php(16): CircleServ->getTopicByid('20', NULL, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): CircleDetail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.circleDe...', '/circle/circleD...', 'CircleDetail', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:28:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(52): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/CircleDetail.php(16): CircleServ->getTopicByid('20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): CircleDetail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.circleDe...', '/circle/circleD...', 'CircleDetail', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:28:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(52): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/circle/CircleDetail.php(16): CircleServ->getTopicByid('20', NULL, NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): CircleDetail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'circle.circleDe...', '/circle/circleD...', 'CircleDetail', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:31:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'like '%哈哈哈%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(100): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/media/Articles.php(13): ArticleServ->getAllArticleCount('1', '?????????')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Articles->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'media.articles....', '/media/articles...', 'Articles', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:31:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'like '%龙之吻%'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(100): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/media/Articles.php(13): ArticleServ->getAllArticleCount('1', '?????????')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Articles->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'media.articles....', '/media/articles...', 'Articles', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 11:32:25][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'stid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ShopServ.php(139): DBAgent->insertRecord('shop', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/EditShopServ.php(32): ShopServ->insertShop(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): EditShopServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.EditSho...', '/service/EditSh...', 'EditShopServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 11:32:27][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'stid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ShopServ.php(139): DBAgent->insertRecord('shop', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/EditShopServ.php(32): ShopServ->insertShop(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): EditShopServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.EditSho...', '/service/EditSh...', 'EditShopServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 11:32:29][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'stid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ShopServ.php(139): DBAgent->insertRecord('shop', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/EditShopServ.php(32): ShopServ->insertShop(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): EditShopServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.EditSho...', '/service/EditSh...', 'EditShopServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 13:26:41][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'stid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ShopServ.php(139): DBAgent->insertRecord('shop', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/EditShopServ.php(32): ShopServ->insertShop(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): EditShopServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.EditSho...', '/service/EditSh...', 'EditShopServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 14:06:33][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'stid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ShopServ.php(139): DBAgent->insertRecord('shop', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/EditShopServ.php(32): ShopServ->insertShop(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): EditShopServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.EditSho...', '/service/EditSh...', 'EditShopServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 14:55:26][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 14:55:45][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 14:57:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 14:58:16][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 14:59:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(574): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:05:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('5', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:05:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '5')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:12:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('2', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:12:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=2' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('20', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('20', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('20', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('20', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('8', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:16:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '8')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:17:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('6', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:17:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:18:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('6', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:18:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:50:34][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:50:36][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('125')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:52:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('125')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 15:52:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('125')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 16:56:14][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'vip_level' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/AdminServ.php(309): DBAgent->updateRecords('member', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/SetVIPServ.php(23): AdminServ->setUserVip('1', NULL)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SetVIPServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.setVIPS...', '/service/setVIP...', 'SetVIPServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 16:56:56][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'vip_level' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/AdminServ.php(309): DBAgent->updateRecords('member', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/SetVIPServ.php(23): AdminServ->setUserVip('1', NULL)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SetVIPServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.setVIPS...', '/service/setVIP...', 'SetVIPServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-16 17:05:31][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_company_regist' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(127): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/checkManager/CompanyCheckManager.php(23): CompanyServ->getAllRegistComCount('0')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): CompanyCheckManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'checkManager.co...', '/checkManager/c...', 'CompanyCheckMan...', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 22:43:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and mid!= and status!=0 order by mid limit 8' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(61): CircleServ->getFriendByCid('2', NULL, 8)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-16 22:43:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and circle_id=2' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CircleServ.php(72): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Interesting.php(67): CircleServ->Checkcircle(NULL, '2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Interesting->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.interestin...', '/info/interesti...', 'Interesting', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

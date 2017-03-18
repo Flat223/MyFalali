@@ -1,0 +1,72 @@
+.choose_brand{
+    /* width: 100%; */
+    /* height: 5%; */
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 3rem;
+    margin-left: 2.4%;
+}
+.choose_more{
+    float: right;
+    margin-right: 5%;
+    color: #9e9e9e;
+}
+.choose_defa{
+    width: 95%;
+    height: 20%;
+    margin-left: 2.4%;
+}
+.choose_one{
+    /* width: 100%; */
+    height: 49%;
+}
+.choose_tit{
+    width: 32%;
+    /* height: 100%; */
+    background-color: lavender;
+    text-align: center;
+    line-height: 5rem;
+    border-radius: 25px;
+    float: left;
+    font-size: 1.6rem;
+}
+.choose_price{
+    width: 100%;
+    height: 6%;
+    background-color: lavender;
+    margin-top: 2%;
+}
+.choose_value{
+    /* width: 80%; */
+    height: 80%;
+    margin-left: 10%;
+    /* margin-top: 2%; */
+}
+.choose_min{
+    width: 40%;
+    height: 80%;
+    outline: none;
+    border: 0px;
+    margin-top: 2%;
+}
+.choose_buttom{
+    width: 100%;
+    height: 8%;
+    font-size: 1.7rem;
+}
+.choose_reset{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 4.2rem;
+}
+.choose_finish{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: darkturquoise;
+    text-align: center;
+    line-height: 4.2rem;
+}

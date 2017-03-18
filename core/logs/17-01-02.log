@@ -1,0 +1,32 @@
+[2017-01-02 00:56:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('16')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-02 20:55:07][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/AdminServ.php(115): DBAgent->insertRecord('member', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/AddMemberServ.php(54): AdminServ->addUser(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMemberServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMemb...', '/service/addMem...', 'AddMemberServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-02 20:56:47][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/AdminServ.php(115): DBAgent->insertRecord('member', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/manager/_api/service/AddMemberServ.php(54): AdminServ->addUser(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMemberServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMemb...', '/service/addMem...', 'AddMemberServ', true)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}

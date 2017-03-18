@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的收藏</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/favorite.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>我的收藏</span>
+		</p>
+		
+		<div class="favoritebox">
+			<div class="layui-tab layui-tab-card" lay-filter="demo" style="">
+			  <ul class="layui-tab-title">
+			    <li class="layui-this">商品收藏</li>
+			    <li>实验室收藏</li>
+			    
+			  </ul>
+			  <div class="layui-tab-content" style="padding: 10px;">
+			    <div class="layui-tab-item layui-show">
+			      <ul>
+				  <?php
+				  	foreach ($params['product'] as $product){ 
+				  ?>
+			      	<li style="position: relative;">
+				      	<a href="/goods/detail.html?pid=<?php echo md5($product['pid']) ?>" >
+				      		<img style="width: 160px;height: 160px;border: 1px solid #ddd"
+				      			src="<?php echo (explode(',',$product['images'])[0])?>" />
+				      	</a>
+						<i class="unfavorite"
+							value="<?php echo $product['pid'];?>"
+							type="<?php echo $product['coll_type'];?>"
+							>
+						</i>
+			      		<p>
+				      		<a href="/goods/detail.html?pid=<?php echo md5($product['pid']) ?>">
+								<?php echo $product['name'];?>													
+							</a>
+			      		</p>
+<!--
+			      		<span>
+				      		<?php echo ("¥".$product['price']); ?>
+				      		<i class="addInShopCar" 
+				      			pid="<?php echo $product['pid'];?>"
+				      			skuid="<?php echo $product['sku'];?>">
+			      			</i>
+			      		</span>
+-->
+			      	</li>
+			      <?php
+			      	}
+			      ?>
+			      </ul>
+		      <?php
+				if(count($params['product']) == 0){
+				?>
+					<p style="text-align: center; margin-top: 10% ;font-size: 18px;color: #929292">还没有收藏商品</p>
+				<?php
+					}
+			?>
+			    </div>
+			    <div class="layui-tab-item">
+			    	<ul>
+				    <?php
+				  		foreach ($params['laboratory'] as $laboratory){ 
+					?>
+			    		<li style="position: relative;width: 190px" class="lab-like">
+				    		<a href="/lab/detail.html?labId=<?php echo $laboratory['lab_id'] ?>">
+				    			<img style="border: 1px solid #ddd;width: 160px;height: 160px "
+				    				src="<?php echo $laboratory['logo']?>" 
+				    				/>
+				    		</a>
+							<i class="unfavorite"
+								value="<?php echo $laboratory['lab_id'];?>"
+								type="<?php echo $laboratory['coll_type'];?>"
+								>
+							</i>
+			    			<h3>
+				    			 <a href="/lab/detail.html?labId=<?php echo $laboratory['lab_id'] ?>">
+				                    <?php echo $laboratory['name'] ?>
+			                    </a>
+			    			</h3>
+			    			<div class="star">
+				    			实验室星级：
+				    		<?php
+								$starCount = $laboratory['stars'];
+		                    	if ($starCount > 5){
+			                    	$starCount = 5;
+		                    	}
+		                    	for ($i = 0; $i < $starCount; $i++){
+				    		?>	
+				    			<img src="/images/pc/star-on-big.png" alt="" />
+				    		<?php
+				    			}
+				    		?>	
+				    		</div>
+			    			<div>
+				    			服务领域 :
+				    			<?php echo ($laboratory['service_area']); ?>
+							</div>
+			    		</li>
+			    	<?php
+			    		}
+			    	?>
+			    	</ul>
+	    	<?php
+				if(count($params['laboratory']) == 0){
+			?>
+					<p style="text-align: center; margin-top: 10% ;font-size: 18px;color: #929292">还没有收藏实验室</p>
+			<?php
+				}
+			?>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+	
+
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script>
+	window.seajs&&seajs.use('pc/user/favorite.js');
+</script>
+
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-绑定企业</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/binding.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/setaccount.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>
+			<?php
+				$user = UserAgent::getUser();
+				$bind_title = "";
+				if($user['type'] == 1){
+					$bind_title = "高校";
+				} else if($user['type'] == 2){
+					$bind_title = "企业";
+				}
+				echo "绑定".$bind_title;
+			?>
+			</span>
+		</p>
+		<div class="page_container" bind_type="<?php echo ($user['type']);?>">
+	<?php
+		if($user['bind_status'] == 0){
+	?>
+			<div class="bindingbox">
+				<div class="bind_search clearfix">
+					<div class="bindding_outbox right">
+						<input name="search_key" type="text"		
+							placeholder="<?php echo "输入".$bind_title."名称或关键词进行搜索"; ?>"
+							value="<?php echo (isset($_GET['key'])?$_GET['key']:"") ?>"
+							/>
+						<span class="com_search"><?php echo ("搜索".$bind_title);?></span>
+					</div>
+				</div>
+			</div>
+		<?php
+			if(!isset($_GET['key'])){
+		?>
+				<p style="text-align: center;margin-top: 20%;font-size: 18px;color: #929292;">
+					<?php echo("还未绑定".$bind_title.",快去搜索".$bind_title."申请绑定吧"); ?>
+				</p>	
+		<?php
+			} else {
+				foreach ($params['search_company'] as $company){	
+		?>
+			<div class="result clearfix" >
+				<dl class="left">
+					<dt>
+						<img src="/images/temp_pc/company1.png" alt="" />
+					</dt>
+					<dd>
+						<span>名称：<?php echo($company['name']); ?></span>
+						<?php
+							if($user['type'] == 2){
+						?>
+						<span>地址：<?php echo($company['address']); ?></span>
+						<?php
+							}
+						?>
+						<span>所在地：<?php echo $company['province_name'].$company['city_name']; ?>
+						</span>
+					</dd>
+				</dl>
+			
+				<div class="bind_state right">
+					<a class="apply_bind" href="javascript:;" cid="<?php echo($company['mid']);?>">
+						<?php echo $user['type'] == 1 ? '绑定高校' : '申请绑定' ?>
+					</a>
+				</div>
+			</div>
+					
+	<?php
+				}
+			}
+		} else {
+			$company = $params['company'];
+	?>
+			<div class="result clearfix" >
+				<dl class="left">
+					<dt>
+						<img src="/images/temp_pc/company1.png" alt="" />
+					</dt>
+					<dd>
+						<span>名称：<?php echo($company['name']); ?></span>
+						<span>地址：<?php echo($company['address']); ?></span>
+						<span>所在地：<?php echo $company['province_name'].$company['city_name']; ?>
+						</span>
+					</dd>
+				</dl>
+			
+				<div class="bind_state right">
+				<?php
+					if ($user['bind_status'] == 2) {
+				?>
+					<span class="bind_intro">已绑定</span>
+					<a class="unbind" href="javascript:;" cid="<?php echo($company['mid']);?>">解除绑定</a>
+				<?php
+					} else if($user['bind_status'] == 1){
+				?>
+					<a class="binding" style="background: #ddd;color: black">审核中</a>
+				<?php
+					} else {	
+				?>
+					<span class="bind_intro">申请被拒绝</span>
+					<a class="rebind" href="javascript:;">重新申请</a>
+				<?php
+					} 	
+				?>
+				</div>
+			</div>
+	<?php
+		}
+	?>
+		</div>
+	
+	<?php
+		if(isset($_GET['key'])){
+			if(count($params['search_company']) == 0){
+	?>
+			<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">未搜索到相关信息</p>
+	<?php
+			} else {	
+	?>
+		
+			<div class=" clearfix" id="page">
+				<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+				<p class="">
+					共<?php echo($params['pager']->getPageCount()); ?>页，到第
+					<input type="text" maxlength="4" id="page_num">页
+					<input class="sub" type="butston" id="goto" value="确定">
+				</p>
+			</div>
+	<?php
+			}
+		}
+	?>	
+	</div>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/binding.js');
+</script>
+</body>
+</html>
+

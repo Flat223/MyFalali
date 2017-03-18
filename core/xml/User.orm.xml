@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<cy-mapping xmlns="http://www.ichuk.com/cy-mapping">
+	<entity table="my_user">
+		<id column="id">id</id>
+		<field column="name" type="string">name</field>
+		<field column="sex" type="integer">sex</field>
+		<field column="mobile" type="string">mobile</field>
+		<field column="info" type="string">info</field>
+		<field column="time" type="integer">time</field>
+	</entity>
+</cy-mapping>
+
+
+

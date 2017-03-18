@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-商品列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link href="/css/pc/style.css" rel="stylesheet" type="text/css" />
+	<link href="/css/pc/swiper.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/pc/card.css" rel="stylesheet" type="text/css">
+	<link href="/css/pc/common.css" rel="stylesheet" type="text/css">
+	<link href="/css/pc/product_list.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200">
+<div class="ui large breadcrumb">
+  <ul class="clearfix">
+     <li>
+         <a href="/lab/shop.html">实验室商城</a>
+     </li>
+     <?php 
+     	$typelist=$params['type'];
+     	foreach($typelist as $type){
+     ?>
+     <li style="padding: 0 5px;">></li>
+     <li>
+        <a href="/goods/productList.html?ptid=<?php echo($type['ptid'])?>"><?php echo $type['name'];?></a>
+     </li>
+     <?php
+     }
+     ?>
+    <?php 
+ 		if($params['key']!=""){
+	 ?>
+	  <li style="padding: 0 5px;">></li>
+	 <li>
+       搜索"<i style="color: #f99464"><?php echo $params['key'];?></i>"
+     </li>    
+     <?php
+     }
+     ?>
+
+  </ul>
+</div>
+
+<div class="category clearfix">
+		<?php 
+			$brandlist=$params['brandlist'];
+			if(count($brandlist)>0){
+		?>
+		<div class="brand clearfix">
+			<label class="ite left">
+				品牌:
+			</label>
+			<div class="brand_list left clearfix">
+				<div class="list left">
+					<ul class="brand-ul clearfix">
+						<?php
+							foreach($brandlist as $brand)
+							{
+							?>
+								<li style="cursor: pointer" value="<?php echo($brand['brand_id']);?>"><?php echo($brand['name']);?></li>
+							<?php
+							}
+						?>
+					</ul>
+				</div>
+                <label class="more">
+                    更多
+                </label>
+               
+			</div>
+
+		</div>
+		<?php
+         }
+        ?>
+        
+        
+        <?php
+			$typelist=$params['typelist'];
+			if(count($typelist)>0){
+			?>
+				<p class="clearfix classify-p">
+					<span class="left">分类：</span>
+					<span class="right classify-con">
+					<label class="label-item classify">
+					<?php	
+						foreach($typelist as $value)
+						{
+						?>
+							
+							<span  class="protype" style="cursor: pointer" value="<?php echo($value['ptid'])?>"><?php echo($value['name']);?></span>
+						<?php
+					}
+					?>
+					</label>
+					</span>
+				</p>
+			<?php
+			}
+		?>
+		
+		
+			<?php 
+			if((count($params['property']) > 0) && !empty($params['property']))
+			{ 
+				$property=$params['property'];
+				
+			    ?>
+			    <script type="text/javascript">
+					var basePropertyArray = '<?php echo json_encode($property); ?>';
+					basePropertyArray = eval("("+basePropertyArray+")");  
+					var fixPropertyArray = Array();
+					var fixFinalArray = Array();
+					for(var x = 0;x < basePropertyArray.length;x++)
+					{
+						var item = {};
+						item.property = basePropertyArray[x].property;
+						fixPropertyArray.push(item);
+					}
+					
+					
+					for(var x = 0;x < fixPropertyArray.length;x++)
+					{
+						var item = Array();
+						var property = fixPropertyArray[x].property;
+						for(var y = 0; y < property.length;y++)
+						{
+							item.push(property[y].id);
+						}
+						fixFinalArray.push(item);
+					}
+					
+					//console.log(fixFinalArray);
+				</script>
+			    <?php
+				foreach($property as $pKey=>$single)
+				{
+				?>
+					<p class="clearfix">
+						<span class="left"><?php echo($single['name']);?></span>
+						<label class="label-item">
+							<?php if(isset($single['property']))
+							{
+								foreach($single['property'] as $k=>$v)
+								{ 
+									?>
+					           			<span class="protype1" style="cursor:pointer" data-position="<?php echo $pKey; ?>-<?php echo $k; ?>" value="<?php echo $v['id']; ?>" ><?php echo $v['name'].'&nbsp'; ?></span>
+									<?php 
+								}
+							} 
+							?>
+		                </label>
+                    </p>
+			    <?php 
+				}
+			}
+			else
+			{
+		
+		    } 
+		    ?>
+		
+		<p class="clearfix">
+            <span class="left">价格区间：</span>
+			<label class="label-item1">
+            <span style="cursor: pointer" class="protype">0-100</span>
+            <span style="cursor: pointer" class="protype">101-500</span>
+            <span style="cursor: pointer" class="protype">501-1000</span>
+            <span style="cursor: pointer" class="protype">1001-2000</span>
+            <span style="cursor: pointer" class="protype">2001-5000</span>
+				<label>
+					<input type="text" style="width: 50px" value="<?php echo empty($_GET['m'])?'':$_GET['m']; ?>" id="lprice"/>
+					<b>-</b>
+					<input type="text"  style="width: 50px" value="<?php echo empty($_GET['l'])?'':$_GET['l']; ?>" id="rprice"/>
+					<b class="sure">确定</b>
+				</label>
+			</label>
+        </p>
+        
+    </div>
+    <div class="prodcut_l">
+    	<h4>热卖商品</h4>
+    	<?php
+    		$hotsell=$params['hotsell'];
+    		foreach($hotsell as $value)
+    		{
+	    		$images=explode(',',$value['images']);
+			?>
+		    	<div class="curs">
+		    		<a href="/goods/detail.html?pid=<?php echo(md5($value['pid']));?>" target="_blank"><img  src="<?php echo($images[0]);?>" alt="" /></a>
+		    		<i><?php echo($value['price']);?></i>
+		    		<span><?php echo($value['name']);?></span>
+		    	</div>
+		    <?php
+		    }
+		?>
+    </div>
+    <div class="prodcut_r">
+    	    <div class="sort">
+    	        <div class="left">
+    	            <ul class="sort-ul">
+    	                <li value="1">综合排序</li>
+    	                <li value="2">销量</li>
+    	                <li value="3" class="sortprice pricedown"><span class="sortarrow sortpricedown"></span>价格</li>
+    	                <li value="5" style="display: none" class="sortprice priceup"><span class="sortarrow sortpriceup"></span>价格</li>
+    	                <li value="4">评论数</li>
+    	            </ul>
+    	        </div>
+    	        <div class="right">
+    	            <span class="left">共<?php echo($params['count']);?>个产品</span>
+    	        </div>
+    	    </div>
+    	    <div class="list_wrapper">
+    		    <ul>
+	    		    <?php 
+	    		    	$productlist=$params['productlist'];
+	    		    	if(count($productlist)>0){
+	    		    	foreach($productlist as $key=>$product){
+		    		    	$images=explode(',',$product['images']);
+	    		    ?>
+    		    			<li>
+		    		    		<div class="ui card">
+		    		    		  <a class="image" href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>" target="_blank">
+		    		    		    <img src="<?php echo($images[0])?>">
+		    		    		  </a>
+		    		    		  <div class="content">
+		    		    		    <a class="header1" href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>"><span><i>￥</i><?php echo($product['price']);?></span></a>
+		    		    		    <div class="meta">
+		    		    		      <a><?php echo($product['name'])?></a>
+		    		    		    </div>
+		    		    		  </div>
+		    		    		  <i class="compare" style="cursor: pointer" value="<?php echo(md5($product['pid']))?>"> </i>
+		    		    		</div>
+							</li>
+						<?php
+							}
+						}else{
+						?>
+						<div class="list_wrapper">
+							<div class="noth-item">
+								<p>抱歉！没有符合条件的产品</p>
+        					</div>
+						</div>
+						<?php
+						}
+						
+					?>
+    		    </ul>
+    	    </div>  
+    </div> 
+</div>
+<div class="w1200">
+	<div class="constr " style="display: none" >
+		<p class="clearfix">
+			<span>对比栏</span>
+			<span class="line"></span>
+		</p>
+		<div class="constr-list">
+			<ul id="compare_add">
+
+			</ul>
+			<div class="clear-r right">
+				<a style="cursor: pointer" id="compare">对比</a>
+				<p class="clear_compare" style="cursor: pointer">清空对比</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo($params['pager']->getPageCount()); ?>页
+    </p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+
+	window.seajs&&seajs.use('pc/product_list.js');
+</script>
+
+

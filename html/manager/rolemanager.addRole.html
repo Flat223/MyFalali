@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css"> 
+    <link type="text/css" rel="stylesheet" href="/css/manager/ichuk.com.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title>菜单管理-添加角色</title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>权限管理</a></li>
+			<li><span>/</span></li>
+			<li><a href="../rolemanager/roleList.html"><i></i>角色管理</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>添加角色</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <script type="text/javascript"> 
+			    var iChuk; 
+			</script>
+			 
+			<div class="_addtourist_wrap">
+				
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						名称
+					</div>
+					<div class="_section_item _section_input">
+						<input name="name" type="text" placeholder="名称"/>
+					</div>
+					<div class="_section_item _section_notice">
+						
+					</div>
+				</div> 
+				 
+				 
+				
+				<div class="_addtourist_section status">
+					<div class="_section_item _section_title">
+						&nbsp;
+					</div>
+					<div class="_section_item _section_input">
+						<div id="_submit_tourist" class="_submit_tourist">添加</div>
+					</div>
+					<div class="_section_item _section_notice"></div>
+				</div> 
+			</div>
+        </div>
+    </div>
+</div> 
+<script src="/js/jquery.min.js"></script> 
+<script src="/js/ichuk.com.js"></script> 
+<script src="../../js/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/role_rolelist_add.js"></script>
+</body>
+</html>

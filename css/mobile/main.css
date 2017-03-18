@@ -1,0 +1,154 @@
+.m-header{
+	width: 100%;
+	background: #2f2e33;
+	padding: 3rem 0 1.2rem;
+}
+.m-header-back{
+	position: absolute;
+	left: 2rem;
+}
+.m-header-more{
+	position: absolute;
+	right: 2rem;
+}
+.m-header-back a,.m-header-more a{
+	display: block;
+	height: 1.7rem;
+}
+.m-header-back img{
+	width: 1rem;
+	margin-top: .5rem;
+}
+.m-header-more img{
+	width: 2.2rem;
+	margin-top: .8rem;
+}
+.m-header-box{
+	color: #fff;
+	position: relative;
+}
+.m-header-title{
+	width: 100%;
+	height: 3.4rem;
+	line-height: 3.4rem;
+	text-align: center;
+	font-size: 1rem!important;
+}
+.m-search{
+	border: 1px solid #e6e6e6;
+	background: #eee;
+	padding: 1rem 2.4rem .6rem;
+}
+.m-search-box{
+	border: 1px solid #cfcfcf;
+	background: #fff;
+	color: #989898;
+	position: relative;
+}
+.m-search-box span{
+	border-right: 1px solid #cfcfcf;
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    text-align: center;
+    line-height: 3.6rem;
+}
+#m-search-input{
+	width: 16rem;
+	height: 3.2rem;
+	border: none;
+	outline: none;
+	padding: .1rem .5rem;
+}
+#m-search-input:focus{
+	outline: none;
+}
+#m-search-btn{
+	position: absolute;
+	right: .5rem;
+	height: 3.6rem;
+	border: none;
+	outline: none;
+	padding: .1rem 1rem 0.1rem 1.5rem;
+	background: #fff;
+	background:url(/images/temp_mobile/search.png)no-repeat center;
+}
+.m-joined{
+	
+}
+.m-joined-title{
+	height: 3.3rem;
+	line-height: 3.3rem;
+	padding: 0 1.3rem;
+	border: 1px solid #ebe9ea;
+}
+.m-qz-all{}
+.m-joined-title{
+	height: 3.3rem;
+	line-height: 3.3rem;
+	padding: 0 1.3rem;
+	border: 1px solid #ebe9ea;
+}
+
+.m-qz-all-title{
+	border: 1px solid #ebe9ea;
+	padding: 1.25rem;
+}
+.m-qz-item{
+	padding: 1rem;
+}
+.m-qz-item-pic{
+	width: 8rem;
+	height: 8rem;
+	font-size: 0;
+}
+.m-qz-item-pic img{
+	width: 100%;
+}
+.m-qz-add{
+	border: none;
+	border-bottom: 1px solid #ebe9ea;
+	height:8rem;
+	margin-left: 9rem;
+	position: relative;
+	padding: 0 0 0 1rem;
+}
+.m-qz-add a{
+	position: absolute;
+	right: 0;
+	top: 2rem;
+	padding: 0.8rem 1.8rem;
+	border-radius: 3rem;
+	background: #fff;
+	border: 1px solid #00bfb8;
+	color: #00bfb8;
+}
+.m-qz-add a:active{
+	background: #00bfb8;
+	color: #fff;
+}
+.m-qz-info h4{
+	margin: 0 0 1.2rem;
+}
+.m-qz-info span{
+	margin-right: 1.2rem;
+	padding: 1.2rem 0;
+}
+.m-qz-info p{
+	margin: 1.2rem 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

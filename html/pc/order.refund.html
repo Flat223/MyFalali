@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-退货退款</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/order.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/orderRefund.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/rating.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>退货退款</span>
+		</p>
+	<?php
+		$product = $params['product'];
+	?>
+		<div class="comment-wrap">
+			<div class="comment-wrap-l left">
+			<?php $imgArr = explode(",",$product['images']) ?>
+				<img style="width:120px;height:120px"; src="<?php echo $imgArr[0] ?>" alt="" />
+				<p class="comment-des" style="margin-top: 10px">
+					<?php echo $product['name'] ?>
+				</p>
+				<p class="comment-pri">
+					<?php echo '￥'.$product['price'] ?>
+				</p>
+			</div>
+			<div class="comment-wrap-r right">
+				<div class="commemt-text clearfix">
+					<span class="left">退款原因</span>
+					<select name="reason">
+						<option>买错了</option>
+						<option>不满意</option>
+						<option>待添加</option>
+					</select>
+				</div>
+			
+				<div class="commemt-text clearfix" style="margin-top: 20px">
+					<span class="left">其他原因</span>
+					<textarea name="" id="commentIntro" cols="30" rows="10"></textarea>
+				</div>
+				
+				<div class="comment-img">
+					<span>上传图片</span>
+					<div style="display: none" id="uploadImage"></div>
+					<img id="commentImage" style="cursor: pointer" width="180px" src="" height="180px"  />
+				</div>
+				<div class="comment-submit">
+					<span class="submit-button" 
+						order_code="<?php echo isset($_GET['order_code'])?$_GET['order_code']:'';?>"
+						pid="<?php echo $product['pid'] ?>">申请退款</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/pc/jquery.raty.js"></script>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/productRefund.js');
+</script>

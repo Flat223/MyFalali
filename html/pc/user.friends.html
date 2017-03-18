@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-好友管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myfriend.css">
+	
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+	<?php
+		$type = isset($_GET['type'])?$_GET['type']:'';
+	?>
+		<div class="circle">
+			<p class="caption">
+				<span class="lef">
+					<?php
+						if($type == 1){
+							echo '我的关注';
+						} else if($type == 2){
+							echo '我的粉丝';
+						} else {
+							echo '好友管理';
+						}
+					?>
+				</span>
+			</p>
+			
+	<?php
+		if(!@$_GET['type']){
+	?>
+			<div class="search_cont right">
+				<input name="search_key" type="text" placeholder="输入用户名称进行搜索" 
+					value="<?php echo (@$_GET['searchinfo'])?$_GET['searchinfo']:"" ?>"/>
+				<span class="search">搜索用户</span>
+			</div>
+	<?php
+		}
+		if(!@$_GET['searchinfo']){
+			if(count($params['friends']) == 0){		
+	?>
+			<p style="text-align: center; margin-top: 20% ;font-size: 18px;color: #929292">
+				还没有好友哦,先去搜索用户关注吧!
+			</p>
+		<?php
+			} else {
+		?>
+			<div class="favoritebox">	
+				<div class="layui-tab layui-tab-card" lay-filter="demo" style="">
+				  	<ul class="layui-tab-title">
+					    <li class="layui-this" name='list'>
+					    	<?php
+								if($type == 1){
+									echo '关注列表';
+								} else if($type == 2){
+									echo '粉丝列表';
+								} else {
+									echo '好友列表';
+								}
+							?>
+				    	</li>
+					    <li name="dynamic">
+					    	<?php
+								if($type == 2){
+									echo '粉丝动态';
+								} else {
+									echo '好友动态';
+								}
+							?>
+					    </li>
+					</ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show" style="margin-top: 20px">
+					      	<ul class="list-ul">
+							  <?php
+						      	foreach ($params['friends'] as $friend){
+						      ?>
+						      	<li style="cursor: pointer"
+							      	onclick="location.href='/user/friendhome.html?mid=<?php echo $friend['mid']?>'">
+								  	<img class="face" src="<?php echo empty($friend['face'])?'/images/pc/face_default.png':$friend['face']; ?>" alt="" />
+						      		<p><?php echo ($friend['nickname']); ?></p>
+					      		<?php
+					      			if($type != 2){
+					      		?>
+						      		<i class="unfollow" mid="<?php echo $friend['mid']?>" alt="sssd"></i>
+						      	<?php
+						      		}
+						      	?>
+						      	</li>
+						      <?php
+						      	}
+						      ?>
+					      	</ul>
+					    </div>
+					    <div class="layui-tab-item">
+					    <?php
+					    	if(count($params['dynamic']) == 0){
+					    ?>
+						    <p style="text-align: center; margin-top: 15%;font-size: 18px;color: #929292">
+							    暂无好友动态
+							</p>
+					    <?php
+					    	} else {
+					    ?>
+					    	<ul class="social">
+						    <?php 
+						    	foreach ($params['dynamic'] as $dynamic){
+						    ?>
+					    		<li>
+					    			<dl class="clearfix">
+					    				<dt>
+					    					<a href="/user/friendhome.html?mid=<?php echo $dynamic['mid']?>">
+											<img class="face" 
+												src="<?php echo empty($dynamic['face'])?'/images/pc/face_default.png':$dynamic['face']; ?>" />
+					    					</a>
+					    				</dt>
+					    				<dd>
+					    					<span class="name" 
+					    						onclick="location.href='/user/friendhome.html?mid=<?php echo $dynamic['mid']?>'">
+					    						<?php echo ($dynamic['nickname']); ?>
+					    					</span>
+					    					<span style="margin-left: 20px;">
+					    						<?php echo (date("Y-m-d H:i:s",$dynamic['time']));?>
+					    					</span>
+					    					<h5 style="margin-top: 6px;">
+						    					<?php echo ($dynamic['title']); ?>
+						    				</h5>
+					    					<p style="margin-top: 10px;cursor: pointer"
+						    					onclick="location.href='/info/article.html?id=<?php echo $dynamic['id']?>' ">
+					    						<?php echo ($dynamic['intro']); ?>
+					    					</p>
+					    					<ul>
+					    				<?php 
+					    					$images = $dynamic['images'];
+					    					foreach (explode(",",$images) as $image) { 
+					    				?>
+					    						<li>
+							    					<a href="/info/article.html?id=<?php echo $dynamic['id'] ?> ">
+							    						<img style="width: 250px;height: 150px;" 
+							    							src="<?php echo $image ?>" alt="" />
+							    					</a>		
+					    						</li>
+				    					<?php
+					    					}
+				    					?>
+					    					</ul>
+					    				</dd>
+					    			</dl>
+					    		</li>
+					    	<?php
+					    		}
+					    	?>	
+					    	</ul>
+					    <?php
+					    	}
+					    ?>
+					    </div>
+				  	</div>
+				</div>
+			</div>
+	<?php
+			}
+		} else if(count($params['friends']) == 0){
+	?>
+			<p style="text-align: center; margin-top: 20% ;font-size: 18px;color: #929292">没有搜索到相关好友</p>
+	<?php
+		} else {
+	?>
+			<div class="favoritebox">
+				<div class="layui-tab layui-tab-card" lay-filter="demo" style="">
+					<ul class="layui-tab-title">
+						<li class="layui-this" name='list'>搜索结果</li>
+					</ul>
+					<div class="layui-tab-content" style="padding: 10px;">
+						<div class="layui-tab-item layui-show">
+							<ul class="list-ul">
+								<?php
+						      	foreach ($params['searchfriend'] as $friend){
+						      ?>
+								<li style="cursor: pointer"
+									onclick="location.href='/user/friendhome.html?mid=<?php echo $friend['mid']?>'">
+									<img class="face" src="<?php echo empty($friend['face'])?'/images/pc/face_default.png':$friend['face']; ?>" alt="" />
+									<p><?php echo mb_substr(($friend['nickname']),0,5,'utf-8'); ?></p>
+								</li>
+								<?php
+						      	}
+						      ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	<?php
+		}
+	?>
+	
+		</div>
+		<?php
+			if(isset($params['pager']) && count($params['dynamic'])>0){		
+		?>
+			<div class=" clearfix" id="page" style="display:none">
+				<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+				<p class="">
+					共<?php echo($params['pager']->getPageCount()); ?>页，到第
+					<input type="text" maxlength="4" id="page_num">页
+					<input class="sub" type="butston" id="goto" value="确定">
+					<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+				</p>
+			</div>
+		<?php
+			}
+		?>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/friends.js');
+</script>
+
+

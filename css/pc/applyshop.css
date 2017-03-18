@@ -1,0 +1,119 @@
+.content{
+	margin-top: 20px;
+}
+.menu-item ul li{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+	width: 215px;
+	text-align: left;
+	position: relative;
+	text-indent: 10px;
+}
+.menu-item ul li  i{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: #00bfb8;
+    top: 50%;
+    margin-top: -4.5px;
+    border-radius: 50%;
+}
+.menu-item ul li a{
+	padding-left:20px; 
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 14px;
+}
+.menu-item ul li a:hover{
+	color: #525252; 
+}
+.menu-item ul .menu-act a{
+	color: #00bfb8;
+}
+.content-item{
+	width: 950px;
+	min-height: 524px;
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 14px;
+}
+.content-item>h1{
+	font-size: 18px;
+	font-weight: normal;
+	border-bottom: 1px solid #cccccc;
+	line-height: 30px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-indent: 5px;
+	color: #00bfb8;
+}
+.content-item>.proName
+,.content-item>.proType
+,.content-item>.proImg{
+	margin-bottom: 15px;
+}
+.content-item>.proName>span
+,.content-item>.proType>span
+,.content-item>.proImg>span{
+	display: inline-block;
+    width: 70px;
+    text-align: right;
+    line-height: 40px;
+    margin-right: 2em;
+}
+.content-item>.proName>input{
+	padding: 5px;
+	border: 1px solid #ddd;
+	width: 300px;
+	line-height: 30px;
+}
+.content-item>.proType>select{
+	padding: 5px;
+	border: 1px solid #ddd;
+	width: 154px;
+	line-height: 30px;
+}
+.content-item>.proImg>button{
+    border: 1px solid #00bfb8;
+    background: #00bfb8;
+    border-radius: 3px;
+    width: 78px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.content-item> .uploadfile{
+	margin-left: 98px;
+}
+.content-item> .uploadfile img{
+    border: 1px solid #ddd;
+    display: inline-block;
+    width: 160px;
+    margin-right: 5px;
+}
+/*µÍ∆Ã–≈œ¢*/
+.apply-item span{
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	line-height: 30px;
+	padding: 0 .5em;
+	margin-right: 1em;
+}
+.apply-item input{
+	width: 260px;
+	display: inline-block;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+.apply-item {
+	margin: 10px 0;
+	position: relative;
+}
+.apply-item input[type=file]{
+	position: absolute;
+	left: 126px;
+	top: 0px;
+	width: 100px;
+	height: 100px;
+}

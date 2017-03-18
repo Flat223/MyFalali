@@ -1,0 +1,67 @@
+em{
+	color: #ff0000;
+}
+.input-item ,.select-item ,.textarea-item ,.code-item {
+	margin-bottom: 14px;
+}
+.input-item span,.select-item span,.textarea-item span,.code-item span{
+	width: 174px;
+	display: inline-block;
+	text-align: right;
+	line-height: 30px;
+	padding: 5px;
+}
+.textarea-item span{
+	float: left;
+}
+.input-item input{
+	width: 300px;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 1em;
+	border: 1px solid #dddddd;
+}
+.code-item input{
+	width: 170px;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 1em;
+	border: 1px solid #dddddd;
+}
+.select-item select{
+	width: 744px;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 1em;
+	border: 1px solid #dddddd;
+}
+.textarea-item textarea{
+	width: 715px;
+	height: 120px;
+	line-height: 30px;
+	border: 1px solid #dddddd;
+	margin-left: 4px;
+	padding: 1em;
+}
+.code-item-mid{
+	float: right;
+	margin-right: 48%;
+	margin-top: -8px;
+}
+.submit-item button{
+	margin-left: 187px;
+}
+.layui-btn{
+	background-color: #00bfb8!important;
+}
+.layui-unselect {
+	width: 745px;
+    float: right;
+    margin-right: 8px;
+}
+.layui-form-select .layui-edge {
+    right: 19px!important;
+}
+.layui-form-select ul {
+    left: -8px!important;
+}

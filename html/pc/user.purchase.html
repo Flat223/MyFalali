@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/purchase.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+	<?php
+		$user = UserAgent::getUser();
+		$purchaseArray = $params['purchase'];
+	?>
+		<p class="order_p">
+			<span>采购订单</span>
+			<input name="order_type" value="1" type="hidden"/>
+		</p>
+		<div class="order">
+			<label>
+				<span>订单号：</span>
+				<input name="order_code" type="text" value="<?php echo isset($_GET['order_code'])?$_GET['order_code']:''; ?>" />
+				<span>商品名称:</span>
+				<input name="product" value="<?php echo isset($_GET['product'])?$_GET['product']:''; ?>" type="text" />
+			</label>
+			<label>
+				<span>成交日期:</span>
+				<input id="start_time" class="date"
+					value="<?php echo isset($_GET['start_time'])?$_GET['start_time']:''; ?>"
+					/>
+				<span>至&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<input id="end_time" class="date" 
+					value="<?php echo isset($_GET['end_time'])?$_GET['end_time']:''; ?>"
+					/>
+				<span class="tag_submit" name="orderSearch" style="cursor:pointer;margin-left: 30px;">搜索</span>
+			</label>
+		</div>
+		<div class="all_order">
+			<ul id="status_list" class="all_order_ul clearfix">
+				<li name="all" value="" >全部订单</li>
+				<li name="notpay" value="1">待付款</li>
+				<li name="notsend" value="2">待发货</li>
+				<li name="notget" value="3">待收货</li>
+				<li name="getit" value="4">待评价</li>
+				<li name="finish" value="5">已完成</li>
+			</ul>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<th>商品信息</th>
+						<th>单价(元)</th>
+						<th>数量</th>
+						<th>商品操作</th>
+						<th>订单状态</th>
+						<th>总计</th>
+						<th>交易操作</th>
+					</tr>
+				</thead>
+	<?php
+		for($i=0;$i<count($purchaseArray);$i++){
+			$purchase = $purchaseArray[$i];
+			$state = $purchase['state'];
+			$operate_type = $state < 2 ? 1 : 2; //1:取消订单,2:退货退款
+	?>
+				<tbody>
+				<?php
+					if($i == 0){
+				?>
+					<tr class="sep-row">
+						<td colspan="7">
+							<div style="float: left">
+								<input type="checkbox" class="selectAll"/> 全选
+								<button class="paySelect">合并付款</button>
+							</div>
+						</td>
+					</tr>
+				<?php
+					} else {
+				?>
+					<tr>
+						<td colspan="7">
+						</td>
+					</tr>
+				<?php
+					}
+				?>
+					<tr class="cells">
+						<td class="" colspan="7">
+							<input type="checkbox" name="seleSingle"
+							order_code="<?php echo($purchase['order_code'])?>"
+							state="<?php echo($purchase['state'])?>"/>
+							<?php echo date('Y-m-d H:i:s',$purchase['time']); ?>&nbsp;&nbsp;订单号:<?php echo $purchase['order_code']; ?>
+						</td>
+						<td>
+					<?php
+						if($state == 5 || $state == 10){
+					?>
+							<i class="deleteOrder" order_code="<?php echo ($purchase['order_code']);?>"></i>
+					<?php
+						}
+					?>
+						</td>
+					</tr>
+		<?php
+			$productArray = $purchase['product'];
+			for($j=0;$j<count($productArray);$j++){
+				$product = $productArray[$j];
+		?>
+					<tr>
+						<td class="commodity_inof">
+							<dl>
+								<dt>
+									<?php $imgArr = explode(",",$product['images']) ?>
+									<a href="/goods/detail.html?pid=<?php echo md5($product['pid']) ?>">
+										<img style="width:100px;height:100px;"; src="<?php echo $imgArr[0] ?>" alt="" />
+									</a>
+								</dt>
+								<dd>
+									<a href="/goods/detail.html?pid=<?php echo md5($product['pid']) ?>">
+										<?php echo $product['name'];?>
+									</a>
+							<?php
+								foreach($product['props'] as $prop){
+							?>									
+									<p>
+										<span><?php echo($prop['proname']." : ".$prop['proval']); ?></span>
+									</p>
+							<?php
+								}
+							?>
+								</dd>
+							</dl>
+						</td>
+						<td><?php echo "¥".$product['price'];?></td>
+						<td class="number_td"><?php echo $product['num'];?></td>
+						<td class="handlePro merge">
+							<a class="detail" href="/goods/detail.html?pid=<?php echo $product['pid'] ?>">
+								产品详情
+							</a>
+					<?php
+						if($state == 4){
+					?>
+							<a style="margin-top: 20px" 
+								href="/order/comment.html?pid=<?php echo $product['pid']?>&order_code=<?php echo $purchase['order_code'] ?>">
+								评论
+							</a>
+					<?php
+						}
+					?>
+						</td>
+						
+			<?php
+				if(count($productArray)>1){
+					if($j == 0){
+			?>
+						<td class="order_state merge" rowspan="<?php echo(count($productArray));?>">
+							<a>
+								<?php
+									if($state == 2 && $purchase['payment_type'] == 3){
+										echo '线下付款凭证通过,等待发货';
+									} else {
+										switch ($state) {
+											case '1':
+												echo '待付款';
+												break;
+											case '2':
+												echo '已付款,待发货';
+												break;
+										    case '3':
+												echo '已发货';
+												break;
+											case '4':
+												echo '已收货,待评论';
+												break;
+											case '5':
+												echo '已评论';
+												break;
+											case '6':
+												echo '已上传线下付款凭证';
+												break;
+											case '7':
+												echo '付款凭证被驳回';
+												break;
+										}
+									}
+								?>
+							</a>
+							<a class="detail" 
+								style="top: <?php echo ($state == 2 && $purchase['payment_type'] == 3)?'85px':'40px'?>"
+								order_code="<?php echo ($purchase['order_code']);?>">
+								订单详情
+							</a>
+						</td>
+						<td class="merge" colspan="2" rowspan="<?php echo(count($productArray));?>">
+							<span class="" style="left: 44px;"><?php echo "¥".$purchase['tot_fee'];?></span>
+						<?php 
+							if($state != 4 && $state != 5 && $state != 6){
+						?> 
+							<div class="handle_order tag_submit" style="right:40px;" 
+								state="<?php echo ($state);?>"
+								order_code="<?php echo ($purchase['order_code']);?>">
+								<?php
+									switch ($state) {
+										case '1':
+											echo '付款';
+											break;
+										case '2':
+											echo '提醒发货';
+											break;
+									    case '3':
+											echo '确认收货';
+											break;
+										case '7':
+											echo '重新上传';
+											break;
+									}
+								?>
+							</div>
+						<?php
+							} else {
+						?>
+							<div class="finish tag_submit" 
+								style="background: #ddd;right:40px;cursor: auto">
+								<?php
+									switch ($state) {
+										case '4':
+											echo '等待评论';
+											break;
+										case '5':
+											echo '已完成';
+											break;
+										case '6':
+											echo '等待审核';
+											break;
+									}
+								?>
+							</div>
+						<?php
+							}
+							if($state == 1){
+						?>
+							<a class="cancel" 
+								style="position: absolute;top: 45px;right: 60px"
+								order_code="<?php echo ($purchase['order_code']);?>">
+									取消订单
+							</a>
+						<?php
+							}
+						?>
+						</td>
+				<?php
+					}
+				?>	
+			<?php
+				}else{
+			?>		
+					<td class="merge">
+						<div>
+							<?php
+								if($state == 2 && $purchase['payment_type'] == 3){
+									echo '线下付款凭证通过,等待发货';
+								} else {
+									switch ($state) {
+										case '1':
+											echo '待付款';
+											break;
+										case '2':
+											echo '已付款,待发货';
+											break;
+									    case '3':
+											echo '已发货';
+											break;
+										case '4':
+											echo '已收货,待评论';
+											break;
+										case '5':
+											echo '已评论';
+											break;
+										case '6':
+											echo '已上传线下付款凭证';
+											break;
+										case '7':
+											echo '付款凭证被驳回';
+											break;
+									}
+								}
+							?>
+						</div>
+						<div class="detail" order_code="<?php echo ($purchase['order_code']);?>">
+							订单详情
+						</div>
+					</td>
+					<td class="merge"><?php echo ("¥".$purchase['tot_fee']);?></td>
+					<td>
+					<?php
+						if($state != 5 && $state != 6){
+					?>
+						<div class="handle_order tag_submit" style="margin:auto"
+							state="<?php echo ($state);?>"
+							order_code="<?php echo ($purchase['order_code']);?>"
+							pid="<?php echo ($product['pid']);?>">
+							<?php
+								switch ($state) {
+									case '1':
+										echo '付款';
+										break;
+									case '2':
+										echo '提醒发货';
+										break;
+								    case '3':
+										echo '确认收货';
+										break;
+								    case '4':
+										echo '评论产品';
+										break;
+									case '7':
+										echo '重新上传';
+										break;
+								}
+							?>
+						</div>
+					<?php
+						} else {
+					?>
+						<div style="background: #ddd;margin: auto;cursor: auto" class="tag_submit">
+							<?php
+								switch ($state) {
+									case '5':
+										echo '已完成';
+										break;
+									case '6':
+										echo '等待审核';
+										break;
+								}
+							?>
+						</div>	
+					<?php
+						}
+						if($state == 1){
+					?>
+						<span class="cancel"order_code="<?php echo ($purchase['order_code']);?>">取消订单</span>
+					<?php
+						}
+					?>
+					</td>
+			<?php
+				}
+			?>
+		<?php
+			}
+		?>
+			
+				</tr>
+				
+			</tbody>
+	<?php
+		}
+	?>
+			</table>
+		</div>
+		
+	<?php
+		if(count($purchaseArray) == 0){
+	?>
+		<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无订单</p>
+	<?php
+		}
+	?>
+		
+	<?php
+		if($params['pager'] != "" && count($purchaseArray)>0){		
+	?>
+		<div style="float: left">
+			<input type="checkbox" class="selectAll" style="margin-left: 39px;"/> 全选
+			<button class="paySelect">合并付款</button>
+		</div>
+	
+		<div class=" clearfix" id="page">
+			<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+			<p class="">
+				共<?php echo($params['pager']->getPageCount()); ?>页，到第
+				<input type="text" maxlength="4" id="page_num">页
+				<input class="sub" type="butston" id="goto" value="确定">
+				<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+			</p>
+		</div>
+	<?php
+		}
+	?>	
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/purchase.js');
+</script>
+<script>
+	$(function(){
+		var flag="<?php echo isset($_GET['state'])?$_GET['state']:''; ?>";
+		switch(flag)
+		{
+			case '1':
+				$('#status_list li[name=notpay]').addClass("this_or");
+				break;
+			case '2':
+				$('#status_list li[name=notsend]').addClass("this_or");
+				break;
+			case '3':
+				$('#status_list li[name=notget]').addClass("this_or");
+				break;
+			case '4':
+				$('#status_list li[name=getit]').addClass("this_or");
+				break;
+			case '5':
+				$('#status_list li[name=finish]').addClass("this_or");
+				break;
+			default:
+				$('#status_list li[name=all]').addClass("this_or");
+		}
+	});
+	laydate({
+		elem: '#start_time',
+		event: 'click',
+		skin:'molv',
+		path:"js/laydate/"
+	});
+
+	laydate({
+		elem: '#end_time',
+		event: 'click',
+		skin:'molv',
+		path:"js/laydate/"
+	});
+</script>
+
+

@@ -1,0 +1,34 @@
+.home_context{
+    float: right;
+    width: 70%;
+    text-align: left;
+}
+.home_context span{
+    /*word-break: break-all;*/
+    /*text-overflow: ellipsis;*/
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 2;*/
+    /*overflow: hidden;*/
+}
+.news{
+    float: left;
+    width: 30%;
+}
+.home_div41 a{
+    display: block;
+}
+.home_div41 {
+    padding: 1rem;
+    margin: .5rem 0;
+    background-color: #fff;
+}
+.home_div41:after {
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}

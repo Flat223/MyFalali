@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-数据统计</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/viewkpi.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>信息数据统计</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>KPI指标</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<h1>KPI指标总览</h1>
+				<div class="chart-wrapp clearfix">
+					<ul class="clearfix">
+						<li class="chart-this">本月指标</li>
+						<li>本季指标</li>
+						<li>本年指标</li>
+						<div class="right">
+							<div class="chart-time clearfix">
+								<span class="left">其他时间查询：</span>
+								<div class="left">
+									<input type="text" class="chart-input" value="月">
+									<span><i></i></span>
+								</div>
+								<div class="right">
+									<input type="text" class="chart-input" value="2015年5月">
+									<span><i></i></span>
+								</div>
+							</div>
+						</div>
+					</ul>
+				</div>
+				<div class="chart-content">
+					<div class="chart-item chart-show">
+						<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<th width="15%">订单号</th>
+									<th width="10%">图号</th>
+									<th width="15%">公司名称</th>
+									<th width="10%">截止时间</th>
+									<th width="10%">完成时间</th>
+									<th width="10%">需求数量</th>
+									<th width="15%">质量检查</th>
+									<th width="15%">操作</th>
+								</tr>
+								<tr>
+									<td>201611122345</td>
+									<td>201612345845</td>
+									<td>名称名称</td>
+									<td>2016-10-10</td>
+									<td>2016-10-10</td>
+									<td>1500件</td>
+									<td>质检合格</td>
+									<td>
+										<button class="layui-btn layui-btn-small layui-btn-look">
+										  <i class="layui-icon"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>201611122345</td>
+									<td>201612345845</td>
+									<td>名称名称</td>
+									<td>2016-10-10</td>
+									<td>2016-10-10</td>
+									<td>1500件</td>
+									<td style="color:#ff0000;">质检不合格</td>
+									<td>
+										<button class="layui-btn layui-btn-small layui-btn-look">
+										  <i class="layui-icon"></i>
+										</button>
+									</td>
+								</tr>
+						</table>
+					</div>
+					<div class="chart-item">
+					</div>
+					<div class="chart-item">
+					</div>
+				</div>
+				<div class="boot-wrapp clearfix">
+					<div id="page" class="left"></div>
+					<div class="right" >
+						<dl class="clearfix">
+							<dt class="left">
+								<p>本页统计：准时交货率50%；质量合格率50%，接单量20000  </p>
+								<p>总页统计：准时交货率80%；质量合格率80%，接单量200000000</p>
+							</dt>
+							<dd class="right">
+								<div class="button-excel">导出报表</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	})
+	$(".chart-wrapp ul li").on("click",function() {
+		$(this).addClass("chart-this").siblings().removeClass("chart-this");
+		var $dangqian = $(".chart-item").eq($(".chart-wrapp ul li").index(this)); 
+		$dangqian.addClass("chart-show"); 
+		$dangqian.siblings().removeClass("chart-show"); 
+	})
+	layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+});
+</script>

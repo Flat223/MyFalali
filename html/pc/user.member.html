@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-会员中心</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/js/layer/skin/default/layer.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/member.css" >
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>	
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>会员中心</span>
+		</p>
+		<?php
+			$user = UserAgent :: getUser();
+		?>
+		<div class="username clearfix" >
+			<dl class="left">
+				<dt>
+					<img src="<?php echo empty($user['face'])?'/images/pc/face_default.png':$user['face']; ?>" alt="" />
+				</dt>
+				<dd>
+					<p class="name" style="font-size: 17px;"><?php echo ($user['nickname']) ?></p>
+				<?php
+					if($user['is_vip'] == 1){
+				?>
+					<p>首次购买：<?php echo (date("Y-m-d",$user['start_time'])) ?></p>
+					<p>有效期至：<?php echo (date("Y-m-d",$user['end_time'])) ?></p>
+				<?php
+					} else {
+				?>
+					<p>您尚未开通任何会员</p>
+				<?php
+					}
+				?>
+				</dd>
+			</dl>
+			<div class="sign right">
+				<?php echo ($user['is_vip'] == 1) ? "会员续费" : "开通会员"?>
+			</div>
+		</div>
+
+		<div class="recode">
+			<p class="caption">交易记录</p>
+			<table>
+				<tr>
+					<th>日期</th>
+					<th>商品名称</th>
+					<th>金额</th>
+					<th>状态</th>
+				</tr>
+		<?php
+			foreach ($params['transaction'] as $transaction) {
+		?>
+				<tr>
+					<td><?php echo(date("Y-m-d H:i",$transaction['time'])); ?></td>
+					<td><?php echo($transaction['remarks']); ?></td>
+					<td>
+						<span style="font-size: 17px"><?php echo($transaction['pay_type'] == 2 ? "-" : "+") ?></span>
+						<span><?php echo("¥".$transaction['number']);  ?></span>
+					</td>
+					<td>
+						<?php
+							$state = "";
+							if ($transaction['state'] == 1){
+								echo ("交易成功") ;
+							} else if ($transaction['state'] == 2){
+								echo ("交易失败") ;
+							} 
+						?>
+					</td>
+				</tr>
+		<?php
+			}
+		?>
+			</table>
+					
+		<?php
+			if(count($params['transaction']) == 0){
+		?>
+				<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无交易记录</p>
+		<?php
+			}
+		?>
+
+		</div>
+	</div>	
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<div class="openmember" style="display: none;">
+	<dl class="clearfix">
+		<dt class="left">
+			<img src="<?php echo empty($user['face'])?'/images/pc/face_default.png':$user['face']; ?>" alt="" />
+		</dt>
+		<dd class="left">
+			<?php
+				if($user['nickname'] != ""){
+					echo $user['nickname'];
+				} else if($user['name'] != ""){
+					echo $user['name'];
+				} else {
+					echo $user['mobile'];
+				}
+			?>
+		</dd>
+	</dl>
+	<ul class="date-choice clearfix">
+		<li paytype="1">
+			<div class="month clearfix">
+				<i></i>
+				<span class="left"><b>￥</b>19.8</span>
+				<span class="right">月</span>
+			</div>
+		</li>
+		<li paytype="2">
+			<div class="month clearfix">
+				<i></i>
+				<span class="left"><b>￥</b>58</span>
+				<span class="right">季</span>
+			</div>
+		</li>
+		<li paytype="3">
+			<div class="month clearfix">
+				<i></i>
+				<span class="left"><b>￥</b>198</span>
+				<span class="right">年</span>
+			</div>
+		</li>
+	</ul>
+<!--
+	<div class="cash-item">
+		<span>代金券：</span>没有可用的代金券哦
+	</div>
+-->
+	<div class="payfor clearfix">
+		<span class="pay">前往付款</span>
+<!--
+		<div class="payimg left">
+			<div class="face"><img src="/images/temp_pc/qr-code.jpg" alt=""></div>
+			<span>扫描二维码轻松支付</span>
+			<span><img src="/images/pc/zfb.png" alt=""><img src="/images/pc/weixin.png" alt=""></span>
+		</div>
+		<div class="right">
+			<p>应付金额：</p>
+			<p class="price">19.8元</p>
+		</div>
+-->
+	</div>
+</div>
+<div style="display: none;">
+	<input type="hidden" id="pay_type" value="<?php echo($user['is_vip'] == 1) ? "2" : "1"?>" >
+</div>
+<script type="text/javascript">
+	
+</script>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/member.js');
+</script>
+
+
+

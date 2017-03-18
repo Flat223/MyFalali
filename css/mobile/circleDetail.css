@@ -1,0 +1,106 @@
+.main{
+	background: #eee;
+}
+.m-qz-item-pic img{
+	border-radius: 100%;
+}
+.m-qz-add{
+	border: none;
+}
+.m-qzi-title{
+	background: url(../images/pic.png)no-repeat;
+	background-size: cover;
+}
+.m-qz-item{
+	background: rgba(0,0,0,.5);
+}
+.m-qz-info{
+	color: #fff;
+}
+.m-qz-info-item01{
+	border-right:1px solid #fff;
+}
+.m-qz-info span{
+	/*padding: 0 1.2rem 0 0!important;*/
+}
+.m-qzi-intro{
+	padding: 1rem 1.3rem;
+	background: #fff;
+}
+.m-qz-news{
+	margin: 1rem 0 0;
+	padding: 1rem 1.3rem;
+	background: #fff;
+}
+.m-qz-user-pic{
+	width: 5rem;
+	height: 5rem;
+}
+.m-qz-user-pic img{
+	width: 100%;
+}
+.m-qz-user-nick{
+	margin: 1.2rem 0.9rem 0;
+}
+.m-qz-user-nick p{
+	font-size: 14px;
+	/*font-weight: bold;*/
+	margin: 0 0 .8rem;
+}
+.m-qz-user-nick span{
+	color: #9e9e9e;
+}
+.m-qz-news-text p{
+	line-height: 1.5;
+	margin: 1.2rem 0;
+	font-size: 14px;
+}
+.m-qz-news-content .pic-list{
+	width: 32rem;
+	overflow: hidden;
+}
+.m-qz-news-content .pic-list li{
+	width: 9rem;
+	height: 9rem;
+	margin-right: .9rem;
+	margin-bottom: .9rem;
+}
+.m-qz-news-content .pic-list li img{
+	width: 100%;
+	height: auto;
+}
+.icon-box li{
+	height: 1.5rem;
+	line-height: 1.5rem;
+	width: 9rem;
+	text-align: center;
+}
+.icon-box li span{
+	display: inline-block;
+	width: 2.6rem;
+	height: 1.5rem;
+	vertical-align: middle;
+}
+.icon-share{
+	display: inline-block;
+	background: url(../images/share.png) no-repeat center;
+}
+.icon-message{
+	display: inline-block;
+	background: url(../images/message.png) no-repeat center;
+}
+.icon-love{
+	background: url(../images/love.png) no-repeat center;
+}
+
+.m-qz-news-item{
+	margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+

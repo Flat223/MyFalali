@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/css/pc/toolbar.css">
+<div class="topbar">
+	<?php 
+		$user = UserAgent::getUser();
+	?>
+	<div class="top-nav w1200">
+		<div class="right">
+			<ul id="add-boot">
+				<span>
+					<a href="/user/interestingCircle.html">
+						<span class="right interesting">兴趣圈子</span>
+					</a>
+					<a>
+						<span id="topbarqiandao" class="right mysign">签到</span>
+					</a>
+				</span>
+			<?php
+				if($user['type'] == 3 && $user['sub_type'] == 0){
+			?>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='myshop')?'act-nav':''); ?>">
+					<a href="/myshop/shopInfo.html">我的店铺</a>
+				</li>
+			<?php
+				} else {
+			?>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='user')?'act-nav':''); ?>">
+					<a href="/user/index.html">个人中心</a>
+				</li>
+			<?php
+				}
+			?>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='fitment')?'act-nav':''); ?>">
+					<a href="/fitment/index.html">实验室装修</a>
+				</li>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='shop')?'act-nav':''); ?>">
+					<a href="/lab/shop.html">实验室商城</a>
+				</li>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='share')?'act-nav':''); ?>">
+					<a href="/lab/share.html">实验室共享</a>
+				</li>
+				<li class="<?php echo((isset($params['style']) && $params['style']=='home')?'act-nav':'') ?>">
+					<a href="/index.html">首页</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<?php
+		$user = UserAgent::getUser();
+		if($user['type'] == 3){
+		?>
+			<div class="tool-bars">
+				<ul>
+					<li><a href="http://wpa.qq.com/msgrd?v=3&uin=1193218128&site=qq&menu=yes"></a><i></i></li>
+					<li><a href="/user/message.html"></a><i <?php echo ($params['message'] == 0)?'style="display:none"':'';?>><b class="bCon"><?php echo $params['message']?></b></i></li>
+					<li><a href="/user/profile.html"></a><i></i></li>
+					<li class="ideal"><i></i></li>
+				</ul>
+			</div>
+	<?php
+		}else{
+		?>
+			<div class="tool-bar">
+				<ul>
+					<li><a href="http://wpa.qq.com/msgrd?v=3&uin=1193218128&site=qq&menu=yes"></a><i></i></li>
+					<li><a href="/user/favorite.html"></a><i></i></li>
+					<li><a href="/user/profile.html"></a><i></i></li>
+					<li class="ideal"><i></i></li>
+				</ul>
+			</div>
+	<?php
+		}
+	?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use("pc/topbar");
+</script>

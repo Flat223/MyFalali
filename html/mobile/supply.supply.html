@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>发布</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#share").click(function(){
+            window.location.href="/supply/supplyShare.html";
+        });
+        $("#need").click(function(){
+            window.location.href="/supply/supplyBuy.html";
+        })
+    })
+</script>
+<body>
+<div class="title">发布</div>
+    <div id="share" style="width:94%;margin-left: 2.4%;margin-top: 2%"><img width="100%" src="/images/temp_mobile/supply_share.png"></div>
+    <div id="need" style="width:94%;margin-left: 2.4%;margin-top: 2%"><img width="100%" src="/images/temp_mobile/supplyBuy.png"></div>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/html/mobile/foot.html'); ?>
+</body>
+</html>

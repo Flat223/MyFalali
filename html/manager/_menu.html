@@ -1,0 +1,196 @@
+<?php
+	$admin = UserAgent::getAdmin();
+	FileUtil::requireService("RoleMenuServ");
+	$RoleMenuServ =new RoleMenuServ(); 
+	$roleid = $admin["rid"]; 
+    $menu = $RoleMenuServ->getJobMenu($roleid);
+?>
+<script type="text/javascript">
+	var rid = '<?php echo $admin["rid"] ?>';
+	var menu = '<?php echo json_encode($menu); ?>';
+	var _index = "<?php echo $params['substyle'];?>";
+	var deviceWidth = document.documentElement.clientWidth;
+	var deviceHeight = document.documentElement.clientHeight;
+	$(function(){
+		var menuwidth = $(".menu-container").width();
+		var contentwidth = deviceWidth - menuwidth - 10;
+		var contentheight = deviceHeight - 10;
+	    $(".content").eq(0).css({"width":contentwidth+"px","min-height":contentheight+"px"});
+	    $(".menu-container").eq(0).css({"height":$(".content").eq(0).height()+"px"});
+		GenSideMenu(menu);
+		if(_index != ""){
+			if($('.'+_index).size() == 0)
+			{
+				$(".section_content").toggle("fast");
+			}
+			else
+			{ 
+				$('.'+_index).addClass('on');
+				$('.'+_index).find('i').addClass('on');
+				$('.'+_index).parent().parent().find(".section_title").addClass('on');
+		        $('.'+_index).parent().parent().siblings().find(".section_content").toggle(false);
+			}
+		}
+		else{
+			$(".section_content").toggle("fast"); 
+		}
+	    var _inner = "<i class=\'section-title-status\'>+</i>";
+	    var _inner_ = "<i class=\'section-title-status\'>-</i>";
+		for(var x = 0;x < $(".section_title").size();x++)
+		{
+		    if($(".section_title").eq(x).hasClass("on"))
+			{
+				$(".section_title").eq(x).append(_inner_);
+			}
+			else
+			{
+				$(".section_title").eq(x).append(_inner);
+			}
+		}
+
+		$(".section_title").click(function(){
+			$(this).addClass('on');
+		    var _status = $(this).find('i').text();
+		    var _change = (_status == "+")?"-":"+";
+		    $(this).find('i').html(_change);
+			if(_status == "-")
+			{
+			    $(this).removeClass('on');
+			}
+			$(this).parent().find(".section_content").toggle("fast");
+		});
+	})
+	
+	function GenSideMenu(menu)
+	{ 
+		var menu_object = eval("("+menu+")");
+		
+		var menulistarray = Array();
+		var firstmenuarray = SplitMenuList(0,menu_object.data);
+		for(var x = 0; x < firstmenuarray.length;x++)
+		{
+			var tempitem = firstmenuarray[x];
+			var secondmenulist = SplitMenuList(firstmenuarray[x].id,menu_object.data); 
+			tempitem.lists = secondmenulist;
+			menulistarray.push(tempitem);
+		}
+		
+		var html = "";
+		for(var i = 0;i < menulistarray.length ;i++)
+		{
+			var selected =  Number(menulistarray[i].selected);
+			if(selected)
+			{
+				html += '<div class=\"section\">\
+							<ul class=\"section_title\">\
+								'+menulistarray[i].name+'\
+							</ul>';
+				for(var x =0 ;x < menulistarray[i].lists.length;x ++)
+				{
+					var iselected =  Number(menulistarray[i].lists[x].selected);
+					var icon = ( typeof(menulistarray[i].lists[x].icon) != "undefined" && menulistarray[i].lists[x].icon != "")?menulistarray[i].lists[x].icon:menulistarray[i].lists[x].content;
+					var href = (menulistarray[i].lists[x].url != '')?'../../'+menulistarray[i].lists[x].url+".html":"";
+					var iclass = menulistarray[i].lists[x].url.split("\/"); 
+					if(iselected)
+					{
+						html += '<ul class=\"section_content\">\
+									<a class=\"section_item '+iclass[1]+'\" href=\"'+href+'\">\
+										<i class=\"'+icon+'\">\
+											\
+										</i>\
+										<span>\
+											'+menulistarray[i].lists[x].name+'\
+										</span>\
+									</a>\
+								</ul>';
+					}
+					
+				}
+				
+				html += '</div>';
+			}
+			
+	    }
+		 
+		$(".side_menu").html(html);
+	}
+	
+	//根据pid 返回菜单数据
+	function SplitMenuList(pid,data)
+	{
+		var menuobj = Array();
+		for(var y = 0; y < data.length;y++)
+		{
+			if(Number(data[y].pid) == Number(pid))
+			{ 
+				menuobj.push(data[y]);
+			}
+		}
+		return menuobj;
+	}
+</script>
+<div class="menu-container">
+    <div class="console_side menu-wrapp">
+        <div class="placeholder"></div>
+        <div class="head-item">
+	        <div id="uploadimg" style="display: none"></div>
+            <img id="faceimage" src="<?php echo empty($admin['face'])?'/images/pc/face_default.png':$admin['face']; ?>" alt="">
+            <span><?php echo $admin['nickname']?></span>
+        </div>
+        <div class="side_menu">
+		    <ul class="side-menu-loading">菜单加载中...</ul>
+	    </div>
+         
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="/js/manager/cyupload.js"></script>
+<script>
+	$("#faceimage").click(function(){
+		$("#uploadimg").find(".upload_file_btn").trigger("click");
+	});
+	
+	$.cyupload({
+		elem: '#uploadimg',
+		btnName: "请选择",		//按键名称
+		infoElementId: "",	//上传状态信息包装元素id
+		maxFilesize: 10485760,
+		uploadUrl: '/service/uploadimgServ.html',
+		fileFilter: '',
+		upfileParam: 'upload_file_input',
+		success: function (url) {
+			layer.confirm('确定更新头像',{
+				title:'温馨提示',
+				btn:['确定','取消']
+			},function(){
+				updateAdminFace(url['file_url']);
+			});
+		}
+	}); 
+	function updateAdminFace(face){
+		$.ajax({
+			type:"post",
+			dataType:"json",
+			url:"/service/updateAdminFaceServ.html",
+			data:{'face':face},
+			success:function(data){
+				if(data.ret == 1){
+					layer.alert(data.msg,{offset:'200px'},function(){
+						window.location.reload(true);
+					});
+				} else {
+					layer.alert(data.msg,{offset:'200px'});
+				}
+			},
+			error:function(data){
+				layer.alert('服务器错误,请稍后再试',{offset:'200px'});
+			},
+			complete:function(){
+				
+			}
+		});
+	}
+	
+	
+</script>

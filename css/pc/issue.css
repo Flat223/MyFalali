@@ -1,0 +1,111 @@
+.ui.breadcrumb{
+	margin: 10px 0;
+	font-size: 14px;	
+}
+.ui.breadcrumb >ul li{
+	float: left;
+}
+
+.ui.breadcrumb >ul li a:hover{
+	color: #00bfb8;
+}
+em{
+    color: red;
+}
+.issuebox{
+	margin-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1),
+                -2px -2px 4px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+label{
+	display: block;
+	 margin-bottom: 10px;
+}
+label> input[type=number]{
+    width: 158px;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    text-indent: 1em;
+}
+ label> input[type=number]+span{
+    width: 150px;
+    display: inline-block;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    text-align: center;
+    background: #00bfb8;
+    color: #fff;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+label> span{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+label input[type=file]{
+    position: absolute;
+    z-index: 2;
+    left: 222px;
+    width: 172px;
+    height: 172px;
+    opacity: 0;
+    top: 10px;
+}
+label> input[type=text]{
+    width: 335px;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    text-indent: 1em;
+}
+label> select{
+    width: 335px;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    text-indent: 1em;
+}
+label> input[type=radio]{
+    margin-left: 20px;
+}
+.issuebox p{
+	font-size: 19px;
+	padding-bottom: 10px;
+}
+label> textarea{
+    width: 990px;
+    height: 160px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    text-indent: 1em;
+}
+label> input[type=submit]{
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-left: 132px;
+    background: #00bfb8 ;
+    color: #ffffff;
+}
+label> select#year{
+    width: 120px;
+}
+label> select#month{
+    width: 120px;
+}
+#endDate>.textbox-invalid{
+    margin-left: 20px;
+}

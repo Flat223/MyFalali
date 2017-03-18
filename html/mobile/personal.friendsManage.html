@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>好友管理</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1">
+        <!--<link rel="shortcut icon" href="/favicon.ico">-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+        <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">-->
+        <link rel="stylesheet" href="/css/mobile/sm.css">
+        <link rel="stylesheet" href="/css/mobile/sm-extend.min.css">
+        <link rel="stylesheet" href="/css/mobile/my.css">
+    </head>
+    <body>
+        <div class="page-group">
+            <div class="page page-current">
+                <!--<div class="bar bar-nav titleBackground">
+                    <a class="button button-link button-nav pull-left external" href="#">
+                        <img class="bar-icon-left" src="/images/mobile/50_1.png">
+                    </a>
+                    <header class="title titleColor">好友管理</header>
+                    <a class="button button-link button-nav pull-right external" href="#" >
+                        <img class="bar-icon-right" src="/images/mobile/50_3.png">
+                    </a> 
+                </div>-->
+                <div class="content pageBackGround">
+                    <div class="friend">
+                        <span class="friend-left">
+                           <img class="friend-icon" src="/images/mobile/43_1.png">我的好友
+                        </span>
+                       <!-- <span class="friend-right">
+                            <a class="button button-round button-style external" href="#">+加好友</a>
+                        </span>-->
+                    </div>
+                    <div class="list-block contacts-block">
+                        <div class="list-group">
+                            <ul>
+                                <?php $friends = $params['friends'];?>
+                                <?php
+                                    if(!empty($friends)){
+                                        for($i = 0;$i<count($friends);$i++){
+                                        ?>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="div-left">
+                                                            <img width="80px" height="80px" class="circle_style" src="<?php echo empty($friends[$i]['face']) ? '/images/temp_mobile/43_2.png': $friends[$i]['face'] ;?>">
+                                                        </div>
+                                                        <div class="div-right">
+                                                            <div class="div-right-title"><?php echo empty($friends[$i]['name']) ?$friends[$i]['mobile'] : $friends[$i]['name']; ?></div>
+                                                            <!--<div class="color-gray div-right-content">个性签名：耳闻不如一见，一见不如实验</div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php
+                                        }
+                                    }else{
+                                    ?>
+                                        <div style="text-align: center;margin-top: 100px;font-size: 16px;"><span>暂无好友~</span></div>
+                                    <?php
+                                    }
+                                    ?>
+                               <!-- <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="div-left">
+                                                <img class="circle_style" src="/images/temp_mobile/43_2.png">
+                                            </div>
+                                            <div class="div-right">
+                                                <div class="div-right-title">爱实验室的小鹿</div>
+                                                <div class="color-gray div-right-content">个性签名：耳闻不如一见，一见不如实验</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>-->
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

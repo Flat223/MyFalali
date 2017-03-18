@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-服务详情</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/icon.css" >
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>服务详情</li>
+        </ul>
+    </div>
+    <?php $info = $params['info'];?>
+    <input id="typeVal"type="hidden" value="<?php echo $params['type']?>"/>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span>名称：</span><input  id="sid"type="hidden" value="<?php echo $info['service_id']?>"/>
+                                    <input id="insname" type="text" value="<?php echo ($info['name'] == null ? '' : $info['name']) ;?>" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>周期：</span>
+                                    <input id="inscycle" type="text" value="<?php echo ($info['service_cycle'] == null ? '' : $info['service_cycle']) ;?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>价格：</span>
+                                    <input id="insprice" type="text" value="<?php echo ($info['price'] == null ? '' : $info['price']) ;?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>实验室：</span>
+                                    <input style="height: 36px;" id="lab" class="easyui-combobox" value="<?php echo ($params['sl']['name'] == null ? '' : $params['sl']['name']) ;?>">
+                                </td>
+                            </tr>
+                        </table>
+                        <span style="margin-left:180px;"><button class="layui-btn layui-btn-warm serSave">保存修改</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/easyui/jquery.easyui.min.js"></script>
+<script src="/js/manager/lab_service.js"></script>
+</body>
+</html>

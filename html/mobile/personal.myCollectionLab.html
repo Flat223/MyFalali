@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>我的收藏</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="/css/mobile/head.css">
+    <link rel="stylesheet" href="/css/mobile/myCollectionLab.css">
+</head>
+<body>
+    <?php $lab = $params['lab']?>
+    <div class="title">我的收藏</div>
+    <div class="m_sc_type">
+        <a href="/personal/myCollectionMall.html"><span>收藏的商品</span></a>
+        <a href="/personal/myCollectionLab.html"><span style="color: #00BFB8" class="m_sc_span">收藏的实验室</span></a>
+    </div>
+        <?php
+            if(!empty($lab)){
+            for($i = 0;$i<count($lab);$i++){
+            ?>
+                <div class="m_sc_sp_one" <?php echo $i%2 == 0 ? '':'style="margin-left: 5%"'?>>
+                    <img width="100%" height="100%" src="<?php echo empty($lab[$i]['logo'])? '/images/temp_mobile/m_sc_lab.png': explode(',',$lab[$i]['logo'])[0];?>">
+                    <div class="m_sc_one_name">
+                        <div class="m_sc_name"><?php echo $lab[$i]['name']?></div>
+                        <div class="m_star_lever">实验室星级 :</div>
+                        <?php
+							$starNum = $lab[$i]['stars'];
+							if($starNum%2 == 0){
+                                for($k = 0; $k < $starNum/2; $k++){
+                                ?>
+                                    <div class="m_star"><img width="100%" height="100%" src="/images/pc/1y.png"></div>
+                                <?php
+                                }
+							}else{
+								for($k = 0; $k < floor($starNum/2); $k++){
+							    ?>
+                                    <div class="m_star"><img width="100%" height="100%" src="/images/pc/1y.png"></div>
+                                <?php
+								}
+								?>
+                                    <div class="m_star"><img width="100%" height="100%" src="/images/pc/1yb.png"></div>
+                                <?php
+							}
+							?>
+                            <div class="m_block"></div>
+                            <div class="m_lab_area">服务领域 :<a><?php echo explode(',',$lab[$i]['service_area'])[0]?></a></div>
+                    </div>
+                </div>
+        <?php
+            }
+            }else{
+          ?>
+    <div style="text-align: center;margin-top: 100px;font-size: 16px;"><span>暂无实验室~</span></div>
+        <?php
+            }
+        ?>
+
+
+        <!--<div class="m_sc_sp_one" style="margin-left: 5%">
+            <img width="100%" height="100%" src="/images/temp_mobile/m_sc_lab.png">
+            <div class="m_sc_one_name">
+                <div class="m_sc_name">星湖街实验室</div>
+                <div class="m_star_lever">实验室星级 :</div>
+                <div class="m_star"><img width="100%" height="100%" src="/images/mobile/m_sc_star.png"></div>
+                <div class="m_block"></div>
+                <div class="m_lab_area">服务领域 :<a>生物、化学</a></div>
+            </div>
+        </div>
+
+        <div class="m_sc_sp_one">
+            <img width="100%" height="100%" src="/images/temp_mobile/m_sc_lab.png">
+            <div class="m_sc_one_name">
+                <div class="m_sc_name">星湖街实验室</div>
+                <div class="m_star_lever">实验室星级 :</div>
+                <div class="m_star"><img width="100%" height="100%" src="/images/mobile/m_sc_star.png"></div>
+                <div class="m_star"><img width="100%" height="100%" src="/images/mobile/m_sc_star.png"></div>
+                <div class="m_star"><img width="100%" height="100%" src="/images/mobile/m_sc_star.png"></div>
+                <div class="m_block"></div>
+                <div class="m_lab_area">服务领域 :<a>生物、化学</a></div>
+            </div>
+        </div>
+
+        <div class="m_sc_sp_one" style="margin-left: 5%">
+            <img width="100%" height="100%" src="/images/temp_mobile/m_sc_lab.png">
+            <div class="m_sc_one_name">
+                <div class="m_sc_name">星湖街实验室</div>
+                <div class="m_star_lever">实验室星级 :</div>
+                <div class="m_star"><img width="100%" height="100%" src="/images/mobile/m_sc_star.png"></div>
+                <div class="m_block"></div>
+                <div class="m_lab_area">服务领域 :<a>生物、化学</a></div>
+            </div>
+        </div>-->
+</body>
+</html>

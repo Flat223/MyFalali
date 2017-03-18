@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-友情链接</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <!--<link type="text/css" rel="stylesheet" href="/css/manager/news.css">-->
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <style>
+        .info{
+            border: 1px solid #dddddd;
+            width: 1000px;
+        }
+        table tr td{
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            margin:10px auto;
+            text-align: center;
+            width: 100px;
+        }
+        tr{
+            border-right: 0px;
+
+        }
+        table textarea,input{
+            width:700px;
+            border: 1px solid gainsboro;
+            margin:5px 5px;
+        }
+        table input{
+            height: 30px;
+        }
+        table input[type=radio]{
+            height: 20px;
+            width: 30px;
+        }
+        button{
+            text-align: center;
+            display: inline-block;
+            line-height: 38px;
+            padding: 0 10px;
+            color: #fff;
+            white-space: nowrap;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><i class="layui-icon">&#xe603;</i><a href="../newsmanager/friendly.html">友情链接</a></li>
+            <li><i class="layui-icon">&#xe603;</i><a href="">添加友情链接</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="info">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>名字:</td>
+                        <td><input name="title" type="text" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>LOGO图:</td>
+                        <td style="text-align: left">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-primary" style="margin-left:5px;padding: 0 0;width: 100px;height: 35px;background-color:blueviolet" id="brand_upimg" >上传图片</button>
+                                    <span name="tips" style="font-size:20px;color:red"><b></b><span>
+                                </div>
+                            </div>
+                            <div class="form-group" id="brand_img_wrap">
+                                <div>
+                                    <img style="width:200px;height:200px" id="images" src='' style="max-width: 100%;"/>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="height:20px">链接:</td>
+                        <td><input type="text" name="url" /></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div class="submit-item">
+                <button style="margin-left:300px;background-color: #f23e47;width: 80px" name="addthis" class="layui-com"><i class="layui-icon">&#xe605;</i>确定</button>
+                <button style="background-color:#3F9F00;width: 80px" class="layui-res" onclick="window.location.reload(-1)">重置</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/manager/cyupload.js"></script>
+<script>
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    });
+
+    $('button[name=addthis]').on('click',function(){
+        var title=$('input[name=title]').val();
+        var type=$('input[name=type]').val();
+        var image=$("#images")[0].src;
+        var url=$("input[name=url]").val();
+        var url2="/service/AddfriendServ.html";
+        if(title.length<0){
+            alert('请输入名称');
+            return false;
+        }
+        if(url.length<0){
+            alert('请输入URL');
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: url2,
+            data:{"title":title,"type":type,"image":image,"url":url},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    alert(data.msg);
+                    window.location.reload(-1);
+                }else{
+                    alert(data.msg);
+                }
+            },
+            error: function (data) {
+                alert("error");
+            }
+        });
+    })
+
+    $.cyupload({
+        elem:'#brand_upimg',
+        btnName:"请选择",		//按键名称
+        infoElementId:"",	//上传状态信息包装元素id
+        maxFilesize:10485760,
+        uploadUrl:'/service/uploadimgServ.html',
+        fileFilter:'',
+        upfileParam:'upload_file_input',
+        success:function(url){
+            $('#images').attr('src',url['file_url']);
+        }
+    });
+</script>

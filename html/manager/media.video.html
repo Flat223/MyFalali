@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-视频管理</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>视频管理</a></li>
+            <li><span>/</span></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div>
+                        <span style="text-align:center;cursor: pointer;color: white;background-color:darkseagreen;width: 100px;height: 30px;line-height: 30px;display: inline-block;"><a href="addvideo.html">+添加视频</a></span>
+                        <span style="text-align:center;cursor: pointer;color: white;background-color:#A64AF1;width: 100px;height: 30px;line-height: 30px;display: inline-block;" ><a href="videocategory.html">视频分类</a></span>
+                        <?php foreach($params['category'] as $v){ ?>
+                        <span style="text-align:center;cursor: pointer;color: white;background:grey;background: <?php echo (($_GET['id'])==$v['id'])?'coral':'grey'; ?>;width: 100px;height: 30px;line-height: 30px;display: inline-block;"><a href="../media/video.html?id=<?php echo $v['id']; ?>"><?php echo $v['title']; ?></a></span>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" name="info" placeholder="输入视频标题关键字">
+                        <span name="search" style="cursor: pointer">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--<th width="5%">ID</th>-->
+                    <th width="15%">标题</th>
+                    <!--<th width="35%">链接</th>-->
+                    <th width="20%">创建日期</th>
+                    <th width="5%">点击</th>
+                    <th width="10%">所属</th>
+                    <th width="10%">操作</th>
+                </tr>
+                <?php foreach($params['video'] as $v){ ?>
+                <tr>
+                    <!--<td><?php echo $v['id']; ?></td>-->
+                    <td><a href="http://d27.ichuk.com/info/video.html?id=<?php echo $v['id']; ?>"><?php echo $v['title']; ?></a></td>
+                    <!--<td width="35%"><a href="<?php echo $v['images']; ?>" ><?php echo $v['images']; ?></a></td>-->
+                    <td width="15%" style="text-align: center"><?php echo date('Y-m-d',$v['time']); ?>&nbsp;&nbsp; <?php echo date('H:i:s',$v['time']); ?></td>
+                    <td><?php echo $v['view_num']; ?></td>
+                    <td><?php echo $params['cate'][$v['categoryId']]; ?></td>
+                    <td>
+                        <!--<button class="layui-btn layui-btn-small layui-btn-look">-->
+                            <!--<i class="layui-icon"></i>-->
+                        <!--</button>-->
+                        <a href="/media/updatevideo.html?id=<?php echo $v['id']; ?>"><span style="cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                            修改
+                        </span></a>
+                        <span newsid="<?php echo  $v['id']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                            删除
+                        </span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+            <input name="count" type="hidden" value="<?php echo ceil($params['count']/10);?>">
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    var pages=$('input[name=count]').val();
+    var page=GetQueryString('page');
+    var info=GetQueryString('info');
+    var url='../media/video.html?';
+    if(info){
+        url+='info='+info+'&';
+    }
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = url+'page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    $(document).on('click','.del',function(){
+        var id=$(this).attr('newsid');
+        var alert = layer.confirm("是否删除？", {
+            title:"温馨提示",
+            btn: ['确认','取消'] //按钮
+        }, function(){
+            layer.close(alert);
+            Delete(id);
+        }, function(){
+
+        });
+    })
+
+    $("span[name=search]").on('click',function(){
+        var info=$("input[name=info]").val();
+        window.location.href="../media/video.html?info="+info;
+    })
+
+    function Delete(id){
+        var url="/service/DeleteArticleServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"id":id},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+    }
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+</script>

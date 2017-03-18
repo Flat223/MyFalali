@@ -1,0 +1,53 @@
+.ui.breadcrumb{
+	margin: 10px 0;
+	font-size: 14px;	
+}
+.ui.breadcrumb >ul li{
+	float: left;
+}
+
+.ui.breadcrumb >ul li a:hover{
+	color: #00bfb8;
+}
+
+.brand{
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+}
+.brand span{
+	display: inline-block;
+	width: 75px;
+	text-align: center;
+}
+.brand a{
+	display: inline-block;
+	margin-right: 20px;
+}
+.brand_list{
+	margin-top: 25px;
+}
+.brand_list .list_l{
+	width:138px;
+	height: 257px;
+	line-height: 257px;
+	border-right: 1px solid #ddd;
+	text-align: center;
+}
+.brand_list .list_r ul li{
+	float: left;
+    margin: 20px 8px 0px 10px;
+}
+.brand_list .list_r ul li img{
+	width: 130px;
+	height: 98px;
+}
+.brand_list .list_r{
+	width: 1050px;
+}
+.brand_list div.clearfix{
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+}
+
+

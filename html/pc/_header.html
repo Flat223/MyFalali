@@ -1,0 +1,195 @@
+<style>
+	.Conwrap.search{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		display: inline-block;
+		width: 73px;
+		height: 38px;
+		line-height: 38px;
+		border-radius: 6px 0px 0px 6px;
+		background: #f0f0f0 url(/images/temp_pc/icons1.png) no-repeat 57px;
+		cursor: pointer;
+		text-indent: 0.6rem;
+		color: #000;
+		float:left;
+		position: relative;
+	}
+	.search{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		display: inline-block;
+		width: 73px;
+		height: 38px;
+		line-height: 38px;
+		border-radius: 6px 0px 0px 6px;
+		background: #f0f0f0 url(/images/temp_pc/icons1.png) no-repeat 57px;
+		cursor: pointer;
+		text-indent: 0.6rem;
+		color: #000;
+		float:left;
+		position: relative;
+	}
+	.Conwrap.search > p{
+		margin-bottom: 2px;
+	}
+	.Conwrap > ul{
+		display: none;
+	}
+	.Conwrap > ul > li.search{
+		margin-bottom: 2px;
+		border-radius: 5px;
+		background: #f0f0f0;
+		width: 73px;
+		height: 38px;
+		line-height: 38px;
+	}
+	.LayMsg{
+		position: absolute;
+		top:80px;
+		right: 10px;
+		display: none;
+	}
+	#buy_cart b.NCon{
+		color: white;
+		line-height: 10px;
+		text-shadow: 0 0 5px #4F4F4F;
+		font-size: 12px;
+		height: 10px;
+		width: 10px;
+		background-color: red;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
+		border: 2px solid;
+		position: absolute;
+		left: 15px;
+		top: 0;
+	}
+
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="/css/pc/cityPicker.css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=P14l8MNCnZ4XRkhvPzBvKB4B"></script>
+<div class="header">
+	<div class="head-nav w1200">
+		<div class="logo left">
+			<a href="/index.html"><img src="/images/temp_pc/logo1.png" alt="" /></a>
+		</div>
+		<div class="area left">
+			<span style="margin-left: 10px;"  id="pclace"></span>&nbsp;
+			<!--<span id="cityChoice" style="margin-left: 10px;">苏州市</span>-->
+			<input type="hidden" id="province" value="">
+			<input type="hidden" id="city" value="">
+		</div>
+		<div class="search-box left">
+			<div class="_container">
+				<select name="search" class="search">
+					<option value="goods"  class="search" <?php echo (!empty($_GET['type']) && $_GET['type']=='goods')?"selected":""; ?>>&nbsp&nbsp商品</option>
+					<option value="lab" class="search">实验室</option>
+				</select>
+				<!--<div class="search Conwrap " >-->
+					<!--<p >商&nbsp;&nbsp;品</p>-->
+					<!--<ul>-->
+						<!--<li value="goods"  class="search" <?php echo (!empty($_GET['type']) && $_GET['type']=='goods')?"selected":""; ?>>商品</li>-->
+						<!--<li value="lab" class="search">实验室</li>-->
+					<!--</ul>-->
+				<!--</div>-->
+
+				<input type="text" name="search" value="<?php echo empty($_GET['info'])?'':$_GET['info']; ?>" placeholder="请输入关键词、找商品、找实验室" />
+				<span class="right search-btn" name="search"  ></span>
+				<div class="automatically">
+					
+				</div>
+			</div>
+		</div>
+		<div class="nav-title left">
+				<span id="buy_cart" style="cursor: pointer;position: relative;">购物车<b id="headCar" class="NCon"><?php echo $params['pn']?></b></span>
+			<a href="/requirement/option.html">
+				<span style="background: url(/images/temp_pc/fabu.png) no-repeat 0px;background-size: 23px;color: #fff!important;">发布需求</span>
+			</a>
+		</div>		
+		<div class="right login-nav">
+			<ul>
+				<li>
+					<a id="weixin" href="#" style="margin-top: 1rem">
+						<img  src="/images/temp_pc/weixin.png" class="weixin" alt="" />
+						<img id="wximg" style="display: none;width: 300px;height: 300px;" src="/images/pc/store.jpg" alt="" />
+						<span>微信</span>
+					</a>
+				</li>
+			<?php
+				$user = UserAgent::getUser();
+				if($user == null){
+			?>
+				<li>
+					<a href="/regist/stepReg.html">
+						<img src="/images/temp_pc/iconregedit.png" class="weixin" alt="" />
+						<span>注册</span>
+					</a>
+				</li>
+				<li>
+					<a href="/member/login.html">
+						<img src="/images/temp_pc/iconlogin.png" class="weixin" alt="" />
+						<span>登录</span>
+					</a>	
+				</li>
+			<?php
+				}else{
+					$name = $user['nickname'];
+					if(!$name){
+						$name = $user['name'];
+					}
+					if(!$name){
+						$name = $user['mobile'];
+					}
+			?>	
+				<li style="margin-top: 23px;margin-left: 48px;">
+					<a class="logout"
+						style="float: right;margin-top: -7px;color: #fff!important;margin-right:5px;cursor: pointer">
+						<img src="/images/pc/loginout.png" width="20px" height="20px" alt="">
+						退出
+					</a>
+<!--
+					<span class="name"
+						style="color: white; float: right; text-align: right; margin-right: 13px;width: 82px;">
+						<?php echo($name); ?>
+					</span>
+-->
+					<a href="<?php echo ($user['type'] == 3) ? '/myshop/shopInfo.html':'/user/index.html' ;?>">
+						<img style="float: right; text-align: right; margin-right: 45px;width: 40px; height: 40px; margin-top: -40px;border-radius:50%"
+						src="<?php echo empty($user['face'])?'/images/pc/face_default.png':$user['face']; ?>" alt="" />
+					</a>
+					
+				</li>
+			<?php
+				}
+			?>
+			</ul>
+			<span class="Laybut" style="display: none;">ss</span><div id="pcmap"></div>
+		</div>
+	</div>
+</div>
+<div class="LayMsg">
+	tyle=i
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/sea.js"></script>
+<script type="text/javascript" src="/js/seaconfig.js"></script>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("pcmap");
+	var point = new BMap.Point(116.331398,39.897445);
+	var geolocation = new BMap.Geolocation();
+
+	function myFun(result){
+		var cityName = result.name;
+		map.setCenter(cityName);
+		$("#pclace").text(cityName);
+	}
+	var myCity = new BMap.LocalCity();
+	myCity.get(myFun);
+	window.seajs&&seajs.use('pc/search.js');
+</script>

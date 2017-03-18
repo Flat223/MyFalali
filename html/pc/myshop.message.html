@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-商家消息列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/shopmessage.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+			<li><i class="myshopinfo"></i><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><i class="shoppro"></i><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><i class="shopgroup"></i><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><i class="shopadd"></i><a href="/myshop/addProduct.html">添加产品</a></li>
+            <li><i class="shoporder"></i><a href="/myshop/orderManager.html">订单管理</a></li>
+<!--             <li><i class="shopfreight"></i><a href="/myshop/freight.html">运费管理</a></li> -->
+            <li><i class="shopaddress"></i><a href="/myshop/addressManager.html">发货地址管理</a></li>
+            <li><i class="shopmes"></i><a href="/myshop/message.html" style="color: #00bfb8">消息列表</a></li>
+            <li><i class="shopcoupon"></i><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+            <li><i class="shopcouponlist"></i><a href="/myshop/couponList.html">优惠券列表</a></li>
+        </ul>
+    </div>
+    <div class="right content-item">
+	   	<?php
+	   		$type = isset($_GET['type'])?trim($_GET['type']):"1";
+	   	?>
+	    <h1 >店铺消息</h1>
+	    <input type="hidden" name="msg_type" value="<?php echo $type ?>" />
+	    <div class="chart-wrapp clearfix">
+			<ul class="msg_type_title clearfix">
+				<li name="remind" value="1">提醒发货</li>
+				<li name="newOrder" value="2">新的订单</li>
+			</ul>
+		</div>
+		<div class="messagebox">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<th>收货人</th>
+					<th>订单号</th>
+					<th>消息内容</th>
+					<th>时间</th>
+					<th>操作</th>
+				</tr>
+			<?php
+				foreach ($params['message'] as $message){	
+			?>
+				<tr class="msg_line" messid="<?php echo ($message['id']); ?>"
+					rid="<?php echo $message['id'] ?>"
+					order_code="<?php echo $message['order_code'] ?>"
+					>
+					<td class="selMessage">
+						<div>
+							<input type="checkbox" name="consignee"/>
+							<?php echo ($message['consignee']);?>
+						</div>
+					</td>
+					<td class="detail"><?php echo ($message['order_code']); ?></td>
+					<td class="detail"><?php echo $type == 1 ? '买家提醒发货' : '买家成功下单' ?></td>
+					<td class="detail">
+						<?php echo(date("Y-m-d H:i:s",$message['time'])); ?>
+					</td>
+					<td>
+						<span class="del">删除</span>
+					</td>
+				</tr>
+			<?php
+				}
+			?>
+						
+			</table>
+						
+			<?php
+				if(count($params['message']) == 0){
+			?>
+					<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无消息</p>
+			<?php
+				}
+				if (count($params['message']) > 0) {
+			?>
+				<div class="submitbox">
+					<input type="checkbox" name="selAll"/> 全选
+					<input type="submit" class="del_select tag_submit" 
+					style="cursor: pointer" value="删除选中项" />
+				</div>
+				
+				<div class=" clearfix" id="page">
+					<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+					<p class="">
+						共<?php echo($params['pager']->getPageCount()); ?>页，到第
+						<input type="text" maxlength="4" id="page_num">页
+						<input class="sub" type="butston" id="goto" value="确定">
+						<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+					</p>
+				</div>
+			<?php
+				}
+			?>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/myshop.shopMessage.js');
+				
+	$(function(){
+		var flag="<?php echo isset($_GET['type'])?$_GET['type']:''; ?>";
+		switch(flag){
+			case '1':
+				$('.msg_type_title li[name=remind]').addClass("selected");
+				break;
+			case '2':
+				$('.msg_type_title li[name=newOrder]').addClass("selected");
+				break;
+			default:
+				$('.msg_type_title li[name=remind]').addClass("selected");
+		}
+	});
+</script>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-近期活动</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>近期活动</a></li>
+            <li><span>/</span></li>
+            <li name="count" count="<?php echo ceil($params['count']/10); ?>" ><a href="javascript:;"><i></i>共<?php echo $params['count']; ?>个</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span onclick="window.location.href='../media/addactivity.html'" style="color:#00a0e9"><a>添加活动</a></span>
+                        <span id="act" style="cursor:pointer;color:white">主题图片</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" name="info" placeholder="输入标题关键字">
+                        <span name="search" style="cursor: pointer">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--<th width="5%">ID</th>-->
+                    <th width="15%">缩略图</th>
+                    <th width="18%">标题</th>
+                    <th width="30%">简介</th>
+                    <th width="15%">创建日期</th>
+                    <!--<th width="8%">点击</th>-->
+                    <!--<th width="10%">所属/作者</th>-->
+                    <th width="12%">操作</th>
+                </tr>
+                <?php foreach($params['article'] as $v){ ?>
+                <tr>
+                    <!--<td><?php echo $v['id']; ?></td>-->
+                    <td>
+                        <img style="width:139px;height:105px" src="<?php echo empty($v['images'])?'/images/manager/product.jpg':$v['images']; ?>" alt="">
+                    </td>
+                    <td><a href="http://d27.ichuk.com/info/article.html?id=<?php echo $v['id']; ?>" ><?php echo $v['title']; ?></a></td>
+                    <td><?php echo $v['intro']; ?></td>
+                    <td style="text-align: center"><?php echo date('Y-m-d',$v['time']); ?>&nbsp;&nbsp; <?php echo date('H:i:s',$v['time']); ?></td>
+                    <!--<td><?php echo $v['cname']; ?>/<?php echo $v['wname']; ?></td>-->
+                    <td>
+                        <!--<button class="layui-btn layui-btn-small layui-btn-look">
+                        <i class="layui-icon"></i>
+                        </button>
+                        <button class="layui-btn layui-btn-small layui-btn-edit">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>-->
+                        <a href="../media/updatecooperate.html?id=<?php echo $v['id']; ?>">
+                        <span newsid="<?php echo  $v['id']?>"  style="margin-right: 0px; cursor: pointer;color: white;background:goldenrod;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                            修改
+                        </span>
+                        </a>
+                        <span newsid="<?php echo  $v['id']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                            删除
+                        </span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    var order=GetQueryString('order');
+    var pages=$('li[name=count]').attr('count');
+    var page=GetQueryString('page');
+    var url='../media/articles.html?';
+    var info=GetQueryString('info');
+    if(order){
+        url+='order='+order;
+    }
+    if(info){
+        url+='info='+info+'&';
+    }
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = url+'&page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    $("span[name=search]").on('click',function(){
+        var info=$("input[name=info]").val();
+        window.location.href="../media/activity.html?info="+info;
+    })
+
+
+    $(document).on('click','.del',function(){
+        var id=$(this).attr('newsid');
+        var alert = layer.confirm("是否删除？", {
+            title:"温馨提示",
+            btn: ['确认','取消'] //按钮
+        }, function(){
+            layer.close(alert);
+            Delete(id);
+        }, function(){
+
+        });
+    })
+
+    function Delete(id){
+        var url="/service/DeleteArticleServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"id":id},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+    }
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+    $("#act").on("click",function() {
+        layer.open({
+            type: 2,
+            title: '修改信息',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['480px', '60%'],
+            content: '/media/editCoopImg.html'
+        });
+    });
+
+</script>

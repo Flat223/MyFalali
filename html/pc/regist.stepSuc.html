@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/regedit_identity.css">
+</head>
+<body>
+<div class="head">
+	<div class="topnav w1200 clearfix">
+		<div class="left">
+			<a href="/index.html"><img src="/images/pc/reg.png" alt="" /></a>
+			<div class="reg right">
+				账号注册
+			</div>
+		</div>
+		<div class="right">
+			<span>已有实验圈账号？</span>
+			<a href="/member/login.html" class="login">登录</a>
+		</div>
+	</div>
+</div>
+<div class="content w1200">
+<?php
+	$check = $params['check'];
+	$wait = isset($_GET['wait'])?$_GET['wait']:''; 
+?>
+	<div class="login_process">
+		<img src="/images/pc/process4.png" alt="" />
+	</div>
+	<section>
+		<img src="/images/pc/right-icon.png" class="process4" alt="" />
+		<p>恭喜您注册成功!</p>
+		<?php
+			if($check == 2 || $check == 3){
+		?>
+			<p style="color: gray;margin-top: 20px; font-size: 17px"><?php echo ($check==2)?'公司':'供应商'?>注册要先通过审核哦
+			</p>
+			
+		</section>
+		<div class="clear"></div>
+		<div class="process4_bottom">
+			<a href="/regist/checkCompany.html?mid=<?php echo $params['mid'] ?>&check=<?php echo $check ?>">上传资料</a>
+		</div>
+		<?php
+			} else if($wait == 1){
+		?>
+			<p style="color: gray;margin-top: 20px; font-size: 17px">请等待管理员审核</p>
+		<?php
+			}
+		?>
+	</section>
+<?php
+	if(empty($check)){
+?>
+	<div class="process4_bottom">
+		<a href="/index.html">返回首页</a>
+		<a href="/member/login.html">立即登录</a>
+	</div>
+<?php
+	}
+?>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/swiper.min.js"></script>

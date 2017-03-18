@@ -1,0 +1,209 @@
+.cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: #000;
+	opacity: 0.15;
+    filter: alpha(opacity=15);
+    -moz-opacity: 0.15;
+    display: none;
+}
+.toast *{
+	box-sizing: content-box;
+}
+.toast{
+	min-width: 400px;
+    z-index: 1000;
+    overflow: hidden;
+    top: 20%;
+    left: 35%;
+    position: fixed;
+    border: 4px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    display: none;
+}
+.toast-title{
+    position: relative;
+    padding: 0 10px;
+    height: 31px;
+    line-height: 31px;
+    background: #f3f3f3;
+    font-size: 14px;
+    color: #666;
+    font-family: "Microsoft Yahei";
+}
+.toast-title span {
+    max-width: 80%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+.toast-content{
+    min-height: 90px;
+    overflow: hidden;
+    padding: 10px;
+    background: #fff;
+}
+.toast-close{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: url("/images/dialog-close.png") no-repeat;
+    font-size: 0;
+}
+.upload_file_btn {
+    width: 100px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+.baseinfo{
+	z-index: 1000;
+	position: fixed;
+	top: 55px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	left: 30%;
+	width: 50%;
+	min-width: 950px;
+	height: 650px;
+	border: 4px solid rgba(0,0,0,.1);
+	background-color: #f4f4f4;
+	display: none;
+}
+.tmPro_addmod{
+	z-index: 1500;
+	top: 20px;
+	left: 20%;
+	position: fixed;
+	width: 1000px;
+	max-height: 800px; 
+	overflow-y: auto;
+	overflow-x: hidden;
+	border:3px solid rgba(0,0,0,.1);
+	display: none;
+}
+.baseinfo .product_images div {
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.tmPro_addmod .product_images div{
+	 width: 180px;
+    height: 108px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.baseinfo .product_images div span,.tmPro_addmod .product_images div span {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background: url("/images/img-cancel-gray.jpg");
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 124px;
+    display: none;
+}
+.tmPro_addmod .product_images div span{
+	margin-left: 154px;
+}
+.baseinfo .product_images div img{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.tmPro_addmod .product_images div img {
+	 width: 180px;
+    height: 108px;
+    border: 1px solid #ccc;
+}
+.product_images div span:hover{
+	background: url("/images/img-cancel-red.jpg");
+}
+.main_jcrop{
+	width: 600px;
+	height: 525px;
+	margin: 20px auto 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 2000;
+	background: #fff;
+	top: 100px;
+}
+.main_jcrop *{
+	box-sizing: content-box;
+}
+.cover2{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1999;
+	background: #000;
+	opacity: 0.15;
+    filter: alpha(opacity=15);
+    -moz-opacity: 0.15;
+    display: none;
+}
+.propinfo{
+	z-index: 1500;
+	position: fixed;
+	top: 30px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	left: 30%;
+	width: 50%;
+	min-width: 950px;
+	min-height: 350px;
+	max-height: 700px;
+	border: 4px solid rgba(0,0,0,.1);
+	background-color: #f4f4f4;
+	display: none;
+}
+.prop_op{
+	position: fixed;
+	left: 30%;
+	top: 12%;
+	background-color: #ecf0f5;
+	width: 420px;
+	z-index: 2000;
+	display: none;
+}
+.sku_add_ui{
+	display: none;
+}
+.sku_op{
+	position: fixed;
+	left: 30%;
+	top: 12%;
+	background-color: #ecf0f5;
+	width: 420px;
+	z-index: 2000;
+	display: none;
+}
+
+
+
+
+

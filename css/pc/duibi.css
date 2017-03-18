@@ -1,0 +1,131 @@
+table.duibi-list td.title{
+	width: 130px;
+	height: auto;
+	background: #f7f7f7;
+	text-align: center;
+	color: #999999;
+}
+table.duibi-list td{
+	border: 1px solid #ddd;
+}
+table.duibi-list{
+	/*margin-top: 40px;*/
+}
+table.duibi-list td dl dt img{
+	display: block;
+	width: 100%;
+}
+table.duibi-list td dl dt{
+	width: 200px;
+	height: 200px;
+}
+table.duibi-list td dl dd{
+	width: 200px;
+}
+table.duibi-list td dl dd h3{
+	font-weight: normal;
+}
+table.duibi-list td dl dd span{
+	display: block;
+	padding: 10px 0;
+	color: #e42c3c;
+	font-size: 20px;
+}
+table.duibi-list td dl dd span i{
+	font-size: 14px;
+}
+table.duibi-list td dl dd input{
+	background: #00bfb8;
+	color: #fff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+}
+table.duibi-list td dl dd input:last-child{
+	margin-left: 38px;
+}
+table.duibi-list td dl{
+	padding: 40px;
+}
+table.duibi-list td.td2{
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+table.duibi-list td p.add{
+	text-align: center;
+}
+.td2_div{
+	line-height: 30px;
+	text-align: left;
+	text-indent: 3em;
+	padding: 10px 0;
+}
+.td2_div span{
+	font-size: 20px;
+	color: #e42c3c;
+}
+.td2_div span i{
+	font-size: 16px;
+}
+.recomment-table{
+	margin-top: 40px;
+}
+.recomment-table td {
+	border: 1px solid #ddd;
+}
+.recomment-table td dl{
+	padding: 20px;
+}
+.recomment-table td dl dt,
+.recomment-table td dl dd{
+	width: 160px;
+}
+.recomment-table td dl dt img{
+	display: block;
+	width: 100%;
+}
+.recomment-table td dl dd h3{
+	font-size: 14px ;
+	font-weight: normal;
+}
+.recomment-table td dl dd input{
+	background: #00bfb8;
+	color: #fff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 20px;	
+}
+.recomment-table td dl dd span{
+	display: block;
+	padding: 10px 0;
+	color: #e42c3c;
+	font-size: 20px;
+}
+.recomment-table td dl dd span i{
+	font-size: 14px;
+}
+.recomment-table caption{
+	height: 40px;
+	line-height: 40px;
+	background: #f7f7f7;
+	border: 1px solid #ddd;
+	border-width: 1px 1px 0px 1px ;
+}
+.recomment-table caption  h2{
+	text-indent: 1em;
+	font-size: 18px;
+}
+.recomment-table caption span{
+	color: #00bfb8;
+	font-size: 14px;
+	margin-right: 20px;
+
+}

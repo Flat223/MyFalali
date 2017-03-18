@@ -1,0 +1,1602 @@
+[2017-01-17 00:46:47][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(53): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:48:43][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:48:50][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:49:13][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:53:07][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:53:36][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 6, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:55:20][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 10, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 00:55:43][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(127): DBAgent->queryRecords('select C.nickna...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(56): InterestServ->GetuserTopicA('180', 10, 1)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:06:51][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_company_regist' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabDetailServ.php(62): DBAgent->getSingleRecordFromTable('company_regist', '*', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/lab/Detail.php(27): LabDetailServ->getBelongInstitude('1')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Detail->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'lab.detail.html', '/lab/detail.htm...', 'Detail', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 10:46:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(17): CompanyServ->getBindingCompany('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:46:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:46:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(30): CompanyServ->getBindingCompany('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:46:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(35): CompanyServ->getPageBindingCompany('2', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(44): CompanyServ->getBindingCompany('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(49): CompanyServ->getPageBindingCompany('3', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:02][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(30): CompanyServ->getBindingCompany('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:02][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(35): CompanyServ->getPageBindingCompany('2', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(17): CompanyServ->getBindingCompany('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:47:03][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(17): CompanyServ->getBindingCompany('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(30): CompanyServ->getBindingCompany('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(35): CompanyServ->getPageBindingCompany('2', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(44): CompanyServ->getBindingCompany('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:57:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(49): CompanyServ->getPageBindingCompany('3', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:58:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(17): CompanyServ->getBindingCompany('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:58:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:58:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(200): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(17): CompanyServ->getBindingCompany('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 10:58:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and labring_company_check c where b.cid = c.id and b.status = 1 and b.is_check =' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(218): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/PeopleManager.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): PeopleManager->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.peopleMana...', '/user/peopleMan...', 'PeopleManager', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:33:14][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring___company_check' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(115): DBAgent->insertRecord('__company_check', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UploadComInfoOnRegist.php(14): CompanyServ->uploadCompanyInfo('193', '2', '???????????????...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UploadComInfoOnRegist->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.uploadC...', '/service/upload...', 'UploadComInfoOn...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:33:16][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring___company_check' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(115): DBAgent->insertRecord('__company_check', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UploadComInfoOnRegist.php(14): CompanyServ->uploadCompanyInfo('193', '2', '???????????????...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UploadComInfoOnRegist->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.uploadC...', '/service/upload...', 'UploadComInfoOn...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:33:18][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring___company_check' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(115): DBAgent->insertRecord('__company_check', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UploadComInfoOnRegist.php(14): CompanyServ->uploadCompanyInfo('193', '2', '???????????????...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UploadComInfoOnRegist->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.uploadC...', '/service/upload...', 'UploadComInfoOn...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:33:20][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring___company_check' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(115): DBAgent->insertRecord('__company_check', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UploadComInfoOnRegist.php(14): CompanyServ->uploadCompanyInfo('193', '2', '???????????????...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UploadComInfoOnRegist->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.uploadC...', '/service/upload...', 'UploadComInfoOn...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:35:29][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:39:19][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_company_regist' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabDetailServ.php(62): DBAgent->getSingleRecordFromTable('company_regist', '*', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/manager/labmanager/LabInfo.php(26): LabDetailServ->getBelongInstitude('7')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabInfo->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'labmanager.labI...', '/labmanager/lab...', 'LabInfo', false)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:40:21][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:40:49][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:42:21][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/checkManager/BindingCompany.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompany->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'checkManager.bi...', '/checkManager/b...', 'BindingCompany', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:42:27][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_company_regist' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabDetailServ.php(62): DBAgent->getSingleRecordFromTable('company_regist', '*', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/manager/labmanager/LabInfo.php(26): LabDetailServ->getBelongInstitude('7')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabInfo->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'labmanager.labI...', '/labmanager/lab...', 'LabInfo', false)
+#6 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:42:58][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:46:06][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:46:25][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:47:09][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:47:12][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 13:48:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:10][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('8')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('9')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('10')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('10')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:15][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('9')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:16][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('8')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('8')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:30][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:30][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('10')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('9')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:32][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:42][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:48:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:49:36][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('12')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 13:51:12][error] errCode:01000
+errMsg:SQLSTATE[01000]: Warning: 1265 Data truncated for column 'v1_discount' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(642): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(101): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:00:51][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CompanyServ.php(217): DBAgent->queryRecords('select b.* from...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/checkManager/BindingCompany.php(22): CompanyServ->getPageBindingCompany('1', 0, 10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompany->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'checkManager.bi...', '/checkManager/b...', 'BindingCompany', false)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:04:45][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:06:57][error] errCode:01000
+errMsg:SQLSTATE[01000]: Warning: 1265 Data truncated for column 'v1_discount' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(642): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(101): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:08:21][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:08:24][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:10:13][error] errCode:01000
+errMsg:SQLSTATE[01000]: Warning: 1265 Data truncated for column 'v1_discount' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(642): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(101): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:10:48][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '1', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:13:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined offset: 1 in <b>/ichukdata1/html/project/labrin' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(203): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->Addviewnum('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:13:52][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined offset: 1 in <b>/ichukdata1/html/project/labrin' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(167): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(20): ArticleServ->GetAriticle_Writer('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:14:07][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(203): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->Addviewnum('<br/><b>Notice<...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:14:07][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(167): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(20): ArticleServ->GetAriticle_Writer('<br/><b>Notice<...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:15:46][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'video_url' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(642): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(101): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:17:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined offset: 1 in <b>/ichukdata1/html/project/labrin' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(203): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->Addviewnum('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:17:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined offset: 1 in <b>/ichukdata1/html/project/labrin' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(167): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(20): ArticleServ->GetAriticle_Writer('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 14:18:29][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '1', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:18:37][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '1', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:20:03][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(115): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:20:57][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(115): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:20:57][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(115): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:20:57][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(115): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:20:57][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(115): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:24:29][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(118): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:27:26][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'ptid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(124): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddMyPr...', '/service/AddMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:29:37][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(118): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:35:33][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(120): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:35:51][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'v1_discount' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(658): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(120): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.AddMyPr...', '/service/AddMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:38:49][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('184', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:44:13][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:46:31][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle(NULL, '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:50:49][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:52:28][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:53:03][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '2', '??????2016???FD...', '12???14??????FD...', '<p style="margi...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:54:45][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE4\xBA\x8EPET...' for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '-1', '???????????????...', '', '<table class="r...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 14:57:40][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '-1', 'asdasd', '', '<table class="r...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 15:01:35][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(119): DBAgent->insertRecord('article', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/PublishArticleServ.php(18): ArticleServ->publishArticle('193', '1', '', '', '<table class="r...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): PublishArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.publish...', '/service/publis...', 'PublishArticleS...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 15:13:42][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(130): DBAgent->updateRecords('article', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UpdateArticleServ.php(20): ArticleServ->updateArticleById('117', 1, '3', '???????????????...', '???????????????...', '<p style="text-...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UpdateArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.updateA...', '/service/update...', 'UpdateArticleSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 15:13:46][error] errCode:22001
+errMsg:SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'content' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ArticleServ.php(130): DBAgent->updateRecords('article', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/UpdateArticleServ.php(20): ArticleServ->updateArticleById('117', 1, '3', '???????????????...', '???????????????...', '<p style="text-...', 'http://d27.ichu...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): UpdateArticleServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.updateA...', '/service/update...', 'UpdateArticleSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 15:34:24][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '2000')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Operate...', '/service/Operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:35:33][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '1000')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Operate...', '/service/Operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:37:59][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:38:46][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:38:57][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:39:21][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:39:56][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:41:41][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:41:51][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:41:53][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:42:20][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:42:53][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:43:12][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:43:51][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 15:44:35][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_college_member' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/CollegeServ.php(87): DBAgent->query('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/manager/_api/service/OperateFundServ.php(50): CollegeServ->updateResearchFund('5', '1', '2', '20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): OperateFundServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.operate...', '/service/operat...', 'OperateFundServ', true)
+#5 /ichukdata1/html/project/labring/index_admin.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:08:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:08:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:08:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:08:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:09:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:25:44][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('106')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:32][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:45][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('93')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:51][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:56][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:30:58][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:31:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:31:34][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 16:40:32][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('122')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 17:24:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 17:34:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[$i][id]' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(36): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/news/ArticleDetail.php(9): NewsServ->GetNewsById('$art[$i][id]')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ArticleDetail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'news.articleDet...', '/news/articleDe...', 'ArticleDetail', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 17:34:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[$i][id]' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(79): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/mobile/news/ArticleDetail.php(10): NewsServ->Addviewnum('$art[$i][id]')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ArticleDetail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'news.articleDet...', '/news/articleDe...', 'ArticleDetail', false)
+#5 /ichukdata1/html/project/labring/index_mobile.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 18:39:44][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'guarantee_3' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(683): DBAgent->insertRecord('product', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(145): ProductServ->addMyProduct(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddMyProductServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:12:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('99')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 19:20:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(322): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '191', '???????????????...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:35:39][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(322): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '???????????????...')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:39:26][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(322): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '????????????')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:47:01][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(125): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(296): DBAgent->queryWithTransaction(Array, Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(304): ProductServ->saveOrders(Array, Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 19:47:12][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '111111')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:47:15][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(125): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(296): DBAgent->queryWithTransaction(Array, Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(304): ProductServ->saveOrders(Array, Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 19:47:39][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(125): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(296): DBAgent->queryWithTransaction(Array, Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(304): ProductServ->saveOrders(Array, Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 19:51:23][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(34): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '????????????')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 19:52:15][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(125): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(296): DBAgent->queryWithTransaction(Array, Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(304): ProductServ->saveOrders(Array, Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-01-17 19:55:39][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '65123521')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 20:01:50][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(23): CompanyServ->sendUserBindingMessage('0', '180', '????????????', '7', '')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 20:04:20][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(35): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '??????')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:24:34][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_message' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('labring_message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(35): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', 'sss')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:29:46][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(264): DBAgent->updateRecords('binding_company', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/DeleteBindingCompServ.php(9): CompanyServ->deleteData('6')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): DeleteBindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.DeleteB...', '/service/Delete...', 'DeleteBindingCo...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:29:50][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(264): DBAgent->updateRecords('binding_company', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/DeleteBindingCompServ.php(9): CompanyServ->deleteData('17')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): DeleteBindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.DeleteB...', '/service/Delete...', 'DeleteBindingCo...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:30:01][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_message' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('labring_message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(36): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '186', '??????')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:30:05][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(264): DBAgent->updateRecords('binding_company', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/DeleteBindingCompServ.php(9): CompanyServ->deleteData('17')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): DeleteBindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.DeleteB...', '/service/Delete...', 'DeleteBindingCo...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:31:29][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(245): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(264): DBAgent->updateRecords('binding_company', Array, Array, Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/DeleteBindingCompServ.php(9): CompanyServ->deleteData('17')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): DeleteBindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.DeleteB...', '/service/Delete...', 'DeleteBindingCo...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:40:23][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '王迪得得' for column 'mid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CompanyServ.php(323): DBAgent->insertRecord('message', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/BindingCompServ.php(35): CompanyServ->sendUserBindingMessage('1', '180', '????????????', '7', '????????????')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): BindingCompServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Binding...', '/service/Bindin...', 'BindingCompServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2017-01-17 22:50:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(576): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(115): ProductServ->GetProperty('115')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

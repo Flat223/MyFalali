@@ -1,0 +1,191 @@
+.account_ul{
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+    height: 10px;
+}
+.account_ul ul li{
+	float: left;
+	color: #00bfb8 
+}
+.layui-tab-card {
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.1);
+}
+.layui-tab-title{
+	border-bottom: 0px solid #e2e2e2;
+}
+.layui-tab-card .layui-tab-title {
+    background-color: #fff;
+}
+.layui-tab-card .layui-tab-title li {
+    background: #e4e4e4;
+    margin: 0 5px;
+}
+.layui-tab-card .layui-this {
+ 	background: #00bfb8 !important;
+    color: #fff;
+}
+.layui-tab-item label{
+    display: block;
+    margin-bottom: 20px;
+}
+.layui-tab-item label span{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    height: 38px;
+    line-height: 38px;
+}
+.layui-tab-item label input[type=text],
+.layui-tab-item label input[type=password]{
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    text-indent: 1em;
+}
+.layui-tab-item label input[type=number]{
+      width: 150px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    text-indent: 1em;
+}
+.layui-tab-item label span.code{
+    width: 123px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-left: 20px;
+}
+.layui-tab-item label span em{
+    color: red;
+}
+.layui-tab-item label .reg_captcha{
+    color: #00bfb8;
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+.layui-tab-item label select{
+      width: 150px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+ 
+}
+.layui-tab-item label.upimg{
+    position: relative;
+    height: 110px;
+} 
+.layui-tab-item label.upimg input{
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    z-index: 2;
+    opacity: 0;
+}
+.layui-tab-item label.upimg img{
+    position: absolute;
+    z-index: 1
+}
+.layui-tab-item label input[type=submit]{
+    background-color: #00bfb8;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 124px;
+}
+.layui-tab-item ul.na-ul li{
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 5px;
+	cursor: pointer;
+}
+.layui-tab-item ul.na-ul li.na-li-this{
+    border-bottom:2px solid #00bfb8; 
+}
+.layui-tab-item table{
+    width: 90%;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+.layui-tab-item table th{
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 10px;
+    border-bottom:1px solid #ddd;
+    background-color: #f5f8fa;
+    font-weight: normal; 
+}
+.layui-tab-item table td{
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 10px;
+    border-bottom:1px solid #ddd;
+}
+.delete{
+	width: 80px;
+	color:#00bfb8;
+	cursor: pointer;
+	text-align: center;
+}
+.delete:hover{
+	color: red;
+}
+.section-tab{
+    display: none;
+}
+.layui-tab-item ul li{
+    float: left;
+    width: 200px;
+    /*border: 1px solid #ddd;*/
+    position: relative;
+}
+.layui-tab-item ul li span{
+    position: absolute;
+    display: inline-block;
+}
+.layui-tab-item ul li input[type=radio]{
+
+}
+.science-p span i{
+    color: #00bfb8;
+}
+.apply_cont{
+	width: 90%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+span.apply{
+	display: inline-block;
+	color: white;
+	background: #00bfb8;
+	border: 1px solid #ddd;
+	line-height: 40px;
+	height: 40px;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+span.apply_info{
+	display: inline-block;
+	color: white;
+	background: #ddd;
+	border: 1px solid #ddd;
+	line-height: 40px;
+	height: 40px;
+	width: 100px;
+	text-align: center;
+}

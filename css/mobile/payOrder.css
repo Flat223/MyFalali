@@ -1,0 +1,243 @@
+.mui-switch {
+    width: 52px;
+    height: 31px;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none; }
+.mui-switch:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+.mui-switch:checked {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63; }
+.mui-switch:checked:before {
+    left: 21px; }
+.mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s; }
+.mui-switch.mui-switch-animbg:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-animbg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #64bd63;
+    transition: border-color 0.4s, background-color ease 0.4s; }
+.mui-switch.mui-switch-animbg:checked:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+.mui-switch.mui-switch-anim:before {
+    transition: left 0.3s; }
+.mui-switch.mui-switch-anim:checked {
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+.mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s;
+}
+
+.ex_address{
+    /* width: 100%; */
+    /* height: 13%; */
+    font-size: 1.4rem!important;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.ex_name{
+    width: 55%;
+    height: 40%;
+    float: left
+}
+.ex_tel{
+    width: 40%;
+    height: 40% ;
+    float: left
+}
+.ex_addr_detail{
+    width: 90%;
+    height: 50%
+}
+/*.ex_flag{
+    height: 1%;
+    width: 100%
+}*/
+.ex_detail{
+    height: 15%;
+}
+.ex_img{
+    width:25%;
+    height: 90%;
+    float: left
+}
+.ex_attr{
+    /*width: 72%;
+    height: 100%;*/
+    float: left;
+    margin-left: 3%;
+    font-size: 1.4rem!important;
+    margin-top: 1%;
+    line-height: 2rem;
+}
+/*.ex_goods_name{
+    width: 100%;
+    margin-top: 1%;
+    height: 32%
+}
+.ex_type{
+    width: 100%;
+    height: 32%
+}*/
+.ex_integra{
+    /*width: 30%;
+    height: 32%;*/
+    color: aquamarine;
+    /* float: left*/
+}
+.ex_num{
+    /*width: 10%;*/
+    float: right;
+    color: black;
+    /*margin-left: 40%*/
+}
+.ex_count_div{
+    /* width: 100%;*/
+    height: 4%
+}
+.ex_count{
+    width: 65%;
+    height: 100%;
+    float: left;
+    font-size: 1.4rem!important;
+    font-weight: bold;
+    line-height: 2rem;
+}
+/*.ex_count a{
+    font-size:18px
+}*/
+.ex_reduce{
+    width: 30%;
+    float: left;
+    outline: none;
+}
+.ex_nu{
+    width: 35%;
+    float: left;
+    margin-top: 5%;
+    margin-left: 2.5%
+}
+.ex_add{
+    width: 30%;
+    float: left
+}
+.order_ps{
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.order_pspri{
+    float: right;
+    margin-right: 5%;
+}
+.order_mjly{
+    /*height: 4%;*/
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.order_input{
+    float: right;
+    margin-right: 5%;
+}
+.order_input input{
+    outline: none;
+    border: 0px;
+}
+
+.order_heji{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5%;
+    float: right;
+    line-height: 3rem;
+}
+.order_jijin{
+    /*width: 100%;
+    height: 4%;*/
+    line-height: 3rem;
+}
+.order_jjtit{
+    /*width: 70%;
+    height: 100%;
+    float: left*/
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.order_buttom{
+    font-weight: bold;
+    /* text-align: center; */
+    /* width: 100%; */
+}
+.order_much{
+    font-size: 1.7rem;
+    float: left;
+    margin-left: 40%;
+    line-height: 3.5rem;
+}
+.order_much a{
+    color: aqua
+}
+.order_commit{
+    font-size: 1.7rem;
+    /* float: left; */
+    background: #0ce6ec;
+    line-height: 3.5rem;
+    float: right;
+    margin-right: 3%;
+}
+.order_commit span{
+    padding: 1.5rem;
+}
+.order_zfb{
+    height: 4%;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+}
+.zfbimg{
+    float: left;
+    height: 100%;
+}
+.zfbtit{
+    float: left;
+    margin-left: 2%;
+}
+.zfbbtn{
+    float: right;
+    margin-right: 3%;
+}

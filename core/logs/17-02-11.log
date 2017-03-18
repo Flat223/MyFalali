@@ -1,0 +1,149 @@
+[2017-02-11 19:41:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(13): ProductServ->updateSee('8613985ec49eb8f...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 19:41:40][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(13): ProductServ->updateSee('8613985ec49eb8f...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 19:59:06][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814346'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814346)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 19:59:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814349'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814349)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 19:59:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814363'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814363)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:01:35][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814495'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814495)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:04:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814648'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814648)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:07:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814847'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814847)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:08:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '28' and ptid = '120' and time = '1486814907'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '28', '120', 1486814907)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:38:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '21' and ptid = '120' and time = '1486816734'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '21', '120', 1486816734)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:50:19][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '21' and ptid = '120' and time = '1486817419'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '21', '120', 1486817419)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 20:51:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 衍生化试剂' and sid = '21' and ptid = '120' and time = '1486817497'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(950): DBAgent->querySingleRecord('select * from #...')
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddMyProductServ.php(270): ProductServ->getJustInsertProduct('2-???-3'-??????...', '21', '120', 1486817497)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): AddMyProductServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addMyPr...', '/service/addMyP...', 'AddMyProductSer...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 22:22:05][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(13): ProductServ->updateSee('da4fb5c6e93e74d...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2017-02-11 22:22:06][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'da4fb5c6e93e74d3df8527599fa62642' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetProductBroServ.php(11): DBAgent->queryRecords('select property...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(116): GetProductBroServ->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetProd...', '/service/GetPro...', 'GetProductBroSe...', true)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2017-02-11 22:59:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(48): DBAgent->query('update #__produ...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/Detail.php(13): ProductServ->updateSee('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(116): Detail->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.detail.ht...', '/goods/detail.h...', 'Detail', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

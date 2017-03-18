@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css"> 
+    <link type="text/css" rel="stylesheet" href="/css/manager/ichuk.com.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title>菜单管理-添加菜单</title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>权限管理</a></li>
+			<li><span>/</span></li>
+			<li><a href="../rolemanager/menuList.html"><i></i>菜单管理</a></li>
+			<li><span>/</span></li>
+			<li><a><i></i>添加菜单</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+             
+			<script type="text/javascript">
+				var iChuk; 
+			</script>
+			 
+			<div class="_addtourist_wrap">
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						父菜单
+					</div>
+					<div class="_section_item _section_input menu-tree">
+						<select name="pid">
+							<option value="0">根目录</option>
+						</select>
+					</div>
+					<div class="_section_item _section_notice">
+						
+					</div>
+				</div> 
+				
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						菜单名称
+					</div>
+					<div class="_section_item _section_input">
+						<input name="menuname" type="text" placeholder="菜单名称"/>
+					</div>
+					<div class="_section_item _section_notice">
+						
+					</div>
+				</div> 
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						菜单地址
+					</div>
+					<div class="_section_item _section_input">
+						<input name="url" type="text" placeholder="菜单地址"/>
+					</div>
+					<div class="_section_item _section_notice">
+						基于根目录的地址，<br>例如填写：rolemanager/addMenu，则生成的地址为：http://www.ichuk.com/rolemanager/addMenu.html
+					</div>
+				</div> 
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						菜单图标
+					</div>
+					<div class="_section_item _section_input">
+						<div class="ichuk-icon-chooser">
+							<ul style="    background-color: #58c2f4;padding: 2px 10px;color: #ffffff;font-size: 14px;" class="chooser-select ichuk-button">选择图标</ul>
+							<ul style="margin-top:10px;" class="chooser-preview"></ul>
+						</div>
+						<input name="icon" type="hidden"/>
+					</div>
+					<div class="_section_item _section_notice">
+						
+					</div>
+				</div> 
+				
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						菜单状态
+					</div>
+					<div class="_section_item _section_input">
+						<div id="statusonoff" class="onoff " tar="status">
+			                <ul val="0">
+			                    无效
+			                </ul>
+			                <ul val="1" class="on">
+			                    有效
+			                </ul>
+			            </div>
+			            <input style="width: 110px;" class="_single_input" type="hidden" name="status" value="1"/>
+					</div>
+					<div class="_section_item _section_notice">
+						
+					</div>
+				</div> 
+				 
+				
+				<div class="_addtourist_section name"> 
+					<div class="_section_item _section_title">
+						菜单备注
+					</div>
+					<div class="_section_item _section_input">
+						<input name="remark" type="text" placeholder="菜单说明，不建议太长"/>
+					</div>
+					<div class="_section_item _section_notice">
+					</div>
+				</div>  
+				
+				<div class="_addtourist_section status">
+					<div class="_section_item _section_title">
+						&nbsp;
+					</div>
+					<div class="_section_item _section_input">
+						<div id="_submit_tourist" class="_submit_tourist">添加</div>
+					</div>
+					<div class="_section_item _section_notice"></div>
+				</div> 
+			</div>
+        </div>
+    </div>
+</div> 
+<script src="/js/jquery.min.js"></script> 
+<script src="/js/ichuk.com.js"></script> 
+<script src="../../js/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/role_menulist_add.js"></script>
+</body>
+</html>

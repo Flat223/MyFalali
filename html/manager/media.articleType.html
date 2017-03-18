@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-文章分类</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+<!--	<link type="text/css" rel="stylesheet" href="/css/manager/labType.css">-->
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link rel="stylesheet" href="/js/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <title></title>
+</head>
+<style type="text/css">
+	.fl-li{
+		height: 25px;
+	}
+	.fl_span{
+
+	}
+	.edit{
+		color: #00bfb8;
+		cursor: pointer;
+		width: 10px;
+		margin-left: 10px;
+	}
+</style>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+	<ul id="treeDemo" class="ztree"></ul>
+	<span id="tv" style="display: none;"><?php echo json_encode($params['type'])?></span>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script type="text/javascript" src="/js/ztree/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="/js/ztree/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="/js/ztree/js/jquery.ztree.exedit.js"></script>
+<script type="text/javascript">
+	/*function getAsyncUrl(treeId, treeNode) {
+		return treeNode.isParent ? "/service/ArticleCa" : "nodes2.php";
+	};*/
+
+	var setting = {
+		/*async: {
+			enable: true,//开启异步加载处理
+			url : getAsyncUrl,
+			//dataFilter: filter,//用于对 Ajax 返回数据进行预处理的函数
+			contentType : "application/json",
+			autoParam : [ "id","name"],
+		},*/
+		view: {
+			expandSpeed: 200,//zTree 节点展开、折叠时的动画速度，设置方法同 JQuery 动画效果中 speed 参数。
+			addHoverDom: addHoverDom,//用于当鼠标移动到节点上时，显示用户自定义控件，显示隐藏状态同 zTree 内部的编辑、删除按钮
+			removeHoverDom: removeHoverDom,//设置鼠标移到节点上，在后面显示一个按钮
+			selectedMulti: true//多选
+		},
+		edit: {
+			enable: true,			showRemoveBtn: true,
+			removeTitle: "删除",
+			renameTitle: "修改",
+			//editNameSelectAll: true,
+			/* drag:{				//拖拽为Move，拖拽时按下Ctrl为Copy
+			 //isCopy:true,
+			 //isMove:true,
+			 }, */
+		},
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		callback: {
+			beforeEditName: beforeEditName,
+			beforeRemove: beforeRemove,
+			//beforeRename: beforeRename,
+			//onRemove: onRemove,
+			//onRename: onRename
+
+		}
+	}
+
+	//删除节点
+	function beforeRemove(id, treeNode) {
+		/*var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+		var pn = treeObj.getNodeByTId(treeNode.tId);*/
+		if(treeNode.id == 1 || treeNode.id == 2 || treeNode.id == 3 || treeNode.id == 4){
+			layer.msg("根节点不可删除！",{icon:5});
+			return false;
+		}
+		var flag=confirm("确认删除 节点 -- " + treeNode.name + " 吗？");
+		if(flag==true){
+			$.ajax({
+				url: "/service/EditArticleTypeServ.html",
+				type: "POST",
+				dataType:"json",
+				data:{"id":treeNode.id,"flag":1},
+				success: function (data) {
+					if(data.ret == 1){
+						layer.alert(data.msg);
+						/*window.close();*/
+						window.location.reload();
+					}else{
+						layer.alert(data.msg);
+					}
+				},
+				error: function (data) {
+					layer.alert("error");
+				}
+			});
+		} else {
+			return false;
+		}
+	}
+	//所有选中节点的叶子节点
+	function getChildren(cids,treeNode){
+		cids.push(treeNode.id);
+		if (treeNode.isParent){
+			for(var obj in treeNode.children){
+				getChildren(cids, treeNode.children[obj]);
+			}
+		}
+	}
+
+	//修改节点
+	function beforeEditName(treeId, treeNode, newName) {
+		layer.open({
+			type: 2,
+			title: '修改信息',
+			shadeClose: true,
+			shade: 0.8,
+			area: ['380px', '30%'],
+			content: '/media/editArticleTName.html?id='+treeNode.id
+		});
+	}
+
+	//增加节点
+	function addHoverDom(treeId, treeNode) {
+		var sObj = $("#" + treeNode.tId + "_span");
+		if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return null;
+		var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
+				+ "' title='增加' onfocus='this.blur();' ></span>";
+		sObj.after(addStr);
+		$("#addBtn_" + treeNode.tId).bind("click", function () {
+			if(treeNode.id != 1 && treeNode.id != 2 && treeNode.id != 3 && treeNode.id != 4){
+				layer.msg("子节点不可再添加！",{icon:5});
+				return;
+			}
+			layer.open({
+				type: 2,
+				title: '修改信息',
+				shadeClose: true,
+				shade: 0.8,
+				area: ['380px', '30%'],
+				content: '/media/editArticleType.html?id='+treeNode.id
+			});
+		})
+	}
+
+	//鼠标移出节点,隐藏按钮
+	function removeHoverDom(treeId, treeNode) {
+		$("#addBtn_" + treeNode.tId).unbind().remove();
+	}
+
+	var zNodes = $("#tv").text();
+
+	$(document).ready(function(){//初始化ztree对象
+		var zTreeDemo = $.fn.zTree.init($("#treeDemo"),setting,eval("("+zNodes+")"));
+		/* $("#addParent").bind("click", {isParent:true}, addHoverDom); */
+	});
+
+</script>

@@ -1,0 +1,86 @@
+.pur_type{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 2%;
+}
+.pur_type a{
+    margin-left: 7%
+}
+.pur_div{
+    width: 100%;
+    height: 30%;
+    margin-left: 2.4%;
+}
+.pur_num{
+    /*width: 100%;*/
+    height: 12%;
+    font-size: 1.4rem;
+}
+.pur_state{
+    color: cyan;
+    /* margin-left: 36%; */
+    float: right;
+    margin-right: 3%;
+}
+.pur_info{
+    height: 50%;
+    width: 100%;
+    background-color: whitesmoke
+}
+.pur_img{
+    width:25%;
+    height: 90%;
+    float: left;
+    margin-top: 1%
+}
+.pur_det{
+    width: 72%;
+    height: 100%;
+    float: left;
+    margin-left: 3%;
+    font-size: 1.6rem;
+    margin-top: 1%;
+    font-weight: bold;
+}
+.pur_name{
+    width: 100%;
+    margin-top: 1%;
+    height: 32%
+}
+.pur_type1{
+    width: 100%;
+    height: 32%
+}
+.pur_price{
+    width: 40%;
+    height: 32%;
+    float: left
+}
+.pur_sl{
+    width: 10%;
+    float: left;
+    margin-left: 40%
+}
+.pur_count{
+    width: 100%;
+    /* height: 10%; */
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2%;
+}
+.pur_btn{
+    width: 100%;
+    height: 30%
+}
+.pur_btn1{
+    float: left;
+    width: 25%;
+    height: 60%;
+    margin-left: 45%
+}
+.pur_btn2{
+    float: left;
+    width: 25%;
+    height: 60%;
+    margin-left: 1%
+}

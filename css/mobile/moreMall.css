@@ -1,0 +1,78 @@
+.coop_search_block{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    background: #eee;
+}
+.coop_input{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.coop_scTex{
+    /* height: 70%; */
+    outline: none;
+    overflow: auto;
+    border: 0px;
+    background-color: transparent;
+    width: 80%;
+}
+.coop_scBtn{
+    border: 1px solid white;
+    color: #aea2a2;
+    border-radius: 0.7rem;
+    background-color:transparent;
+    outline: none;
+}
+.mm_type{
+    /* width: 100%; */
+    /* height: 5%; */
+    font-size: 1.7rem;
+    color: deepskyblue;
+    font-weight: bold;
+    margin-top: 2%;
+}
+.mm_type a{
+    margin-left: 11%
+}
+.mm_goods{
+    height: 30%;
+    margin-top: 3%;
+}
+.mm_left{
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+.mm_img{
+    /*height: 70%;
+    width: 100%*/
+}
+.mm_info{
+    /* height: 30%; */
+    /* width: 100%; */
+    background-color: whitesmoke;
+    line-height: 2rem;
+}
+.mm_tit{
+    /* width: 100%; */
+    /* height: 50%; */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.mm_pri{
+    /*width: 80%; */
+    /* height: 50%; */
+    /* float: left; */
+    margin-left: 1%;
+}
+.mm_much{
+    color: darkturquoise;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.mm_cart{
+    float: right;
+    width: 16%;
+}

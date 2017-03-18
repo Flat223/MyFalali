@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-添加信息</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/file.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><i class="layui-icon">&#xe603;</i><a href="">返回</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>标题：</td>
+						<td><input type="text"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>分类：</td>
+						<td>
+							<select name="" id="" class="classify">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>上传：</td>
+						<td>
+							<div class="file">
+								<input type="file">
+							</div>
+						</td>
+						<td>支持doc、pdf格式</td>
+					</tr>
+					<tr>
+						<td>标题：</td>
+						<td colspan="2"><textarea name="" id="" cols="30" rows="10"></textarea></td>
+					</tr>
+				</table>
+				<div class="submit-item">
+			       <button class="layui-com"><i class="layui-icon">&#xe605;</i>确定</button>
+			       <button class="layui-res">重置</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	})
+</script>

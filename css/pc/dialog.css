@@ -1,0 +1,138 @@
+.dialog-cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: #000;
+	opacity: 0.15;
+    filter: alpha(opacity=15);
+    -moz-opacity: 0.15;
+}
+.dialog{
+	width: 400px;
+	z-index: 10000;
+	overflow: hidden;
+	top: 30%;
+	left: 35%;
+	position: fixed;
+	border: 4px solid rgba(0,0,0,.1);
+	border-radius: 5px;
+}
+.dialog *{
+	box-sizing: content-box;
+}
+.dialog-title{
+	position: relative;
+	padding: 0 10px;
+	width: 380px;
+	height: 31px;
+	line-height: 31px;
+	background: #f3f3f3;
+	font-size: 14px;
+	color: #666;
+	font-family: "Microsoft Yahei";
+}
+.dialog-title span{
+	max-width: 300px;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+}
+.dialog-content{
+	height: 128px;
+	width: 380px;
+	overflow: hidden;
+	padding: 10px;
+	background: #fff;
+}
+.dialog-content .dialog-tip{
+	font-size: 18px;
+	color: #ff6c00;
+	margin-top: 15px;
+	position: relative;
+	width: 340px;
+	height: 80px;
+	margin: 0 auto;
+	overflow: hidden;
+	word-break: break-word;
+}
+.dialog-icon-info{
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background: url("/images/dialog_info.png") no-repeat;
+	background-position: -94px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.dialog-msg{
+	margin-left: 70px;
+	font-weight: bold;
+	line-height: 25px;
+	width: 270px;
+	display: inline-block;
+}
+.dialog-content .dialog-button{
+	display: inline-block;
+	margin:  0 10px;
+	height: 30px;
+	max-width: 85px;
+	overflow: hidden;
+	line-height: 30px;
+	background-color: #f2f2f2;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: 400;
+	cursor: pointer;
+	padding: 0 20px;
+	border: 1px solid #e1e1e1;
+	background-image: -moz-linear-gradient(top,#f2f2f2,#f7f7f7);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f2f2f2),color-stop(1,#f7f7f7));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#f7f7f7', GradientType='0');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#f7f7f7');
+    background-image: linear-gradient(to top,#f2f2f2 0,#f7f7f7 100%);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+	-webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.dialog-content .dialog-button:hover{
+	color: #323333;
+	text-decoration: none;
+	-webkit-box-shadow: 0 1px 1px rgba(0,1,1,.08);
+    -moz-box-shadow: 0 1px 1px rgba(0,1,1,.08);
+    box-shadow: 0 1px 1px rgba(0,1,1,.08);
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top,#f7f7f7,#f2f2f2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2', GradientType='0');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2');
+    background-image: linear-gradient(to top,#f7f7f7 0,#f2f2f2 100%);
+}
+.dialog-close{
+	cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: url("/images/dialog-close.png") no-repeat;
+    font-size: 0;
+}
+
+
+
+
+
+
+
+
+
+

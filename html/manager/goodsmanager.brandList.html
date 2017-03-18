@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-品牌列表</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($paramsa);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="../"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="javascript:;"><i></i>商品管理</a></li>
+				<li><span>/</span></li>
+				<li name="count" ><a>共<?php echo $params['count']; ?>个品牌</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-wrapp clearfix">
+					<div class="left">
+						<div class="add-item">
+							<span><a href="/goodsmanager/addbrand.html">+添加品牌</a></span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="sear-item">
+							<input value="<?php echo $params['info']?>" type="text" id="info" placeholder="输入品牌名称进行搜索">
+							<span id="search">搜索</span>
+						</div>
+					</div>
+				</div>
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<!--<th width="5%">ID</th>-->
+						<th width="15%">品牌图片</th>
+						<th width="10%">名称</th>
+						<th width="10%">排序字母</th>
+						<th width="20%">操作</th>
+					</tr>
+					<?php foreach($params['brand'] as $val){ ?>
+					<tr>
+						<!--<td><?php echo $v['id']; ?></td>-->
+						<td>
+							<img style="width:139px;height:105px" src="<?php echo empty($val['image'])?'':$val['image']; ?>" alt="">
+						</td>
+						<td><?php echo $val['name']; ?></td>
+						<td style="text-align: center"><?php echo $val['sort_letter']; ?></td>
+						<td>
+							<!--<button class="layui-btn layui-btn-small layui-btn-look">
+							  <i class="layui-icon"></i>
+							</button>-->
+							<a href="/goodsmanager/addbrand.html?id=<?php echo $val['brand_id']; ?>"><span style="cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								修改
+							</span></a><br>
+							<span value="<?php echo  $val['brand_id']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								删除
+							</span><br>
+							<a href="/goodsmanager/addCategory.html?id=<?php echo $val['brand_id']; ?>"><span style="cursor: pointer;color: white;background:#f25058;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								添加分类
+							</span></a>
+						</td>
+					</tr>
+					<?php } ?>
+				</table>
+				<div class=" clearfix" id="page">
+					<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+					<p class="">
+						共<?php echo($params['pager']->getPageCount()); ?>页，到第
+						<input type="text" maxlength="4" id="page_num">页
+						<input class="sub" type="button" id="goto" value="确定">
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+
+<script type="text/javascript">
+	$("#goto").on("click",function(){
+		var page = $.trim($("#page_num").val());
+		if(page == ""){
+			return;
+		}
+		var info=GetQueryString("info");
+		window.location.href = getHost()+"/goodsmanager/brandList.html?pj=1&page="+page;
+	});
+	$("#page_num").keypress(function(e){
+		if(e.keyCode == 13){
+			$("#goto").click();
+		}
+	});
+
+	function getHost(){
+		var path = window.document.location.href;
+		var pathName = window.document.location.pathname;
+		if(pathName == "/"){
+			if(path.indexOf("https://") == 0){
+				return "https://" + document.domain;
+			}
+			return "http://" + document.domain;
+		}
+		var pos = path.indexOf(pathName);
+		var host = path.substring(0, pos);
+		return host;
+	}
+
+	$(".del").on('click',function () {
+		var id = $(this).attr('value');
+		$.ajax({
+			type: "get",
+			dataType: "json",
+			url: "/service/DeleteBrandServ.html",
+			data: {"id": id},
+			success: function (data) {
+				if(data.ret == 1){
+					layer.alert(data.msg, {icon: 1});
+					window.location.reload();
+				}else if(data.ret == -1){
+					layer.alert(data.msg, {icon: 2});
+				}
+			}
+		})
+	});
+
+
+	$("#search").on('click',function(){
+		var info = $("#info").val();
+		window.location.href="/goodsmanager/brandList.html?info="+info;
+	});
+
+	function GetQueryString(name) {
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  unescape(r[2]); return null;
+	}
+
+</script>

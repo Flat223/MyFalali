@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-发布</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/issue.css" >
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css" >
+	<link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+	<link rel="stylesheet" type="text/css" href="/js/easyui/themes/icon.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+	<div class="ui large breadcrumb">
+	  <ul>
+	     <li>
+			 <a href="/index.html">首页</a>
+	     </li>
+	     <li>></li>
+	     <li>
+			 <a href="/requirement/option.html">发布需求</a>
+	     </li>
+	     <li>></li>
+	     <li>
+	     	发布需求信息
+	     </li>
+	  </ul>
+	</div>
+	<div class="clear"></div>
+	<div class="issuebox">
+		<p>
+			需求信息
+		</p>
+		<label>
+			<span><em>*</em>信息类型：</span>
+			<input type="radio" value="1" name="titType" checked />求购
+			<input type="radio" value="2" name="titType"/>求介绍
+			<input type="radio" value="3" name="titType"/>求购二手
+			<input type="radio" value="4" name="titType"/>寻求加工
+			<input type="radio" value="5" name="titType"/>寻求合作
+			<input type="radio" value="6" name="titType"/>招标
+		</label>
+		<label>
+			<span><em>*</em>信息标题：</span>
+			<input type="text" id="title" />
+		</label>
+		<label>
+			<span><em>*</em>信息过期时间：</span>
+			<span id="dispan" style="margin-left: 20px"><input id="endDate" type="text" class="easyui-datebox" data-options="required:false,editable:false" style="width:335px;height: 40px;" /></span>
+		</label>
+		<label>
+			<span><em>*</em>联系人：</span>
+			<input type="text" id="linkermen" />
+		</label>
+		<label>
+			<span><em>*</em>联系电话：</span>
+			<input type="text" id="phone"/>
+		</label>
+		<label>
+			<span><em>*</em>验证码：</span>
+			<input type="number" id="validateCode"/>
+			<span style="cursor: pointer" class="code" id="getCode">发送验证码</span>
+		</label>
+		<label>
+			<span>联系人邮箱：</span>
+			<input type="text"  id="mail"/>
+		</label>
+		<label>
+			<span>行业分类：</span>
+			<input type="text"  id="category"/>
+		</label>
+		<label>
+			<span>交易条件：</span>
+			<input type="text" placeholder="需求数量，价格要求，包装要求" id="trade" />
+		</label>
+		<label>
+			<span class="left">详细说明：</span>
+			<textarea name="" placeholder="详细说明" id="desc" cols="30" rows="10"></textarea>
+		</label>
+		<label>
+			<input style="cursor: pointer;" type="submit" id="subtn" value="提交申请"/>
+		</label>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/supplyRelease.js');
+</script>
+</body>
+</html>

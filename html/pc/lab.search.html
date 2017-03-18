@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-搜索结果</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/card.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/lab_list.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+
+    <style>
+        .nolab{
+            display: block;
+            width:800px;
+            /*border:1px solid gainsboro;*/
+            height: 200px;
+            text-align: center;
+            padding-top:150px;
+            font-size: 20px;
+            color: #1CB177;
+            margin: auto;
+            border-radius: 4px;
+            /*background-color: gainsboro;*/
+        }
+        .view{
+            margin-top: -20px;
+            /* background: #1a5454; */
+            color: #000000;
+            font-size: 1px;
+            text-align: center;
+        }.num{
+             color: red;
+         }
+        .heart{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200">
+    <!--<?php-->
+<!--echo '<pre>';-->
+    <!--print_r($params);-->
+    <!--exit();-->
+<!--?>-->
+    <!--<div class="section clearfix  ">-->
+        <!--<div class="ui large breadcrumb">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--实验室搜索-->
+                <!--</li>-->
+                <!--<li></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+    <?php if($params['info']['count']>0){ ?>
+    <div class="sort">
+        <!--<div class="left">-->
+            <!--<ul>-->
+                <!--<li value="1"><a href="/lab/labList.html?labtId=<?php echo $params['labtId']; ?>&parentId=<?php echo $params['parentId']; ?>&obtype=1">综合排序</a></li>-->
+                <!--&lt;!&ndash; <li>价格</li>&ndash;&gt;-->
+                <!--<li value="2"><a href="/lab/labList.html?labtId=<?php echo $params['labtId']; ?>&parentId=<?php echo $params['parentId']; ?>&obtype=2">热度</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div class="right">
+            <span class="left">共<a class="act-a"><?php echo ($params['info']['count']);?></a>家实验室</span>
+            <p class="page left">
+
+            </p>
+
+            <p class="arrow left">
+                <!-- <a href="" class="next"><i></i></a>
+                 <a href="" class="prev"><i></i></a>-->
+            </p>
+        </div>
+    </div>
+    <?php } ?>
+
+    <div class="list_wrapper">
+        <ul>
+            <?php
+                $labArr = $params['info']['data'];
+				if(!empty($labArr)){
+					foreach($labArr as $v){
+                        ?>
+            <li>
+                <dl>
+                    <dt>
+                        <!--<img src="<?php echo $labArr[$i][$j]['logo']; ?>" alt="" />-->
+
+                        <img src="<?php echo empty($v['logo'])?'/images/temp_pc/list1.png':explode(',',$v['logo'])[0] ;?>" alt="" />
+
+                    <div class="heart" value="<?php echo $v['lab_id']?>">
+                        <img class="ht<?php echo $v['lab_id'];?>" src="<?php echo (in_array($v['lab_id'],$params['cl'])? '/images/temp_pc/list-heart.png':'/images/temp_pc/list-hollow.png') ;?>" alt="" />
+                    </div>
+                    <div class="view"><span class="num"><?php echo $v['view_num']?></span>次浏览</div>
+                    </dt>
+                    <dd>
+                        <h3><a href="/lab/detail.html?labId=<?php echo $v['lab_id']; ?>"><?php echo ($v['name']); ?></a></h3>
+                        <?php
+												 	$starNum = $v['stars'];
+												 	if($starNum%2 == 0){
+												 		for($i = 0; $i < $starNum/2; $i++){
+														?>
+                        <img src="/images/pc/1y.png" alt="" />
+                        <?php
+												 		}
+												 	}else{
+												 		for($i = 0; $i < floor($starNum/2); $i++){
+														?>
+                        <img src="/images/pc/1y.png" alt="" />
+                        <?php
+												 		}
+														?>
+                        <img src="/images/pc/1yb.png" alt="" />
+                        <?php
+												 	}
+												?>
+                        <div class="description">
+                            <p>
+                                <span>服务领域：</span><?php echo $v['service_area'];?>
+                            </p>
+                            <p>
+                                <span>联系地址：</span><?php echo $v['address']; ?>
+                            </p>
+                            <p>
+                                <span>简介：</span> <?php echo $v['intro']; ?>
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
+            <?php
+
+				    }
+                }else{
+			?>
+            <div class="nolab">抱歉，没有搜到您需要的实验室</div>
+            <?php } ?>
+        </ul>
+        <div id="demo" class="right"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['info']['count']/6); ?>页<!--，到第
+        <input type="text" maxlength="4" id="page_num">页
+        <input class="sub" type="button" id="goto" value="确定">-->
+    </p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+    $(".heart").click(function () {
+        var id = $(this).attr('value');
+        $.ajax({
+            type:"get",
+            dataType:"json",
+            url:"/service/CollectionLabServ.html",
+            data:{"id":id},
+            success:function(data) {
+                if(data.ret == 1){
+                    layer.alert(data.msg, {icon: 1});
+                    $(".ht"+id).attr('src','/images/temp_pc/list-heart.png');
+                }else if(data.ret == -1){
+                    layer.alert(data.msg, {icon: 2});
+                }else if(data.ret == -2){
+                    layer.alert(data.msg, {icon: 2});
+                }else if(data.ret == -3){
+                    layer.alert(data.msg, {icon: 6});
+                }
+            },
+            error:function () {
+                layer.alert("服务器繁忙", {icon: 2});
+            }
+        });
+    });
+</script>
+</body>
+</html>
+

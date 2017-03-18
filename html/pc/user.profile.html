@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的资料</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myprofile.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+		?>
+		<blockquote class="layui-elem-quote">
+		  <span class="left">我的资料</span>
+		  <span class="right" 
+		  		onclick='location.href="/user/address.html";' 
+		  		style="cursor: pointer">收货地址管理
+		  </span>
+		</blockquote>
+		<div class="profile">
+			<div>
+				<span>头像:</span>
+				<div id="uploadimg" style="display: none;">上传图像</div>
+				<img id="faceimage"  width="80px" height="80px" style="cursor: pointer" 
+					src="<?php echo empty($user['face'])?'/images/pc/face_default.png':$user['face']; ?>" />
+			</div>
+			<label>
+				<span><em>*</em>昵称：</span>
+				<input id="nickname"  type="text" value="<?php echo $user['nickname']; ?>"/>
+				<span><em>*</em>身份证号：</span>
+				<input id="identity_num" type="text" maxlength="18" value="<?php echo $user['identity_num']; ?>"/>
+			</label>
+			<label class="select_city">
+				<span><em>*</em>姓名：</span>
+				<input id="username" type="text" value="<?php echo $user['name']; ?>" />
+				<span><em>*</em>居住地：</span>
+<!-- 				<input id="city" type="text" value="<?php echo $user['city']; ?>"/> -->
+				<select class="s_province" real="<?php echo $user['province']?>"></select>
+				<select class="s_city" real="<?php echo $user['city']?>"></select>
+				<select class="s_country" real="<?php echo $user['country']?>"></select>
+			</label>
+			<label>
+				<span><em>*</em>性别：</span>
+				<input type="radio" name="sex" value="1" <?php echo ($user['sex']=='1')?'checked':''; ?>/>男
+				<input type="radio" name="sex" value="2" <?php echo ($user['sex']=='2')?'checked':''; ?>/>女
+				<span class="school">毕业学校：</span>
+				<input id="university" type="text" value="<?php echo $user['university']; ?>"/>
+			</label>
+<!--
+			<label>	
+				<span><em>*</em>学历：</span>
+				<input id="education" type="text" value="<?php echo $user['education']; ?>"/>
+				<span class="major"><em>*</em>专业：</span>
+				<input id="residential_district" type="text" value="<?php echo $user['residential_district']; ?>"/>
+			</label>
+-->
+			<label>
+				<span>职业：</span>
+				<input id="career" type="text" value="<?php echo $user['career']; ?>"/>
+				<span>政治面貌：</span>
+				<input id="political_identity" type="text" value="<?php echo $user['political_identity']; ?>"/>
+			</label>
+			<label>
+				<span class="left">个人简介：</span>
+				<textarea name="" id="personal_desc" cols="30" rows="10"><?php echo $user['personal_desc']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">教育经历：</span>
+				<textarea name="" id="education_experience" cols="30" rows="10"><?php echo $user['education_experience']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">工作经历：</span>
+				<textarea name="" id="work_experience" cols="30" rows="10"><?php echo $user['work_experience']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">科研成果：</span>
+				<textarea name="" id="research_achievement" cols="30" rows="10"><?php echo $user['research_achievement']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">专利：</span>
+				<textarea name="" id="patent" cols="30" rows="10"><?php echo $user['patent']; ?></textarea>
+			</label>
+			<label>
+				<span class="left">科研项目：</span>
+				<textarea name="" id="research_projects" cols="30" rows="10"><?php echo $user['research_projects']; ?></textarea>
+			</label>
+			<label>
+				<span>兴趣标签：</span>
+				<select class="interest" name="" id="all_lab">
+				<?php 
+					$allLabs=$params['interestLabs'];
+					foreach ($allLabs as $lab) { 
+				?>	
+					<option id="" value="" lid="<?php echo ($lab['label_id']); ?>"><?php echo $lab['name'] ?></option>
+				<?php
+					}
+				?>
+				</select>
+				<span class="add tag_label" id="addLab" style="cursor: pointer">添加</span>		
+				<div class="tag" id="lab_container">
+					<ul class="interest_labels">
+					<?php
+						$lab_ids = $user['interest_labels'];
+						if($lab_ids != ""){
+							foreach (explode(",",$lab_ids) as $lid) { 
+					?>
+				      	<li class="added_label" lid="<?php echo ($lid);?>">
+				      		<span class="tag_label">
+				      			<?php
+				      				foreach ($allLabs as $lab) { 
+										if ($lab['label_id'] == $lid) {
+											echo $lab['name'];	
+										}
+									}
+				      			?>
+				      		</span>
+				      		<i class="del_label" lid="<?php echo ($lid);?>"></i>
+				      	</li>
+				  	<?php
+				  			}
+				   		}
+				    ?>
+			      	</ul>
+				</div>	
+			</label>
+		</div>
+		<div class="save">
+			<input type="submit" class="tag_label" id="saveChange" value="保存修改" />
+		</div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/userProfile.js');
+</script>

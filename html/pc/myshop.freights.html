@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-商家消息列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/shopmessage.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/freights.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+	        <li><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><a href="/myshop/addProduct.html">添加产品</a></li>
+            <li><a href="/myshop/freight.html" style="color: #00bfb8">运费管理</a></li>
+            <li><a href="/myshop/orderManager.html">订单管理</a></li>
+            <li><a href="/myshop/message.html">消息列表</a></li>
+			<li><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+			<!--<li><a href="">退款管理</a></li>-->
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<h1>运费管理</h1>
+    	<div id="freights"></div>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	var ctx = 'http://<?php echo($_SERVER['HTTP_HOST']); ?>';
+	window.seajs&&seajs.use('pc/freight.js',function(freight){freight.handleList.init(ctx)});
+</script>

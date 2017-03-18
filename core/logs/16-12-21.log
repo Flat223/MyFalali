@@ -1,0 +1,1412 @@
+[2016-12-21 09:27:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and labring_order.type=2 order by id DESC' at line 2
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/user/Purchase.php(43): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): Purchase->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.purchase.h...', '/user/purchase....', 'Purchase', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2016-12-21 09:28:22][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'ads', 'asd', '5222')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:30:36][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '525', '65226')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:30:47][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '525', '65226')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:31:19][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '62562563', '58652')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:35:51][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asd', '58252')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:43:30][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asd', 'asdasd')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:44:07][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', 'asdasd')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:49:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'adsasd', '65252')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:50:45][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/labShareSupplyServ.php(14): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', 'asd')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:52:51][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(14): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdas', 'dasdasd', '622632')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:52:54][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(14): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdas', 'dasdasd', '622632')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:53:34][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '32532')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 09:55:04][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '5125')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:04:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('asdasd', 'asdasd', '+62652')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:05:02][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('1232', '33213', '1232123')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:07:05][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): labShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:08:53][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:10:20][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:10:21][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:10:22][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:10:50][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:14:46][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:14:47][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:16:36][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:16:37][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:19:52][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:19:52][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:20:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'type_id' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:20:14][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'type_id' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:20:14][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'type_id' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:21:51][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:21:52][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1364 Field 'intro' doesn't have a default value
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(21): LabShareSupplyServ->insertSupplyLab('111', 'sdfe', '1112121')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 10:33:45][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by id DESC' at line 2
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(44): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2016-12-21 12:17:06][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.name' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(29): DBAgent->queryRecords('select b.*,c.na...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(11): OrderServ->getAllRequireOrder('1', '100', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 12:52:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from labring_order a join labring_member b on a.mid = b.mid join labring_order_p' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(29): DBAgent->queryRecords('select b.name,c...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/TestServ.php(11): OrderServ->getAllRequireOrder('1', '100', '1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): TestServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.testSer...', '/service/testSe...', 'TestServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 13:48:27][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:33][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:33][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:33][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:48][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:48][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:48:48][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:09][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 14:49:21][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 14:49:25][error] errCode:HY093
+errMsg:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 14:49:52][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:52][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:52][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:53][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:53][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:53][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:54][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:54][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:54][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:55][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:55][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:49:55][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:42][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:42][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:42][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:43][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:43][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:50:43][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_a' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/UserServ.php(125): DBAgent->querySingleRecord('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/shopping/Process.php(19): UserServ->getCartDeatilById('3')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Process->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'shopping.proces...', '/shopping/proce...', 'Process', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 14:57:37][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:03:14][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:03:16][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:03:29][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:03:58][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:03:59][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:04:39][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:04:42][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:05:05][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:07:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(14): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:11:26][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(17): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:11:50][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and labring_order.type=2 order by id DESC' at line 2
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/user/Purchase.php(43): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): Purchase->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.purchase.h...', '/user/purchase....', 'Purchase', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2016-12-21 15:13:11][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(17): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:13:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(17): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(47): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:17:36][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(14): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:18:33][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:19:24][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:24:56][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:26:13][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all from labring_lab where name like "%搜索%"' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/LabListServ.php(72): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/lab/Search.php(13): LabListServ->getLabByinfo('??????', 1, 4)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Search->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'lab.search.html', '/lab/search.htm...', 'Search', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 15:26:20][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all from labring_lab where name like "%测试%"' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/LabListServ.php(72): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/lab/Search.php(13): LabListServ->getLabByinfo('??????', 1, 4)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Search->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'lab.search.html', '/lab/search.htm...', 'Search', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 15:29:26][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareSupplyServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabSupplyServ.php(44): LabShareSupplyServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabSupplyServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabSupp...', '/service/LabSup...', 'LabSupplyServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 15:30:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by id DESC' at line 2
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/module/pc/user/PersonalOrder.php(44): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/FileLoader.php(115): PersonalOrder->action()
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.personalOr...', '/user/personalO...', 'PersonalOrder', false)
+#4 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#5 {main}
+[2016-12-21 15:54:20][error] errCode:23000
+errMsg:SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mid' cannot be null
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/ProductServ.php(140): DBAgent->insertRecord('cart', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/AddCartServ.php(43): ProductServ->AddCart(NULL, '1', '1', '1', '2')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): AddCartServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.addCart...', '/service/addCar...', 'AddCartServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 16:33:08][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by circle_id desc limit 5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(43): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(35): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 17:23:52][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'NaN' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(44): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:00:02][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(13): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:02:02][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'NaN' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(44): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:05:50][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:08:21][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:08:40][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:11:42][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:11:47][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:12:25][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:12:48][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:13:23][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:13:33][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:17:34][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(34): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:19:18][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(14): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:08][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:10][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:11][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:11][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:12][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:25:14][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:26:37][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:27:42][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:28:45][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:28:48][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:30:29][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:31:52][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'phone' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:37:23][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:40:08][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:41:05][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:44:04][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:44:56][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 18:49:23][error] errCode:22003
+errMsg:SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'endDate' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/SupplyBuyReleaseServ.php(41): DBAgent->insertRecord('release', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/SupplyReleaseServ.php(33): SupplyBuyReleaseServ->insertSupplyInfo(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): SupplyReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SupplyR...', '/service/Supply...', 'SupplyReleaseSe...', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-21 19:58:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = '2016121201'' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(53): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 20:06:32][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = 2016121201' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(53): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 20:08:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = '2016121201' order by a.time desc' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(54): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 20:08:44][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = '2016121201' order by a.time desc' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(54): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 20:08:45][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = '2016121201' order by a.time desc' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(54): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 20:08:47][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and a.order_code = '2016121201' order by a.time desc' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/OrderServ.php(54): DBAgent->queryRecords('select a.time,a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/Order.php(41): OrderServ->getAllRequireOrder('1', '100', '2', Array)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Order->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.order.html', '/user/order.htm...', 'Order', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:09:14][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.status' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:09:26][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.status' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:09:26][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.status' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:10:35][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.status' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:10:35][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.status' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select * from #...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:18:09][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.name' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select a.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('1')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-21 23:18:09][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.name' in 'field list'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(132): DBAgent->queryRecords('select a.name a...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/SubmitOrderServ.php(147): ProductServ->getPropertyDetail('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): SubmitOrderServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.SubmitO...', '/service/Submit...', 'SubmitOrderServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}

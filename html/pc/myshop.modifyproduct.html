@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-添加商品</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css" >
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css" >
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<?php
+	$product = $params['product'];
+	$first_tid = $product['first_tid'];
+	if($first_tid == 1){
+		$productType = 1;
+	} else if($first_tid == 93){
+		$productType = 4;
+	} else if($first_tid == 217 || $first_tid == 218 || $first_tid == 219){
+		$productType = 3;
+	} else {
+		$productType = 2;
+	}
+	$user = UserAgent::getUser();
+?>
+
+<div style="display: none">
+	<input name="address_type" type="hidden" value="<?php echo empty($params['address'])?0:1 ?>" />
+	<input name="mid" type="hidden" value="<?php echo $user['mid'] ?>" />
+	<input name="pid" value="<?php echo $product['pid']; ?>" type="hidden">
+	<input name="productType" value="<?php echo $productType ?>"/>
+</div>
+<div class="content w1200 clearfix" style="margin-right: -220px">
+    <div class="content-item">
+        <h1>修改产品</h1>
+        
+        <div class="proType">
+			<span><i>*</i>类型</span>
+			<select name="first_type">
+		<?php
+			foreach ($params['first_type'] as $first){
+		?>	
+				<option value="<?php echo $first['ptid']?>"
+					<?php echo ($first['ptid']==$product['first_tid'])?"selected='selected'":"" ?>>
+					<?php echo $first['name']?>
+				</option>
+		<?php
+			}
+		?>
+			</select>
+			<select name="second_type">
+		<?php
+			foreach ($params['second_type'] as $second){
+				if($second['parentid'] == $product['first_tid']){
+		?>	
+				<option value="<?php echo $second['ptid']?>"
+					<?php echo ($second['ptid']==$product['second_tid'])?"selected='selected'":"" ?>>
+					<?php echo $second['name']?>
+				</option>
+		<?php
+				}
+			}
+		?>
+			</select>
+		<?php
+			$show_third = false;
+			$thirdType = array();			
+			if($product['third_tid'] != 0){
+				foreach ($params['third_type'] as $third){
+					if($third['parentid'] == $product['second_tid']){
+						$thirdType[] = $third;
+						$show_third = true;
+					}
+				}
+			}
+		?>
+			<select name="third_type" style="display: <?php echo $show_third?'inline':'none' ?>">
+			<?php
+				foreach ($thirdType as $third){
+			?>	
+				<option value="<?php echo $third['ptid']?>"
+					<?php echo ($third['ptid']==$product['third_tid'])?"selected='selected'":"" ?>>
+					<?php echo $third['name']?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+			
+		<?php
+			$show_forth = false;
+			$forthType = array();			
+			if($product['forth_tid'] != 0){
+				foreach ($params['forth_type'] as $forth){
+					if($forth['parentid'] == $product['third_tid']){
+						$forthType[] = $forth;
+						$show_forth = true;
+					}
+				}
+			}
+		?>
+			<select name="forth_type" style="display: <?php echo $show_forth?'inline':'none' ?>">
+			<?php
+				foreach ($forthType as $forth){
+			?>	
+				<option value="<?php echo $forth['ptid']?>"
+					<?php echo ($forth['ptid']==$product['forth_tid'])?"selected='selected'":"" ?>>
+					<?php echo $forth['name']?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		<?php
+			$show_fifth = false;
+			$fifthType = array();
+			if($product['fifth_tid'] != 0){
+				foreach ($params['fifth_type'] as $fifth){
+					if($fifth['parentid'] == $product['forth_tid']){
+						$fifthType[] = $fifth;
+						$show_fifth = true;
+					}
+				}
+			}
+		?>	
+			<select name="fifth_type" style="display: <?php echo $show_fifth?'inline':'none' ?>">
+			<?php
+				foreach ($fifthType as $fifth){
+			?>	
+				<option value="<?php echo $fifth['ptid']?>"
+					<?php echo ($fifth['ptid']==$product['fifth_tid'])?"selected='selected'":"" ?>>
+					 <?php echo $fifth['name']?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+		
+		<div class="proType">
+            <span><i>*</i>产品品牌</span>
+            <div class="layui-inline" style="margin-top: 10px;">
+                <input value="<?php echo $params['brand']['name']?>" style="width:335px;height: 40px;" id="brand" class="easyui-combobox">
+            </div>
+        </div>
+        
+        <div class="proName">
+            <span><i>*</i>产品名称</span>
+            <input name="name" type="text" value="<?php echo $product['name']?>"/>
+            <br />
+        </div>
+        
+        <div class="proName proAlias"
+	        style="display: <?php echo ($productType == 3 || $productType == 4) ? 'block' : 'none'?>">
+			<span>产品别名</span>
+			<input name="proAlias" type="text" placeholder="请填写产品别名" value="<?php echo $product['alias'] ?>"/>
+		</div>
+		
+		<div class="proName EnglishName"
+			style="display:<?php echo ($productType == 1 || $productType == 4) ? 'block' : 'none'?>">
+			<span>英文名称</span>
+			<input name="EnglishName" type="text" value="<?php echo $product['EnglishName'] ?>" placeholder="请填写产品英文名称" />
+		</div>	
+	
+		<div class="proName size">
+			<span class="size" style="width: 76px;margin-left: -7px"><i>*</i>规格</span>
+			<input name="size" type="text" value="<?php echo $product['size'] ?>" placeholder="请填写产品规格" />
+		</div>
+		<div class="proName goods_code">
+			<span><i>*</i>货号</span>
+			<input name="goods_code" value="<?php echo $product['goods_code'] ?>" type="text" placeholder="请填写产品货号" />
+		</div>
+
+		<div class="proName CASnumber"
+			style="display: <?php echo ($productType == 3 || $productType == 4) ? 'block' : 'none'?>">
+			<span><i>*</i>CAS号</span>
+			<input name="CASnumber" type="text" value="<?php echo $product['CASnumber'] ?>" placeholder="请填写产品CAS号" />
+		</div>
+		<div class="proName purity"
+			style="display: <?php echo ($productType == 3 || $productType == 4) ? 'block' : 'none'?>">
+			<span><i>*</i>含量</span>
+			<input name="purity" type="text" value="<?php echo $product['purity'] ?>" placeholder="请填写产品含量" />
+		</div>
+		
+		<div class="proImg">
+            <span><i>*</i>产品图片</span>
+            <button id="uping">添加图片</button>
+            <small>（最多可以添加5张产品图片）</small>
+        </div>
+        <div class="uploadfile">
+            <div name='uping' style="float: left">
+                <span class="deleteimg">删除</span>
+                <img name="uping" src="<?php echo isset($product['tu'][0])?$product['tu'][0]:'/images/pc/upload.jpg';?>" alt="" />
+            </div>
+            <div name='uping' style="float: left">
+                <span class="deleteimg">删除</span>
+                <img name="uping" src="<?php echo isset($product['tu'][1])?$product['tu'][1]:'/images/pc/upload.jpg';?>" alt="" />
+            </div>
+            <div name='uping' style="float: left">
+                <span class="deleteimg">删除</span>
+                <img name="uping" src="<?php echo isset($product['tu'][2])?$product['tu'][2]:'/images/pc/upload.jpg';?>" alt="" />
+            </div>
+            <div name='uping' style="float: left">
+                <span class="deleteimg">删除</span>
+                <img name="uping" src="<?php echo isset($product['tu'][3])?$product['tu'][3]:'/images/pc/upload.jpg';?>" alt="" />
+            </div>
+            <div name='uping' style="float: left">
+                <span class="deleteimg" >删除</span>
+                <img name="uping" src="<?php echo isset($product['tu'][4])?$product['tu'][4]:'/images/pc/upload.jpg';?>" alt="" />
+            </div>
+        </div>
+		
+	<?php
+		$unitArray = array("盒","套","支","只","kg","把","张","卷","副","包","本","g","台","m","瓶","桶","箱","吨","件","kit","ml","ul","L","mg","㎡","cm","mm","um");
+	?>
+		<div class="proName unit">
+			<span>计量单位</span>
+			<select name="unit">
+			<?php
+				foreach ($unitArray as $unit){
+			?>	
+				<option <?php echo ($unit==$product['unit'])?"selected='selected'":'' ?>>
+					<?php echo $unit ?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+	
+    <?php
+		$storeArray = array("常温保存","零下20℃保存","零下40℃保存","远离火源","填充氮气","真空保存","恒温恒湿保存");
+	?>
+		<div class="proName store">
+			<span>存储条件</span>
+			<select name="store">	
+			<?php
+				foreach ($storeArray as $store){
+			?>	
+				<option <?php echo ($store == $product['store'])?"selected='selected'":'' ?>>
+					<?php echo $store ?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+
+			</select>
+		</div>
+		
+		<?php
+			$trafficArray = array("常温运输","危险品车运输","零下20℃运输","液封运输");
+		?>
+		<div class="proName traffic">
+			<span>运输条件</span>
+			<select name="traffic">	
+			<?php
+				foreach ($trafficArray as $traffic){
+			?>	
+				<option <?php echo ($traffic == $product['traffic'])?"selected='selected'":'' ?>>
+					<?php echo $traffic ?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+		
+	<?php
+		$lifeArray = array("三个月以上","六个月以上","一年以上","两年以上");
+	?>
+		<div class="proName shelf_life" 
+			style = "display: <?php echo ($productType == 1) ? 'block' : 'none'?>">
+			<span style="margin-left: -32px;width: 102px">质保期</span>
+			<select name="shelf_life">	
+			<?php
+				foreach ($lifeArray as $shelf_life){
+			?>	
+				<option <?php echo ($shelf_life == $product['shelf_life'])?"selected='selected'":'' ?>>
+					<?php echo $shelf_life ?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		</div>
+	<?php
+		$fre_id = $product['fre_id'];
+	?>
+		<div class="proName freight">
+			<span style="margin-left: -32px;width: 102px"><i>*</i>运费设置</span>
+			<select name="freight_way">		
+				<option value="1" <?php echo ($fre_id != 0)?"selected='selected'":'' ?>>使用运费模板</option>
+				<option value="2" <?php echo ($fre_id == 0)?"selected='selected'":'' ?>>卖家承担运费</option>
+			</select>
+			<div class="freight_intro" style="display: <?php echo ($fre_id!=0)?'inline':'none' ?>">
+		<?php
+			if(empty($params['freight'])){
+		?>
+				<span class="noFreight" style="width: 100px">暂无运费模板</span>
+<!-- 				<a class="addFreight" href="/myshop/freight.html">前往添加</a> -->
+		<?php
+			} else {
+		?>
+				<select name="freight" style="margin-left: 20px;min-width: 20px">	
+				<?php
+					foreach ($params['freight'] as $freight){
+				?>	
+					<option 
+						value="<?php echo $freight['fre_id'] ?>" 
+						valuation_unit="<?php echo $freight['valuation_unit'] ?>"
+						<?php echo ($freight['fre_id'] == $product['fre_id'])?"selected='selected'":'' ?>>
+						<?php echo $freight['name'] ?>
+					</option>
+				<?php
+					}
+				?>
+				</select>
+				
+				<div class="weight_info" style="display:<?php echo($params['valuation_unit']==2)?'inline':'none'?>"> 
+					<span>产品重量:</span>
+					<input name="weight" placeholder="请填写产品重量 (数字形式,单位:kg)" 
+						onkeyup="clearNoNum(this)"
+						value="<?php echo (($product['weight'] != 0.0))?$product['weight']:'' ?>"/>
+				</div>
+				
+				<div class="volume_info" style="display:<?php echo($params['valuation_unit']==3)?'inline':'none'?>"> 
+					<span>产品体积:</span>
+					<input name="volume" placeholder="请填写产品体积 (数字形式,单位:m³)" 
+						onkeyup="clearNoNum(this)"
+						value="<?php echo (($product['volume'] != 0.0))?$product['volume']:'' ?>"/>
+				</div>
+		<?php
+			}
+		?>
+			</div>
+		</div>
+		
+		<div class="proName address" style="display: <?php echo ($fre_id == 0)?'block':'none' ?>">
+			<span><i>*</i>发货地址</span>
+			
+		<?php
+			$addressArray = $params['address'];
+			if(empty($addressArray)){
+		?>
+			<div class="noAddressInfo">
+				<span class="noAddress">暂无发货地址</span>
+<!-- 				<a class="addAddress" href="/myshop/addressManager.html">前往添加</a> -->
+			</div>
+		<?php
+			} else {
+		?>
+			<select name="address">	
+			<?php
+				foreach($params['address'] as $address){
+			?>	
+				<option 
+					value="<?php echo $address['id'] ?>" 
+					<?php echo ($address['id'] == $product['address_id'])?"selected='selected'":'' ?>>
+					<?php 
+						echo $address['province_name']." ".$address['city_name']." ".$address['country_name']." ".$address['detail_address'];
+					?>
+				</option>
+			<?php
+				}
+			?>
+			</select>
+		<?php
+			}
+		?>
+		</div>	
+		
+		<div class="proName producer">
+			<span style="width: 80px;margin-left: -10px">生产商/产地</span>
+			<input type="radio" name="producer" value="国产" style="width: 25px"/>国产
+			<input type="radio" name="producer" value="进口" style="width: 25px;margin-left: 25px"/>进口
+		</div>
+		
+		<div class="proName packing" packing="<?php echo $product['packing'] ?>">	
+			<span>产品包装</span>
+			<input type="radio" name="packing" value="无包装" style="width: 25px"/>无包装
+			<input type="radio" name="packing" value="散装" style="width: 25px;margin-left: 25px"/>散装
+			<input type="radio" name="packing" value="独立包装" style="width: 25px;margin-left: 25px"/>独立包装
+			<input type="radio" name="packing" value="普通包装" style="width: 25px;margin-left: 25px"/>普通包装
+		</div>
+		
+		<div class="proName">
+            <span>VIP折扣:</span>
+            <b>请填写0-1的数字</b>
+        </div>
+        <div class="proName">
+            <span>一级VIP</span>
+            <input name="vipone" type="text" placeholder="一级VIP折扣" 
+            	value="<?php echo $product['v1_discount']?>" onkeyup="clearNoNum(this)"  
+            	/>
+        </div>
+        <div class="proName">
+            <span>二级VIP</span>
+            <input name="viptwo" type="text" placeholder="二级VIP折扣" 
+            	value="<?php echo $product['v2_discount']?>" onkeyup="clearNoNum(this)" 
+            	/>
+        </div>
+        <div class="proName">
+            <span>三级VIP</span>
+            <input name="vipthree" type="text" placeholder="三级VIP折扣" 
+            	value="<?php echo $product['v3_discount']?>" onkeyup="clearNoNum(this)" 
+            	/>
+        </div>
+        <div class="proName">
+            <span>四级VIP</span>
+            <input name="vipfour" type="text" placeholder="四级VIP折扣" 
+            	value="<?php echo $product['v4_discount']?>" onkeyup="clearNoNum(this)" 
+            	/>
+        </div>
+        
+        <div class="proName is_harmful" 
+	        style="margin-top: 10px;display: <?php echo($productType==3 || $productType==4) ? 'block':'none'?>" >
+			<span style="width: 113px; margin-left: -45px">易制毒、制爆</span>
+			<input type="radio" name="is_harmful" value="0" style="width: 25px" 
+				<?php echo $product['is_harmful'] == 0 ?'checked':''?> 
+				/>否
+			<input type="radio" name="is_harmful" value="1" style="width: 25px;margin-left: 38px" 
+				<?php echo $product['is_harmful'] == 1 ?'checked':''?> 
+				/>是
+		</div>
+
+        <div class="proName" style="margin-top: 10px">
+			<span style="width: 118px; margin-left: -45px">是否支持质量检测</span>
+			<input type="radio" name="can_testing" value="0" style="width: 25px" 
+				<?php echo ($product['can_testing']=='0')?'checked':''?>
+				/>不支持
+			<input type="radio" name="can_testing" value="1" style="width: 25px;margin-left: 10px"
+				<?php echo ($product['can_testing']=='1')?'checked':''?>
+				/>支持
+			<span class="quality_price" style="margin-left: 20px; 
+				display: <?php echo ($product['can_testing']=='1')?'display':'none' ?> ">
+				质检价格:
+			</span>
+			<input name="quality_testing" type="text" placeholder="设定质检价格" 
+					value="<?php echo $product['quality_testing']?>" onkeyup="clearNoNum(this)" 
+				style="display: <?php echo ($product['can_testing']=='1')?'display':'none' ?>"
+				/>
+		</div>
+	
+		<div class="proName" style="margin-top: 10px">
+			<span style="width: 113px; margin-left: -45px">是否支持延保</span>
+			<input type="radio" name="can_guarantee" value="0" style="width: 25px" 
+				<?php echo ($product['can_guarantee']=='0')?'checked':''?>
+				/>不支持
+			<input type="radio" name="can_guarantee" value="1" style="width: 25px;margin-left: 10px"
+				<?php echo ($product['can_guarantee']=='1')?'checked':''?>
+				/>支持
+		</div>
+	
+		<div class="proName guarantee"
+			style="display: <?php echo ($product['can_guarantee']=='1')?'display':'none' ?>">
+			<span style="width: 113px; margin-left: -45px">保修一年的价格</span>
+			<input name="guarantee_1" type="text" placeholder="请输入保修一年的价格" 
+				value="<?php echo $product['guarantee_1']?>" onkeyup="clearNoNum(this)" 
+			/>
+		</div>
+		<div class="proName guarantee" 
+			style="display: <?php echo ($product['can_guarantee']=='1')?'display':'none' ?>">
+			<span style="width: 113px; margin-left: -45px">保修两年的价格</span>
+			<input name="guarantee_2" type="text" placeholder="请输入保修两年的价格" 
+				value="<?php echo $product['guarantee_2']?>" onkeyup="clearNoNum(this)" />
+		</div>
+		<div class="proName guarantee" 
+			style="display: <?php echo ($product['can_guarantee']=='1')?'display':'none' ?>">
+			<span style="width: 113px; margin-left: -45px">保修五年的价格</span>
+			<input name="guarantee_5" type="text" placeholder="请输入保修五年的价格" 
+				value="<?php echo $product['guarantee_5']?>" onkeyup="clearNoNum(this)" />
+		</div>
+        
+        <div class="proName">
+            <span>产品视频</span>
+            <input name="video_url" type="text" value="<?php echo $product['video_url']?>"/>
+            <br />
+        </div>
+        <div class="proName">
+            <div id="vedio">
+                <button type="button" class="btn btn-primary" style="padding: 0 0;width: 100px;height: 35px;" id="brand_upimg" >上传图片</button>
+                <img style="height:160px;width:240px" id="images" src="<?php echo $product['video_img']?$product['video_img']:''; ?>" style="max-width: 100%;"/>
+            </div>
+        </div>
+        
+        <div class="proName">
+        	<span>产品说明（电脑）</span>
+            <div name="content" style="margin-left:90px;width:800px">
+
+                <script id="container" name="content"  type="text/plain"></script>
+                <script type="text/javascript">
+                    var ue = UE.getEditor('container',{
+	                    toolbars:[['fullscreen', 'undo', 'redo', 'bold','simpleupload','attachment']],
+                        enableAutoSave:false,
+                        autoHeightEnabled:true,
+                        initialFrameHeight:300,
+                        initialFrameWidth:800,
+                        autoWidthEnabled:true
+                    });
+                    ue.addListener("ready",function(){
+                        ue.setContent(<?php echo json_encode($params['product']['intro']);?>);
+                    })
+                </script>
+            </div>
+        </div>
+        <div class="proName">
+            <span>产品说明（手机）</span>
+            <div name="content" style="margin-left:90px;width:800px">
+
+                <script id="container2" name="content" type="text/plain"></script>
+                <script type="text/javascript">
+                    var uc = UE.getEditor('container2',{
+	                    toolbars:[['fullscreen', 'undo', 'redo', 'bold','simpleupload','attachment']],
+                        enableAutoSave:false,
+                        autoHeightEnabled:true,
+                        initialFrameHeight:300,
+                        initialFrameWidth:800,
+                        autoWidthEnabled:true
+                    });
+
+                    uc.addListener("ready",function(){
+                        uc.setContent(<?php echo json_encode($params['product']['intro_mobile']);?>);
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+        <div class="next clearfix">
+            <a id="savethis" class="nextStep">保存并修改</a>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+    window.seajs&&seajs.use('pc/modifyproduct.js',function(pro){
+	    var product = <?php echo (json_encode($params['product'])) ?>;
+		var properties = <?php echo (json_encode($params['property'])) ?>;
+		var secondTypes = <?php echo (json_encode($params['second_type'])) ?>;
+		var thirdTypes = <?php echo (json_encode($params['third_type'])) ?>;
+		var forthTypes = <?php echo (json_encode($params['forth_type'])) ?>;
+		var fifthTypes = <?php echo (json_encode($params['fifth_type'])) ?>;
+		
+		pro.setProduct(product);
+		pro.setProPerty(properties);
+		pro.setProType(secondTypes,thirdTypes,forthTypes,fifthTypes);
+    });
+    
+    function clearNoNum(obj){
+		obj.value = obj.value.replace(/[^\d.]/g,"");  //清除“数字”和“.”以外的字符
+		obj.value = obj.value.replace(/\.{2,}/g,"."); //只保留第一个. 清除多余的
+		obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+		obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');//只能输入两个小数
+		if(obj.value.indexOf(".")< 0 && obj.value !=""){//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额
+			obj.value= parseFloat(obj.value);
+		}
+	}
+</script>
+

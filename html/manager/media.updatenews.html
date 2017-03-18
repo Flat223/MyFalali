@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-修改新闻</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <!--<link type="text/css" rel="stylesheet" href="/css/manager/news.css">-->
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <title></title>
+    <style>
+        .info{
+            border: 1px solid #dddddd;
+            width: 800px;
+        }
+        table tr td{
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            margin:10px auto;
+            width: 100px;
+        }
+        tr{
+            border-right: 0px;
+
+        }
+        table textarea,input{
+            width:700px;
+            border: 1px solid gainsboro;
+            margin:5px 5px;
+        }
+        table input{
+            height: 30px;
+        }
+        button{
+            text-align: center;
+            display: inline-block;
+            line-height: 38px;
+            padding: 0 10px;
+            color: #fff;
+            white-space: nowrap;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><i class="layui-icon">&#xe603;</i><a style="cursor:pointer" onclick="history.go(-1)">返回</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>原文链接:</td>
+                    <td><input type="text" id="url" value="<?php echo $params['news']['url']; ?>"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>标题：</td>
+                    <td><input name="title" type="text" value="<?php echo $params['news']['title']; ?>"></td>
+                    <input type="hidden" name="newsid" value="<?php echo $params['news']['id']; ?>" />
+                    <td></td>
+                </tr>
+               <!-- <tr>
+                    <td>上传：</td>
+                    <td style="height:200px">
+                        <div class="form-group" id="brand_img_wrap">
+                            <div>
+                                <img style="height:160px;width:240px" id="images" src="<?php echo $params['news']['images']; ?>" style="max-width: 100%;"/>
+                            </div>
+                        <div  class="form-group">
+                            <div  class="col-sm-6">
+                                <button style="width: 240px;" type="button" style="padding: 0 0;width: 100px;height: 35px;background-color: #00a0e9" id="brand_upimg" >上传图片</button>
+                            </div>
+                        </div>
+
+                        </div>
+                    </td>
+                </tr>-->
+                <tr>
+                    <td>内容:</td>
+                    <td>
+                        <textarea id="content" style="border: 1px solid #dddddd;text-indent: 1em;margin: 3px 0;" type="text" cols="104" rows="8"><?php echo $params['news']['content']; ?></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="submit-item">
+                <button style="margin-left:300px;width:100px;background-color:indianred" class="layui-com" name="update"><i class="layui-icon">&#xe605;</i>确定</button>
+                <button style="width:100px;background-color:goldenrod" class="layui-res" onclick="window.location.reload(-1)">重置</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(".menu-wrapp li").on("click",function() {
+        $(this).find("ul").slideToggle("slow");
+    });
+
+    $("button[name=update]").on("click",function(){
+        var data={};
+        var title=$('input[name=title]').val();
+        var content=$("#content").val();
+        var id=$('input[name=newsid]').val();
+        var href = $("#url").val();
+        if(title.length<5){
+            layer.msg("标题过短！", {icon: 2});
+            return false;
+        }
+        if(content.length<1){
+            layer.msg("内容过短！", {icon: 2});
+            return false;
+        }
+        if(href == ""){
+            layer.msg("链接不能为空！", {icon: 2});
+            return false;
+        }
+        var matchurl = /^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/;
+        if(!matchurl.test(href)){
+            layer.msg("链接错误！", {icon: 2});
+            $("#url").val("");
+            return false;
+        }
+        var url='/service/UpdatenewsServ.html';
+        data.title=title;
+        data.content=content;
+        data.id=id;
+        data.href=href;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data:data,
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    layer.msg(data.msg,{"icon":1});
+                    window.setTimeout(widreload,1000);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error:function(data){
+                alert("error");
+            }
+        });
+    });
+
+
+    function widreload() {
+        window.location.href="/media/companynews.html";
+    }
+</script>

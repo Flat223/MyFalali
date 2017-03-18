@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-合同签订</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/givetime.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>竞价管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>合同签订</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-container">
+					<div class="sear-wrapp clearfix">
+						<div class="search-item">
+							<span>订单号：</span>
+							<input type="text">
+						</div>
+						<div class="search-item">
+							<span>图纸名称：</span>
+							<input type="text" >
+						</div>
+						<div class="search-item">
+							<span>供应商名称：</span>
+							<input type="text" >
+						</div>
+					</div>
+					<div class="sear-wrapp clearfix">
+						<div class="search-item">
+							<span>图号：</span>
+							<input type="text">
+						</div>
+						<div class="search-item">
+							<span>交货日期：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span>到：</span>
+							<input type="text" class="date">
+						</div>
+						<div class="search-item">
+							<span class="sear-span">搜索</span>
+						</div>
+					</div>
+				</div>
+					<div class="chart-wrapp clearfix">
+					<ul class="clearfix">
+						<li class="chart-this">即将到期</li>
+						<li>已到期</li>
+					</ul>
+				</div>
+				<div class="chart-content">
+					<div class="chart-item chart-show">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th width="10%">图号</th>
+							<th width="10%">名称</th>
+							<th width="10%">供应商</th>
+							<th width="10%">交货日期</th>
+							<th width="10%">金额</th>
+							<th width="10%">数量</th>
+							<th width="10%">状态</th>
+							<th width="10%">操作</th>
+						</tr>
+						<tr>
+							<td colspan="8" class="order-number"><span>订单号：201415926</span><span>2016-10-16&nbsp;&nbsp;12:00:00</span></td>
+						</tr>
+						<tr>
+							<td>20160102030405</td>
+							<td>
+								<dl class="clearfix">
+									<dt class="left">
+										<img src="/images/manager/product.jpg" alt="">
+									</dt>
+									<dd class="left">
+										名称名称
+									</dd>
+								</dl>
+							</td>
+							<td>某某公司</td>
+							<td>2016-10-11	<i class="edit"></i></td>
+							<td>1500.00元</td>
+							<td>1000</td>
+							<td style="color:#ff0000;">已修改交货日期，原日期2016-10-10</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="8" class="order-number"><span>订单号：201415926</span><span>2016-10-16&nbsp;&nbsp;12:00:00</span></td>
+						</tr>
+						<tr>
+							<td>20160102030405</td>
+							<td>
+								<dl class="clearfix">
+									<dt class="left">
+										<img src="/images/manager/product.jpg" alt="">
+									</dt>
+									<dd class="left">
+										名称名称
+									</dd>
+								</dl>
+							</td>
+							<td>某某公司</td>
+							<td>2016-10-11	<i class="edit"></i></td>
+							<td>1500.00元</td>
+							<td>1000</td>
+							<td class="wait-goods">已邮件通知</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+							</td>
+						</tr>
+					</table>
+					</div>
+					<div class="chart-item">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th width="10%">图号</th>
+							<th width="10%">名称</th>
+							<th width="10%">供应商</th>
+							<th width="10%">交货日期</th>
+							<th width="10%">金额</th>
+							<th width="10%">数量</th>
+							<th width="10%">状态</th>
+							<th width="10%">操作</th>
+						</tr>
+						<tr>
+							<td colspan="8" class="order-number"><span>订单号：201415926</span><span>2016-10-16&nbsp;&nbsp;12:00:00</span></td>
+						</tr>
+						<tr>
+							<td>20160102030405</td>
+							<td>
+								<dl class="clearfix">
+									<dt class="left">
+										<img src="/images/manager/product.jpg" alt="">
+									</dt>
+									<dd class="left">
+										名称名称
+									</dd>
+								</dl>
+							</td>
+							<td>某某公司</td>
+							<td style="color:#ff0000;">2016-10-11	<i class="edit"></i></td>
+							<td>1500.00元</td>
+							<td>1000</td>
+							<td style="color:#ff0000;">已逾期1天</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="8" class="order-number"><span>订单号：201415926</span><span>2016-10-16&nbsp;&nbsp;12:00:00</span></td>
+						</tr>
+						<tr>
+							<td>20160102030405</td>
+							<td>
+								<dl class="clearfix">
+									<dt class="left">
+										<img src="/images/manager/product.jpg" alt="">
+									</dt>
+									<dd class="left">
+										名称名称
+									</dd>
+								</dl>
+							</td>
+							<td>某某公司</td>
+							<td style="color:#ff0000;">2016-10-11	<i class="edit"></i></td>
+							<td>1500.00元</td>
+							<td>1000</td>
+							<td style="color:#ff0000;">已逾期1天</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+								<button class="layui-btn layui-btn-small lay-btn-cancel">
+								  <i></i>
+								</button>
+							</td>
+						</tr>
+					</table>
+					</div>
+				</div>
+				<div class="boot-wrapp clearfix">
+					<div id="page" class="left"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	})
+	$(".chart-wrapp ul li").on("click",function() {
+		$(this).addClass("chart-this").siblings().removeClass("chart-this");
+		var $dangqian = $(".chart-item").eq($(".chart-wrapp ul li").index(this)); 
+		$dangqian.addClass("chart-show"); 
+		$dangqian.siblings().removeClass("chart-show"); 
+	})
+	layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+});
+</script>

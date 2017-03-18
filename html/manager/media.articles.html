@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-文章管理</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>文章管理</a></li>
+            <li><span>/</span></li>
+            <li name="count"><a href="javascript:;"><i></i>共<?php echo $params['count']; ?>篇</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span onclick="window.location.href='/media/articles.html?ob=1'" style="cursor:pointer;color:#00a0e9"><a>按点击量</a></span>
+                        <span onclick="window.location.href='/media/addArticle.html'" style="cursor:pointer"><a>添加文章</a></span>
+                        <span onclick="window.location.href='/media/articleType.html'" style="cursor:pointer"><a>修改分类</a></span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" name="info" placeholder="输入标题关键字搜索">
+                        <span name="search" style="cursor: pointer">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--<th width="5%">ID</th>-->
+                    <th width="15%">缩略图</th>
+                    <th width="30%">标题</th>
+                    <th width="15%">创建日期</th>
+                    <th width="8%">点击</th>
+                    <th width="17%">所属/作者</th>
+                    <th width="5%">操作</th>
+                </tr>
+                <?php foreach($params['article'] as $v){ ?>
+                <tr>
+                    <!--<td><?php echo $v['id']; ?></td>-->
+                    <td>
+                        <img style="width:139px;height:105px" src="<?php echo empty($v['images'])?'/images/manager/product.jpg':$v['images']; ?>" alt="">
+                    </td>
+                    <td><a href="http://d27.ichuk.com/info/article.html?id=<?php echo $v['id']; ?>" ><?php echo $v['title']; ?></a></td>
+                    <td style="text-align: center"><?php echo date('Y-m-d',$v['time']); ?>&nbsp;&nbsp; <?php echo date('H:i:s',$v['time']); ?></td>
+                    <td><?php echo $v['view_num']; ?></td>
+                    <td><?php echo empty($v['cname'])?'其他':$v['cname']; ?>/<?php echo empty($v['mname'])?'实验圈':$v['mname']; ?></td>
+                    <td>
+                        <?php
+                            if($v['recommend'] == 0){
+                            ?>
+                            <span newsid="<?php echo $v['id']?>" class="rec" style="text-align: center;cursor: pointer;color: white;background:#b5d5ff;width: 100px;height: 30px;line-height: 30px;display: inline-block;">推荐</span>
+                        <?php
+                            }else{
+                            ?>
+                            <span value="<?php echo $v['id']?>" class="nrec" style="cursor: pointer;text-align: center;color: white;background:#ff0038;width: 100px;height: 30px;line-height: 30px;display: inline-block;">取消推荐</span>
+                        <?php
+                            }
+                        ?>
+                        <span newsid="<?php echo $v['id']?>" class="del" style="text-align: center;cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+                            删除
+                        </span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class=" clearfix" id="page">
+                <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+                <p class="">
+                    共<?php echo($params['pager']->getPageCount()); ?>页
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    /*var order=GetQueryString('order');
+    var pages=$('li[name=count]').attr('count');
+    var page=GetQueryString('page');
+    var info=GetQueryString('info');
+    var url='../media/articles.html?';
+    if(order){
+        url+='order='+order;
+    }
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = url+'?info'+info+'&page='+obj.curr;
+                }
+            }
+        });
+    });*/
+
+    $(document).on('click','.del',function(){
+        var id=$(this).attr('newsid');
+        var alert = layer.confirm("是否删除？", {
+            title:"温馨提示",
+            btn: ['确认','取消'] //按钮
+        }, function(){
+            layer.close(alert);
+            Delete(id);
+        }, function(){
+
+        });
+    });
+
+    $(document).on('click','.rec',function(){
+        var id=$(this).attr('newsid');
+        var alert = layer.confirm("是否推荐？", {
+            title:"温馨提示",
+            btn: ['确认','取消'] //按钮
+        }, function(){
+            layer.close(alert);
+            recommend(id,0);
+        }, function(){
+
+        });
+    });
+
+    $(document).on('click','.nrec',function(){
+        var id=$(this).attr('value');
+        var alert = layer.confirm("是否取消推荐？", {
+            title:"温馨提示",
+            btn: ['确认','取消'] //按钮
+        }, function(){
+            layer.close(alert);
+            recommend(id,1);
+        }, function(){
+
+        });
+    });
+
+    function recommend(id,flag){
+        var url="/service/RecommendArticleServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"id":id,"flag":flag},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+
+    }
+
+    function Delete(id){
+        var url="/service/DeleteArticleServ.html";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {"id":id},
+            dataType: "json",
+            success: function (data) {
+                if(data.ret=='1'){
+                    window.location.reload(-1);
+                }else{
+                    layer.alert(data.msg);
+                }
+            },
+            error: function (data) {
+                layer.alert("error");
+            }
+        });
+    }
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+    $("span[name=search]").on('click',function(){
+        var info=$("input[name=info]").val();
+            window.location.href="/media/articles.html?info="+info;
+    })
+
+</script>

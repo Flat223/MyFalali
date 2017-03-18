@@ -1,0 +1,42 @@
+#search-con{
+    width: 529px;
+    padding: 0;
+}
+.qr_l{
+    line-height: 1!important;
+}
+body{
+    font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53' !important;
+}
+#add-boot >span >a >a>span{
+    color: #fff !important;
+}
+a{
+    color: #525252 !important;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:none !important;
+    color: #00bfb8!important;
+}
+.footer_list ul li>a{
+    color: #FFFFFF!important;
+}
+.qr_l h2,.qr_l h3{
+    font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53' !important;
+    margin-bottom: 14px;
+}
+.mainContent .main-wrapp table td a.payerInfo,.mainContent .main-wrapp table td a.operate{
+    color:#fff !important;
+    opacity: 0.8;
+}
+.mainContent .main-wrapp table td a.payerInfo:hover,.mainContent .main-wrapp table td a.operate:hover{
+    opacity: 1;
+}
+.tool-bar ul li a{
+    height: 40px !important;
+}
+#page ul li.page_active a, #page ul li a:hover{
+    color: #FFFFFF!important;
+}
+

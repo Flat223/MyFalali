@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>购物车</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/shopCart.css">
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#toPay").click(function(){
+            window.location.href="/personal/payOrder.html";
+        })
+    })
+</script>
+<body>
+    <div class="title">购物车</div>
+    <div class="cart_div">
+        <div class="cart_img"><img width="100%"  src="/images/mobile/yes.png"></div>
+        <div class="cart_goods"><img width="100%" src="/images/temp_mobile/mallImage.png"></div>
+        <div class="cart_info">
+            <div class="cart_name">名称</div>
+            <div class="cart_type">型号分类:型号名称</div>
+            <div class="cart_price">29.00</div>
+                <div class="cart_count">
+                    <div class="cart_jiajian"><input type="image" width="100%" height="100%" src="/images/mobile/reduce.png"></div>
+                    <div class="cart_value">1</div>
+                    <div class="cart_jiajian"><input type="image" width="100%" height="100%" src="/images/mobile/add.png"></div>
+                </div>
+        </div>
+    </div>
+    <hr>
+    <div class="cart_div">
+        <div class="cart_img"><img width="100%"  src="/images/mobile/yes.png"></div>
+        <div class="cart_goods"><img width="100%" src="/images/temp_mobile/mallImage.png"></div>
+        <div class="cart_info">
+            <div class="cart_name">名称</div>
+            <div class="cart_type">型号分类:型号名称</div>
+            <div class="cart_price">29.00</div>
+            <div class="cart_count">
+                <div class="cart_jiajian"><input type="image" width="100%" height="100%" src="/images/mobile/reduce.png"></div>
+                <div class="cart_value">1</div>
+                <div class="cart_jiajian"><input type="image" width="100%" height="100%" src="/images/mobile/add.png"></div>
+            </div>
+        </div>
+    </div>
+    <!--<div style="width: 100%;height: 50%;background-color: gainsboro;margin-top: "></div><br>-->
+    <div class="cart_buttom">
+        <div class="cart_index">
+            <div class="cart_indeximg"><img  src="/images/mobile/no.png"></div>
+            <div class="cart_choose">全选</div>
+            <div class="cart_heji">合计:29.00元</div>
+        </div>
+        <div id="toPay" class="cart_jiesuan">结算</div>
+    </div>
+</body>
+</html>

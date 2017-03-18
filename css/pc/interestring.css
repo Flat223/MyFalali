@@ -1,0 +1,335 @@
+.box_l dl dt,
+.box_l dl dd{
+	float: left;
+	padding: 10px;
+}
+.box_l dl dd{
+	line-height: 30px;
+	/*margin-top: 10px;*/
+}
+.box_l{
+	width: 850px;
+}
+.box_r{
+	width: 300px;
+}
+.box_l dl {
+	position: relative;
+}
+.box_l >p{
+	margin: 10px 0;
+	/*padding-left: 127px;*/
+}
+.box_l .box-des span{
+	display: inline-block;
+	color: #999;
+	margin-right: 10px;
+}
+.box_l .box-des{
+	padding-bottom:10px; 
+}
+.box_l dl>span.hade:hover:after{
+	position: absolute;
+    top: 40px;
+    height: 30px;
+    right: 17px;
+    background: #A4A4A4;
+    width: 66px;
+    content: "不感兴趣";
+    text-align: center;
+    color: #fff;
+    line-height: 30px;border-radius: 5px;
+    border: 6px transparent solid #fff;
+    z-index: 9;
+}
+.box_l dl>span.hade:hover i:after{
+	content:"";
+	position: absolute;
+    width: 10px;
+    height: 10px;
+    width: 0;
+    height: 0;
+    right: 40px;
+    top: 58px;
+    z-index: 11;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #A4A4A4;
+}
+.box_l dl>span.hade{
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    margin-right: 45px;
+    color: #ccc;
+    cursor: pointer;	
+    margin-top: .5em;
+}
+.fr_case ul li{
+	float: left;
+	width: 50px;
+	margin:5px 14px;
+	cursor: pointer;
+}
+.fr_case ul li:hover i{
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background: url(/images/temp_pc/icon5.png);
+/*     top: 0; */
+    right: 0;
+    cursor: pointer;
+}
+.fr_case ul li i:hover:after{
+	content: "关注";
+	color: black;
+	background: #fdfdfd;
+	font-size: 10px;
+	width: 50px;
+	height: 17px;
+	line-height: 17px;
+	text-align: center;
+	position: absolute;
+	z-index: 999;
+	top: 23px;	
+}
+.fr{
+	padding: 5px 0;
+}
+.fr_case ul li p{
+	text-align: center;
+	padding: 10px 0;
+}
+.fr_case ul{
+	margin-left: -14px;
+	overflow: hidden;
+}
+.button{
+	display: inline-block;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	color: #fff;
+	background: #00bfb8;
+	text-align: center;
+}
+.recomment-c dl dt,
+.recomment-c dl dd
+{
+float: left;
+padding: 10px 10px 10px 0;
+}
+.recomment-c dl dd h1{
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 10px;
+	/*margin-top: 10px;*/
+}
+.rec-p{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+/*兴趣圈子1*/
+.p1{
+	margin-top: 60px;
+	font-size: 18px;
+	text-align: center;
+}
+.p2{
+	margin-top: 10px;
+	font-size: 18px;
+	text-align: center;
+	color: #AAA9A9;
+	margin-bottom: 20px;
+}
+.p3{
+	margin-top: 20px;
+	font-size: 18px;
+	text-align: center;
+	color: #AAA9A9;
+	margin-bottom: 40px;
+}
+.p_inpt{
+	border: 1px solid #ddd;
+	height: 40px;
+	line-height: 40px;
+	width: 600px;
+	margin: auto;
+}
+.p_inpt input{
+	width: 450px;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 1em;
+}
+.p_inpt span{
+	background: #00bfb8;
+	color: #fff;
+	width: 150px;
+	height: 40px;
+	line-height: 38px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+.instro_list{
+	width: 700px;
+	margin: auto;
+}
+.instro_list dl {
+	width: 300px;
+    float: left;
+    margin: 10px 20px;
+}
+.instro_list dl dt
+,.instro_list dl dd{
+float: left;
+padding: 10px 10px 10px 0;
+}
+.instro_list dl dd p{
+	font-size: 18px;
+	margin-top: 15px;
+}
+.instro_list dl dt img{
+	width: 48px;
+	height: 48px;
+}
+
+/*关注圈子*/
+.want-like{
+	width: 900px;
+	margin: auto;
+	margin-left: 200px;
+}
+.want-like ul li{
+	float: left;
+	position: relative;
+	width: 140px;
+	height: 140px;
+	margin: 10px;
+}
+.want-like ul li img{
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+.want-like ul li span{
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	background: rgba(0,0,0,.3);
+	color: #fff;
+	width: 100%;
+	text-align: center;
+}
+.want-like ul li i{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	top: 0;
+	left: 0;
+	background: url(/images/pc/choose-type.png);
+	position: absolute;
+	display: none;
+}
+.want-like a{
+	width: 260px;
+	height: 38px;
+	line-height: 38px;
+	margin: auto;
+	display: block;
+    margin-right: 383px;
+    margin-top: 40px;
+}
+.want-like a:hover{
+	color: #fff
+}
+
+.app-join{
+	padding: .5em 1em;
+	background: #00bfb8;
+	color: #fff;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.list-one{
+	padding: .5em 0 ;
+	border-bottom: 1px solid #ddd;
+}
+.list-one p.title{
+    padding-left: 110px;
+    font-size: 15px;
+    margin-top: -35px;
+    margin-bottom: 20px;
+}
+.comm-item{
+	margin: 1em 0;
+}
+.comm-item div.right{
+	width: 88%;
+}
+.comm-item div.left{
+	width: 10%;
+}
+.comm-item div.right textarea{
+	border:1px solid #ddd;
+	width: 100%;
+}
+.comm-item div.left img{
+	padding: .5em;
+}
+.push-item{
+	padding: .5em 1em;
+	background: #00bfb8;
+	color: #fff;
+	margin-top: 10px;
+	float: right;
+	cursor: pointer;
+}
+.dynamic dl dd p:first-of-type{
+	margin-top: -24px;
+    font-size: 15px!important;
+    font-weight: bold!important;
+}
+.dynamic dl dd p{
+	line-height: 25px;
+	margin: 0;
+}
+.dynamic dl dd>ul li{
+	float: left;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+.dynamic p:first-of-type{
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.dynamic dl {
+	border-bottom: 1px solid #ddd;
+	padding: 1em 0;
+}
+.emoji-item{
+    display: inline-block;
+    background: url(/images/pc/icon-ins.png) no-repeat 0px 0px;
+    width: 28px;
+    height: 28px;
+}
+.img-item{
+    display: inline-block;
+    background: url(/images/pc/icon-ins.png) no-repeat -44px 0px;
+    width: 28px;
+    height: 28px;
+}
+.video-item{
+    display: inline-block;
+    background: url(/images/pc/icon-ins.png) no-repeat -88px 0px;
+    width: 28px;
+    height: 28px;
+}
+.toPicImg{
+	width: 100px;
+}
+.toPiCon{
+	width: 710px;
+}

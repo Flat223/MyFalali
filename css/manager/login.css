@@ -1,0 +1,555 @@
+@charset "utf-8";
+html{color:#333; } 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+body,button,input,select,textarea{font: 15px "微软雅黑",Tahoma,Verdana,"宋体"} 
+input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:inherit;}
+fieldset,img{border:0;}
+iframe{display:block;}
+abbr,acronym{border:0;font-variant:normal;}
+del{text-decoration:line-through;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500;}
+ol,ul{list-style:none;}
+ol{margin-left: 30px;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+b { font-weight:normal;}
+i { font-style:normal;}
+q:before,q:after{content:'';}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+a{
+	text-decoration: none;
+}
+
+body{
+	
+}
+
+table{
+	margin-bottom: 10px;
+	border-collapse: collapse;
+	display: table;
+}
+td{
+	border-width: 0.8pt;
+	border-color: rgb(0, 0, 0);
+	padding: 0pt 5.4pt;
+}
+
+/*--- 登录、注册 ---*/
+.login-box { height: 460px; padding: 20px 0 160px 0;}
+.login-form { background: rgba(38,35,46,0.8); padding: 35px; margin: 0 auto; width: 220px;}
+.login-tit { font-size: 24px; color: #fff; padding-bottom: 20px;}
+.login-input { width: 200px; padding:0 10px; height: 39px; line-height: 39px; font-size: 16px; margin-bottom: 10px; border: none;} 
+.login-forget { margin-bottom: 15px; text-align: right;}
+.login-forget a { color: #fff; font-size: 14px;}
+.login-btn { cursor: pointer; width: 220px; height: 39px; line-height: 39px; background: #f87205; color: #fff; font-size: 20px; border: none; margin-bottom: 15px;}
+.login-reg { display: block; width: 220px; height: 39px; line-height: 39px; background: #fff; color: #f00; font-size: 20px; text-align: center;}
+
+.other-login { margin-top: 50px; border-top: 1px dotted #ddd;}
+.other-login p {
+	padding: 5px 0;
+	color: white;
+}
+.other-login li { float: left; margin-right: 15px;}
+.other-login li a {
+	float: left; 
+    color: white;
+}
+.loginBox-R { width: 300px; padding-top: 50px;}
+.loginBox-R p { text-align: center; padding-bottom: 10px;}
+.loginBox-R .p1 { font-size: 14px;}
+.btn-blue { background: #2282e3;}
+
+.notice_msg{margin: 10px;text-align: center;padding: 10px;background-color: rgb(255, 165, 0);color: white;border: 1px solid #FF7400;}
+.notice_msg .notice_input_password{
+	border: none;
+	padding: 5px 2%;
+	border-radius: 5px;
+	margin: 5px 0;
+	width: 92%;
+}
+.notice_msg .notice_input_submit{
+	border: none;
+	padding: 5px 2%;
+	border-radius: 5px;
+	margin: 5px 0;
+	color: white;
+	background-color: #0094FF;
+	cursor: pointer;
+	width: 96%;
+} 
+	
+.position{
+	padding: 5px 10px;
+	font-size: 15px;
+}
+.position a{
+	color: #413e3e;
+}
+
+.ihavedone .description{
+	text-align: center;
+	padding: 2%;
+	background-color: rgba(255, 107, 0, 0.8);
+	color: white; 
+	bottom: 0;
+	width: 94%;
+	margin: 1%;
+	cursor: pointer;
+	border-radius: 5px; 
+}
+.ihavedone .description span{
+  display: -webkit-inline-box;
+  height: 25px;
+}
+.ihavedone .description span img{
+    height: 30px;
+}
+.ihavedonewrap textarea{
+	width: 94%;
+	border: none;
+	background-color: #F9F9F9;
+	padding: 3%;
+	margin: 10px 0;
+	font-size: 13px;
+}
+.ihavedonewrap .submit_ihavedone{
+	display: block;
+	width: 100%;
+	border: none;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.ihavedonewrap .submit_ihavedone:hover{
+	background-color: red;
+}
+.joinlist{
+	text-align: center; 
+	padding: 10px 0;
+	margin: 10px 5px;
+	overflow: hidden;
+}
+.joinlist .joinitem{
+	overflow: hidden;
+	float: left;
+	width: 46%;
+	margin: 2%; 
+}
+.joinlist .joinitem .handle{
+	overflow: hidden; 
+	width: 100%;
+	background-color: white; 
+}
+.joinlist .joinitem .handle i{
+    float: left;
+    display:block;
+    overflow: hidden;
+    padding: 5px 0;
+    width: 33.33333444%
+}
+.joinlist .joinitem .handle i.split{
+    background-color: #E8E8E8;
+}
+.joinlist .joinitem .handle i div{
+	font-size: 12px;
+    display:  block;
+}
+.joinlist .joinitem .joinlink{
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+.joinlist .joinitem .info{
+	padding: 2%;
+	overflow: hidden; 
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 96%;
+}
+.joinlist .joinitem .info li{ 
+	line-height: 30px;
+	margin-right: 10px; 
+	text-align:left;
+	font-size: 13px;
+}
+.joinlist .joinitem .info li b{
+	line-height: 18px;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+}
+.joinlist .joinitem .info li b,.joinlist .joinitem .info li i{ 
+    display: block;
+}
+joinlist .joinitem .info li i{
+    overflow: hidden;
+    font-size:12px;
+}
+.joinlist .joinitem .litpic img{
+	width: 100%;
+}
+.joinlist .joinitem .info li i .face,.joinlist .joinitem .info li i .writer{
+    float: left;
+}
+.joinlist .joinitem .info li i .writer{
+    margin-left:10px;
+}
+.joinlist .joinitem .info li i .face img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.joinlist .jointitle{
+	font-size: 13px;
+	color: red;
+	text-align: left;
+	padding: 0 10px;
+	border-left: 5px solid red;
+	margin-left: 10px;
+}
+.joinlist .jointitle .refresh{
+	float: right;
+	color: rgb(0, 158, 255);
+	border: 1px solid rgb(0, 158, 255);
+	padding: 0 5px;
+	border-radius: 3px;
+}
+.navgation{
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 99999;
+}
+.navgation .navitem{
+	float: left;
+	width: 25%;
+	padding: 8px 0;
+	text-align: center;
+	border-bottom:3px solid rgba(255, 255, 255, 0);
+	cursor: pointer;
+	color: rgba(34, 34, 34, 1);
+}
+.navgation .navitem.on{
+	border-bottom:3px solid orange;
+}
+.content-wrap .commentlist{
+	padding: 5px;
+	background-color: #F7F7F7; 
+}
+.content-wrap .commentlist .commenttitle{
+    text-align: center;
+    color: rgb(146, 146, 146);
+    font-size: 15px;
+    margin: 20px 0;
+    font-weight: 200;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+.commentitem{
+	padding: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.commentitem ul{
+	float: left;
+}
+.commentitem ul.face img{
+	height: 35px;
+	width: 35px;
+	border-radius: 3px;
+}
+.commentitem ul.msg{
+	padding:0 10px;
+}
+.commentitem ul.msg li.nickname{
+    color: gray;
+    overflow: hidden;
+}
+.commentitem ul.msg li.nickname .name{
+	float: left;
+}
+.commentitem ul.msg li.nickname .zan,.commentitem ul.msg li.nickname .comment{
+	float: right;
+    margin-left: 10px;
+}
+.commentitem ul.msg li.nickname .zan .icon-praise{
+	display: inline-block;
+	margin-right: 7px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/ui-icon.png) no-repeat;
+	background-position: -16px 0;
+}
+.commentitem ul.msg li.nickname .comment .icon-praise{
+	display: inline-block;
+	margin-right: 7px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/ui-icon.png) no-repeat;
+	background-position: -32px 0;
+}
+.commentitem ul.msg li.content{
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+.commentitem ul.msg li.content msg{
+	background-color: wheat;
+	padding: 5px 10px;
+	border-radius: 3px;
+	display: block;
+	color: #4D4D4D;
+	font-size: 14px;
+	border: 1px solid #E2C195;
+}
+.commentitem ul.msg li.content msg user{
+	border-radius: 3px;
+	display: block;
+	color: gray;
+	border-bottom: 1px dotted #DF9C45;
+}
+.commentitem ul.msg li.content content{
+	padding: 5px 10px;
+	display: block;
+}
+.commentitem ul.msg li.pubdate{
+	font-size: 12px;
+	color: #BABABA;
+}
+.commenttool{overflow: hidden}
+.commenttool .commentsend{
+	border: 1px solid #00A7FD;
+	color: #00A7FD;
+	padding: 3px 10px;
+	font-size: 13px;
+	border-radius: 3px;
+	float: right;
+}
+.clickmore{
+	background-color: rgb(189, 189, 189);
+	color: white;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 3px;
+}
+.followarchive{
+	overflow: hidden;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	font-size: 15px;
+	margin: 30px 0 0 0;
+}
+.followarchive .followmain{
+	overflow: hidden;
+	color: gray;
+}
+.followarchive .followmain ul{float: left;}
+.followarchive .followmain .image{
+    width: 30%;
+}
+.followarchive .followmain .description{
+	width: 66%;
+	padding:2%;
+}
+.followarchive .followtitle{
+	padding: 5px 0;
+	color: #626262;
+}
+
+/*dialog*/
+
+.dialog_wrap{
+    border-radius:1px; 
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	z-index: 100;
+	background-color: white;
+}
+.dialog_title{
+    color:white;
+	overflow:hidden;
+	padding: 5px ;
+	border-bottom: none;
+	background-color: #272727;
+}
+.dialog_title ._title{float:left;}
+.dialog_title ._close{
+    float:right;
+	font-size: 36px;
+	height: 24px;
+	line-height: 16px;
+	cursor: pointer;
+}
+.dialog_title ._close:hover{color:orange;}
+.dialog_content{
+	overflow: hidden;
+	padding: 5px 10px;
+	background-color: white;
+	margin: 1px;
+	border: none;
+	border-radius: 1px;
+	overflow-y: auto;
+}
+
+.dialog_wrap .dialog_handle{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+}
+
+.dialog_wrap .dialog_handle a{
+    width: 44%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+	color:white;
+    margin:3%;
+}
+
+.dialog_wrap .dialog_handle a:first-of-type{
+    background-color: #58c2f4;
+}
+.dialog_wrap .dialog_handle a:last-of-type{
+    background-color: gray;
+}
+
+.dialog_wrap .dialog_handle a:hover{ 
+    color:white;
+    background-color: #dcdcdc;
+}
+
+.dialog_content .tagitem{cursor:pointer;float:left;padding: 3px 10px;border: 1px solid #ccc;font-size: 13px;margin: 5px 5px 0 0;}
+.dialog_content .tagitem:hover{background-color: #ccc;}
+.dialog_content .tagitem.on{background-color: red;color:white;border: 1px solid #B30000;}
+.dialog_content .pagebreak{clear: both;color: gray;font-size: 13px;padding: 5px 0;overflow:hidden;}
+.dialog_content .pagebreak a{float: left;padding:0 5px;}
+.dialog_content .pagebreak a.page_handle{background-color: orange;margin-right: 10px;color: white;border-radius: 3px;cursor: pointer;}
+.dialog_content .pagebreak a.page_handle:hover{background-color: #ff3000;}
+
+ 
+
+.content-wrap .wrap-content{ 
+	float: left; 
+	background-color: white;
+	border: 1px solid #DFDFDF;
+    border-radius: 3px;
+}
+.icon-sprite{
+	background-image: url(../../images/icon-sprite.png);
+	display: inline-block;
+}
+
+.icon-sprite.sprite-dynamic{
+	width: 15px;
+	height:15px;
+}
+.icon-sprite.sprite-comment{
+	width: 15px;
+	height:15px;
+	background-position: -75px 0;
+}
+.icon-sprite.sprite-zan{
+	width: 15px;
+	height:15px;
+	background-position: -90px 0;
+}
+.icon-sprite.sprite-click{
+	width: 15px;
+	height:15px;
+	background-position: -105px 0;
+}
+.icon-sprite.sprite-hot{
+	width: 15px;
+	height:15px;
+	background-position: -45px 0;
+}
+.icon-sprite.sprite-update{
+	width: 30px;
+	height:30px;
+	background-position: 0 -15px;
+}
+.icon-sprite.sprite-feedback{
+	width: 30px;
+	height:30px;
+	background-position: -30px -15px;
+}
+.icon-sprite.sprite-service{
+	width: 30px;
+	height:30px;
+	background-position: -60px -15px;
+}
+
+ 
+
+.employ-content{
+    padding:10px;
+}
+
+.employ-content .employ-content-body{
+    padding:10px 0;
+}
+
+.employ-content h1{
+    font-size:16x;
+	font-weight:bold;
+}
+.employ-content .employ-content-tool{
+    padding:10px 0;
+}
+.employ-content .employ-content-body .body-guide{
+    padding: 5px;
+    margin-bottom: 10px;
+    border-left: 3px solid #ccc;
+}
+
+.employ-content .employ-content-body .body-confirm{
+    color: white;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+	display: inline-block;
+    margin: 20px 0;
+    background-color: #ff6161;
+}
+
+.employ-content .employ-content-body .body-content{
+    
+}
+
+.employ-banner{ 
+}
+.employ-banner img{
+    border-radius:3px;
+	margin:0 1%;
+	width:98%;
+    box-shadow: 0 0 3px #000;
+}

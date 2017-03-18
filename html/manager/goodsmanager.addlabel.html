@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <title></title>
+</head>
+<body>
+<?php
+	$level = $params['level'];
+?>
+<table style="margin-top: 12px;line-height: 30px;">
+    <tr>
+        <td style="text-indent: 1em;text-align: center">分类名称 :</td>
+        <td>
+	        <input name="typeName" type="text" 
+	        	style="border: 1px solid #9e9e9e;margin-left: 15px; height: 30px;width: 260px;"/>
+	    </td>
+    </tr>
+    <?php 
+    	if($params['level']=='2'){
+    ?>
+    <tr>
+        <td style="text-indent: 1em;text-align: center">一级类:</td>
+        <td>
+	        <select name="parentid" 
+		        style="min-width: 120px;height: 34px;margin: 10px 0 0 15px;border: 1px solid #ddd;">
+	        <?php 
+	        	foreach($params['first_type'] as $firstType){ 
+	        ?>
+	        	<option value="<?php echo $firstType['ptid'] ?>">
+	        		<?php echo $firstType['name']; ?>
+	        	</option>
+	        <?php 
+	        	} 
+	        ?>
+	        </select>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+<br>
+<?php
+	if($level == 2){
+?>
+	<span id="save" class="layui-btn layui-btn-warm"
+		style="margin-left: 150px; width: 100px;">保存
+	</span>
+<?php
+	} else {
+?>
+	<span id="save" class="layui-btn layui-btn-warm"
+		style="margin-left: 150px; width: 100px; margin-top: 20px">保存
+	</span>
+<?php
+	}
+?>
+<div style="display: none">
+	<input name="parentid" type="hidden" value="<?php echo $params['parentid']; ?>"/>
+	<input name="level" type="hidden" value="<?php echo $params['level']; ?>"/>
+</div>  
+        
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript" src="/js/manager/addPropertyType.js"></script>
+</body>
+</html>

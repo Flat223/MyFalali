@@ -1,0 +1,95 @@
+.order_p {
+	color: #00bfb8;
+	padding: 20px 0px 10px 10px;
+	border-bottom: 1px solid #ddd;
+}
+.bind_search{
+	margin-top: 15px;
+}
+.bindding_outbox input{
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 1em;
+}
+.bindding_outbox span{
+	display: inline-block;
+	background: #f5f8fa;
+	border-left: 1px solid #ddd;
+	line-height: 40px;
+	height: 40px;
+	width: 80px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: -4px;
+}
+.bindding_outbox{
+	border: 1px solid #ddd;
+}
+.bindingbox p{
+	text-align: center;
+    margin-top: 20%;
+    font-size: 18px;
+    color: #929292
+}
+.bindingbox p img{
+	vertical-align: middle;
+	margin: 0 10px;
+}
+/*搜索结果*/
+.result {
+	padding: 16px 0;
+}
+
+.result dl dt,
+.result dl dd {
+	float: left;
+}
+.result dl dd {
+	margin: 5px;
+	margin-left: 10px;
+}
+.result dl dd span{
+	height: 20px;
+	line-height: 20px;
+	display: block;
+	margin: 5px 0;
+}
+
+.result .bind_state {
+	margin: 20px 20px;
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+}
+
+.bind_state .bind_intro{
+	width: 100px;
+	text-align: right;
+	color: gray;
+	float: left;
+}
+
+.bind_state a{
+	width: 100px;
+	background: #00bfb8;
+	color: white;
+	text-align: center;
+	float: right;
+}
+
+.bind_state a:hover{
+	color:white;
+}
+
+.result .applying{
+	width: 100px;
+	line-height: 30px;
+	height: 30px;
+	background: #e4e4e4 ;
+	color: #fff;
+	text-align: center;
+	margin: 20px 0 ;
+}
+

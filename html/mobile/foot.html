@@ -1,0 +1,52 @@
+
+<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+<link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">  
+    $(function () {
+        $("#index").click(function(){
+            window.location.href="/index.html";
+        });
+        $("#lab").click(function(){
+            window.location.href="/lab/cooperateLab.html";
+        });
+        $("#mall").click(function(){
+            window.location.href="/mall/mall.html";
+        });
+        $("#my").click(function(){
+            window.location.href="/personal/personalCenter.html";
+        })
+        function is_weixin(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                $(".title").hide();
+            }
+        }
+        is_weixin();
+
+    })
+</script>
+<div style="height:10%" class="footPlace"></div>
+<div class="head_buttom">
+	<?php
+	    $menuStyle = !empty($params['style'])?$params['style']:"";
+	?>
+    <div class="foot_home" >
+        <!--<i id="index" class="img1" ></i>-->
+        <img id="index" height="40%" class="img1" src="/images/mobile/home<?php echo $menuStyle=='index'?'1':'2'; ?>.png">
+        <span>首页</span>
+    </div>
+    <div class="foot_home">
+        <img id="lab" height="40%" class="img2" src="/images/mobile/lab<?php echo $menuStyle=='lab'?'1':'2'; ?>.png">
+        <span>实验室</span>
+    </div>
+    <div class="foot_home">
+        <img id="mall" height="40%" class="img2" src="/images/mobile/mall<?php echo $menuStyle=='mall'?'1':'2'; ?>.png">
+        <span>商城</span>
+    </div>
+    <div class="foot_home">
+        <img id="my" height="40%" class="img2" src="/images/mobile/my<?php echo $menuStyle=='my'?'1':'2'; ?>.png">
+        <span>我的</span>
+    </div>
+</div>
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-商品属性</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/propertyManager.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <title></title>
+</head>
+<body>
+
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>商品管理</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>商品属性</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span class="levelone"><a>一级类列表</a></span>
+                        <span class="addlevel" level="1">
+                        	<a>添加一级类</a>
+                        </span>
+                        <span class="addlevel" level="2">
+                        	<a>添加二级类</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th width="10%">所属一级类</th>
+                    <th width="10%">二级类名</th>
+                    <th width="40%">三级分类</th>
+                    <th width="20%">四级分类</th>
+                    <th width="15%">五级分类</th>
+                    <th width="5%">操作</th>
+                </tr>
+        <?php 
+        	foreach($params['second'] as $secondLevel){ 
+    	?>
+                <tr>
+                    <td><?php echo $secondLevel['pname'] ?></td>
+                    <td>
+	                    <?php echo $secondLevel['name']; ?>
+<!-- 	                    <a name="ptid-<?php echo $secondLevel['ptid']; ?>"> -->
+	                </td>
+                    <td>
+            <?php 
+                foreach($secondLevel['sub_level'] as $thirdLevel){ 
+            ?>
+                        <button name="levelthree" class="prolevel"
+                        	ptid="<?php echo $thirdLevel['ptid']; ?>"
+                        	parentid="<?php echo $thirdLevel['parentid']; ?>"
+                        	>
+						<?php echo $thirdLevel['name']; ?>
+                        </button>
+            <?php 
+            	} 
+            ?>
+                        <button class="addlevel layui-btn"
+                        	parentid="<?php echo $secondLevel['ptid'];?>"
+                        	level="3">
+                            <i class="layui-icon">+</i>
+                        </button>
+                    </td>
+                    <td class="forthBody" 
+	                    ptid="<?php echo $secondLevel['ptid'] ?>">
+                    </td>
+                
+                    <td class="fifthBody" 
+	                    ptid="<?php echo $secondLevel['ptid'] ?>">
+                    </td>
+               
+                    <td>
+                        <span proid="<?php echo $secondLevel['ptid']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								删除
+                        </span>
+                        <span class="update" 
+                        	style="margin-right: 0px; cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;"
+                        	proid="<?php echo $secondLevel['ptid']?>"
+                        	proname="<?php echo $secondLevel['name']?>"
+                        	>
+								修改二级类名
+                        </span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+<!--
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+-->
+        </div>
+    </div>
+</div>
+</div>
+<!-- 	<input name="count" type="hidden" value="<?php echo ceil($params['count']/10); ?>"/> -->
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript" src="/js/manager/propertyManager.js"></script>

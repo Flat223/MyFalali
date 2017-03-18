@@ -1,0 +1,55 @@
+.ref_sqfw{
+    width: 96%;
+    height: 5%;
+    background-color: #dfdfdf;
+    margin-left: 2.4%;
+    line-height: 3rem;
+    margin-top: 2%;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.ref_sqtit{
+    width: 25%;
+    float: left;
+    margin-left: 2%
+}
+.ref_sqtit a{
+    color: red;
+    margin-left: 2%
+}
+.ref_sqinput{
+    width: 70%;
+    float: left;
+    margin-left:2%
+}
+.ref_sqinput input{
+    overflow:auto;
+    border:0px;
+    background-color:transparent;
+    width:100%;
+    outline: none;
+}
+.ref_upload{
+    width: 100%;
+    height:20%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.fileInputContainer{
+    height:179px;
+    background:url("/images/mobile/uploadPZ.png");
+    position:relative;
+    width: 181px;
+    margin-top: 2%;
+    margin-left: 2.4%;
+}
+.fileInput{
+    height:178px;
+    font-size: 181px;
+    position:absolute;
+    right:0;
+    top:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer;
+}

@@ -1,0 +1,119 @@
+/***
+ *	ichuk Style (Default Style)
+ *	ichuk.com  Author Networker  2012
+ **/
+   
+/*---------- base ---------*/
+* {
+	padding:0px;
+	margin:0px;
+}
+html {
+	background:#FCFCFC;
+}
+body {
+	font:15px "微软雅黑",Tahoma,Verdana,"宋体";
+}
+img {
+	border:none;
+}
+
+li,ul,div {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+input,select,button {
+	font:12px Verdana,Arial,Tahoma;
+	vertical-align:middle;
+}
+
+table{
+	margin-bottom: 10px;
+	border-collapse: collapse;
+	display: table;
+}
+td{
+	border-width: 0.8pt;
+	border-color: rgb(0, 0, 0);
+	padding: 0pt 5.4pt;
+}
+  
+/*quickGuide*/
+.quickGuide{display:none;z-index:100; overflow: visible!important; width:65px; padding: 5px; margin-left:650px; bottom:0px; position: fixed; border-radius: 5px; filter: alpha(opacity=90); -moz-opacity: 0.9; opacity: 0.9;}
+.quickGuide .top{border-bottom: 1px dotted #CCC;}
+.quickGuide .top a{background-color:rgb(201, 201, 201);display: block;padding: 10px 5px;color: rgb(255, 255, 255);font-size: 13px;}
+.quickGuide .guestbook a{background-color:rgb(201, 201, 201);display: block;padding: 10px 5px;color: rgb(255, 255, 255);font-size: 13px;}
+.quickGuide .context{overflow:hidden;}
+.quickGuide .context li a{background-color:rgb(67, 117, 199); display: block; padding: 5px;color:rgb(230, 230, 230);border-radius: 5px;border:1px solid rgb(0, 69, 175);text-align:center;}
+
+.dialog_wrap{border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);position: fixed;top: 50px;width: 100%;z-index: 100;background-color: rgba(0, 0, 0, 0.7)}
+.dialog_title{color:white;overflow:hidden;padding: 5px 10px;border-bottom: 1px dotted #ccc;}
+.dialog_title ._title{float:left;}
+.dialog_title ._close{float:right;font-size: 36px;height: 24px;line-height: 24px;cursor: pointer;}
+.dialog_title ._close:hover{color:orange;}
+.dialog_content{overflow:hidden;padding: 5px 10px;background-color: white;margin: 5px 10px;border: 1px solid #ccc;border-radius: 5px;overflow-y: scroll;}
+
+.dialog_content .tagitem{cursor:pointer;float:left;padding: 3px 10px;border: 1px solid #ccc;font-size: 13px;margin: 5px 5px 0 0;}
+.dialog_content .tagitem:hover{background-color: #ccc;}
+.dialog_content .tagitem.on{background-color: red;color:white;border: 1px solid #B30000;}
+.dialog_content .pagebreak{clear: both;color: gray;font-size: 13px;padding: 5px 0;overflow:hidden;}
+.dialog_content .pagebreak a{float: left;padding:0 5px;}
+.dialog_content .pagebreak a.page_handle{background-color: orange;margin-right: 10px;color: white;border-radius: 3px;cursor: pointer;}
+.dialog_content .pagebreak a.page_handle:hover{background-color: #ff3000;}
+
+
+/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000; 
+  right: -280px;
+  padding: 10px; 
+  background-color: white;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.crop-button{
+	cursor: pointer;
+	position: absolute;
+	bottom: 20px;
+	display: table;
+	background-color: #F80;
+	padding: 3px 0;
+	border-radius: 5px;
+	color: white;
+	font-size: 13px;
+	width: 95%;
+	text-align: center;
+}
+.crop-button:hover{
+	background-color: red;
+}
+
+.ichuk-ui.v2 #side{width:150px;float:left;margin-left:10px;}
+.ichuk-ui.v2 #side a{margin-bottom: 5px;border: 1px solid #d9d9d9;height: 28px;line-height: 28px;background-color: #f1f1f1;border-radius: 5px;display: block!important;cursor: pointer;text-align: center;margin: 5px 0;font-size: 14px;}
+.ichuk-ui.v2 #side a:hover{background-color:#E7E7E7;}
+.ichuk-ui.v2 #side a.on{color: #00b1cb;}
+.ichuk-ui.v2 #side .secondlist{font-size: 12px;overflow: hidden;padding-left: 20px;}
+.ichuk-ui.v2 #side .secondlist a{margin-left: 30px;text-align: center;font-size: 12px;display: list-item!important;list-style-type: circle;}
+.ichuk-ui.v2 #main{padding:10px 10px 10px 170px;min-height:400px;}
+.ichuk-ui.v2 #main .welcome{font-size: 14px; line-height: 28px;}

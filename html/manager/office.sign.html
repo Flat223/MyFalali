@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-打卡</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/check.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+	<link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/pc/ichuk.com.js"></script>
+	<script type="text/javascript" src="/js/WdatePicker.js" ></script>
+	</head>
+
+<style type="text/css">
+.sign_wrap{
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #ccc;
+	font-size: 13px;
+} 
+.sign_wrap ul.sepreate{
+	padding: 5px 0;
+}
+.sign_wrap ul.sepreate a.done{
+	background-color: rgb(215, 252, 255);
+	padding: 3px 10px;
+	border-radius: 3px;
+	border: 1px solid #00FFF5;
+	color: rgb(0, 158, 255);
+}
+.sign_wrap ul.sepreate a.waiting{
+	display: inline-block; 
+	background-color: orange;
+	color: white;
+	padding: 3px 10px;
+	border-radius:2px;
+	font-size: 12px;
+	border: 1px solid #FF3A00;
+	cursor: pointer;
+}
+.sign_wrap ul.sepreate a.waiting:hover{
+	background-color: red;
+}
+
+.lit_jobwall_list_item{
+	float: left;
+	text-align: center;
+	box-shadow: 0 0 5px #ccc;
+	margin: 5px;
+}
+.lit_jobwall_list_item.on{
+	box-shadow: 0 0 5px #007cff;
+}
+.confirm-data ul.description{
+	padding: 5px;
+	color: rgb(42, 166, 0);
+	background-color: rgba(157, 255, 108, 0.17);
+	border: 1px solid rgb(0, 195, 25);
+	margin: 5px -2px 5px 0;
+}
+.payinfo{
+	color: rgb(42, 166, 0);
+	background-color: rgba(157, 255, 108, 0.17);
+	border: 1px solid rgb(0, 195, 25);
+	width: 96%;
+	padding: 2%;
+	font-size: 13px;
+	margin: 10px 0px 0px;
+	display: block;
+}
+.qimo8{ overflow:hidden; width:815px;}
+.qimo8 .qimo {/*width:99999999px;*/width:8000%; height:30px;}
+.qimo8 .qimo div{ float:left;}
+.qimo8 .qimo ul{float:left; height:30px; overflow:hidden; zoom:1; }
+.qimo8 .qimo ul li{float:left; line-height:30px; list-style:none;}
+.qimo8 li a{margin-right:10px;color:#03A9F4;;}
+</style>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="console_show">
+        <div class="sign_wrap">
+	        <ul style="width:330px;">
+				<div id="demo" class="qimo8">
+					<div class="qimo">
+						<div id="demo1">
+							<ul>
+								<li><a>记得每天打卡哦</a></li>
+								<li><a>   </a></li>
+							</ul>
+						</div>
+						<div id="demo2"></div>
+					</div>
+				</div>
+		        <div id="calendar" ></div>
+	        </ul>
+        </div>
+        <div class="sign_wrap">
+	        <ul class="sepreate" style="border-bottom: 1px dotted #ccc">
+		        <span><?php echo date('Y-m-d',time())?>&nbsp;上班</span>
+		        <span>
+					<?php
+						if(empty($params['am'])){
+						?>
+							<a class="waiting sign" data-type="1" data-limit="09:00">打卡</a>
+					<?php
+						}else{
+						?>
+							<a class="done"><?php echo date('Y-m-d:H:i:m',$params['am']['time'])?>&nbsp;打卡</a>
+					<?php
+						}
+					?>
+		        </span>
+		    </ul>
+	        <ul class="sepreate" style="border-bottom: 1px dotted #ccc">
+		        <span><?php echo date('Y-m-d',time())?>&nbsp;下班</span>
+		        <span>
+					<?php
+						if(empty($params['pm'])){
+						?>
+							<a class="waiting sign" data-type="2" data-limit="18:00">打卡</a>
+					<?php
+						}else{
+						?>
+							<a class="done"><?php echo date('Y-m-d:H:i:m',$params['pm']['time'])?>&nbsp;打卡</a>
+					<?php
+						}
+					?>
+		        </span>
+		    </ul>
+        </div>
+		</div>
+	</div>
+	<input id="userId" type="hidden" value="<?php echo empty($params['aid'])?0:$params['aid'] ;?>">
+</body>
+<script type="text/javascript">
+	var iChuk;
+	var calendar;
+	var idate;
+	var mid = $("#userId").val();
+	var daydate = new Date().getDate();
+	iChuk = iChukCore.Inital();
+	calendar = iChuk.Calendar("#calendar",HandleCalendar,1,false,true);
+
+
+	/*var demo = document.getElementById("demo");
+	var demo1 = document.getElementById("demo1");
+	var demo2 = document.getElementById("demo2");
+	demo2.innerHTML=document.getElementById("demo1").innerHTML;
+	function Marquee(){
+		if(demo.scrollLeft-demo2.offsetWidth>=0){
+			demo.scrollLeft-=demo1.offsetWidth;
+		}
+		else{
+			demo.scrollLeft++;
+		}
+	}
+	var myvar=setInterval(Marquee,30);
+	demo.onmouseout=function (){myvar=setInterval(Marquee,30);}
+	demo.onmouseover=function(){clearInterval(myvar);}*/
+
+	function HandleCalendar(Obj) {
+		console.log(Obj);
+		if(Obj.type == "day") {
+			if(!(Obj.month == 10 || Obj.month == 11 || Obj.month == 12)) {
+				Obj.month = "0"+Obj.month;
+			}
+			idate = Obj.year+"-"+Obj.month;
+		}
+		else if(Obj.type == "month") {
+			if(!(Obj.data == 10 || Obj.data == 11 || Obj.data == 12)) {
+				Obj.data = "0"+Obj.data;
+			}
+			idate = Obj.year+"-"+Obj.data;
+		}
+		ViewPeople(mid,idate);
+	}
+
+	function ViewPeople(imid,date) {
+		$(".day-sign").empty();
+		var url = "/service/GetSignDataServ.html";
+		date = (date == undefined || date == null)?idate:date;
+		console.log(date);
+		$.ajax({
+			type: "POST",
+			url: url,
+			data:{"date":date},
+			dataType: "json",
+			success : function(data){
+				//console.log(data);
+				if(data.total > 0) {
+					for (x in data.items) {
+						var unixTimestamp = new Date(Number(data.items[x].time) * 1000);
+						var day=unixTimestamp.getDate();
+						var hours = unixTimestamp.getHours();
+						var minutes = unixTimestamp.getMinutes();
+						var seconds = unixTimestamp.getSeconds();
+						if(hours <10){
+							hours = "0"+hours;
+						}
+						if(minutes <10){
+							minutes = "0"+minutes;
+						}
+						if(seconds <10){
+							seconds = "0"+seconds;
+						}
+						$(".day-"+day).find("i.type-"+data.items[x].status).detach();
+						$(".day-"+day).css({
+							"position":"relative"
+						});
+						var html= "";
+						if($(".day-"+day).find(".day-sign").size() == 0) {
+							html += "<div class=\'day-sign\' style=\'  bottom: 1px;position: absolute;padding:0px;background-color: rgba(0, 0, 0, 0.5);border-radius: 2px;\'>";
+							if(data.items[x].status == 1) {
+								var color = "lime";
+								var status = "准时上班"+hours+":"+minutes+":"+seconds;
+								if(hours > 9) {
+									color = "red";
+									status = "上班迟到"+hours+":"+minutes+":"+seconds;
+								}
+								else if(hours == 9) {
+									if(minutes > 0) {
+										color = "red";
+										status = "上班迟到"+hours+":"+minutes+":"+seconds;
+									}
+								}
+								html += "<i class=\'type-0\' title=\'"+status+"\' style=\'margin:1px;background-color: "+color+";display: inline-block;line-height: 10px;height:12px;width:12px;border-radius:50%;\'></i>";
+							}
+							else if(data.items[x].status == 2) {
+								var color = "lime";
+								var status = "按时下班"+hours+":"+minutes+":"+seconds;
+								if(hours < 18 ) {
+									color = "red";
+									status = "提前下班"+hours+":"+minutes+":"+seconds;
+								}
+								html += "<i class=\'type-1\' title=\'"+status+"\' style=\'margin:1px;background-color: "+color+";display: inline-block;line-height: 10px;height:12px;width:12px;border-radius:50%;\'></i>";
+							}
+							html += "</div>";
+							$(".day-"+day).append(html);
+						}
+						else {
+							if(data.items[x].status == 1) {
+								var color = "lime";
+								var status = "准时上班"+hours+":"+minutes+":"+seconds;
+								if(hours > 9) {
+									color = "red";
+									status = "上班迟到"+hours+":"+minutes+":"+seconds;
+								}
+								else if(hours == 9) {
+									if(minutes > 0) {
+										color = "red";
+										status = "上班迟到"+hours+":"+minutes+":"+seconds;
+									}
+								}
+								html += "<i class=\'type-0\' title=\'"+status+"\' style=\'margin:1px;background-color: "+color+";display: inline-block;line-height: 10px;height:12px;width:12px;border-radius:50%;\'></i>";
+							}
+							else if(data.items[x].status == 2) {
+								var color = "lime";
+								var status = "按时下班"+hours+":"+minutes+":"+seconds;
+								if(hours < 18 ) {
+									color = "red";
+									status = "提前下班"+hours+":"+minutes+":"+seconds;
+								}
+								html += "<i class=\'type-1\' title=\'"+status+"\' style=\'margin:1px;background-color: "+color+";display: inline-block;line-height: 10px;height:12px;width:12px;border-radius:50%;\'></i>";
+							}
+							$(".day-"+day).find(".day-sign").append(html);
+						}
+					}
+				}
+			},
+			error:function(data){
+				var status = data.status ;
+				var readyState = data.readyState;
+			}
+		});
+	}
+
+	$(".sign").click(function(){
+		if(Number($(this).attr("click"))!=1) {
+			$(this).attr("click",1);
+			$(this).text("打卡中...");
+			var type = $(this).attr("data-type");
+			console.log(type);
+			$.ajax({
+				type: "POST",
+				url: "/service/OASignServ.html",
+				data:{"type":type},
+				dataType: "json",
+				success : function(data){
+					if(data.ret == 1) {
+						layer.alert(data.msg,function () {
+							window.location.reload();
+						});
+					}
+					else {
+						layer.alert(data.msg);
+					}
+				}
+			});
+		}
+	})
+</script>
+</html>

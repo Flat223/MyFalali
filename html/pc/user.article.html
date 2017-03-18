@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的文章</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myarticle.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css" >
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<div class="article">
+			<p class="caption">
+				<span class="lef">我的文章</span>
+				<a href="/user/publisharticle.html" class="right"><i></i>发布文章</a>
+			</p>
+		<?php
+			if(count($params['article']) == 0){
+		?>
+			<p style="text-align: center;margin-top: 20% ;font-size: 18px;color: #929292">暂无文章</p>
+		<?php
+			}
+		?>
+			
+			<ul>
+			<?php
+				$articleArray = $params['article'];
+				foreach ($articleArray as $article) {
+			?>
+				<li class="clearfix">
+					<dl>
+						<dt>
+							<a href="/info/article.html?id=<?php echo $article['id'] ?> ">
+								<img src="<?php echo $article['images']?>" alt="" />
+							</a>
+						</dt>
+						<dd>
+							<h2><?php echo $article['title']; ?></h2>
+							<p class="describe"><?php echo $article['intro']; ?></p>
+							<div class="boot">
+								<span><?php echo(date('Y-m-d',$article['time'])); ?></span>
+								<span>浏览量：<?php echo $article['view_num']; ?></span>
+								
+								<!--<a href="/user/editArticle.html?aid=<?php echo $article['id'] ?>">编辑</a>-->
+								<a class="delete" aid="<?php echo($article['id'] )?>">删除</a>
+								<span><i></i><?php echo $article['category']; ?></span>
+							</div>
+						</dd>
+					</dl>
+				</li>
+			<?php
+				}
+			?>
+			</ul>
+		<?php
+			if($params['pager'] != "" && count($params['article'])>0){		
+		?>
+			<div class=" clearfix" id="page">
+				<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+				<p class="">
+					共<?php echo($params['pager']->getPageCount()); ?>页，到第
+					<input type="text" maxlength="4" id="page_num">页
+					<input class="sub" type="butston" id="goto" value="确定">
+					<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+				</p>
+			</div>
+		<?php
+			}
+		?>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/article.js');
+</script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-购物车</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/shopcart.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200">
+		<div class="ui large breadcrumb clearfix">
+		  <ul>
+		     <li>
+		         <a href="index.html">首页</a>
+		     </li>
+		     <li>></li>
+		     <li>
+		     	购物车
+		     </li>
+		  </ul>
+		</div>
+		<?php 	$cartlist=$params['productlist']; 
+			if(count($cartlist)>0){
+		?>
+		<div class="shopcart">
+			<div class="cart_nav">
+				<ul class="clearfix">
+					<li class="li1">
+						<label for="" style="margin-bottom: 0">
+							<input type="checkbox" class="btnall">全选
+						</label>
+					</li>
+					<li class="li2">商品信息</li>
+					<li class="li3">单价(元)</li>
+					<li class="li4">数量</li>
+					<li class="li5">总额(元)</li>
+					<li class="li6">操作</li>
+				</ul>
+			</div>
+			<?php 
+				$cartlist=$params['productlist'];
+				foreach($cartlist as $key=>$shop){
+			?>
+			<div class="companybox">
+				<div class="company">
+					<input type="checkbox" class="btnshop"/><?php echo($shop['shop_name']);?>
+				</div>
+				
+				<?php 
+					foreach($shop['product'] as $key2=>$product){
+						$images=explode(',',$product['images']);
+				?>
+				<div class="one_shop" value="<?php echo($product['cid']);?>" value2="<?php echo($product['pid']);?>">
+					<ul>
+						<li class="li1">
+							<label for="">
+								<input type="checkbox" class="btn tol" value2="<?php echo($product['pprice']*$product['num']);?>" value="<?php echo($product['cid']);?>">
+							</label>
+						</li>
+						<li class="li2">
+							<a href="/goods/detail.html?pid=<?php echo(md5($product['pid']))?>">
+								<img class="prod_img" src="<?php echo($images[0]);?>" width="130" height="130" alt="">
+							</a>
+							<a href="/goods/detail.html?pid=<?php echo(md5($product['pid']));?>">
+								<p class="title"><?php echo($product['name']);?></p>
+							</a>
+							<?php 
+								foreach($product['property'] as $key3=>$property){
+							?>
+								<p><?php echo($property['pname'])?>：<?php echo($property['name']);?></p>
+							<?php
+								}
+							?>
+							<?php 
+								if($product['testing']>0){	
+							?>
+								<p>服务:&nbsp;&nbsp;发货前质检</p>
+							<?php
+							}
+							?>
+							<?php 
+								if($product['guarantee']>0){	
+							?>
+								<p>服务:&nbsp;&nbsp;延长保修<?php echo($product['guarantee']);?>年</p>
+							<?php
+							}
+							?>
+						</li>
+						<li class="li3">
+							<span class="singlep"><?php echo($product['pprice']);?></span>
+						</li>
+						<li class="li4">
+							<p class="set_p clearfix" value="<?php echo($product['cid']);?>">
+								<span class="down">-</span>
+								<input class="text" type="text" value="<?php echo($product['num']);?>" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"  
+                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+								<span class="up">+</span>
+							</p>
+						</li>
+						<li class="price li5" value="<?php echo($product['pprice']*$product['num']);?>">
+							<?php echo($product['pprice']*$product['num']);?>
+						</li>
+						<li class="li6">
+							<span class="collection">加入收藏夹</span>
+							<span class="delete">删除</span>
+						</li>
+					</ul>
+				</div>
+				<?php
+				}
+				?>
+			
+			</div>
+			<?php
+				}
+			?>
+			
+			<!--结算-->
+			<div class="settlement">
+				<p class="left">
+					<input type="checkbox" class="btnall"/>全选
+					<span id="delete_all" style="cursor: pointer">删除</span>
+					<span class="collection_all" style="cursor: pointer">加入收藏夹</span>
+				</p>
+				<span class="settlement_total">总共0件</span>
+				合计：<i>(不含运费)</i>
+				<span class="checkprice">¥0.00</span>
+				<span class="submit" style="cursor: pointer">结算</span>
+			</div>
+		</div>
+		<?php 
+		}else{	
+		?>
+		<div class="list_wrapper">
+			<div class="noth-item">
+				<p>抱歉，您的购物车为空</p>
+				 
+					您可以  <a href="/lab/shop.html">前往购买</a>
+        	</div>
+		</div>
+
+		<?php
+		}
+		?>
+	</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/shopcart.js');
+</script>

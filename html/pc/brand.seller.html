@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-店家</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/card.css" >
+    <link rel="stylesheet" type="text/css" href="/css/pc/brand_detail.css" >
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/toolbar.css">
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+    <style>
+        .button-span1 {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background: #fff;
+            color: #00bfb8;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid #00bfb8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<?php $brand=$params['brand']?>
+<div class="content w1200">
+    <div class="ui large breadcrumb">
+        <ul class="clearfix">
+            <li>
+                <a href="/lab/shop.html">实验室商城</a>
+            </li>
+            <li>></li>
+            <a>
+                店铺
+            </a>
+
+        </ul>
+    </div>
+    <div class="top_detail clearfix">
+        <dl class="">
+            <dt>
+                <img style="width:170px;height:150px" src="<?php echo($brand['logo']);?>" alt="" />
+            </dt>
+            <dd id="box">
+                <?php echo($brand['shop_name']); ?>
+                <br />
+                <?php echo($brand['address']); ?>
+                <!--<p style="cursor: pointer;text-align: right">更多</p>-->
+            </dd>
+
+            <!--<span>100元</span>-->
+            <?php if(count($params['couponlist'])>0){
+            foreach($params['couponlist'] as $v){
+            ?>
+            <span  name="coupon" class="button-span1" value="<?php echo $v['id']; ?>">
+                <p><?php echo $v['money']; ?></p>
+                <p style="font-size:10px"><?php echo empty($v['name'])?'优惠卷':$v['name']; ?></p>
+            </span>
+            <?php }} ?>
+        </dl>
+    </div>
+    <div class="category clearfix">
+        <p>
+            <span>分类：</span>
+            <span style="cursor: pointer" value="1">实验室设备仪器</span>
+            <span style="cursor: pointer" value="93">试剂</span>
+            <span style="cursor: pointer" value="122">耗材</span>
+        </p>
+
+    </div>
+    <div class="sort">
+        <div class="left">
+            <ul>
+                <li value="1">综合排序</li>
+                <li value="2">销量</li>
+                <li value="3">价格</li>
+                <li value="4">评论数</li>
+            </ul>
+        </div>
+        <div class="right">
+            <span class="left">共<?php echo($params['count'])?>个产品</span>
+        </div>
+    </div>
+    <div class="list_wrapper clearfix">
+        <ul>
+            <?php
+		    	$product=$params['productlist'];
+		    	foreach($product as $value){
+			    	$images=explode(',',$value['images']);
+				?>
+            <li>
+                <div class="ui card">
+                    <a class="image" href="/goods/detail.html?pid=<?php echo md5($value['pid']);?>">
+                        <img src="<?php echo($images[0]);?>">
+                    </a>
+                    <div class="content">
+                        <a class="header1" href="#"><span><i>￥</i><?php echo($value['price']);?></span></a>
+                        <div class="meta">
+                            <a><?php echo($value['name']);?></a>
+                        </div>
+                    </div>
+                    <!--<i class="compare" style="cursor: pointer" value="<?php echo($value['pid']);?>" ></i>-->
+                </div>
+            </li>
+            <?php
+				}
+			?>
+        </ul>
+
+
+    </div>
+    <div class="list">
+
+    </div>
+</div>
+<!--<div class="w1200">-->
+<!--<div class="constr ">-->
+<!--<p class="clearfix">-->
+<!--<span>对比栏</span>-->
+<!--<span class="line"></span>-->
+<!--</p>-->
+<!--<div class="constr-list">-->
+<!--<ul id="compare_add">-->
+
+<!--</ul>-->
+<!--<div class="clear-r right">-->
+<!--<a style="cursor: pointer" id="compare">对比</a>-->
+<!--<p class="clear_compare" style="cursor: pointer">清空对比</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo($params['pager']->getPageCount()); ?>页
+    </p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script type="text/javascript">
+    window.seajs&&seajs.use('pc/seller.js');
+</script>

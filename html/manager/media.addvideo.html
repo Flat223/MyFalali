@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加视频</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <!--<link type="text/css" rel="stylesheet" href="/css/manager/news.css">-->
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <!--<script src="/js/manager/cyupload.js"></script>-->
+    <title></title>
+    <style>
+        .info{
+            border: 1px solid #dddddd;
+            width: 800px;
+        }
+        table tr td{
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            margin:10px auto;
+            width: 100px;
+        }
+        tr{
+            border-right: 0px;
+
+        }
+        table textarea,input{
+            width:720px;
+            border: 1px solid gainsboro;
+        }
+        table input{
+            height: 30px;
+        }
+        button{
+            text-align: center;
+            display: inline-block;
+            line-height: 38px;
+            padding: 0 10px;
+            color: #fff;
+            white-space: nowrap;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            opacity: .9;  }
+    </style>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><i class="layui-icon">&#xe603;</i><a href="" onclick="history.go(-1)">返回</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="info">
+                <!--<span style="color: gray;margin-left: 150px">**视频地址要从优酷里面取,缩略图是优酷返回的**</span>-->
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>标题:</td>
+                        <td><input name="title" type="text" value=""></td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td>缩略图:</td>-->
+                        <!--<td>-->
+                            <!--<input type="file" name="upload" class="layui-upload-file">-->
+                            <!--<img style="float: left" src="" alt="">-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <tr>
+                        <td style="height:30px">所属:</td>
+                        <td><select name="category" style="border: 1px solid black">
+                            <?php foreach($params['category'] as $v){ ?>
+                            <option value="<?php echo $v['id']; ?>" ><?php echo $v['title']; ?></option>
+                            <?php } ?>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>展示图：</td>
+                        <td>
+                            <div class="form-group">
+                            </div>
+                            <div class="form-group" id="brand_img_wrap">
+                                <div>
+                                    <img style="height:160px;width:240px" id="images" src='' style="max-width: 100%;"/>
+                                </div>
+                                    <button type="button" class="btn btn-primary" style="padding: 0 0;width: 240px;height: 35px;float: left" id="brand_upimg" >上传图片</button>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>视频URL:</td>
+                        <td><input  type="text" name="videourl" value="">
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="height:20px">简介:</td>
+                        <td><textarea style="min-height:20px" name="intro" id="" cols="30" rows="2"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>正文:</td>
+                        <td>
+                            <script id="container" name="content" type="text/plain"></script>
+                            <script type="text/javascript">
+                                var ue = UE.getEditor('container',{
+                                    enableAutoSave:false,
+                                    autoHeightEnabled:true,
+                                    initialFrameHeight:500,
+                                    initialFrameWidth:720,
+                                    autoWidthEnabled:true
+                                });
+                            </script>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div class="submit-item">
+                <button style="width:100px;margin-left:200px;background-color: #f23e47;" name="update" class="layui-com"><i class="layui-icon"></i>确定</button>
+                <button style="width:100px;background-color:#3F9F00;" class="layui-res" onclick="window.location.reload(-1)">重置</button>
+                <button name="checkurl" style="background-color:blueviolet;width:100px;">查看视频</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $.cyupload({
+        elem:'#brand_upimg',
+        btnName:"请选择",		//按键名称
+        infoElementId:"",	//上传状态信息包装元素id
+        maxFilesize:10485760,
+        uploadUrl:'/service/uploadimgServ.html',
+        fileFilter:'',
+        upfileParam:'upload_file_input',
+        success:function(url){
+            $('#images').attr('src',url['file_url']);
+        }
+    });
+    window.seajs&&seajs.use('manager/addvideo.js');
+</script>

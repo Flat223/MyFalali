@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /core
+Disallow: /upload
+Disallow: /console
+

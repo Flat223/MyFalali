@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-我的店铺信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/myarticle.css">
+
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+            <li><i class="myshopinfo"></i><a href="/myshop/shopInfo.html" style="color: #00bfb8">我的店铺信息</a></li>
+            <li><i class="shoppro"></i><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><i class="shopgroup"></i><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><i class="shopadd"></i><a href="/myshop/addProduct.html">添加产品</a></li>
+            <li><i class="shoporder"></i><a href="/myshop/orderManager.html">订单管理</a></li>
+<!--             <li><i class="shopfreight"></i><a href="/myshop/freight.html">运费管理</a></li> -->
+            <li><i class="shopaddress"></i><a href="/myshop/addressManager.html">发货地址管理</a></li>
+            <li><i class="shopmes"></i><a href="/myshop/message.html">消息列表</a></li>
+            <li><i class="shopcoupon"></i><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+            <li><i class="shopcouponlist"></i><a href="/myshop/couponList.html">优惠券列表</a></li>
+        </ul>
+    </div>
+    <div class="right content-item">
+        <h1>我的店铺</h1>
+        <div class="publish">
+            <input type="hidden" name="sid" value="<?php echo $params['shop']['sid'];?>">
+            <label style="width: 320px;margin-left: 28px;">
+                <span style="width: 58px; cursor: pointer">展示图：</span>
+                <img style="height:250px;width:250px;cursor: pointer" id="images"
+                     src="<?php echo $params['shop']['logo'];?>" style="max-width: 100%;"/>
+            </label>
+
+            <label>
+                <span>店铺名：</span>
+                <input type="text" name="shop_name" value="<?php echo $params['shop']['shop_name']; ?>"/>
+            </label>
+            <label>
+                <span>电话：</span>
+                <input type="text" name="tel" value="<?php echo $params['shop']['phone'];?>"/>
+            </label>
+            <label>
+                <span>开店时间：</span>
+                <input type="text" name="title" readonly="readonly"
+                       value="<?php echo date('Y/m/d',$params['shop']['time'])?>"/>
+            </label>
+            <label>
+                <span><em></em>所在地：</span>
+                <!-- 				<input id="city" type="text" value="<?php echo $user['city']; ?>"/> -->
+                <select class="s_province" real="<?php echo $params['shop']['province_id']?>"></select>
+                <select class="s_city" real="<?php echo $params['shop']['city_id']?>"></select>
+                <select class="s_country" real="<?php echo $params['shop']['district']?>"></select>
+            </label>
+            <label>
+                <span>详细地址：</span>
+                <input type="text" name="address" value="<?php echo $params['shop']['address']?>"/>
+            </label>
+            <label>
+                <span>邮编：</span>
+                <input type="text" name="zip" value="<?php echo $params['shop']['zip']?>"/>
+            </label>
+            <!--<label>
+                <span>店铺描述：</span>
+                <textarea name="intro" cols="30" rows="10"></textarea>
+            </label>-->
+
+            <div class="next clearfix">
+                <a class="nextStep" id="save">保存</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script src="/js/manager/cyupload.js"></script>
+<script type="text/javascript">
+    window.seajs && seajs.use('pc/user/shopinfo.js');
+</script>
+

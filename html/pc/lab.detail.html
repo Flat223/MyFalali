@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-实验室</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/card.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/lab_detail.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/rating.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=P14l8MNCnZ4XRkhvPzBvKB4B"></script>
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<?php
+	$lab = $params['lab'];
+?>
+<input id="labName" type="hidden" value="<?php echo $lab['name'] ?>"/>
+<input id="address" type="hidden" value="<?php echo $lab['address'] ?>"/>
+<input id="lat" type="hidden" value="<?php echo $lab['lat'] ?>"/>
+<input id="lon" type="hidden" value="<?php echo $lab['lon'] ?>"/>
+<input id="phone" type="hidden" value="<?php echo $lab['manager_phone'] ?>"/>
+<div class="content w1200">
+	<div class="ui large breadcrumb">
+	  <ul>
+	  	<li>
+	  		<a href="/lab/share.html">实验室</a>
+	  	</li>
+	  	<li>></li>
+	  	<li>
+	  		<?php echo $lab['name'] ?>
+	  	</li>
+	  </ul>
+	</div>
+	<div class="clear"></div>
+	<div class="banner">
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+				<?php if(!empty($lab['logo'])){
+					$logo = explode(',',$lab['logo']);
+					for($i = 0;$i<3;$i++){
+					?>
+						<div class="swiper-slide"><img width="1200px" height="360px" src="<?php echo $logo[$i];?>" alt="" /></div>
+					<?php
+					}
+				}else{
+				?>
+					<div class="swiper-slide"><img src="/images/temp_pc/banner-lab.jpg" alt="" /></div>
+					<div class="swiper-slide"><img src="/images/temp_pc/banner-lab.jpg" alt="" /></div>
+					<div class="swiper-slide"><img src="/images/temp_pc/banner-lab.jpg" alt="" /></div>
+				<?php
+				}
+				?>
+	        </div>
+	         <div class="swiper-pagination"></div>
+	    </div> 
+	</div>
+	<div class="lab clearfix">
+		<dl>
+			<dt>
+				<img src="/images/temp_pc/head1.png" alt="" />
+			</dt>
+			<dd>
+				<p class="title">
+					<span class="manager left">管理员:</span>
+					<span class="name left"><?php echo $lab['manager'] ?></span>
+				</p>
+				<div class="clear"></div>
+				<p>
+					<a class="contace-he"><?php echo ($lab['manager_phone'] == null ? "未留下联系方式" : $lab['manager_phone']) ;?></a>
+					<span>服务领域：</span>
+					<span>
+						<?php
+							if(!empty($lab['service_area'])){
+								$serviceArea = explode(',',$lab['service_area']);
+								for($i = 0; $i<count($serviceArea);$i++){
+								?>
+									<a><?php echo $serviceArea[$i] ?></a>
+								<?php
+								}
+							}
+						?>
+					</span>
+				</p>
+			</dd>
+		</dl>
+	</div>
+	<div class="labintro">
+		<p class="clearfix bartitle ">
+			<span class="left">实验简介</span>
+			<span class="right"><a href="javascript:;" id="more">&gt;&gt;更多</a></span>
+		</p>
+		<section id="section">
+			<h2><?php echo $lab['name'] ?></h2>
+			<p class="text_indent">
+				<?php echo $lab['intro'] ?>
+			</p>
+		</section>
+	</div>
+	<?php
+		$serviceRange = $params['serviceRange'];
+	?>
+	<div class="service-range">
+		<p class="clearfix bartitle ">
+			<span class="left">服务范围</span>
+			<span class="right"><a href="javascript:;" id="more1"><?php if(count($serviceRange)>3){ ?> &gt;&gt;更多</a></span><?php }else{ ?> </a></span> <?php } ?>
+		</p>
+		<section id="section">
+			<?php
+				if(!empty($serviceRange)){
+					for($i = 0; $i<count($serviceRange);$i++){
+					?>
+						<p class="clearfix">
+							<span class="left"><?php echo(($i+1).'. '.$serviceRange[$i]['name']); ?></span>
+							<span name="consultation" class="right button" value="<?php echo ($serviceRange[$i]['name']); ?>" value1="<?php echo ($serviceRange[$i]['service_cycle']); ?>" value2="<?php echo ($serviceRange[$i]['price']); ?>">收费咨询</span>
+						</p>
+					<?php
+					}
+				}else{
+					echo "还没有服务范围参考";
+				}
+			?>
+		</section>
+	</div>
+	<?php
+		$instrument = $params['instrument'];
+	?>
+	<div class="apparatus">
+		<p class="clearfix bartitle ">
+			<span class="left">仪器资源</span>
+			<span class="right" ><a href="javascript:; "id="more2"><?php if(count($instrument)>3){ ?> &gt;&gt;更多</a></span><?php }else{ ?> </a></span> <?php } ?>
+		</p>
+		<section id="section">
+			<?php
+				if(!empty($instrument)){
+					for($i = 0; $i<count($instrument);$i++){
+					?>
+						<p class="clearfix">
+							<span class="left"><?php echo(($i+1).'. '.$instrument[$i]['name']); ?></span>
+							<span name="consultation_instr" class="right button" value="<?php echo ($instrument[$i]['name']); ?>" value1="<?php echo ($instrument[$i]['service_cycle']); ?>" value2="<?php echo ($instrument[$i]['price']); ?>">收费咨询</span>
+						</p>
+					<?php
+					}
+				}else{
+					echo "还没有仪器资源参考";
+				}
+			?>
+		</section>
+	</div>
+	<?php
+		$expert = $params['expert'];
+	?>
+	<div class="professor">
+		<p class="clearfix bartitle ">
+			<span class="left">专家推荐</span>
+			<span class="right"><a href="javascript:; "id="more3"><?php if(count($expert)>7){ ?> &gt;&gt;更多</a></span><?php }else{ ?> </a></span> <?php } ?>
+		</p>
+		<section id="section">
+				<?php
+					if(!empty($expert)){
+						for($i = 0;$i < count($expert);$i++){
+						?>
+							<li class="clearfix section-li">
+								<div value="<?php echo $expert[$i]['mid'];?>" class="ui  card expertInfo">
+									<a class="image" href="javascript:;">
+										<img style="width: 130px;height: 130px" src="<?php echo empty($expert[$i]['face'])? '/images/temp_pc/headimg.png':$expert[$i]['face'] ;?>">
+									</a>
+									<a href="javascript:;"><?php echo $expert[$i]['name'];?></a>
+								</div>
+							</li>
+						<?php
+						}
+					}else{
+						echo "暂无专家";
+					}
+				?>
+			</ul>
+		</section>
+	</div>
+	<div class="clear"></div>
+	<div class="rule">
+		<p class="clearfix bartitle ">
+			<span class="left">实验守则</span>
+			<span class="right"><a href="javascript:;"></a></span>
+		</p>
+		<section>
+			<?php
+				if(!empty($lab['rules'])){
+					$rules = explode(',',$lab['rules']);
+					for($i = 0; $i<count($rules);$i++){
+					?>
+						<p class="clearfix">
+							<span class="left"><?php echo(($i+1).'. '.$rules[$i]); ?></span>
+						</p>
+					<?php
+						if($i == 2){
+							break;
+						}
+					}
+				}else{
+					echo "暂无守则";
+				}
+			?>
+		</section>
+	</div>
+	<?php $research = $params['research'];
+		if(!empty($research)){
+	?>
+	<div class="lab-data">
+		<p class="clearfix bartitle ">
+			<span class="left">科研数据</span>
+			<span class="right"><a href=""></a></span>
+		</p>
+		<section>
+			<?php
+			 	$type = $params['restype'];
+				for($i = 0; $i<count($type); $i++){
+					for($j = 0; $j<count($research); $j++){
+						if($research[$j]['type'] == $type[$i]['id']){
+						?>
+						<p class="clearfix">
+							<span class="left"><?php echo $type[$i]['name']; ?>：<?php echo $research[$j]['name']; ?></span>
+							<a href="/lab/knowMore.html?rid=<?php echo $research[$j]['id']; ?>&tname=<?php echo $type[$i]['name']; ?>"><span class="right button">了解更多</span></a>
+						</p>
+						<?php
+						}
+					}
+				}
+			?>
+
+		</section>
+	</div>
+	<?php
+		}
+	?>
+	<div class="lab-evaluate">
+		<p class="clearfix bartitle ">
+			<span class="left">综合评分</span>
+		</p>
+		<section>
+			<span><span style="float: left">专业性：</span>
+				<?php
+					$starNum = $lab['speciality_credit'];
+					if(!empty($starNum)){
+					if($starNum%2 == 0){
+						for($k = 0; $k < $starNum/2; $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+					}else{
+						for($k = 0; $k < floor($starNum/2); $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+						?>
+							<img src="/images/pc/1yb.png" alt="" />
+						<?php
+					}
+					}else{
+						echo "还未评分~";
+					}
+				?>
+			</span>
+			<span><span style="float: left">纪律性：</span>
+				<?php
+					$starNum1 = $lab['discipline_credit'];
+					if(!empty($starNum1)){
+					if($starNum1%2 == 0){
+						for($k = 0; $k < $starNum1/2; $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+					}else{
+						for($k = 0; $k < floor($starNum1/2); $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+						?>
+							<img src="/images/pc/1yb.png" alt="" />
+						<?php
+					}
+					}else{
+						echo "还未评分~";
+					}
+				?>
+			</span>
+			<span><span style="float: left">科研环境：</span>
+				<?php
+					$starNum2 = $lab['environment_credit'];
+					if(!empty($starNum2)){
+					if($starNum2%2 == 0){
+						for($k = 0; $k < $starNum2/2; $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+					}else{
+						for($k = 0; $k < floor($starNum2/2); $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+						?>
+							<img src="/images/pc/1yb.png" alt="" />
+						<?php
+					}
+					}else{
+						echo "还未评分~";
+					}
+				?>
+			</span>
+			<span><span style="float: left">科研人员：</span>
+				<?php
+					$starNum3 = $lab['research_staff_credit'];
+					if(!empty($starNum3)){
+					if($starNum3%2 == 0){
+						for($k = 0; $k < $starNum3/2; $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+					}else{
+						for($k = 0; $k < floor($starNum3/2); $k++){
+						?>
+							<img src="/images/pc/1y.png" alt="" />
+						<?php
+						}
+						?>
+							<img src="/images/pc/1yb.png" alt="" />
+						<?php
+					}
+					}else{
+						echo "还未评分~";
+					}
+				?>
+			</span>
+		</section>
+	</div>
+	<?php
+		$institude = $params['institude'];
+		if(!empty($institude)){
+		?>
+		<div class="lab-classify">
+			<p class="clearfix bartitle ">
+				<span class="left">所属机构</span>
+			</p>
+			<section>
+				<dl class="left">
+					<dt>
+						<img src="/images/temp_pc/head2.png" alt="" />
+						<span>ＳＪＳ课题组</span>
+					</dt>
+					<dd>
+						<p>
+							所属机构 ：<?php echo $institude['name']; ?>
+						</p>
+						<p>
+							注册时间：<?php echo(date("Y-m-d", $institude['regist_time']));?>
+						</p>
+					</dd>
+				</dl>
+				<div class="lab-ul-img right">
+					<span>所属机构其他实验室</span>
+					<ul class="clearfix">
+						<?php
+							$otherLab = $params['otherLab'];
+							if(!empty($otherLab)){
+								for($i = 0;$i<count($otherLab);$i++){
+								?>
+									<li><a href="/lab/detail.html?labId=<?php echo $otherLab[$i]['lab_id']; ?>">
+										<img width="96px" height="97px" src="<?php echo empty($otherLab[$i]['logo'])?'/images/temp_pc/list1.png': explode(',',$otherLab[$i]['logo'])[0]; ?>" alt="" />
+										<span class="qitalab_name"><?php echo $otherLab[$i]['name']; ?></span></a>
+									</li>
+								<?php
+									if($i == 4){
+										break;
+									}
+								}
+							}else{
+							?>
+								<li>
+									<img src="/images/temp_pc/lab-classify1.jpg" alt="" />
+									<span class="qitalab_name">暂无实验室</span>
+								</li>
+							<?php
+							}
+						?>
+					</ul>
+				</div>
+			</section>
+		</div>
+	<?php
+		}
+	?>
+	<div class="clear"></div>
+	<div class="lab-contact">
+		<p class="clearfix bartitle ">
+			<span class="left">联系我们</span>
+		</p>
+		<section>
+			<div style="width:100%;height:550px;border:javascript:;ccc solid 1px;" id="dituContent"></div>
+		</section>
+	</div>
+	<!--<div class="lab-circle">
+		<p class="clearfix bartitle ">
+			<span class="left">联系我们</span>
+		</p>
+		<section>
+			<ul>
+				<li>
+					<div class="ui  card">
+					  <a class="image" href="javascript:;">
+					    <img src="/images/temp_pc/lab-classify1.png">
+					  </a>
+					  <a href="">专家姓名</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>-->
+</div>
+<div id="serviceWindow" class="contact-s">
+	<i></i>
+	<p>
+		<span>名称：</span>
+		<input id="service_name" type="text" placeholder="点击收费咨询获取数据" disabled />
+	</p>
+	<p>
+		<span>单位：</span>
+		<input id="service_cycle" name="serArea" type="text" placeholder="点击收费咨询获取数据" disabled />
+	</p>
+	<p>
+		<span>价格：</span>
+		<input id="service_price" type="text" placeholder="点击收费咨询获取数据" disabled />
+	</p>
+	<p style="margin-top: 20px;">
+		<a style="margin-left: 45px" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1193218128&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1193218128:42" alt="询价" title="询价"/></a>
+		<input id="yuyue" style="cursor: pointer;" type="submit" value="预约" />
+	</p>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/lab_detail.js');
+</script>
+</body>
+</html>

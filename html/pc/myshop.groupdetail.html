@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-产品图片</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <style>
+        #table-6{
+            border-collapse:collapse;
+        }
+        #table-6 thead th {
+            background-color: rgb(128, 102, 160);
+            color: #fff;
+            border-bottom-width: 0;
+        }
+
+        /* Column Style */
+        #table-6 td {
+
+            color: #000;
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgb(128, 102, 160);
+        }
+        /* Heading and Column Style */
+        #table-6 tr, #table-6 th {
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(128, 102, 160);
+        }
+
+        /* Padding and font style */
+        #table-6 td, #table-6 th {
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Verdana;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table style="width:100%" id="table-6">
+
+        <tbody>
+        <?php if(count($params['propertyval'])>0){ ?>
+        <?php foreach($params['propertyval'] as $v){ ?>
+        <tr>
+            <?php if(!empty($v['val'])){
+                foreach($v['val'] as $val){ if(isset($params['pro'][$val['propertyid']])){ ?>
+            <td><?php echo $params['pro'][$val['propertyid']].$val['name']?></td>
+                <?php }
+                }
+            }?>
+            <td>价格<?php echo $v['price']; ?>元</td>
+            <td>库存<?php echo $v['inventory']; ?></td>
+            <td>预警<?php echo $v['inventory_warn']; ?></td>
+        </tr>
+        <?php } ?>
+        <?php }else{ ?>
+        <tr>
+            <td><a target="_blank" href="../myshop/addProNext.html?pid=<?php echo $_GET['pid']; ?>">该商品未完善，点击继续完善</a></td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <!--<?php-->
+    <!--echo '<pre>';-->
+    <!--print_r($params);-->
+    <!--?>-->
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+</script>

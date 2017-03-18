@@ -1,0 +1,102 @@
+.freight .fhead{
+	height: 40px;
+	line-height: 40px;
+	background-color: #ddeeff;
+}
+.freight .fhead .tit{
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.freight .fhead .inf{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}
+.freight .fhead .inf span{
+	color: #969696;
+}
+.freight .fhead .inf span:first-child{
+	margin-right: 20px;
+}
+.freight .fhead .inf span a{
+	color: #1acccf;
+}
+.freight .fhead .inf span a:hover{
+	color: #18e2e6;
+}
+.freight .fbody ul{
+	display: block;
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+}
+.freight .fbody ul li{
+	display: block;
+	float: left;
+	width: 95px;
+	border: 1px solid #ddd;
+	border-right: none;
+	height: 100%;
+	line-height: 30px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.freight .fbody ul li:last-child{
+	border-right: 1px solid #ddd;
+}
+.freight .fbody ul li:nth-child(2){
+	width: 475px;
+}
+.freight .fbody .fri_dat table{
+	width: 100%;
+	border-collapse: collapse;
+	border: none;
+}
+.freight .fbody .fri_dat table tbody{
+	background: #e0faf9;
+}
+.freight .fbody .fri_dat table tr td{
+	text-align: center;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+.freight .fbody .fri_dat table tbody tr:hover{
+	background: none;
+}
+.freight .fri_dat table tr td:nth-child(1),.freight .fri_dat table tr td:nth-child(3),.freight .fri_dat table tr td:nth-child(4),
+.freight .fri_dat table tr td:nth-child(5){
+	width: 95px;
+}
+.freight .fri_dat table tr td:nth-child(2){
+	width: 475px;
+	text-align: left;
+	padding-left: 5px;
+}
+.freight .fri_dat{
+	max-height: 150px;
+	overflow-y: auto;
+	border-bottom: 1px solid #ddd;
+}
+.freight .fri_dat table tr:first-child td{
+	border-top: none;
+}
+.freight .fri_dat table tr:last-child td{
+	border-bottom: none;
+}
+#freights .loading,#freights .err,#freights .no-data{
+	font-size: 20px;
+	margin-top: 200px;
+	text-align: center;
+}
+#freights .loading img,#freights .err img{
+	width: 100px;
+}
+#freights .no-data a{
+	color: #1acccf;
+	margin-left: 5px;
+}
+#freights .no-data a:hover{
+	color: #18e2e6;
+}
+

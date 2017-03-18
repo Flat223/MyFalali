@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-账号设置</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/login.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/setaccount.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+		?>
+		<div class="account">
+			<div class="account_ul">
+				<ul>
+					<li>账户设置</li>
+					<li>></li>
+					<li name="titletip">修改密码</li>
+				</ul>
+			</div>
+			<div class="layui-tab layui-tab-card" lay-filter="demo" >
+			  <ul class="layui-tab-title">
+			    <li name="repassword">修改密码</li>
+			    <li name="identity">实名认证</li>
+			    <li name="myinvoice">我的发票</li>
+			  </ul>
+			  <div class="layui-tab-content" style="padding: 10px;">
+			  <div class="layui-tab-item">
+					<label>
+						<span><em>*</em>选择验证方式：</span>
+						<input type="radio" name="logintype" id="radio_login_code" value='1' checked="checked" />手机验证
+						<input type="radio" name="logintype" id="radio_login_psw" value='2' />密码验证
+					</label>
+					<label id="input_checkCode">
+						<span><em>*</em>手机号：</span>
+						<input type="text"  name='mobilecode' value="<?php echo $user['mobile']; ?>" readonly="readonly" />
+					</label>
+					<label id="input_checkCode1">
+						<span><em>*</em>短信验证：</span>
+						<input name="messagecode" type="number" />
+						<span style="cursor: pointer" id="repasswdcode" class="code">获取短信验证码</span>
+					</label>
+					  <label id="input_psd"  style="display: none">
+						  <span><em>*</em>原始密码：</span>
+						  <input name="oldpassword" type="text" />
+					  </label>
+					<label>
+						<span><em>*</em>新密码：</span>
+						<input name="newpassword" type="password" />
+					</label>
+					<label>
+						<span><em>*</em>重复密码：</span>
+						<input name="renewpassword" type="password" />
+					</label>
+					<!--<label>-->
+						<!--<span><em>*</em>验证码：</span>-->
+						<!--<input name="verifycode" type="number" />-->
+						<!--<img src="../core/service/checkcodeServ.html" alt="" />-->
+						<!--<span class="reg_captcha">换一张</span>-->
+					<!--</label>-->
+			     	<label>
+			     		<input name="repasswd" type="submit" value="确定" />
+			     	</label>
+					<section class="section-tab">
+		     		<label>
+		     			<span><em>*</em>原始密码：</span>
+		     			<input type="password"  value="" readonly="readonly" />
+		     		</label>
+		     		<label>
+		     			<span><em>*</em>新密码：</span>
+		     			<input type="password" />
+		     		</label>
+		     		<label>
+		     			<span><em>*</em>重复密码：</span>
+		     			<input type="password" />
+		     		</label>
+		     		<label>
+		     			<span><em>*</em>验证码：</span>
+		     			<input type="number" />
+		     			<img src="/images/temp_pc/code.png" alt="" />
+		     			<span class="reg_captcha">换一张</span>
+		     		</label>
+		     		</section>
+			    </div>
+			    <div class="layui-tab-item">
+					<?php if(empty($params['identity']) || $params['identity']['status']==-1){ ?>
+			    	<label>
+						<?php if($params['identity']['status']=='-1'){ ?>
+						<span  style="margin-left:100px;color: red"><em>*</em>上次认证被拒绝</span><br/>
+						<?php } ?>
+				     		<span><em>*</em>真实姓名：</span>
+				     		<input name="realname" type="text" value="<?php echo $user['name']; ?>"  />
+	    					<input name="identityuser" type="hidden" value="<?php echo $user['mid']; ?>" />
+					</label>
+			     		<label>
+			     			<span><em>*</em>证件类型：</span>
+			     			<select name="cardstyle" id="">
+			     				<option value="1">身份证</option>
+			     				<option value="2">护照</option>
+			     				<option value=""></option>
+			     			</select>
+			     		</label>
+			     		<label class="upimg" style="height:155px">
+							<span><em>*</em>上传照片：</span>
+							<img style="height:150px;width:240px;cursor: pointer" id="images" src='' style="max-width: 100%;"/>
+						</label>
+			     		<label>
+			     			<span><em>*</em>证件号码：</span>
+			     			<input name="cardnum" type="text" />
+			     		</label>
+			     		<label>
+			     			<span><em>*</em>手机号码：</span>
+			     			<input name="identitymobile" value="<?php echo $user['mobile']; ?>" type="text" />
+			     		</label>
+			     		<label>
+			     			<span><em>*</em>验证码：</span>
+			     			<input name="identitycode" type="number" />
+			     			<span style="cursor:pointer" id="identity" class="code">获取短信验证码</span>
+			     	</label>
+			     	<label>
+			     		<input type="submit" name="identitysubmit" style="cursor: pointer" value="确定" />
+			     	</label>
+					<?php }else if($params['identity']['status']==1){ ?>
+					<table border="0" >
+						<tr>
+							<th style="text-align:center">已经认证</th>
+						</tr>
+					</table>
+					<?php }else if($params['identity']['status']==0){  ?>
+					<table border="0" >
+						<tr>
+							<th style="text-align:center">认证过程中</th>
+						</tr>
+					</table>
+					<?php } ?>
+			    </div>
+			    <div class="layui-tab-item">
+			    	<ul class="na-ul clearfix">
+			    		<li class="na-li-this" invoice_type="1">普通发票</li>
+			    		<li invoice_type="2">电子发票</li>
+			    		<li invoice_type="3">增值税发票</li>
+			    	</ul>
+			    	<table border="0" >
+			    		<tr>
+			    			<th>票号</th>
+			    			<th>发票抬头</th>
+			    			<th></th>
+			    			<th></th>
+			    			<th></th>
+			    			<th>操作</th>
+			    		</tr>
+			    		<tbody class="invoice_container">
+		    		<?php
+			    		foreach ($params['invoice'] as $invoice) {
+			    	?>
+					    	<tr>	
+				    			<td><?php echo($invoice['invoice_code']); ?></td>
+				    			<td><?php echo($invoice['title']); ?></td>
+				    			<td></td>
+				    			<td></td>
+				    			<td></td>
+				    			<td class="delete" rid="<?php echo $invoice['id']?>">删除</td>
+			    			</tr>
+			    	<?php 
+				    	}	
+			    	?>
+			    		</tbody>
+			    		
+			    	</table>
+			    	<p class="invoice_hint" 
+						style="text-align: center;width: 90%;margin-top: 10% ;font-size: 18px;color: #929292;
+							display:<?php echo count($params['invoice'])== 0?"display":"none"?>">
+							暂无普通发票
+					</p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script>
+	window.seajs&&seajs.use('pc/user/userInvoice.js');
+</script>
+
+

@@ -1,0 +1,395 @@
+body{
+    /*background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);*/
+}
+.rating_top1{
+    font-size: 18px;
+    color: #2F598F;
+}
+
+table.table tr th {
+    font-weight: bold;
+    vertical-align: middle;
+}
+table.table tr th, table.table tr td{
+    vertical-align: middle;
+    text-align:left;
+}
+
+.table > thead > tr > th {
+    border-bottom:1px solid #ddd;
+}
+.table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-bottom:none;
+}
+table tr th.status-64 {
+    width:64px;
+}
+.fix-margin-right-15 {
+    margin-right:-15px;
+}
+
+
+.splitor {margin-left:2px; margin-right:2px; color:#999;}
+
+.checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2.haizol-h2 {
+    color:#777;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+hr.haizol-hr {
+    border-style: dashed;
+    border-color:#ddd -moz-use-text-color -moz-use-text-color;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+hr.haizol-hr-solid {
+    border-style: solid;
+    border-color:#ddd -moz-use-text-color -moz-use-text-color;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+
+.panel {
+    border-radius:0px;
+}
+.form-control {
+    border-radius:0px;
+}
+.dropdown-menu {
+    border-radius:0px;
+}
+.nav-pills > li > a {
+    border-radius:0px;
+}
+
+
+.dropdown-menu > li > a {
+    text-align:left;
+}
+
+.panel > .panel-heading input {
+    font-weight:normal;
+}
+
+.panel-default > .panel-heading {
+    font-weight:bold;
+    color:#777;
+}
+
+.panel > .panel-heading-with-buttons {
+    padding:0;
+}
+
+.highcharts-button {
+    display:none;
+}
+span.required {
+    font-size:11px;
+    color:#ff3300;
+}
+.text-middle {
+    vertical-align: middle;
+}
+
+
+.btn-default {
+    color:#555;
+    border-color:#ddd;
+    background-color:#f7f7f7;
+}
+.btn-default:hover {
+    border-color:#ddd;
+    background-color:#ededed;
+}
+.btn-primary {
+    background-color:#194783;
+}
+.btn-primary:hover {
+    background-color:#092D5C;
+}
+
+.logo-box-g{
+    width:180px;height:120px;
+    display:table;
+    text-align:center;
+    vertical-align:middle;
+    border:1px solid #ddd;background:#fff;
+    padding:2px;
+    border-radius:4px;
+}
+.logo-box-g a {
+    display:table-cell;vertical-align:middle;width:180px;height:120px;
+}
+.logo-box-g a img {
+    position:static;
+    *position:relative;
+    top:-50%;left:-50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.btn-pay {
+    background-image: linear-gradient(to bottom, #5cb85c 0%, #5cb85c 100%);
+    background-repeat: repeat-x;
+    border-color: #5cb85c;
+    color:#eee;
+}
+.btn-pay:hover, .btn-pay:focus {
+    background-color: #5cb85c;
+    background-position: 0 -15px;
+    color:#fff;
+}
+.btn-pay:active, .btn-pay.active {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color:#fff;
+}
+
+a.haizol-gray-link {
+    color:#777777;
+}
+a.haizol-gray-link:focus, a.haizol-gray-link:hover {
+    color:#337ab7;
+    text-decoration: none;
+}
+
+a.haizol-gray-title-link {
+    color:#666666;
+    font-size:16px;
+}
+a.haizol-gray-title-link:focus, a.haizol-gray-title-link:hover {
+    color:#337ab7;
+    text-decoration: none;
+}
+
+.light-gray-label {
+    color:#999;
+}
+
+.simple-title {
+    font-size:16px;
+    color:#666;
+}
+
+.panel-simple {
+    border-color: none;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
+    background-color: transparent;
+}
+.panel-simple > .panel-heading {
+    color: #00bfb8;
+    font-size:18px;
+    background-color: transparent;
+    border:none;
+    border-bottom:2px solid #00bfb8;
+}
+.panel-simple > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #faebcc;
+}
+.panel-simple > .panel-heading .badge {
+    color: #fcf8e3;
+    background-color: #8a6d3b;
+}
+.panel-simple > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #faebcc;
+}
+
+.bg-body {
+    background-color:#eee;
+}
+.bg-white {
+    background-color:#fff;
+}
+
+.popover {
+    max-width:296px;
+}
+input.txt-normal {font-weight:normal;}
+
+.cut {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-number {
+    font-size:18px; color:#337ab7;
+}
+
+
+.nav-tabs {
+    border-bottom: 0 none;
+    background: #efefef;
+    margin-bottom:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.nav-tabs li a {
+    border-top:2px solid #efefef;
+    background: transparent;
+    border-radius: 0;
+    font-size: 14px;
+    color: #777;
+    padding: 12px 15px;
+}
+
+.nav-tabs li a:hover {
+    border-top:2px solid #FCF8E3;
+    background-color:#FCF8E3;
+    color:#333;
+}
+
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a i {
+    border-top:2px solid #ff8800;
+    background: #ffffff;
+    color: #ff8800;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .nav-tabs,.nav-tabs li {
+        width: 100%;
+        background: transparent;
+    }
+    .nav-tabs li.active a {
+        border-radius: 10px 10px 0 0;
+    }
+    .nav-tabs li:first-child a {
+        border-bottom-left-radius: 0;
+    }
+    .nav-tabs li a {
+        margin-bottom: 10px;
+        border: 1px solid lightgray;
+    }
+    .nav-tabs li.active a:after {
+        border: none;
+    }
+}
+
+.media .media-body {
+    padding-left: 20px;
+}
+
+.haizol-rfq-box-first {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #194783;
+    color: #fff;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    height: 278px;
+    max-height: 278px;
+    overflow: hidden;
+
+}
+
+.haizol-rfq-box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    height: 278px;
+    max-height: 278px;
+    overflow: hidden;
+}
+
+.haizol-rfq-box:hover {
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.haizol-rfq-box:hover p {
+    color: #666;
+}
+
+.haizol-rfq-box img.drawing {
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+}
+
+.haizol-rfq-box:hover img.drawing {
+    width: 96px;
+    height: 96px;
+    margin: 0px;
+}
+
+.haizol-rfq-box a.rfq-id-link {
+    color: #337ab7;
+    font-size: 14px;
+}
+
+.haizol-rfq-box p {
+    margin-bottom: 10px;
+}
+
+.haizol-rfq-box a.btn-default {
+    color: #999;
+    border-color: #999;
+    background-color: #fff;
+}
+
+.haizol-rfq-box:hover a.btn-default {
+    border-color: #337ab7;
+    color: #337ab7;
+    background-color: #fff;
+    /*color:#337ab7;*/
+}
+
+.haizol-rfq-box img.flag {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.carousel-control {
+    color: #999;
+    font-size: 12px;
+    top: 50px;
+}
+
+.carousel-control:hover, .carousel-control:click {
+
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.glyphicon {
+
+}
+
+.part-idx-size-span {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 10px;
+    color: #999;
+}
+
+.cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

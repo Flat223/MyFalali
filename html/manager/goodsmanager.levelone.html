@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <!--<script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<table style="width:300px;margin-top: 10px;margin-left:40px;line-height: 30px; " >
+    <tr style="border-bottom: 1px solid grey">
+        <th width="20%">ID</th>
+        <th width="60%">名称</th>
+        <th width="20%">操作</th>
+        <input type="hidden" name="ptid" value="<?php echo $params['ptid']; ?>" />
+    </tr>
+<?php 
+	if(count($params['property'])>0){ 
+?>
+    <?php 
+    	foreach($params['property'] as $property){ 
+	?>
+    <tr style="border-bottom: 1px solid grey">
+        <td style="text-align: center"><?php echo $property['ptid']; ?></td>
+        <td style="text-align: center"><?php echo $property['name']; ?></td>
+        <td>
+            <span ptid="<?php echo $property['ptid']?>" class="del" style="text-align:center;margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								删除
+            </span>
+            <span class="update" 
+            	style="text-align:center;margin-right: 0px; cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;margin-top: 3px; display: inline-block;"
+            	ptid="<?php echo $property['ptid']?>"
+            	proname="<?php echo $property['name']?>"
+            	>
+								编辑
+            </span>
+        </td>
+    </tr>
+<?php 
+    	}
+	} 
+?>
+</table>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    });
+//
+        $("span[class=del]").on("click",function(){
+            var id=$(this).attr('ptid');
+            var alert = layer.confirm("是否删除？", {
+                title:"<b>删除后该类和其子类将消失!!</b>",
+                btn: ['确认','取消'] //按钮
+            }, function(){
+                layer.close(alert);
+                Deletetype(id);
+            }, function(){
+
+            });
+        })
+        
+        $("span[class=update]").on("click",function(){
+            var ptid = $(this).attr('ptid');
+            var proname = $.trim($(this).attr('proname'));
+	        layer.open({
+	            type: 1
+	            ,title: "修改分类名称"
+	            ,area: '330px;'
+	            ,shade: 0.5
+	            ,btn: ["确定", "取消"]
+	            ,btnAlign: 'c'
+	            ,content: '<div style="padding: 20px; line-height: 22px; font-weight: 300;">请输入分类名称<input class="type_name" type="text" autofocus="focus" style="line-height: 30px;border:1px solid #ddd;padding-left:5px;margin-left:15px;width:160px" value=" ' + proname + ' "></div>'
+	            ,success: function(layero){
+	                var btn = layero.find('.layui-layer-btn');
+	                btn.find('.layui-layer-btn0').click(function(){
+		                var name = $.trim($('.type_name').val());
+		                if(name == ""){
+			            	layer.alert('类名为空!');
+				            return ;    
+		                } else {
+			                updateTypeName(ptid,name);
+		                }
+	                });
+	            }
+	        });
+        })
+
+        function Deletetype(id){
+            var url="/service/DeleteprotypeServ.html";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {"id":id},
+                dataType: "json",
+                success: function (data) {
+                    if(data.ret=='1'){
+                        window.location.reload();
+//                        window.setTimeout(widreload,1000);
+                    }else{
+                        layer.alert(data.msg);
+                    }
+                },
+                error: function (data) {
+                    layer.alert("error");
+                }
+            });
+        }
+        
+        function updateTypeName(ptid,name){
+		    var params = {};
+		    params.ptid = ptid;
+			params.name = name;
+		    $.ajax({
+	            type: "POST",
+	            url: "/service/updatePropertyTypeServ.html",
+	            data: params,
+	            dataType: "json",
+	            success: function (data) {
+	                if(data.ret==1){
+		                layer.alert(data.msg,function(){
+			            	location.reload(true);    
+		                });
+	                }else{
+	                    layer.alert(data.msg);
+	                }
+	            },
+	            error: function (data) {
+	                layer.alert("服务器错误1");
+	            }
+	        });
+	    }
+    })
+</script>

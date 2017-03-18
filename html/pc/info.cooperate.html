@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-合作项目</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css"/>
+
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="wrapper_r right">
+        <?php
+			$user = UserAgent::getUser();
+		?>
+        <div class="container-t">
+
+                <div class="intro">
+                    <ul id="dynamicContainer">
+                        <?php
+						foreach($params['article'] as $dynamic){
+							$aid = $dynamic['id'];
+					?>
+                        <li class="clearfix">
+                            <dl>
+                                <dt>
+                                    <a href="/info/article.html?id=<?php echo $aid ?> "><img
+                                            src="<?php echo empty($dynamic['images'])?'/images/temp_pc/wz.jpg':$dynamic['images']; ?>" alt="" /></a>
+                                </dt>
+                                <dd style="width: 550px;">
+                                    <h2 onclick="location.href='/info/article.html?id=<?php echo $aid ?>' "><?php echo $dynamic['title']?></h2>
+                                    <span class="desc"><?php echo mb_substr(strip_tags($dynamic['content']),0,230,'utf-8')?></span>
+                                    <p class="extra" style="position: absolute;top: 137px;margin-top: 0px">
+                                        <span>合作项目</span>
+                                        <span><?php echo(date("Y-m-d H:i:s",$dynamic['time'])); ?></span>
+                                    </p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <?php
+						}
+					?>
+                    </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="clear"></div>
+<div class=" clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['count']/10); ?>页
+    </p>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+
+

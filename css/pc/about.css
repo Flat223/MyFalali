@@ -1,0 +1,94 @@
+.aboutbnner{
+	/*margin-left: 10px;*/
+}
+.aboutab{
+	margin-top: 10px;
+}
+.aboutab .tab-title  li{
+	width: 180px;
+	height: 90px;
+	float: left;
+	background: #f0f0f0;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: all .3s ;
+    -moz-transition:  all .3s ;
+	-webkit-transition:  all .3s ;
+	-ms-transition:  all .3s ;
+}
+.aboutab .tab-title  li div{
+    width: 30px;
+    height: 30px;
+    margin: 20px 0 6px 74px;
+}
+.aboutab .tab-title  li span{
+	display: block;
+	text-align: center;
+}
+.aboutab .tab-title  li.about-this{
+	background: #00bfb8;
+	color: #fff;
+}
+.aboutab .tab-title  li .aboutHome{
+	background:url(/images/pc/aboutHome.png) no-repeat
+}
+.aboutab .tab-title  li .aboutDocument{
+	background:url(/images/pc/aboutDocument.png) no-repeat
+}
+.aboutab .tab-title  li .aboutLab{
+	background:url(/images/pc/aboutLab.png) no-repeat
+}
+.aboutab .tab-title  li .aboutShare{
+	background:url(/images/pc/aboutShare.png) no-repeat
+}
+.aboutab .tab-title  li .aboutSave{
+	background:url(/images/pc/aboutSave.png) no-repeat
+}
+
+.aboutab .tab-title  li.about-this .aboutHome{
+	background:url(/images/pc/aboutHome-1.png) no-repeat
+}
+.aboutab .tab-title  li.about-this .aboutDocument{
+	background:url(/images/pc/aboutDocument-1.png) no-repeat
+}
+.aboutab .tab-title  li.about-this .aboutLab{
+	background:url(/images/pc/aboutLab-1.png) no-repeat
+}
+.aboutab .tab-title  li.about-this .aboutShare{
+	background:url(/images/pc/aboutShare-1.png) no-repeat
+}
+.aboutab .tab-title  li.about-this .aboutSave{
+	background:url(/images/pc/aboutSave-1.png) no-repeat
+}
+.aboutab-content .aboutab-item{
+	display: none;
+	padding-bottom: 20px;
+	transition: all .3s ;
+    -moz-transition:  all .3s ;
+	-webkit-transition:  all .3s ;
+	-ms-transition:  all .3s ;
+}
+.aboutab-content .aboutab-show{
+	display: block!important;
+	transition: all .3s ;
+    -moz-transition:  all .3s ;
+	-webkit-transition:  all .3s ;
+	-ms-transition:  all .3s ;
+}
+.aboutab-content .aboutab-item h1{
+	font-size: 15px;
+	padding: 0 0 20px 0;
+	color: #333333;
+	margin-top: 1em;
+}
+.aboutab-content .aboutab-item p{
+	line-height: 30px;
+}
+.aboutab-content .aboutab-item p.title{
+	color: #00bfb8;
+}
+.aboutab-content .aboutab-item img{
+	display: block;
+	width: 90%;
+	margin:20px auto;
+}

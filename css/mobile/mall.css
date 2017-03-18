@@ -1,0 +1,131 @@
+body{
+    background:rgb(242,242,242);
+}
+.banner{
+    width: 100%;
+}
+.banner img{
+    display: block;
+    width: 100%;
+}
+.mall_typebtn{
+    width: 100%;
+    height: 10%
+}
+.mall_typebtn div{
+    width: 33%;
+    height: 100%;
+    float: left
+}
+
+.mall_labtit{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 1rem 1.5rem;
+    text-indent: 0.5rem;
+    border-left: 3px solid #00bfb8;
+}
+.mall_labmore{
+    float: right;
+    margin-right: 5%;
+    font-size: 1.6rem;
+    color: #9e9e9e;
+}
+.mall_labgoods{
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px dashed #9b9b9b;
+    padding-bottom: 1rem;
+}
+
+.mall_labgoodsdet{
+    float: left;
+    width: 23%;
+    margin-left: 1%;
+}
+.mall_goodsimg{
+    border: 1px solid #d1d1d1;
+    width: 100%;
+    height:88px;
+}
+.mall_goodstit{
+    font-size: 1.3rem;
+    text-align: center;
+    line-height:2rem;
+    width: 95%;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.mall_goodsimg >img{
+    width: 100%;
+    height:100%;
+}
+
+.mall_brand{
+    height: 20%;
+    margin-top: 2%;
+}
+.mall_pp{
+    width: 100%;
+    height: 32%
+}
+.mall_pp div{
+    width: 18%;
+    height: 100%;
+    float: left;
+    margin-left: 2%
+}
+.pc_bbgj{
+    height: 15%;
+    margin-top: 3%;
+    margin-left: 7%;
+    float: left;
+    width: 25%;
+}
+.xqdd{
+    height: 90%;
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+.img{
+    height: 60%;
+}
+.name{
+    font-size: 1.7rem!important;
+    margin-top: 6%;
+    font-weight: bold;
+}
+
+.clearfix:after {
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+#ProList{
+    width: 99%;
+    margin: auto;
+    padding-left:2% ;
+}
+#ProList li{
+    float: left;
+    width: 30%;
+    margin: 1%;
+}
+#ProList li>a{
+    display: block;
+}
+#ProList li>a>img{
+    display: block;
+    width: 100%;
+}
+
+

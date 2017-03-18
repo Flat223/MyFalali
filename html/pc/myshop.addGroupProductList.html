@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的店铺</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+<div class="content w1200 clearfix">
+    <div class=" content-item">
+		<div style="width: 100%">
+			<table id="table-5" width="100%" class="table table-bordered table-hover dataTable" role="grid">
+				<thead>
+			        <tr role="row">
+<!--             			<th>&nbspID&nbsp</th> -->
+            			<th width="10%">&nbsp名称&nbsp</th>
+            			<th>&nbsp组图&nbsp</th>
+            			<th>&nbsp类别&nbsp</th>
+            			<th>&nbsp品牌&nbsp</th>
+            			<th>&nbsp最低价格&nbsp</th>
+            			<th>&nbsp卖出总数|浏览数&nbsp</th>
+            			<th>&nbsp总评分&nbsp</th>
+            			<th>分类详情</th>
+            			<th>&nbsp操作栏&nbsp</th>
+        			</tr>
+        		</thead>
+
+				<tbody class="product_body"></tbody>
+				<?php if(count($params['product'])>0){
+				foreach($params['product'] as $v){ ?>
+					<tr class="product" role="row">
+<!-- 						<td><?php echo $v['pid']; ?></td> -->
+						<td style="cursor: pointer" target="_blank" onclick="window.location.href='<?php echo '../goods/detail.html?pid='.$v['pid'];?>'" width="10%"><?php echo $v['name']; ?></td>
+						<td><a class="images" href="javascript:void(0)" images="<?php echo $v['images']; ?>">查看</a></td>
+						<td width="10%"><?php echo $v['tname']; ?></td>
+						<td><?php echo $v['bname']; ?></td>
+						<td><?php echo $v['val']; ?></td>
+						<td><?php echo $v['sale_num']; ?>|<?php echo $v['view_num']; ?></td>
+						<td><?php echo empty($v['score'])?0:round($v['score'],2); ?></td>
+						<td><a class="property" href="javascript:void(0)" ptid="<?php echo $v['ptid']; ?>" pid="<?php echo $v['pid']; ?>">查看</a></td>
+						<td>
+							<p><button class="button green" name="deleteproduct" pid="<?php echo $v['pid']?>">添加</button></p>
+						</td>
+					</tr>
+				<?php } }else{ ?>
+				<p style="text-align: center;font-size:30px;">暂无产品</p>
+				<?php } ?>
+		    </table>
+		</div>
+		<div class=" clearfix" id="page">
+			<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+			<p class="">
+				共<?php echo ceil($params['count']/10); ?>页
+			</p>
+		</div>
+    </div>
+</div>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/addgrouprolist.js');
+</script>
+</script>
+
+

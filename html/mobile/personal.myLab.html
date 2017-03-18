@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <title>我的实验室</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="/css/mobile/head.css">
+    <!--<link rel="stylesheet" href="/css/mobile/myLab.css">-->
+    <link rel="stylesheet" href="/css/mobile/cooperate.css">
+</head>
+<body>
+    <div class="title">我的实验室</div>
+    <?php $lab = $params['laboratory'];?>
+    <ul class="lab_ul">
+        <?php
+            if(!empty($lab)){
+            for($i = 0;$i<count($lab);$i++){
+        ?>
+        <li class="lab_li" value="<?php echo $lab[$i]['lab_id'];?>">
+            <div class="coop_div">
+                <div class="coop_div_1">
+                    <img width="80%"  src="<?php echo empty($lab[$i]['logo'])?'/images/temp_mobile/coop.png': explode(',',$lab[$i]['logo'])[0]; ?>"><br>
+                    <a><?php echo $lab[$i]['name']?></a>
+                </div>
+                <div class="coop_div_2">
+                    <div>服务领域:<a><?php echo explode(',',$lab[$i]['service_area'])[0]?></a></div>
+                    <div>评分:
+                        <?php
+							    $starNum = $lab[$i]['stars'];
+								if($starNum%2 == 0){
+									for($k = 0; $k < $starNum/2; $k++){
+									?>
+                        <img style="display: inline;" width="8%" src="/images/pc/1y.png">
+                        <?php
+									}
+								}else{
+									for($k = 0; $k < floor($starNum/2); $k++){
+									?>
+                        <img style="display: inline;" width="8%" src="/images/pc/1y.png">
+                        <?php
+									}
+								    ?>
+                        <img style="display: inline;" width="8%" src="/images/pc/1yb.png" alt="" />
+                        <?php
+								}
+							?>
+                    </div>
+                    <div>电话:<a><?php echo $lab[$i]['manager_phone'];?></a></div>
+                    <div>地址:<a><?php echo $lab[$i]['address'];?></a></div>
+                </div>
+            </div>
+        </li>
+        <?php
+         }
+         }else{
+         ?>
+            <li style="margin: 100px 150px;font-size: 16px;color: #9e9e9e;"><div><span><?php echo "暂无实验室~"?></span></div></li>
+        <?php
+         }
+        ?>
+    </ul>
+
+</body>
+</html>

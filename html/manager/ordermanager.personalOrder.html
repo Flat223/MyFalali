@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-个人订单</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/all-order.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+	<div class="bread">
+		<ul>
+			<li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><i></i>订单管理</a></li>
+			<li><span>/</span></li>
+			<li><i></i>个人订单</a></li>
+			<input name="order_type" value="4" type="hidden">
+		</ul>
+	</div>
+	<div class="mainContent">
+		<div class="main-wrapp">
+			<div class="search-container">
+				<div class="sear-wrapp clearfix">
+					<div class="search-item">
+						<span>订单号：</span>
+						<input name="order_code" type="text"
+							value="<?php echo isset($_GET['order_code'])?$_GET['order_code']:''; ?>" />
+					</div>
+					<div class="search-item">
+						<span>申请人</span>
+						<input name="applier" type="text"
+							value="<?php echo isset($_GET['applier'])?$_GET['applier']:''; ?>" />
+					</div>
+					<div class="search-item">
+						<span>商品名称：</span>
+						<input name="product"
+							value="<?php echo isset($_GET['product'])?$_GET['product']:''; ?>" type="text" />
+					</div>
+				</div>
+				<div class="sear-wrapp clearfix">
+					<div class="search-item">
+						<span>提交日期：</span>
+						<input name="start_time" class="date" id="data"
+							value="<?php echo isset($_GET['start_time'])?$_GET['start_time']:''; ?>"/>
+					</div>
+					<div class="search-item">
+						<span>至</span>
+						<input name="end_time" class="date" id="data2"
+							value="<?php echo isset($_GET['end_time'])?$_GET['end_time']:''; ?>"/>
+					</div>
+					<div class="search-item">
+						<span class="search">搜索</span>
+					</div>
+				</div>
+			</div>
+			<div class="chart-wrapp clearfix">
+				<ul id="status_list" class="clearfix">
+					<li name="allorder" value="" >全部订单</li>
+					<li name="wait_pay" value="1">待付款</li>
+					<li name="wait_send" value="2">待发货</li>
+					<li name="wait_rece" value="3">待收货</li>
+					<li name="wait_comm" value="4">待评价</li>
+				</ul>
+			</div>
+			<div class="chart-content">
+				<div class="chart-item chart-show">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th width="15%">名称</th>
+							<th width="10%">属性</th>
+							<th width="10%">所在店铺</th>
+							<th width="5%">数量</th>
+							<th width="10%">金额</th>
+							<th width="10%">申请人</th>
+							<th width="10%">状态</th>
+							<th width="10%">操作</th>
+						</tr>
+				<?php
+					foreach ($params['order'] as $order){
+				?>
+						<tr>
+							<td colspan="8" class="order-number" style="text-align: left;text-indent: 1em;">
+								<span>订单号: <?php echo $order['order_code']?></span>
+								<span><?php echo date('Y-m-d  H:i:s',$order['time']); ?></span>
+							</td>
+						</tr>
+					<?php
+						foreach ($order['product'] as $product){
+					?>
+						<tr>
+							<td>
+								<dl class="clearfix">
+									<dt>
+										<img style="width: 90px;height: 90px" src="<?php echo $product['images']?>">
+									</dt>
+									<dd><?php echo $product['name'];?></dd>
+								</dl>
+							</td>
+							<td>
+						<?php
+							foreach($product['props'] as $prop){
+						?>
+								<p>
+									<span><?php echo($prop['proname']." : ".$prop['proval']); ?></span>
+								</p>
+						<?php
+							}
+						?>
+							</td>
+							<td><?php echo $product['shop'];?></td>
+							<td><?php echo $product['num'];?></td>
+							<td><?php echo "¥".$product['price'];?></td>
+							<td><?php echo $order['payer'];?></td>
+							<td class="wait-goods">
+								<?php
+									$state = $order['state'];
+									if($state == 2 && $order['payment_type'] == 3){
+										echo '线下付款凭证通过,等待发货';
+									} else {
+										switch ($state) {
+											case '1':
+												echo '待付款';
+												break;
+											case '2':
+												echo '已付款,待发货';
+												break;
+										    case '3':
+												echo '已发货';
+												break;
+											case '4':
+												echo '已收货,待评论';
+												break;
+											case '5':
+												echo '已评论';
+												break;
+											case '6':
+												echo '已上传线下付款凭证';
+												break;
+											case '7':
+												echo '付款凭证被驳回';
+												break;
+										}
+									}
+								?>
+							</td>
+							<td>
+								<a class="detail"
+									href="/ordermanager/orderdetail.html?type=4&order_code=<?php echo $order['order_code']?> ">
+									查看详情
+								</a>
+							</td>
+						</tr>
+				<?php
+						}
+					}
+				?>
+					</table>
+				</div>
+			</div>
+	<?php
+		if(count($params['order']) == 0){
+	?>
+		<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无订单</p>
+	<?php
+		}
+	?>
+		<?php
+			if($params['pager'] != "" && count($params['order'])>0){
+		?>
+			<div class=" clearfix" id="page">
+				<?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+				<p class="">
+					共<?php echo($params['pager']->getPageCount()); ?>页，到第
+					<input type="text" maxlength="4" id="page_num">页
+					<input class="sub" type="butston" id="goto" value="确定">
+					<input name="baseurl" type="hidden" value="<?php echo $params['baseurl'] ?>">
+				</p>
+			</div>
+		<?php
+			}
+		?>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+<script type="text/javascript" src="/js/manager/allorder.js"></script>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	});
+
+	$(function(){
+		var flag="<?php echo isset($_GET['state'])?$_GET['state']:''; ?>";
+		switch(flag)
+		{
+			case '1':
+				$('#status_list li[name=wait_pay]').addClass("chart-this");
+				break;
+			case '2':
+				$('#status_list li[name=wait_send]').addClass("chart-this");
+				break;
+			case '3':
+				$('#status_list li[name=wait_rece]').addClass("chart-this");
+				break;
+			case '4':
+				$('#status_list li[name=wait_comm]').addClass("chart-this");
+				break;
+			default:
+				$('#status_list li[name=allorder]').addClass("chart-this");
+		}
+
+		laydate({
+			elem: '#data',
+			event: 'click',
+			skin:'molv',
+			path:"js/laydate/"
+		});
+
+		laydate({
+			elem: '#data2',
+			event: 'click',
+			skin:'molv',
+			path:"js/laydate/"
+		});
+	});
+</script>

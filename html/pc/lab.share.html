@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-实验室共享</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/lab_share.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=P14l8MNCnZ4XRkhvPzBvKB4B"></script>
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<style type="text/css">
+		.view{
+			margin-top: -20px;
+			/* background: #1a5454; */
+			color: #000000;
+			text-align: center;
+		}.num{
+			 color: red;
+		}
+		.heart{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="category_nav ">
+	<div class="w1200 clearfix">
+		<div class="categrory left">
+			<a class="all_prd">实验室分类 </a>
+			<div class="cate_down">
+				<ul>
+					<?php
+						$labTypes = $params['labTypes'];
+						if(!empty($labTypes)){
+							foreach($labTypes as $key=>$value){
+							?>
+								<li>
+									<a href="/lab/labList.html?labtId=<?php echo($value['lab_tid']); ?>"><?php echo $value['name']; ?><i></i></a>
+									<div class="sub_menu clearfix">
+										<p class="caption"><?php echo $value['name']; ?></p>
+										<ul>
+											<?php
+												$childTypes = $params['labChildTypes'][$key];
+												if(!empty($childTypes)){
+													foreach($childTypes as $var){
+													?>
+														<li>|<a href="/lab/labList.html?labtId=<?php echo($var['lab_tid']);?>&parentId=<?php echo($var['parentid']); ?>"><?php echo $var['name']; ?></a></li>
+													<?php
+													}
+												}
+											?>
+										</ul>
+									</div>
+								</li>
+							<?php
+							}
+						}
+					?>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部分类End-->
+<div class="content">
+	<div class="banner_news w1200 clearfix">
+		<!--banner-->
+		<div class="banner left">
+			<div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul><li></li><li></li><li></li></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<?php
+							$piclist=$params['advertbanner'];
+							foreach($piclist as $value){
+							?>
+								<li><a href="<?php echo $value['url']; ?>" ><img style="width:733px;height:356px" src="<?php echo($value['image'])?>" /></a></li>
+						<?php
+						}
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--news-->
+		<div class="news right">
+		<!-- 分享 -->
+			<div class="sharebox">
+				<img src="/images/temp_pc/lab_share.jpg" alt="" />
+				<div class="share_button">
+					<a href="/requirement/labshare.html" >分享我的实验室</a>
+				</div>
+			</div>
+			<div class="anner_new">
+				<p class="caption">
+					新闻
+				</p>
+				<ul>
+					<?php
+						$news = $params['news'];
+						if(!empty($news)){
+							for($i = 0; $i<count($news);$i++){
+							?>
+							<li>
+								<a style="height: 30px" href="<?php echo $news[$i]['url']?>" target="_blank"><?php echo $news[$i]['title'] ?></a>
+							</li>
+							<?php
+								if($i == 3){
+									break;
+								}
+							}
+						}
+					?>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+</div>
+<div class="contain w1200">
+	<div class="contain_l_share left">
+		<p class="caption_p">热门实验室</p>
+		<ul>
+			<?php
+				$hotlab = $params['hotLab'];
+					if(!empty($hotlab)){
+						foreach($hotlab as $value){
+						?>
+							<li>
+								<dl>
+									<dt>
+											<img src="<?php echo empty($value['logo'])?'/images/temp_pc/list1.png':explode(',',$value['logo'])[0]; ?>" alt="" />
+											<div class="heart" value="<?php echo $value['lab_id']?>">
+												<img class="ht<?php echo $value['lab_id'];?>" src="<?php echo (in_array($value['lab_id'],$params['cl'])? '/images/temp_pc/list-heart.png':'/images/temp_pc/list-hollow.png') ;?>" alt="" />
+											</div>
+											<div class="view"><span class="num"><?php echo $value['view_num']?></span>次浏览</div>
+											</dt>
+											<dd>
+												<h3><a href="/lab/detail.html?labId=<?php echo $value['lab_id']; ?>"><?php echo $value['name']; ?></a></h3>
+												<?php
+												 	$starNum = $value['stars'];
+												 	if($starNum%2 == 0){
+												 		for($i = 0; $i < $starNum/2; $i++){
+														?>
+															<img src="/images/pc/1y.png" alt="" />
+														<?php
+												 		}
+												 	}else{
+												 		for($i = 0; $i < floor($starNum/2); $i++){
+														?>
+															<img src="/images/pc/1y.png" alt="" />
+														<?php
+												 		}
+														?>
+															<img src="/images/pc/1yb.png" alt="" />
+														<?php
+												 	}
+												?>
+												<div class="description">
+													<p>
+														<span>服务领域：</span><?php echo $value['service_area'];?>
+													</p>
+													<p>
+														<span>联系地址：</span><?php echo $value['address']; ?>
+													</p>
+													<p>
+														<span>简介：</span><?php echo $value['intro']; ?>
+												</div>
+											</dd>
+								</dl>
+							</li>
+						<?php
+						}
+					}
+			?>
+			<li>
+				<dl><a href="/lab/moreLab.html?cate=2">
+					<dd style="cursor: pointer;background: #00bfb8;color: white;text-align: center;height: 30px;line-height: 30px;margin-right: 10px;">
+						<span>查看更多</span>
+					</dd></a>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<div class="contain_r_share left">
+		<p class="p_item_share">
+			合作实验室   <a href="/lab/moreLab.html?cate=1" style="float: right;margin-right: 10px;font-size: 14px;cursor: pointer">查看更多>></a>
+		</p>
+		<div class="list_wrapper clearfix">
+		    <ul>
+				<?php
+					$labs = $params['labs'];
+					if(!empty($labs)){
+						foreach($labs as $value){
+						?>
+							<li>
+								<dl>
+									<dt>
+										<img src="<?php echo empty($value['logo'])?'/images/temp_pc/list1.png':$value['logo']; ?>" alt="" />
+										<div class="heart" value="<?php echo $value['lab_id']?>">
+											<img class="ht<?php echo $value['lab_id'];?>" src="<?php echo (in_array($value['lab_id'],$params['cl'])? '/images/temp_pc/list-heart.png':'/images/temp_pc/list-hollow.png') ;?>" alt="" />
+										</div>
+										<div class="view"><span class="num"><?php echo $value['view_num']?></span>次浏览</div>
+									</dt>
+									<dd>
+										<h3><a href="/lab/detail.html?labId=<?php echo $value['lab_id']; ?>"><?php echo $value['name']; ?></a></h3>
+										<?php
+											$starNum = $value['stars'];
+											if($starNum%2 == 0){
+												for($i = 0; $i < $starNum/2; $i++){
+												?>
+													<img src="/images/pc/1y.png" alt="" />
+												<?php
+												 }
+											}else{
+												for($i = 0; $i < floor($starNum/2); $i++){
+												?>
+													<img src="/images/pc/1y.png" alt="" />
+												<?php
+												 }
+												?>
+													<img src="/images/pc/1yb.png" alt="" />
+												<?php
+											}
+										?>
+										<div class="description">
+											<p>
+												<span>服务领域：</span><?php echo $value['service_area']?>
+											</p>
+											<p>
+												<span>联系地址：</span><?php echo $value['address']; ?>
+											</p>
+											<p>
+											   <span>简介：</span><?php echo $value['intro']; ?>
+										</div>
+									</dd>
+								</dl>
+							</li>
+						<?php
+						}
+					}
+				?>
+		    </ul>
+		</div>
+		<p class="p_item_share">
+			附近实验室
+		</p>
+		<div class="map">
+		<div style="width:977px;height:568px;border:#ccc solid 1px;margin-top:10px" id="dituContent"></div>
+		<div class="face_search">
+			<div class="face_out">
+				<div class=" map_search right clearfix">
+					<!-- <span class="left">商品</span> -->
+					<input id="pointVal" type="text" placeholder="请输入地点、名称搜索" />
+					<span class="right">搜索</span>
+				</div>
+				<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+			</div>
+				<div class="clear"></div>
+				<div class="list" id="labres">
+					<ul>
+						<?php
+							$locallab = $params['localLab'];
+							for($i = 0;$i<count($locallab);$i++){
+							?>
+								<li class="local">
+									<a href="/lab/detail.html?labId=<?php echo $locallab[$i]['lab_id']; ?>"><h2><i><?php echo ($i+1);?></i><?php echo $locallab[$i]['name'];?></h2></a>
+									<dl>
+										<dt class="leftblock">
+											<?php
+												if( $locallab[$i]['stars']%2 == 0){
+													for($j = 0; $j <  $locallab[$i]['stars']/2; $j++){
+													?>
+														<img src="/images/pc/1y.png" alt="" />
+													<?php
+												 	}
+												}else{
+													for($k = 0; $k < floor( $locallab[$i]['stars']/2); $k++){
+													?>
+														<img src="/images/pc/1y.png" alt="" />
+													<?php
+													}
+													?>
+														<img src="/images/pc/1yb.png" alt="" />
+													<?php
+												}
+												?>
+												<p><span>服务领域：</span><?php echo $locallab[$i]['service_area']?></p>
+												<p><span>联系地址：</span><?php echo $locallab[$i]['address']; ?></p>
+										</dt>
+										<dd class="right">
+											<?php
+										 		if(!empty($value['logo'])){
+												?>
+													<img src="<?php echo $locallab[$i]['logo']; ?>" alt="" />
+												<?php
+										 		}else{
+												?>
+													<img src="/images/temp_pc/list1.png" alt="" />
+												<?php
+										 		}
+											?>
+										</dd>
+									</dl>
+								</li>
+								<div style="clear: both"></div>
+							<!--<input type="hidden" id="tot" value="<?php echo count($locallab)?>" />
+							<input type="hidden" class="locname<?php echo $i;?>" value="<?php echo $locallab[$i]['name'];?>" />
+							<input type="hidden" class="latlon<?php echo $i;?>" value="<?php echo $locallab[$i]['lat'].','.$locallab[$i]['lat'];?>"/>
+							<input type="hidden" class="address<?php echo $i;?>" value="<?php echo $locallab[$i]['address'];?>" />-->
+							<?php
+							}
+						?>
+					</ul>
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/lab_share.js');
+</script>
+</body>
+</html>
+
+
+

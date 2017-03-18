@@ -1,0 +1,26 @@
+.info_type{
+    width: 100%;
+    height: 4%;
+    font-size: 18px;
+    margin-left: 2%;
+    font-size: 16px;
+}
+.type{
+    /*width: 30%;*/
+    height: 80%;
+    /*float: left;*/
+}
+.type_input{
+    /*width: 55%;*/
+    height: 100%;
+    float:right;
+    margin-right: 15%;
+}
+.input_value{
+    overflow:auto;
+    border:0px;
+    outline: none;
+    text-align: right;
+    width: 100%;
+    background-color:transparent
+}

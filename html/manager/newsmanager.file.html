@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-公司新闻</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="javascript:;"><i></i>内容管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="javascript:;"><i></i>公司新闻</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="search-wrapp clearfix">
+					<div class="left">
+						<div class="add-item">
+							<span><a href="add-news.html">+添加新闻</a></span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="sear-item">
+							<input type="text" placeholder="输入商家名称或关键词搜索">
+							<span>搜索</span>
+						</div>
+					</div>
+				</div>
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<th width="5%">ID</th>
+						<th width="15%">缩略图</th>
+						<th width="30%">标题</th>
+						<th width="15%">创建日期</th>
+						<th width="15%">点击</th>
+						<th width="20%">操作</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>
+							<img src="/images/manager/product.jpg" alt="">
+						</td>
+						<td>标题</td>
+						<td>2016-10-26&nbsp;&nbsp; 00:00:00</td>
+						<td>0</td>
+						<td>
+							<button class="layui-btn layui-btn-small layui-btn-look">
+							  <i class="layui-icon"></i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-edit">
+							  <i class="layui-icon">&#xe642;</i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-del">
+							  <i class="layui-icon">&#xe640;</i>
+							</button>
+						</td>
+					</tr>
+				</table>
+				<div class="boot-wrapp clearfix">
+					<div id="page" class="left"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find(".accordion-ul").slideToggle("slow");
+//	})
+		layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+});
+</script>

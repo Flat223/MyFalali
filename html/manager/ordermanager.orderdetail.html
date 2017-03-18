@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-订单详情</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/manager/orderDetail.css">
+	
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+	<div class="bread">
+		<ul>																			
+			<li><a href="/index.html"><i></i>后台首页</a></li>
+			<li><span>/</span></li>
+			<li><i></i>订单管理</a></li>
+			<li><span>/</span></li>
+			<li><i></i>订单详情</a></li>
+		</ul>
+	</div>
+	<div class="mainContent">
+		<div class="main-wrapp">
+			<?php
+				$user = UserAgent::getUser();
+				$order = $params['order'];
+				$state = $order['state'];
+				$productArray = $order['product'];
+			?>
+			<input name="order_type" type="hidden" value="<?php echo $params['type']?>"/>
+			<input name="order_code" type="hidden" value="<?php echo $order['order_code']?>"/>
+			<div class="order-process">
+			<?php
+				if($state == 1){		
+			?>
+				<img src="/images/pc/order1.png" alt="" />
+			<?php
+				}else if($state == 2){		
+			?>
+				<img src="/images/pc/order2.png" alt="" />
+			<?php
+				}else if($state == 3){		
+			?>
+				<img src="/images/pc/order3.png" alt="" />
+			<?php
+				}else if($state == 4){		
+			?>
+				<img src="/images/pc/order4.png" alt="" />
+			<?php
+				}else {		
+			?>	
+				<img src="/images/pc/order5.png" alt="" />
+			<?php
+				}
+			?>
+			</div>
+			<div class="tips-wrap">
+				<dl class="clearfix">
+					<dt class="left">
+						<img src="/images/pc/wanted.png" alt="" />
+					</dt>
+					<dd class="left">
+				<?php
+					if($state == 1){
+				?>
+						<h2>订单状态：商品已被拍下，等待买家付款!</h2>
+				<?php
+					} else if($state == 2){
+				?>	
+						<h2>订单状态 : 已完成付款,请等待商家发货</h2>
+						<p>货物将送至 : <?php echo $order['province_name'].$order['detail_address']?>  (收件人 : <?php echo $order['consignee'] ?>) <?php echo $order['mobile'] ?>
+						</p>
+				<?php
+					} else if($state == 3){
+				?>	
+						<h2>订单状态：商品已发货, 等待买家确认收货!</h2>
+						<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+				<?php
+					} else if($state == 4){
+				?>	
+						<h2>订单状态:买家已确认收货,交易完成!</h2>
+						<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+				<?php
+					} else if($state == 5){
+				?>	
+						<h2>订单状态:已评价!</h2>
+						<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+				<?php
+					} else if($state == 6){
+				?>
+						<h2>订单状态:买家已上传线下付款凭证,等待卖家审核!</h2>
+				<?php
+					} else if($state == 7){
+				?>
+						<h2>订单状态:买家线下付款凭证被驳回!</h2>
+						<h2 style="color: gray"><?php echo "拒绝原因:  ".$order['remarks'] ?></h2>	
+				<?php
+					} else if($state == 8){
+				?>
+						<h2>订单状态:买家已申请退款,等待卖家审核!</h2>		
+				<?php
+					} else if($state == 9){
+				?>
+						<h2>订单状态:退款中!</h2>
+				<?php
+					} else if($state == 10){
+				?>
+						<h2>订单状态:退款成功!</h2>
+				<?php
+					} else if($state == 11){
+						$refund = $params['refund'];
+				?>
+						<h2>订单状态:买家退款申请被驳回!</h2>
+						<h2 style="color: gray"><?php echo "拒绝原因:  ".$refund['reply'] ?></h2>
+				<?php
+					}
+				?>
+					</dd>
+				</dl>
+	
+				<table border="0" cellpadding="0" cellspacing="0">
+				  <tr>
+				    <th class="order-title">商品信息</th>
+				    <th>单价(元)</th>
+				    <th>数量</th>
+				    <th>总计</th>
+				    <th>订单状态</th>
+				  </tr>
+				  <tr class="cells">
+				  	<td colspan="5" class="order-number" style="text-align: left;text-indent: 1em;"><?php echo date('Y-m-d H:i:s',$order['time']); ?>&nbsp;&nbsp;&nbsp;订单号:<?php echo $order['order_code']; ?>
+				  	</td>
+				  </tr>
+		<?php
+			for($i=0;$i<count($productArray);$i++){
+				$product = $productArray[$i];
+		?>
+				<tr>
+				    <td class="commodity_inof">
+				    	<dl>
+				    		<dt>
+								<?php $imgArr = explode(",",$product['images']) ?>
+								<a href="/goods/detail.html?pid=<?php echo $product['pid'] ?>">
+									<img style="width:100px;height:100px;"; src="<?php echo $imgArr[0] ?>" alt="" />
+								</a>
+							</dt>
+							<dd>
+								<a href="/goods/detail.html?pid=<?php echo $product['pid'] ?>">
+									<?php echo $product['name'];?>
+								</a>
+						<?php
+							foreach($product['props'] as $prop){
+						?>									
+								<p>
+									<span><?php echo($prop['proname']." : ".$prop['proval']); ?></span>
+								</p>
+						<?php
+							}
+						?>
+							</dd>
+				    	</dl>
+				    <td><?php echo "¥".$product['price'];?></td>
+					<td><?php echo $product['num'];?></td>
+			<?php
+				if(count($productArray) == 1){
+			?>
+					<td><?php echo "¥".$order['tot_fee'];?></td>
+				    <td>
+					    <?php
+							switch ($state) {
+								case '1':
+									echo '待付款';
+									break;
+								case '1.5':
+									echo '已付首款';
+									break;
+								case '2':
+									echo '已付款';
+									break;
+							    case '3':
+									echo '已发货';
+									break;
+								case '4':
+									echo '已收货';
+									break;
+								case '5':
+									echo '已完成';
+									break;
+								case '6':
+									echo '已上传线下付款凭证';
+									break;
+								case '7':
+									echo '付款凭证被驳回';
+									break;
+								
+							}
+						?>
+					</td>
+			<?php
+				} else if($i == 0){
+			?>
+				   	<td class="merge" colspan="2" 
+					   	rowspan="<?php echo(count($productArray));?>">
+						<span><?php echo ("¥".$order['tot_fee']);?></span>
+						<div class="order_state">
+						<?php
+							switch ($state) {
+								case '1':
+									echo '待付款';
+									break;
+								case '1.5':
+									echo '已付首款';
+									break;
+								case '2':
+									echo '已付款';
+									break;
+							    case '3':
+									echo '已发货';
+									break;
+								case '4':
+									echo '已收货';
+									break;
+							}
+						?>
+						</div>
+					</td>
+			   	</tr>
+		<?php
+				}
+			}
+		?>
+			</table>	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	});
+</script>
+
+

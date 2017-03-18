@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <title></title>
+</head>
+<body>
+                        <table style="line-height: 35px;"><?php $data = $params['img']?>
+                            <tr>
+                                <td colspan="2">
+                                    <span>图片：</span>
+                                    <div style="margin-left: 74px" class="form-group">
+                                        <div class="col-sm-6">
+                                            <button type="button" class="btn btn-primary" style="padding: 0 0;width: 100px;height: 35px;background-color: #00a0e9" id="uping" >上传图片</button>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 74px;" class="form-group" id="brand_img_wrap">
+                                        <div class="uploadfile">
+                                            <img style="width:200px;height: 200px" id="logo" src="<?php echo $data['image'] ?>" alt="" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>名称：</span>
+                                    <input style="margin-left: 28px;height: 30px;" id="name" type="text" value="<?php echo $data['name']?>">
+                                </td>
+                            </tr>
+                        </table>
+                        <input  id="did" type="hidden" value="<?php echo $data['id'] ?>">
+                        <div id="save" style="cursor: pointer; margin: 0px 200px;background: #ccc;width: 60px;text-align: center;height: 30px;line-height: 30px;margin-top: 5px">修改</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/cyupload.js"></script>
+<script type="text/javascript">
+    $.cyupload({
+        elem:'#uping',
+        btnName:"请选择",		//按键名称
+        infoElementId:"",	//上传状态信息包装元素id
+        maxFilesize:10485760,
+        uploadUrl:'/service/uploadimgServ.html',
+        fileFilter:'',
+        upfileParam:'upload_file_input',
+        success:function(url){
+            $("#logo")[0].src=url['file_url'];
+            return;
+        }
+    });
+
+    $("#save").on('click',function () {
+        var id = $("#did").val();
+        var logo = $("#logo")[0].src;
+        var name = $("#name").val();
+        if(logo == "" || name == ""){
+            layer.alert("有未填写的信息！", {offset: '200px'});
+            return;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/service/EditThemeServ.html",
+            data: {"img": logo, "name": name,"id":id},
+            success: function (data) {
+                if(data.ret == 1) {
+                    layer.alert(data.msg, {offset: '200px'});
+                    window.setTimeout(widreload,1000);
+                }else if(data.ret == -1){
+                    layer.alert(data.msg, {offset: '200px'});
+                }
+            },
+            error:function (msg) {
+                layer.alert("修改失败！", {offset : '200px'});
+            }
+        })
+    })
+
+    function widreload() {
+        window.location.reload();
+    }
+
+</script>
+</body>
+</html>

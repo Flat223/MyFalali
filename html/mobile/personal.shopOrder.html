@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的订单</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/purchase.css">
+
+<script type="text/javascript" src="/js/sea.js"></script>
+<script type="text/javascript" src="/js/seaconfig.js"></script>
+
+<script type="text/javascript" src="/js/sea.js"></script>
+<script type="text/javascript" src="/js/seaconfig.js"></script>
+
+<body>
+	<?php
+		$user = UserAgent::getUser();
+		$orderType = $params['order_type'];
+	?>
+	<div style="display: none">
+		<input name="order_type" value="<?php echo $params['order_type']?>"/>
+	</div>
+    <div class="title">采购订单</div>
+    <div class="pur_type">
+        <a style="margin-left: 2.4%">全部</a>
+        <a class="wait_pay">待付款</a>
+        <a class="wait_send">待发货</a>
+        <a class="wiat_receive">待收货</a>
+        <a class="finish">已完成</a>
+    </div>
+<?php
+	print_r($params['order']);
+	foreach ($params['order'] as $order){
+?>
+    <hr>
+    <div class="pur_div">
+        <div class="pur_num">
+            订单编号:<a><?php echo $order['order_code'] ?></a><a class="pur_state">
+	            <?php
+					switch ($order['state']) {
+						case '1':
+							echo '等待付款';
+							break;
+						case '2':
+							echo '卖家已付款';
+							break;
+					    case '3':
+							echo '商家已发货';
+							break;
+						case '4':
+							echo '买家已收货';
+							break;
+					}
+				?>
+            </a>
+        </div>
+        <div class="pur_info">
+            <div class="pur_img"><img width="100%" src="/images/temp_mobile/mallImage.png"></div>
+            <div class="pur_det">
+                <div class="pur_name">名称</div>
+                <div class="pur_type1">型号分类:型号名称</div>
+                <div class="pur_price">￥29.00</div>
+                <div class="pur_sl">x1</div>
+            </div>
+        </div>
+        <div class="pur_info">
+            <div class="pur_img"><img width="100%" src="/images/temp_mobile/mallImage.png"></div>
+            <div class="pur_det">
+                <div class="pur_name">名称</div>
+                <div class="pur_type1">型号分类:型号名称</div>
+                <div class="pur_price">￥29.00</div>
+                <div class="pur_sl">x1</div>
+            </div>
+        </div>
+        <div class="pur_count">
+            <a>共</a><a>1</a>件商品 合计:￥<a>29.00</a><a>含运费(￥0.00)</a>
+        </div><hr>
+        <div class="pur_btn">
+            <div class="pur_btn1"><input width="100%" type="image" src="/images/mobile/purBtn1.png"></div>
+            <div class="pur_btn2"><input width="100%" type="image" src="/images/mobile/purBtn2.png"></div>
+        </div>
+    </div>
+<?php
+	}
+?>
+</body>
+</html>
+<!--
+<script type="text/javascript">
+	window.seajs&&seajs.use('mobile/allorder.js');
+</script>
+-->
+<!--
+<script>
+	$(function(){
+		var flag="<?php echo isset($_GET['state'])?$_GET['state']:''; ?>";
+		switch(flag)
+		{
+			case '1':
+				$('#status_list li[name=notpay]').addClass("this_or");
+				break;
+			case '2':
+				$('#status_list li[name=notsend]').addClass("this_or");
+				break;
+			case '3':
+				$('#status_list li[name=notget]').addClass("this_or");
+				break;
+			case '4':
+				$('#status_list li[name=getit]').addClass("this_or");
+				break;
+			default:
+				$('#status_list li[name=all]').addClass("this_or");
+		}
+	});
+</script>
+-->

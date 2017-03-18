@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-好友管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+    <link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="wrapper_r right" style="min-height: <?php echo (count($params['dynamic']))>3?'1100px':'900px';?>">
+	    <?php
+	    	$user = UserAgent::getUser();
+			$friend = $params['friend'];
+		?>
+        <div class="container-t">
+            <div class="container_l">
+                <div class="clearfix">
+                    <dl class="left">
+                        <dt class="left">
+                            <img src="<?php echo empty($friend['face'])?'/images/pc/face_default.png':$friend['face']; ?>" alt="" />
+                        </dt>
+                        <dd class="left">
+                            <p>
+                                昵称：<?php echo $friend['nickname']; ?>
+                            </p>
+                            <p class="clearfix">
+								<span class="left">积分：<?php echo $friend['accumulated_points']; ?></span>
+								<a><i style="cursor: default"></i></a>
+							</p>
+                            <p class="clearfix">
+                            <?php
+								if($friend['is_vip'] == 1){
+							?>
+                                <span class="button-span identify">会员</span>
+                            <?php
+								}
+								if($friend['is_certificate'] == 1){
+							?>
+                                <span class="button-span identify">实名认证</span>
+                            <?php
+								}
+								if($friend['type'] == 1){
+							?>	
+								<span class="button-span identify">
+									<?php
+										foreach ($params['sub_type'] as $subType){
+											if($friend['sub_type'] == $subType['sub_type']){
+												echo $subType['name'];
+											}
+										}
+									?>
+								</span>
+                            <?php
+								} else if($friend['type'] == 2 && $friend['sub_type'] == 1){
+							?>
+                                <span class="button-span identify">科研人员</span>
+                            <?php
+								} else if($friend['type'] == 2 && $friend['sub_type'] == 2){
+							?>
+                                <span class="button-span identify">采购员</span>
+                            <?php
+								}
+							?>
+                            </p>
+                        </dd>
+                    </dl>
+
+                    <div class="tag-item right clearfix">
+                        <?php if($params['is_friend']){ ?>
+                        <span name="isfollow" style="cursor:pointer" class="">-取消关注</span>
+                        <?php }else{ ?>
+                        <span name="follow" style="cursor:pointer" class="">+添加关注</span>
+                        <?php } ?>
+                    </div>
+                <?php 
+					if (count($params['friendLabs']) > 0) {						
+				?>	
+					<div class="tag-item right clearfix">
+						<span class="left">标签：</span>
+						<span class="case-r right">
+					<?php 
+						$friendLabs = $params['friendLabs']['interest_label'];
+						if ($friendLabs != "") {
+							foreach (explode(",",$friendLabs) as $lab) { 						
+					?>						
+								<span class="button-span1"><?php echo ($lab) ; ?></span>
+					<?php	
+							}
+						}
+					?>
+						</span>
+					</div>
+				<?php
+					}
+				?>
+                </div>
+                <div class="newest">
+                    <p class="clearfix">
+                        <span class="left"><i></i>他的动态</span>
+                        <!--<span class="right">换一批></span>-->
+                    </p>
+                    <?php
+                        if(count($params['dynamic']) == 0){
+                    ?>
+                    <p style="text-align: center;margin-top: 20% ;font-size: 18px;color: #929292">该用户暂无文章</p>
+                    <?php
+                        }
+                    ?>
+                </div>
+                <div class="intro">
+                    <ul id="dynamicContainer">
+                    <?php
+						foreach($params['dynamic'] as $dynamic){
+							$aid = $dynamic['id'];
+					?>
+						<li class="clearfix">
+							<dl>
+								<dt>
+									<a href="/info/article.html?id=<?php echo $aid ?> "><img 
+										<img src="<?php echo $dynamic['images']?>" alt="" />
+									</a>
+								</dt>
+								<dd style="width: 550px;">
+									<h2 onclick="location.href='/info/article.html?id=<?php echo $aid ?>' ">
+										<?php echo $dynamic['title']?>
+									</h2>
+									<span class="desc"><?php echo $dynamic['intro']?></span>
+									<p class="extra" style="position: absolute;top: 137px;margin-top: 0px">
+										<span>文</span>
+										<span>/</span>
+										<span class="name"><?php echo $dynamic['author']?></span>
+										<span><?php echo(date("Y-m-d H:i:s",$dynamic['time'])); ?></span>
+										<span><?php echo $dynamic['category']?></span>
+									</p>
+								</dd>
+							</dl>
+						</li>
+					<?php
+						}
+					?>
+                    </ul>
+                    
+                <?php
+					if($params['article'] > count($params['dynamic'])){
+				?>
+					<div class="more_item">
+						<a style="cursor:pointer" class="loadmore" page="1">浏览更多</a>
+					</div>
+				<?php
+					}
+				?>
+                </div>
+            </div>
+            <!-- 开始 -->
+            <div class="container_r right" style="margin-top: -92px">
+                <div class="attention clearfix">
+                    <ul>
+                        <li>
+                            <span>TA的关注</span>
+                            <span><?php echo $params['following']; ?></span>
+                        </li>
+                        <li>
+                            <span>TA的粉丝</span>
+                            <span><?php echo $params['fans']; ?></span>
+                        </li>
+                        <li>
+                            <span>TA的文章</span>
+                            <span><?php echo $params['article']; ?></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="guess-like" style="visibility: hidden">
+                    <p class="clearfix">
+                        <span class="left">猜你喜欢</span>
+                        <span class="right" style="cursor:pointer">换一批></span>
+                    </p>
+                    <div class="box clearfix">
+                        <div class="imgbox">
+                            <img style="width:104px;height:104px" src="/images/temp_pc/home2.png" alt="" />
+                            <span class="des"></span>
+                        </div>
+                    </div>
+                    <p class="clearfix">
+                        <span class="left">公告栏</span>
+                        <span class="right">换一批></span>
+                    </p>
+                    <div class="imgbox-notic">
+                        <img src="/images/temp_pc/home3.png" alt="" />
+                        <span class="des">公告标题</span>
+                    </div>
+                    <p class="clearfix">
+                        <span class="left">推荐商品</span>
+                        <span class="right">换一批></span>
+                    </p>
+                    <div class="box clearfix">
+                        <div class="imgbox">
+                            <img src="/images/temp_pc/home2.png" alt="" />
+                            <span class="des">产品标题</span>
+                        </div>
+                        <div class="imgbox">
+                            <img src="/images/temp_pc/home2.png" alt="" />
+                            <span class="des">产品标题</span>
+                        </div>
+                        <div class="imgbox">
+                            <img src="/images/temp_pc/home2.png" alt="" />
+                            <span class="des">产品标题</span>
+                        </div>
+                        <div class="imgbox">
+                            <img src="/images/temp_pc/home2.png" alt="" />
+                            <span class="des">产品标题</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div style="display: none;">
+				<input type="hidden" name="mid" value="<?php echo $user['mid']?>">
+				<input type="hidden" name="friend_mid" value="<?php echo $friend['mid']?>">
+				<input type="hidden" name="dyn_count" value="<?php echo $params['article']?>">
+				<input type="hidden" name="home" value="2">
+			</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+
+<script type="text/javascript">
+    window.seajs&&seajs.use('pc/user/userIndex.js');
+</script>
+
+

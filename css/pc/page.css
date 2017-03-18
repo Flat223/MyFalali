@@ -1,0 +1,57 @@
+/*page*/
+#page {
+    margin: 20px 0;
+    height: 38px;
+    line-height: 38px;
+    color: #76797a;
+    text-align: center;
+}
+#page ul {
+    margin-right: 4px;
+    display: inline-block;
+}
+#page ul li {
+    min-width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+#page ul li a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #f0f0f0;
+    display: block;
+    color: #76797a;
+    margin: 0 1px;
+}
+#page ul li.page_privous a,#page ul li.page_next a{
+    width: 72px;
+}
+#page ul li.page_active a,#page ul li a:hover {
+    background: #00bfb8;
+    color: #fff;
+}
+.page_privous.disabled a:hover,.page_next.disabled a:hover{
+    background: #fff!important;
+    color:#76797a!important;
+    cursor: default!important;
+}
+#page p {
+    display: inline-block;
+}
+#page p input {
+    border: 1px solid #f0f0f0;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    margin-right: 2px;
+}
+#page p input.sub {
+    background: #fff;
+    color: #76797a;
+    width: 44px;
+    cursor: pointer;
+}
+#page p input.sub:hover{
+    background: #00bfb8;
+    color: #fff;
+}

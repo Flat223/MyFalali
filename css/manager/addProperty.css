@@ -1,0 +1,57 @@
+table.property_container{
+	width: 100%;
+	margin-top: 10px;
+}
+table.property_container tr td{
+	text-align: center;
+	padding: 5px;
+}
+.handle_type{
+	text-align: right;
+	margin-top: 10px;
+}
+.handle_type span{
+	color: white;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	margin-right: 5px;
+}
+.del_type{
+	background-color:#ff6838;
+}
+.add_property{
+	background-color:#00bfb8;
+}
+.handle_property span,.del_addedPro{
+	cursor: pointer;
+}
+.handle_property span:hover,.del_addedPro:hover{
+	color: red;
+}
+
+input[name=propertyname]{
+	border:1px solid gainsboro;
+	width:150px;
+	height:25px;
+	text-indent: 1em;
+}
+
+.submit{
+	text-align: center;
+	margin-top: 10px;
+}
+.save{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	cursor: pointer;
+	border-radius: 3px;
+	display: inline-block;
+	background-color:#F7B824;
+}
+

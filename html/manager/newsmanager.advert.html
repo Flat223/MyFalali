@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-广告管理</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/lab.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>广告管理</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <select name="advert">
+                            <option type="1">首页长广告</option>
+                            <option type="2">首页轮播广告</option>
+                            <option type="3">首页右下小广告</option>
+                            <option type="4">个人中心广告</option>
+                            <option type="5">商城和共享轮播广告</option>
+                            <option type="6">手机端首页</option>
+                            <option type="7">手机端商城</option>
+                        </select>
+                    </div>
+                    <div class="search-item">
+                        <span name="typesearch" style="margin-left:0px;cursor:pointer" class="sear-span">类型搜索</span>
+                    </div>
+                    <div class="search-item">
+                        <span style="margin-left:20px;background-color:red;cursor:pointer" class="sear-span" onclick="window.location.href='/newsmanager/addadvert.html'">添加广告</span>
+                    </div>
+                    <div style="float: right">
+                        <span>共<?php echo $params['count']?>条记录</span><br>
+                        <!--<button value="0" style="margin-top: 5px;float: right" class="layui-btn layui-btn-small layui-btn-normal edit">
+                            <i class="layui-icon">&#xe608;</i>
+                        </button>-->
+                        <input type="hidden" name="count" value="<?php echo ceil($params['count']/10); ?>" />
+                    </div>
+                </div>
+            </div>
+            <?php $advert = $params['advert']?>
+            <div class="chart-content">
+                <div class="chart-item chart-show">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th width="8%">ID</th>
+                            <th width="10%">关键字</th>
+                            <th width="18%">链接</th>
+                            <th width="10%">广告类型</th>
+                            <th width="14%">操作</th>
+                        </tr>
+                        <?php
+                            for($i = 0;$i<count($advert);$i++){
+                            ?>
+                                <tr>
+                                    <td><?php echo  $advert[$i]['id']?></td>
+                                    <td><?php echo  $advert[$i]['description']?></td>
+                                    <td><?php echo  $advert[$i]['url']?></td>
+                                    <td><?php switch ($advert[$i]['type'])
+                                            {
+                                            case 1:
+                                              echo '首页长广告';
+                                              break;
+                                            case 2:
+                                              echo '首页轮播广告';
+                                              break;
+                                            case 3:
+                                              echo '首页右下小广告';
+                                            break;
+                                              case 4:
+                                            echo '个人中心推荐广告';
+                                            break;
+                                            case 5:
+                                            echo '共享和商城轮播广告';
+                                            break;
+                                            case 6:
+                                            echo '手机端首页';
+                                            break;
+                                            case 7:
+                                            echo '手机端商城';
+                                            break;
+                                            default:
+                                              echo '未知';
+                                            }
+
+                                    ?></td>
+                                    <td>
+                                        <span value="<?php echo  $advert[$i]['id']?>" class="edit" style="margin-right: 0px; cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								            修改
+							            </span>
+                                        <span value="<?php echo  $advert[$i]['id']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								            删除
+							            </span>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                        ?>
+                    </table>
+                    <div class="boot-wrapp clearfix">
+                        <div id="page"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script src="/js/manager/news_advert.js"></script>
+</body>
+</html>

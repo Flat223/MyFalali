@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-我的消息</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/mymessage.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>我的消息</span>
+		</p>
+		<div class="layui-tab layui-tab-card" lay-filter="demo" style="">
+			<ul class="layui-tab-title">
+				<li class="layui-this">用户消息</li>
+				<li>系统消息</li>
+			</ul>
+			<div class="layui-tab-content" style="padding: 10px;">
+				<div class="layui-tab-item layui-show">
+					<div class="messagebox">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<th>发件人</th>
+								<th>消息标题</th>
+								<th>时间</th>
+								<th>操作</th>
+							</tr>
+						<?php
+							foreach ($params['user_msg'] as $message){	
+						?>
+							<tr class="msg_line" is_read = "<?php echo($message['is_read']); ?>">
+								<td class="selMessage">
+									<div>
+										<input type="checkbox" name="selUser"
+										from_id="<?php echo ($message['from_id']); ?>" 
+										sid="<?php echo ($message['id']); ?>" 
+										/>
+										<?php echo ($message['sender']); ?>
+									</div>
+								</td>
+								<td class="detail" 
+									from_id="<?php echo ($message['from_id']); ?>" 
+									sid="<?php echo ($message['id']); ?>" 
+									is_read = "<?php echo($message['is_read']); ?>"
+									style="cursor: pointer">
+									<?php echo($message['title']); ?>
+								</td>
+								<td class="detail" 
+									from_id="<?php echo ($message['from_id']); ?>" 
+									sid="<?php echo ($message['id']); ?>" 
+									is_read = "<?php echo($message['is_read']); ?>"
+									style="cursor: pointer">
+									<?php echo(date("Y-m-d H:i:s",$message['time'])); ?>
+								</td>
+								<td>
+									<span class="del" 
+									from_id="<?php echo ($message['from_id']); ?>" 
+									sid="<?php echo ($message['id']); ?>" 
+									style="cursor: pointer">删除</span>
+								</td
+							</tr>
+						<?php
+							}
+						?>
+						</table>
+						
+				<?php
+					if(count($params['user_msg']) == 0){
+				?>
+						<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无用户消息</p>
+				<?php
+					}
+				?>
+					<?php
+						if (count($params['user_msg']) > 0) {
+					?>
+						<div class="submitbox">
+							<input type="checkbox" name="selAll" selType="1"/> 全选
+							<input type="submit" class="tag_submit" delType="1" 
+							style="cursor: pointer" value="删除选中项" />
+						</div>
+					<?php
+						}
+					?>
+					</div>
+
+				</div>
+				
+				<div class="layui-tab-item">
+					<div class="messagebox">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<th>发件人</th>
+								<th>消息标题</th>
+								<th>时间</th>
+								<th>操作</th>
+							</tr>
+						<?php
+							foreach ($params['system_msg'] as $message){
+						?>
+							<tr class="msg_line">
+								<td class="selMessage">
+									<div>
+										<input type="checkbox" name="selSystem" from_id = "-1" 
+										sid="<?php echo $message['is_read']==0?$message['id']:-$message['id']; ?>"/>
+										<?php echo ("系统消息"); ?>
+									</div>
+								</td>
+								<td class="detail" from_id = "-1" 
+									sid = "<?php echo $message['is_read']==0 ? $message['id'] : -$message['id']; ?>"
+									is_read = "<?php echo($message['is_read']); ?>" 
+									style="cursor: pointer">
+									<?php echo($message['title']); ?>
+								</td>
+								<td class="detail" from_id = "-1"
+									sid = "<?php echo $message['is_read']==0 ? $message['id'] : -$message['id']; ?>"
+									is_read = "<?php echo($message['is_read']); ?>" 
+									style="cursor: pointer">
+									<?php echo(date("Y-m-d H:i:s",$message['time'])); ?>
+								</td>
+								<td>
+									<span class="del" from_id = "-1" 
+									sid = "<?php echo $message['is_read']==0 ? $message['id'] : -$message['id']; ?>" 
+									style="cursor: pointer">删除</span>
+								</td
+							</tr>
+						<?php
+							}
+						?>
+						</table>
+				<?php
+					if(count($params['system_msg']) == 0){
+				?>
+						<p style="text-align: center;margin-top: 10% ;font-size: 18px;color: #929292">暂无系统消息</p>
+				<?php
+					}
+				?>	
+						
+					<?php
+						if (count($params['system_msg']) > 0) {
+					?>
+						<div class="submitbox">
+							<input type="checkbox" name="selAll" selType="-1"/> 全选
+							<input type="submit" class="tag_submit" 
+							delType="-1" style="cursor: pointer" value="删除选中项" />
+						</div>
+					<?php
+						}
+					?>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script>
+	window.seajs&&seajs.use('pc/user/userMessage.js');
+</script>
+

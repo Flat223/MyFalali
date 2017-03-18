@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-产品评价</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/order.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/order_detail.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/rating.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<p class="order_p">
+			<span>产品评价</span>
+		</p>
+	<?php
+		$product = $params['product'];
+	?>
+		<div class="comment-wrap">
+			<div class="comment-wrap-l left">
+			<?php $imgArr = explode(",",$product['images']) ?>
+				<img style="width:120px;height:120px"; src="<?php echo $imgArr[0] ?>" alt="" />
+				<p class="comment-des" style="margin-top: 10px">
+					<?php echo $product['name'] ?>
+				</p>
+				<p class="comment-pri">
+					<?php echo '￥'.$product['price'] ?>
+				</p>
+			</div>
+			<div class="comment-wrap-r right">
+				<div class="comment-star">
+					<span>描述相符</span>
+					<span id="star" data-score="1"></span>
+				</div>
+				<div class="commemt-text clearfix">
+					<span class="left">评价商品</span>
+					<textarea name="" id="commentIntro" placeholder="说点什么吧，您的评价对其他买家很有帮助！" cols="30" rows="10"></textarea>
+				</div>
+				<div class="comment-img">
+					<span>晒照片</span>
+					<div style="display: none" id="uploadImage"></div>
+					<img id="commentImage" style="cursor: pointer" width="180px" src="" height="180px"  />
+<!--
+					<input type="file" value="上传照片" />
+					<span style="cursor: pointer" class="upload">上传照片</span>	
+-->
+				</div>
+				<div class="comment-submit">
+					<span class="submit-button" 
+						order_code="<?php echo isset($_GET['order_code'])?$_GET['order_code']:'';?>"
+						pid="<?php echo $product['pid'] ?>">发表评价</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/pc/jquery.raty.js"></script>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/productComment.js');
+</script>
+<script>
+	$(function() {
+	    $.fn.raty.defaults.path = '/images/star';
+	    $('#star').raty({ score:1});
+	})
+</script>

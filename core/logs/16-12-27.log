@@ -1,0 +1,1536 @@
+[2016-12-27 05:02:36][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('12')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 07:07:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('11')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 10:52:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('7')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:03:06][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(108): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(20): ArticleServ->GetAriticleBynum(10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:03:31][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(108): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(20): ArticleServ->GetAriticleBynum(10)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:20:42][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:20:45][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:30:23][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:30:49][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:30:51][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:30:57][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:31:11][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:31:52][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:31:53][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:31:59][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_num' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/FriendlyServ.php(10): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/Index.php(19): FriendlyServ->getFriendlyLink('view_num desc', 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Index->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(43): FileLoader->load('/ichukdata1/htm...', 'index.html', '/index.html', 'Index')
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:40:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('11')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:45:55][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('6')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:45:57][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=2' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:45:59][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=2' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:46:00][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=2' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('2')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:48:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=17' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('17')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:49:01][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=17' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('17')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:49:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:49:06][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 11:53:17][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table labring_article set view_num=view_num+1 where id=20' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(116): DBAgent->query('update table la...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:14:42][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!=0 order by view_num desc limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleByCategoryid(0, '', 1, 10, 'view_num desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:18:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by view_num DESC limit 1,5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(16): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(11): InterestServ->GetFiveHotByUser(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:18:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) order by view_num DESC limit 1,5' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(30): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(13): InterestServ->GetFiveHot(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:18:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id not in(select circle_id from labring_notinterest_mem' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(58): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(39): InterestServ->GetById(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:18:07][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1) and circle_id in(select circle_id from labring_notinterest_member ' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/InterestServ.php(65): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/user/InterestingCircle.php(43): InterestServ->GetBynotinterest(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): InterestingCircle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'user.interestin...', '/user/interesti...', 'InterestingCirc...', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:43:30][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('19')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 14:59:13][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'NaN' for column 'time' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(53): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 15:10:33][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'institude_id' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(53): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 15:11:28][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'institude_id' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(13): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(53): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/h2><span class=' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('25>??????4</h2>...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/h2><span class=' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('25>??????4</h2>...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/h2><span class=' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('25>??????4</h2>...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/h2><span class=' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('25>??????4</h2>...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:18:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:19:06][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'asd' for column 'institude_id' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/service/LabShareReleaseServ.php(14): DBAgent->insertRecord('lab', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/_api/service/LabReleaseServ.php(53): LabShareReleaseServ->insertSupplyLab(Array)
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): LabReleaseServ->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.LabRele...', '/service/LabRel...', 'LabReleaseServ', true)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:22:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:22][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:23][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(95): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(88): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:30:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(105): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:34:47][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 15:57:54][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:04][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:10][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:11][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:13][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 15:58:16][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/NewsServ.php(18): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/News.php(9): NewsServ->GetNewsById('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): News->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.news.html', '/info/news.html', 'News', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:31:29][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:31:48][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:32:03][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:33:00][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:33:25][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:34:01][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:34:04][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:34:06][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:34:28][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:35:05][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:35:06][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'view_nuw' in 'order clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(90): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Morearticle.php(11): ArticleServ->getArticleByView(3, 'view_nuw')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morearticle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morearticl...', '/info/moreartic...', 'Morearticle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined variable: 27 in <b>/ichukdata1/html/project/lab' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(133): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined variable: 27 in <b>/ichukdata1/html/project/lab' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(104): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(97): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(114): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined variable: 27 in <b>/ichukdata1/html/project/lab' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(133): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(11): ArticleServ->Addviewnum('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=<br /><b>Notice</b>:  Undefined variable: 27 in <b>/ichukdata1/html/project/lab' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(104): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(12): ArticleServ->GetAriticle_Writer('<br /><b>Notice...')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(97): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(13): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 16:46:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(114): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Article.php(16): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Article->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.article.ht...', '/info/article.h...', 'Article', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:24:02][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 17:24:15][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 17:24:24][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 17:27:03][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 17:28:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:28:43][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:29:25][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:29:33][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:29:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:31:09][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:32:37][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:32:53][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:35:12][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:35:34][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:37:29][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:37:46][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 17:37:49][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(126): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/GetArticlebyidServ.php(8): ArticleServ->GetAriticleBynum(10, '')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): GetArticlebyidServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.GetArti...', '/service/GetArt...', 'GetArticlebyidS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 18:22:05][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 18:22:33][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 18:29:26][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('21')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:20:56][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>98</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(17): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:33:48][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(17): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:33:56][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(17): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:35:20][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/NewscommentServ.php(17): DBAgent->insertRecord('news_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): NewscommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Newscom...', '/service/Newsco...', 'NewscommentServ', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:35:49][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/ArticlecommentServ.php(16): DBAgent->insertRecord('article_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ArticlecommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Article...', '/service/Articl...', 'ArticlecommentS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:36:00][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/ArticlecommentServ.php(16): DBAgent->insertRecord('article_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ArticlecommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Article...', '/service/Articl...', 'ArticlecommentS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:36:35][error] errCode:HY000
+errMsg:SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '<br />
+<b>Notice</b>:  Undefined index: news in <b>/ichukdata1/html/project/labring/html/pc/info.video.html</b> on line <b>99</b' for column 'pid' at row 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(272): DBAgent->query('insert into lab...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/_api/service/ArticlecommentServ.php(16): DBAgent->insertRecord('article_comment', Array, Array, true)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ArticlecommentServ->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'service.Article...', '/service/Articl...', 'ArticlecommentS...', true)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 19:45:01][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 19:46:38][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 19:47:27][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 19:48:04][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:15:24][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ProductServ.php(416): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/goods/ProductList.php(79): ProductServ->GetProperty('20')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): ProductList->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'goods.productLi...', '/goods/productL...', 'ProductList', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 22:31:32][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:31:44][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:01][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:09][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:11][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:12][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:13][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:14][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:20][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:21][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:23][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:34:36][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:38:39][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:38:40][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:38:42][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:48:59][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 22:49:34][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 22:52:14][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 22:52:38][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:02:26][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Morenews.php(13): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Morenews->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.morenews.h...', '/info/morenews....', 'Morenews', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 23:04:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(133): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(13): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(104): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(21): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(97): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(22): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:38][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(114): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(25): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(102): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(133): DBAgent->query('update labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(13): ArticleServ->Addviewnum('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(104): DBAgent->queryRecords('select labring_...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(21): ArticleServ->GetAriticle_Writer('')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and status=1' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(97): DBAgent->queryRecords('select name fro...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(22): ArticleServ->getThisCategroy(NULL)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:04:41][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!= order by time desc limit 6' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(114): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(25): ArticleServ->GetAriticleByCategoryid(NULL, NULL, 1, 6)
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:05:23][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(16): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 23:08:34][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:09:38][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:10:24][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:13:13][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(17): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 23:13:31][error] errCode:42S02
+errMsg:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'labring.labring_labring_news' doesn't exist
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(205): DBAgent->querySingleRecord('select count(*)...', Array)
+#2 /ichukdata1/html/project/labring/core/service/NewsServ.php(31): DBAgent->getRecordCountsFromTable('labring_news', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(17): NewsServ->Getcount()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}
+[2016-12-27 23:13:55][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:14:30][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:15:32][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:15:52][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:16:36][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:16:47][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:17:35][error] 未找到xml文件 /ichukdata1/html/project/labring/core/filter/xml/manager/filter.xml
+[2016-12-27 23:18:16][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!=0 order by time desc limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(16): ArticleServ->GetAriticleByCategoryid(0, '', 4, 10, 'time desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:18:48][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!=0 order by time desc limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(16): ArticleServ->GetAriticleByCategoryid(0, '', 4, 10, 'time desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:19:14][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!=0 order by time desc limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(16): ArticleServ->GetAriticleByCategoryid(0, '', 4, 10, 'time desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:19:39][error] errCode:42000
+errMsg:SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and id!=0 order by time desc limit 10' at line 1
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(56): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/service/ArticleServ.php(123): DBAgent->queryRecords('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(16): ArticleServ->GetAriticleByCategoryid(0, '', 4, 10, 'time desc')
+#3 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#5 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#6 {main}
+[2016-12-27 23:28:46][error] errCode:42S22
+errMsg:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+trace:
+#0 /ichukdata1/html/project/labring/core/util/DBAgent.php(79): PDOStatement->execute(Array)
+#1 /ichukdata1/html/project/labring/core/util/DBAgent.php(196): DBAgent->querySingleRecord('select * from l...', Array)
+#2 /ichukdata1/html/project/labring/core/service/CircleServ.php(14): DBAgent->getSingleRecordFromTable('interest_circle', '*', Array, Array)
+#3 /ichukdata1/html/project/labring/core/module/pc/info/Circle.php(22): CircleServ->getCircleByid('1')
+#4 /ichukdata1/html/project/labring/core/FileLoader.php(115): Circle->action()
+#5 /ichukdata1/html/project/labring/core/FileLoader.php(58): FileLoader->load('/ichukdata1/htm...', 'info.circle.htm...', '/info/circle.ht...', 'Circle', false)
+#6 /ichukdata1/html/project/labring/index.php(36): FileLoader->loadfile()
+#7 {main}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>商品</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/mallDetail.css">
+<link rel="stylesheet" type="text/css" href="/css/mobile/product_detail.css">
+<script type="text/javascript" src="/js/sea.js"></script>
+<script type="text/javascript" src="/js/seaconfig.js"></script>
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SPLrd5NFBtB9622vBg4fPp61TcYdy1tv"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#allEvaluate").click(function () {
+            window.location.href = "/mall/mallEvaluate.html?pid="+$(this).attr('value');
+        });
+    })
+</script>
+<style>
+    .malldet_jx>table{
+        width: 100%!important;
+        font-size: 1.5rem;
+    }
+    /*.malldet_jx>table:nth-of-type(2){
+        width: 50%!important;
+    }
+    .malldet_jx>table:nth-of-type(1){
+        width: 100%!important;
+    }*/
+    td{
+        width: 150px;
+    }
+</style>
+<body>
+<?php
+		$product=$params['product'];
+		$images=explode(',',$product['images']);
+		$price = explode('.',$product['price']);
+	?>
+
+<div class="title">商品详情</div>
+<div><img height="300px" width="100%" src="<?php echo($images[0])?>"></div>
+<div class="malldet_div">
+    <div class="malldet_tit">
+        <div class="malldet_name"><a><?php echo($product['name'])?></a></div>
+        <a style="font-size:1.4rem;color:darkturquoise;">￥</a><a class="malldet_price"><?php echo($price[0])?></a><a class="malldet_point">.<?php echo empty($price[1])?'00':$price[1];?></a>
+    </div>
+    <!--<div class="malldet_share">
+        <img width="40%" src="/images/mobile/shareBlue.png"><br>
+        <span>分享</span>
+    </div>-->
+    <br style="clear: both">
+    <div class="malldet_info">
+	    <span id="place" value="<?php echo($product['pid']);?>"></span>
+        <a id="freight"></a>
+        <a class="malldet_much">月销<?php echo($product['sale_num']);?>笔</a>
+        <a class="malldet_area"</a>
+    </div>
+</div>
+<hr>
+<div class="malldet_choose">
+    <a>选择 型号分类</a><a class="malldet_flag"></a>
+</div>
+
+<div class="mallType">
+    <div class="ChooseType">
+        <i></i>
+        <?php
+			$property=$product['property'];
+			foreach($property as $key=>$value){
+        ?>
+        <div class="pp_number color_cap">
+            <span class="prd_det left"><?php echo($value['name']);?>:</span>
+            <ul class="num clearfix" id="property" value="<?php echo($key)?>">
+
+                <?php
+                        	if($value['propertyval']!=""){
+                        	$vallist=$value['propertyval'];
+                        	for($i=0;$i<count($vallist);$i++){			                        	
+                        	?>
+                <li id="<?php echo($vallist[$i]['id']); ?>" type="<?php echo $value['id']; ?>"
+                    value="<?php echo($vallist[$i]['id'])?>"><?php echo($vallist[$i]['name']);?></li>
+                <?php
+                        	}
+                        	}
+                        ?>
+            </ul>
+        </div>
+        <?php
+			}
+        ?>
+                <?php 
+               		 if($product['can_testing']>0){
+                ?>
+                <dl class="clearfix srviceAfter">
+					<dt class="left">
+						售后服务：
+					</dt>
+					<dd class="left">
+						<form action="" class="layui-form">
+                            <div class="layui-input-inline">
+                                <select name="quiz">
+                                    <option value="">请选择</option>
+                                    <option value="0">不使用</option>
+                                    <option value="1">延保1年 ￥<?php echo($product['guarantee_1']);?></option>
+                                    <option value="2">延保2年 ￥<?php echo($product['guarantee_2']);?></option>
+                                    <option value="5">延保3年 ￥<?php echo($product['guarantee_5']);?></option>
+                                </select>
+                            </div>
+                        </form>
+					</dd>
+				</dl>
+				<?php
+				}
+				?>
+				
+				<?php 
+					if($product['can_guarantee']>0){
+				?>
+				<dl class="clearfix srviceAfter">
+					<dt class="left">
+						保障服务：
+					</dt>
+					<dd class="left">
+						<div class="layui-input-block" style="cursor: pointer">
+							<input style="cursor: pointer" type=" text"autocomplete="off" value2="1" value="产品质量检测 &nbsp;&nbsp;￥<?php echo($product['quality_testing'])?>" disabled  class="layui-input" id="quaInput">
+						</div>
+					</dd>	
+				</dl>
+				<?php
+				}
+				?>
+                
+
+        <div class="buy_sum clearfix">
+            <span class="prd_det left">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</span>
+            <p class="set_p clearfix">
+                <span class="down">-</span>
+                <input class="text" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="5" value="1">
+                <span class="up">+</span>
+            </p>
+            <span class="prd">(库存<?php echo($product['inventory']);?>)</span>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+<?php $comment=$params['comment'];?>
+<div class="malldet_mallpj"><span>商品评价</span>(<a><?php echo(count($comment));?></a>)</div>
+	<?php 
+		if(count($comment)>0){
+	?>
+<div class="malldet_userPJ">
+
+    <div class="malldet_userHeadPic"><img height="49px" width="47px" style="border-radius: 50%" src="<?php echo($comment[0]['face']);?>"></div>
+    <div class="malldet_userName"><span><?php echo($comment[0]['nickname']);?></span></div>
+    <br style="clear: both">
+    <div class="malldet_pjtext">
+        <span><?php echo($comment[0]['content']);?></span><br>
+    </div>
+   
+</div>
+<span id="allEvaluate" value="<?php echo(md5($product['pid']));?>"  class="malldet_allpj">查看全部评论</span>
+ <?php 
+    }
+    ?>
+<hr>
+<!--<div class="recomment_group">-->
+    <!--<div class="bar-p clearfix">-->
+        <!--<span>推荐组合</span>-->
+        <!--<p class="place"></p>-->
+    <!--</div>-->
+    <!--<div class="layui-tab layui-tab-card" lay-filter="demo" style="height:213px;">-->
+        <!--<ul class="layui-tab-title">-->
+            <!--<?php-->
+	              		<!--$prolist1=$params['prolist'];-->
+	              		<!--foreach($prolist1 as $key=>$list){-->
+            <!--if($key==0){-->
+            <!--?>-->
+            <!--<li class="layui-this">推荐组合<?php echo($key+1)?></li>-->
+            <!--<?php-->
+						<!--}else{-->
+						<!--?>-->
+            <!--<li>推荐组合<?php echo($key+1)?></li>-->
+            <!--<?php-->
+						<!--}-->
+					<!--}-->
+				<!--?>-->
+        <!--</ul>-->
+        <!--<div class="layui-tab-content" style="padding: 10px;">-->
+            <!--<?php-->
+	              		<!--$prolist=$params['prolist'];-->
+	              		<!--foreach($prolist as $key=>$value){-->
+            <!--if($key==0){-->
+            <!--?>-->
+            <!--<div class="layui-tab-item layui-show">-->
+                <!--<?php-->
+				            <!--}else{-->
+				            <!--?>-->
+                <!--<div class="layui-tab-item">-->
+                    <!--<?php-->
+				            <!--}-->
+				            <!--?>-->
+                    <!--<div class="lay-list">-->
+                        <!--<ul>-->
+                            <!--<?php-->
+				                        	<!--foreach($value['product'] as $key1=>$product){-->
+                            <!--$images=explode(',',$product['images']);-->
+                            <!--?>-->
+                            <!--<li>-->
+                                <!--<dl>-->
+                                    <!--<dt>-->
+                                        <!--<a href="/goods/detail.html?pid=<?php echo($product['pid'])?>&skuid=<?php echo($product['skuid'])?>"><img-->
+                                                <!--value="<?php echo($product['pid'])?>" src="<?php echo($images[0])?>"-->
+                                                <!--width="100px" height="101px" alt=""/></a></dt>-->
+                                    <!--<dd>-->
+                                        <!--<a href="/goods/detail.html?pid=<?php echo($product['pid'])?>&skuid=<?php echo($product['skuid'])?>"><?php echo($product['name'])?></a>-->
+                                    <!--</dd>-->
+                                <!--</dl>-->
+                            <!--</li>-->
+                            <!--<?php-->
+					                            	<!--if($key1!=count($value['product'])-1){-->
+					                            	<!--?>-->
+                            <!--<li>-->
+                                <!--<img src="/images/pc/plus.png" alt=""/>-->
+                            <!--</li>-->
+                            <!--<?php-->
+													<!--}else{-->
+					                            <!--?>-->
+                            <!--<li>-->
+                                <!--<img src="/images/pc/dy.png" alt=""/>-->
+                            <!--</li>-->
+                            <!--<?php-->
+													<!--}-->
+											<!--}-->
+										<!--?>-->
+                            <!--<li>-->
+                                <!--<p>-->
+                                    <!--组合价：<span><?php echo($value['total_money'])?></span>-->
+                                <!--</p>-->
+                                <!--<input type="submt" class="groupbuy" style="cursor: pointer"-->
+                                       <!--value2="<?php echo($value['id']);?>" value="立即购买"/>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<?php-->
+	                    <!--}-->
+	                <!--?>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="malldet_jx">
+<!--         <a>继续拖动查看详情</a> -->
+		<?php echo($product['intro_mobile']);?>
+    </div>
+    <div style="height: 40px;;clear: both"></div>
+<!--<div class="malldet_cart" value="<?php echo($product['pid']);?>" id="add_cart"><input type="image" width="100%" src="/images/mobile/goCart.png"></div>-->
+    <div class="malldet_cart" id="buy_now"><input type="image" height="100%" src="/images/mobile/nowBuy.png"></div>
+
+</body>
+</html>
+<script type="text/javascript">
+	window.seajs&&seajs.use('mobile/goode-detail.js');
+</script>
+
+
+
+<script type="text/javascript">
+	    // 百度地图API功能
+    var map = new BMap.Map("map");
+    var point = new BMap.Point(116.331398,39.897445);
+    var geolocation = new BMap.Geolocation();
+    function myFun(result){
+        var cityName = result.name;
+        //map.setCenter(cityName);
+        $("#place").text(cityName);
+        pid=$("#place").attr("value");
+        $.ajax({
+			type:"post",
+			dataType:"json",
+			url:"/service/GetLocationFreServ.html",
+			data:{'name':cityName,'pid':pid},
+			success:function(data){
+				var str="";
+				if(data.ret == 2){
+					$("#freight").text("免运费");
+				}else if(data.ret==1){
+					$("#freight").text("快递："+data['expressp']);
+				}
+			},
+			error:function(data){
+				console.log(data);
+				alert("服务器错误,请稍后再试");
+			}
+	
+		});
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);    
+    $(".malldet_choose").on("click", function () {
+        $(".mallType").fadeIn("slow");
+    })
+    $(".ChooseType i ").on("click", function () {
+        $(".mallType").fadeOut("slow");
+    })
+</script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-招聘列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($paramsa);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <!--<li><a href="../"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>商品管理</a></li>
+            <li><span>/</span></li>-->
+            <li name="count" ><a>共<?php echo count($params['data']); ?>条信息</a></li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span><a href="/recruit/addInfo.html">+添加招聘信息</a></span>
+                    </div>
+                </div>
+                <!--<div class="right">
+                    <div class="sear-item">
+                        <input type="text" name="info" placeholder="输入品牌名称进行搜索">
+                        <span name="search">搜索</span>
+                    </div>
+                </div>-->
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--<th width="5%">ID</th>-->
+                    <th width="30%">招聘岗位</th>
+                    <th width="25%">岗位月薪</th>
+                    <th width="10%">工作类型</th>
+                    <th width="10%">工作地点</th>
+                    <th width="15%">发布日期</th>
+                    <th width="10%">操作</th>
+                </tr>
+                <?php foreach($params['data'] as $val){ ?>
+                <tr>
+                    <td><?php echo $val['quarters']; ?></td>
+                    <td><?php echo $val['salary']; ?></td>
+                    <td><?php echo $val['type'] == 1 ? '全职':'兼职'; ?></td>
+                    <td><?php echo $val['place']; ?></td>
+                    <td><?php echo date('Y-m-d',$val['time']); ?></td>
+                    <td>
+                        <a href="/recruit/addInfo.html?id=<?php echo $val['id']; ?>"><span style="cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								修改
+							</span></a><br>
+                       <!-- <span value="<?php echo  $val['id']?>" class="del" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;display: inline-block;">
+								删除
+							</span>-->
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+           <!-- <div class=" clearfix" id="page">
+                <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+                <p class="">
+                    共<?php echo($params['pager']->getPageCount()); ?>页，到第
+                    <input type="text" maxlength="4" id="page_num">页
+                    <input class="sub" type="button" id="goto" value="确定">
+                </p>
+            </div>-->
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+
+<script type="text/javascript">
+
+    /*$(".del").on('click',function () {
+        var id = $(this).attr('value');
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "/service/DeleteBrandServ.html",
+            data: {"id": id},
+            success: function (data) {
+                if(data.ret == 1){
+                    layer.alert(data.msg, {icon: 1});
+                    window.location.reload();
+                }else if(data.ret == -1){
+                    layer.alert(data.msg, {icon: 2});
+                }
+            }
+        })
+    });*/
+
+</script>

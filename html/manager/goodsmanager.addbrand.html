@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-添加品牌</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/labinfo.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/modules/layer/layer.css">
+	<!--<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>-->
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li>添加品牌</li>
+        </ul>
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-container">
+                <div class="sear-wrapp clearfix">
+                    <div class="search-item">
+                        <table><?php $brand = $params['brand'];?>
+                            <tr>
+                                <td colspan="2">
+                                    <span>图片：</span>
+                                    <div style="margin-left: 74px" class="form-group">
+                                        <div class="col-sm-6">
+                                            <button type="button" class="btn btn-primary" style="padding: 0 0;width: 100px;height: 35px;background-color: #00a0e9" id="uping" >上传图片</button>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 74px;" class="form-group" id="brand_img_wrap">
+                                        <div class="uploadfile">
+                                            <img style="width:200px;height: 200px" id="logo" src="<?php echo empty($brand['image'])?'/images/pc/upload.jpg':$brand['image'] ?>" alt="" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>名称：</span>
+                                    <input id="name" type="text" value="<?php echo empty($brand['name'])? '' : $brand['name'] ;?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>字母排序：</span>
+                                    <input id="sort" type="text" value="<?php echo empty($brand['sort_letter'])? '' : $brand['sort_letter'] ;?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>介绍：</span>
+                                    <textarea cols="104" rows="8" id="intro"><?php echo empty($brand['introduction']) ? '' : $brand['introduction'];?></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <input style="display: none" id="bid" type="text" value="<?php echo empty($brand['brand_id'])? 0 : $brand['brand_id'] ;?>">
+                        <span style="margin-left:180px;"><button class="layui-btn layui-btn-warm serSave">保存修改</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--<script src="/js/jquery.min.js"></script>-->
+<script src="/layui/layui.js"></script>
+<script src="/js/layer/layer.js"></script>
+<!--<script src="/js/manager/cyupload.js"></script>-->
+<script type="text/javascript">
+    $.cyupload({
+        elem:'#uping',
+        btnName:"请选择",		//按键名称
+        infoElementId:"",	//上传状态信息包装元素id
+        maxFilesize:10485760,
+        uploadUrl:'/service/uploadimgServ.html',
+        fileFilter:'',
+        upfileParam:'upload_file_input',
+        success:function(url){
+            $("#logo")[0].src=url['file_url'];
+            return;
+        }
+    });
+
+    $(".serSave").on('click',function () {
+        var id = $("#bid").val();
+        var logo = $("#logo")[0].src;
+        var name = $("#name").val();
+        var sort = $("#sort").val();
+        var intro = $("#intro").val();
+
+        if(logo == "" || name == "" || sort == ""){
+            layer.alert("有未填写的信息！", {offset: '200px'});
+            return;
+        }
+
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/service/AddBrandServ.html",
+            data: {"logo": logo, "name": name, "sort": sort, "intro": intro,"id":id},
+            success: function (data) {
+                if(data.ret == 1) {
+                    layer.alert(data.msg, {offset: '200px'});
+                    window.setTimeout(widreload,1000);
+                }else if(data.ret == -1){
+                    layer.alert(data.msg, {offset: '200px'});
+                }else if(data.ret == -2){
+                    layer.alert(data.msg, {offset: '200px'});
+                }else if(data.ret == -3){
+                    layer.alert(data.msg, {offset: '200px'});
+                }
+            }
+        })
+    })
+
+    function widreload() {
+        window.location.href="/goodsmanager/brandList.html";
+    }
+</script>
+</body>
+</html>

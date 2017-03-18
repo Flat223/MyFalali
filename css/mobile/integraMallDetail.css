@@ -1,0 +1,56 @@
+.dhxq_pic{
+    width:100%;
+    height:32%
+}
+.dhxq_info{
+    width: 100%;
+    height:10%;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.dhxq_name{
+    /* width: 100%; */
+    height: 40%;
+    font-size: 1.7rem;
+    margin-top: 1%;
+    font-weight: bold;
+}
+.dhxq_price{
+    /* width: 100%; */
+    height: 30%;
+    font-size: 1.5rem;
+    color: cyan;
+    margin-top: 1%;
+}
+.dhxq_jf{
+    font-size: 2rem!important;
+}
+.dhxq_intro{
+    width: 100%;
+    /* height: 4%; */
+    font-size: 1.7rem;
+    margin-left: 1%;
+    font-weight: bold;
+}
+.dhxq_detail{
+    width: 100%;
+    margin-left: 1%;
+    margin-top: 2%;
+    font-size: 1.4rem;
+}
+.dhxq_area{
+    width: 100%;
+    height: 6%
+}
+.dhxq_attr{
+    width: 100%;
+    height: 6%;
+    margin-top: 1%
+}
+.dhxq_but{
+    width: 90%;
+    /* text-align: center; */
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+}

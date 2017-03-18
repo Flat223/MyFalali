@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-用户留言</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/levemesg.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>消息管理</a></li>
+				<li><span>/</span></li>
+				<li><a href="#"><i></i>用户留言</a></li>
+			</ul>
+		</div>
+		<div class="mainContent">
+			<div class="main-wrapp">
+				<div class="message-content">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th width="10%">ID</th>
+							<th width="10%">发信方</th>
+							<th width="40%">内容</th>
+							<th width="16%">时间</th>
+							<th width="22%">操作</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>某某公司</td>
+							<td>
+								<p class="mess-con">Happy New YearHappy New YearHappy New YearHappy New Year</p>
+							</td>
+							<td>2016-16-16 23:23:23</td>
+							<td>
+								<button class="layui-btn layui-btn-small layui-btn-look">
+								  <i class="layui-icon"></i>
+								</button>
+								<button class="layui-btn layui-btn-small lay-btn-msg">
+								  <i class="layui-icon"></i>
+								</button>
+								<button class="layui-btn layui-btn-small layui-btn-del">
+								  <i class="layui-icon">&#xe640;</i>
+								</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="boot-wrapp clearfix">
+					<div id="page" class="left"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+//	$(".menu-wrapp li").on("click",function() {
+//		$(this).find("ul").slideToggle("slow");
+//	})
+	layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+  laypage({
+    cont: 'page'
+    ,pages: 100
+    ,skip: true
+  });
+});
+</script>

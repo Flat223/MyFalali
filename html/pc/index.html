@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-首页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/card.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/item.css">
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+	<style>
+		.ul_show{
+			display: block;
+		}
+		.swiper-button-next, .swiper-button-prev {
+			-moz-background-size: 18px 44px!important;
+			-webkit-background-size: 18px 44px!important;
+			background-size: 18px 44px!important;
+			background-color: rgba(0,0,0,0.3);
+		}
+		.coac{
+			padding: .25rem .75rem;
+			display: block;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			position: absolute;
+			background: rgba(0,0,0,.8);
+			word-break: break-all;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			color: #fff;
+			border-radius: 0px 0px 5px 5px;
+			line-height: 1.75em;
+			font-size: 20px;
+			font-family: Verdana;
+		}
+	</style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content" id="content-index">
+	<div class="w1200 clearfix">
+		<div class="contain_l">
+			<!-- banner -->
+			<div class="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<?php foreach($params['indexadvert'] as $v){ ?>
+						<div class="swiper-slide"><img onclick='window.open("<?php echo $v['url']; ?>")' style="width:800px;height:245px;cursor:pointer" src="<?php echo $v['image']; ?>" alt="<?php echo $v['description']; ?>" /></div>
+						<?php } ?>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</div>
+			<!-- editor -->
+			<div class="editor_recommend_box">
+				<div class="ui three cards">
+					<?php if(count($params['video'])>0){
+					foreach($params['video'] as $v){ ?>
+					<a class=" card">
+						<div class="image" id="imgh">
+							<img onclick="window.location.href='../info/videolist.html?id='+<?php echo $v['id']; ?>" style="width:256px;height:170px" src="<?php echo empty($v['images'])?'/images/temp_pc/0.jpg':$v['images']; ?>" id="carimghover" />
+						</div>
+						<div class="des">
+							<span><?php echo $v['title']; ?></span>
+						</div>
+					</a>
+					<?php }} ?>
+				</div>
+			</div>
+			<!-- 文章 -->
+			<div class="list_con">
+				<ul name="allnews">
+					<li class="categoryli con-active" id="first" categoryid="0">
+						<h2>最新文章</h2>
+					</li>
+					<?php foreach($params['category'] as $v){ ?>
+					<li class="categoryli" categoryid="<?php echo $v['id']; ?>">
+						<h2><?php echo $v['name']; ?></h2>
+					</li>
+					<?php } ?>
+				</ul>
+				<div class="intro ">
+					<ul name="info">
+						<!--<?php foreach($params['topart'] as $v){ ?>
+						<li class="clearfix">
+							<dl>
+								<dt>
+									<a href="../info/article.html?id=<?php echo $v['id']; ?>"><img src="<?php echo empty($v['images'])?'/images/temp_pc/0.jpg':$v['images']; ?>" /></a>
+								</dt>
+								<dd>
+									<h2 class="jumpartice" urlid="<?php echo $v['id']; ?>"><?php echo $v['title']; ?></h2>
+									<span class="desc"><?php echo $v['intro']; ?></span>
+									<p class="extra">
+										<span><?php echo empty($v['video_url'])?"文":"视频"; ?></span>
+										<span>/</span>
+										<b><?php echo empty($v['wname'])?'实验圈':$v['wname']; ?></b>
+										<span>·<?php echo date('Y-m-d H:i:s',$v['time']); ?></span>
+										<span><?php echo $v['cname']; ?></span>
+									</p>
+								</dd>
+							</dl>
+						</li>
+						<?php } ?>-->
+						<?php foreach($params['article'] as $v){ ?>
+						<li >
+							<dl class="clearfix">
+								<dt>
+									<a href="../info/article.html?id=<?php echo $v['id']; ?>"><img src="<?php echo empty($v['images'])?'/images/temp_pc/wz.jpg':$v['images']; ?>" alt="" /></a>
+								</dt>
+								<dd>
+									<h2 class="jumpartice" urlid="<?php echo $v['id']; ?>"><?php echo $v['title']; ?></h2>
+									<span class="desc"><?php echo $v['intro']; ?></span>
+									<p class="extra">
+										<span><?php echo empty($v['video_url'])?"文":"视频"; ?></span>
+										<span>/</span>
+										<b><?php echo empty($v['wname'])?'实验圈':$v['wname'];  ?></b>
+										<span>·<?php echo date('Y-m-d H:i:s',$v['time']); ?></span>
+										<span><?php echo $v['cname']; ?></span>
+									</p>
+								</dd>
+							</dl>
+						</li>
+						<?php } ?>
+					</ul>
+					<div class="more_item">
+						<a style="cursor:pointer" name="lookmore" categoryid="0" pageid="1">浏览更多</a>
+					</div>
+				</div>
+				<div class="advertisement">
+					<a href="<?php echo $params['longadvert'][1]['url']; ?>"><img style="width:800px;height:160px" src="<?php echo $params['longadvert'][1]['image'];;?>" alt="<?php echo $params['longadvert'][1]['description']; ?>" /></a>
+				</div>
+			</div>
+
+
+		</div>
+		<!--//合作项目-->
+		<div class="contain_r">
+			<div class="cooperation coolfirst">
+				<div class="coopcards">
+					<img width="325px" height="220px" onclick="window.location.href='../info/cooperate.html'" src="<?php echo $params['img']['image']?>" alt="" />
+					<div class="coac">
+						<span><?php echo $params['img']['name']?></span>
+					</div>
+				</div>
+			</div>
+			<!--近期活动-->
+			<div class="cooperation">
+				<div class="coopcards">
+					<img width="325px" height="220px" onclick="window.location.href='../info/activity.html'" src="<?php echo $params['act']['image']?>" alt="" />
+					<div class="coac">
+						<span><?php echo $params['act']['name']?></span>
+					</div>
+				</div>
+			</div>
+			<!--<div class="ui one cards">-->
+				<!--<a class=" card">-->
+					<!--<div class="image">-->
+						<!--<img onclick="window.location.href='../info/cooperate.html'" src="/images/temp_pc/0.jpg" alt="" />-->
+					<!--</div>-->
+					<!--<div class="near-term">-->
+						<!--<span>合作项目</span>-->
+					<!--</div>-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--<div class="ui one cards">-->
+				<!--<a class=" card">-->
+					<!--<div class="image">-->
+						<!--<img onclick="window.location.href='../info/activity.html'" src="/images/temp_pc/near-term.png" alt="" />-->
+					<!--</div>-->
+					<!--<div class="near-term">-->
+						<!--<span>近期活动</span>-->
+					<!--</div>-->
+				<!--</a>-->
+			<!--</div>-->
+			<!-- 7 x 24h 快讯 -->
+			<div class="news_flash">
+				<h2>7 x 24h 快讯</h2>
+				<ul>
+					<?php if(!empty($params['newsflash'])){
+                            foreach($params['newsflash'] as $v){
+                    ?>
+					<li class="wrapper">
+						<span class="triangle"></span>
+						<div class="con">
+							<h4>
+								<span value="<?php echo $v['id']; ?>" class="con-title" style="display: block">
+									<!--<a href="../info/news.html?id=<?php echo $v['id']; ?>">-->
+										<?php echo $v['title']; ?>
+									<!--</a>-->
+								</span>
+							</h4>
+							<div value="<?php echo $v['id']; ?>" class="con-content hide-content">
+								<?php echo $v['content']; ?>
+							</div>
+							<span class="con-time"><?php $tm=time()-$v['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+                            {
+                                echo floor($tm/60).'分钟前';
+                            }
+                            else if($tm<(24*3600) && $tm>7200)
+                            {
+                                echo floor($tm/3600).'小时前';
+                            }
+                            else if($tm<(30*24*3600) && $tm>(24*3600))
+                            {
+                                echo floor($tm/(24*3600)).'天前';
+                            }
+                            else
+                            {
+                                echo floor($tm/(30*24*3600)).'个月前';
+                            }
+                        ?></span>
+						</div>
+					</li>
+					<?php }} ?>
+				</ul>
+				<div class="more_item-md">
+					<a href="../info/morenews.html">浏览更多</a>
+
+					<div class="more_item-md">
+						<!--<a href="#">浏览更多</a>-->
+					</div>
+					<h2>热门文章</h2>
+					<div class="hot-list">
+						<!--第一个-->
+						<div  style="cursor:pointer" onclick='window.location.href="../info/article.html?id=<?php echo $params['hotarticle'][0]['id']; ?>"' class="hot-1" titleid="<?php echo $params['hotarticle'][0]['id']; ?>">
+							<img src="<?php echo empty($params['hotarticle'][0]['images'])?'/images/temp_pc/near-term.png':$params['hotarticle'][0]['images']?>" alt=""   />
+							<div class="des">
+								<span style="cursor:pointer" ><a href="../info/article.html?id=<?php echo $params['hotarticle'][0]['id']; ?>" style="color:white"><?php echo mb_substr($params['hotarticle'][0]['title'],0,43,'utf-8'); ?></a>...</span>
+							</div>
+							<span class="top_num"><img src="/images/pc/top1.png" alt="" /></span>
+						</div>
+						<!--第二个-->
+						<div style="cursor:pointer" onclick='window.location.href="../info/article.html?id=<?php echo $params['hotarticle'][1]['id']; ?>"' class="hot-1" title="<?php echo $params['hotarticle'][1]['id']; ?>">
+							<img src="<?php echo empty($params['hotarticle'][1]['images'])?'/images/temp_pc/near-term.png':$params['hotarticle'][1]['images']?>" alt="" />
+							<div class="des">
+								<span style="cursor:pointer" ><a href="../info/article.html?id=<?php echo $params['hotarticle'][1]['id']; ?>" style="color:white"><?php echo mb_substr($params['hotarticle'][1]['title'],0,43,'utf-8').'...'; ?></a>...</span>
+							</div>
+							<span class="top_num"><img src="/images/pc/top2.png" alt="" /></span>
+						</div>
+						<!--第三个-->
+						<div style="cursor:pointer" onclick='window.location.href="../info/article.html?id=<?php echo $params['hotarticle'][2]['id']; ?>"' class="hot-2 clearfix">
+							<div class="hot-head left">
+								<img src="<?php echo empty($params['hotarticle'][2]['images'])?'/images/temp_pc/news10.jpg':$params['hotarticle'][2]['images']?>" alt="" />
+								<span>3</span>
+							</div>
+							<div class="hot-title right">
+								<a style="cursor:pointer" href="../info/article.html?id=<?php echo $params['hotarticle'][2]['id']; ?>" class="title"><?php echo mb_substr($params['hotarticle'][2]['title'],0,21,'utf-8'); ?>...</a>
+								<div class="time"><?php $tm=time()-$params['hotarticle'][2]['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+									{
+									echo floor($tm/60).'分钟前';
+									}
+									else if($tm<(24*3600) && $tm>7200)
+									{
+									echo floor($tm/3600).'小时前';
+									}
+									else if($tm<(30*24*3600) && $tm>(24*3600))
+									{
+									echo floor($tm/(24*3600)).'天前';
+									}
+									else
+									{
+									echo floor($tm/(30*24*3600)).'个月前';
+									}
+									?></div>
+							</div>
+						</div>
+						<div style="cursor:pointer" onclick='window.location.href="../info/article.html?id=<?php echo $params['hotarticle'][3]['id']; ?>"' class="hot-2 clearfix">
+							<div class="hot-head left">
+								<img src="<?php echo empty($params['hotarticle'][3]['images'])?'/images/temp_pc/news10.jpg':$params['hotarticle'][3]['images']?>" alt="" />
+								<span>4</span>
+							</div>
+							<div class="hot-title right">
+								<a style="cursor:pointer" href="../info/article.html?id=<?php echo $params['hotarticle'][3]['id']; ?>" class="title"><?php echo mb_substr($params['hotarticle'][3]['title'],0,43,'utf-8'); ?>...</a>
+								<div class="time"><?php $tm=time()-$params['hotarticle'][3]['time'];
+							if($tm<60)
+							{
+							    echo '刚刚发布';
+							}
+							else if($tm<7200 && $tm>60)
+									{
+									echo floor($tm/60).'分钟前';
+									}
+									else if($tm<(24*3600) && $tm>7200)
+									{
+									echo floor($tm/3600).'小时前';
+									}
+									else if($tm<(30*24*3600) && $tm>(24*3600))
+									{
+									echo floor($tm/(24*3600)).'天前';
+									}
+									else
+									{
+									echo floor($tm/(30*24*3600)).'个月前';
+									}
+									?></div>
+							</div>
+						</div>
+					</div>
+					<div class="more_item-md">
+						<a href="../info/morearticle.html">浏览更多</a>
+					</div>
+					<h2>最受关注实验室</h2>
+					<div class="lab-list">
+						<ul>
+							<?php foreach($params['hotlab'] as $v){ ?>
+							<li class="clearfix" name="hotlab" style="cursor:pointer" laburl="<?php echo $v['lab_id']; ?>">
+								<dl>
+									<dt>
+										<img src="<?php echo (empty($v['logo']))?'/images/temp_pc/lab.png':$v['logo']; ?>" alt="" />
+									</dt>
+									<dd>
+										<h4><?php echo $v['name']; ?></h4>
+										<span class="desc"><?php echo $v['intro']; ?></span>
+										<p class="extra">
+											<!--<span>生物医药</span>-->
+										</p>
+									</dd>
+								</dl>
+							</li>
+							<?php } ?>
+
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<!-- 加入实验圈 -->
+					<div class="join clearfix">
+					<span class="title">
+						加入实验圈商城，您将获得
+					</span>
+						<div class="join_more">
+							<ul>
+								<li>
+									<dl>
+										<dt>
+											<img src="/images/temp_pc/join1.png" alt="" />
+										</dt>
+										<dd>
+											众多商户客户的关注
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>
+											<img src="/images/temp_pc/join2.png" alt="" />
+										</dt>
+										<dd>
+											众多商户客户的关注
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>
+											<img src="/images/temp_pc/join3.png" alt="" />
+										</dt>
+										<dd>
+											众多商户客户的关注
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<div  name="bemember" class="want">
+							<input type="submit" name="bemember" value="我要加入" />
+						</div>
+					</div>
+
+					<div onclick="window.location.href='<?php echo $params['littleadvert']['url']; ?>'" class="ad3">
+						<img style="cursor:pointer;" src="<?php echo $params['littleadvert']['image']; ?>" alt="" />
+					</div>
+					<!-- 热点追踪 -->
+					<!--<h2>热点追踪</h2>
+					<div class="casebox clearfix">
+						<a href="#">更美</a>
+						<a href="#">Magic</a>
+						<a href="#">全息投影</a>
+						<a href="#">乔布斯的死亡乔布斯的死亡</a>
+						<a href="#">不要小看3D不要小看3D </a>
+						<a href="#">5G物联网</a>
+						<a href="#">区块链</a>
+						<a href="#">标天下</a>
+					</div>-->
+					<h2>友情链接</h2>
+					<div class="blogroll" >
+						<ul class="clearfix">
+							<?php  foreach($params['link'] as $v){ ?>
+							<li class="friendly" style="cursor:pointer"   >
+								<dl>
+									<dt>
+									<div onclick='window.open("<?php echo $v['link']; ?>")' class="image" style="background: url(<?php echo empty($v['logo'])?'/images/temp_pc/link.jpg':$v['logo']; ?>) center center / 80% no-repeat #fff;">
+									</div>
+									</dt>
+									<dd>
+										<?php echo $v['name']; ?>
+									</dd>
+								</dl>
+							</li>
+							<?php } ?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<script>
+	window.seajs&&seajs.use('pc/index.js');
+</script>
+ <!--<script type="text/javascript" src="/js/jquery.min.js"></script> -->
+<!--
+<script type="text/javascript" src="/js/swiper.min.js"></script>-->
+<script language="javascript">
+//	var swiper = new Swiper('.banner .swiper-container', {
+//		 pagination: '.swiper-pagination',
+//		 nextButton: '.swiper-button-next',
+//		 prevButton: '.swiper-button-prev',
+//		 scrollbar:'.swiper-scrollbar',
+//		 scrollbarHide : false,
+//		 scrollbarDraggable : true ,
+//	     loopAdditionalSlides : 0,
+//		 loop: true
+//
+//    });
+//	$(".list_con ul li").click(function(){
+//		$(this).addClass("con-active").siblings().removeClass("con-active");
+//	})
+$(".con-title").click(function () {
+	var id = $(this).attr('value');
+	$("div .con-content").each(function () {
+		if ($(this).attr('value') == id) {
+			if ($(this).hasClass("hide-content")) {
+				$(this).removeClass("hide-content").addClass("show-content");
+			} else {
+				$(this).removeClass("show-content").addClass("hide-content");
+			}
+		}
+	});
+})
+</script>
+
+
+
+

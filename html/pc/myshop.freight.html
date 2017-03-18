@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-商家消息列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/addproduct.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/shopmessage.css" >
+	<link rel="stylesheet" type="text/css" href="/css/pc/freight.css" >
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+    <div class="left menu-item">
+        <ul>
+	        <li><a href="/myshop/shopInfo.html">我的店铺信息</a></li>
+            <li><a href="/myshop/managerProduct.html">产品管理</a></li>
+            <li><a href="/myshop/groupManager.html" >组合管理</a></li>
+            <li><a href="/myshop/addProduct.html">添加产品</a></li>
+            <li><a href="/myshop/freight.html" style="color: #00bfb8">运费管理</a></li>
+            <li><a href="/myshop/orderManager.html">订单管理</a></li>
+            <li><a href="/myshop/message.html">消息列表</a></li>
+			<li><a href="/myshop/addShopCoupon.html">优惠券</a></li>
+			<!--<li><a href="">退款管理</a></li>-->
+        </ul>
+    </div>
+    <div class="right content-item">
+    	<h1>运费管理</h1>
+    	<div class="freight_edit">
+	    	<div>
+		    	<label class="label_name">模板名称</label>
+		    	<input type="text" id="freight_name" maxlength="50" style="width: 350px;" />
+	    	</div>
+	    	<div>
+		    	<label class="label_name">发货地址</label>
+		    	<select class="province"></select><select class="city"></select><select class="county"></select>
+	    	</div>
+	    	<div>
+		    	<label class="label_name">发货时间</label>
+		    	<select id="delivery_time">
+			    	<option value="0">请选择发货时间</option>
+			    	<option value="4">4小时内</option>
+			    	<option value="8">8小时内</option>
+			    	<option value="12">12小时内</option>
+			    	<option value="16">16小时内</option>
+					<option value="20">20小时内</option>
+					<option value="24">24小时内</option>
+					<option value="48">48小时内</option>
+					<option value="72">72小时内</option>
+		    	</select>
+	    	</div>
+	    	<div>
+		    	<label class="label_name">运费类型</label>
+		    	<label class="options"><input type="radio" name="type" value="2" checked="checked"/>自定义运费</label>
+		    	<label class="options"><input type="radio" name="type" value="1"/>卖家承担运费</label>
+	    	</div>
+	    	<div id="delivery_set">
+		    	<div>
+			    	<label class="label_name">计价方式</label>
+		    		<label class="options"><input type="radio" name="val_unit" value="1" checked="checked"/>按件数</label>
+		    		<label class="options"><input type="radio" name="val_unit" value="2"/>按重量</label>
+		    		<label class="options"><input type="radio" name="val_unit" value="3"/>按体积</label>
+		    	</div>
+		    	<div>
+			    	<label class="label_name">区域限售</label>
+			    	<label class="options"><input type="radio" name="area_limit" value="0" checked="checked"/>不支持</label>
+			    	<label class="options"><input type="radio" name="area_limit" value="1"/>支持</label>
+			    	<span class="tips">如果支持区域限售，产品只能在设置了运费的指定地区销售</span>
+		    	</div>
+		    	<div>
+			    	<label class="label_name">运送方式</label>
+			    	<span class="tips">除指定地区外，其余地区的运费采用“默认运费”</span>
+		    	</div>
+		    	<div>
+			    	<div class="delivery" ref-param="express">
+				    	<label><input type="checkbox" class="delivery_type"/>快递</label>
+				    	<div class="delivery_type_set" style="display: none;">
+					    	<div class="default">
+						    	<span>默认运费：<input type="text" maxlength="8"/>件内，<input type="text" maxlength="8"/>元，每增加<input type="text" maxlength="8"/>件，增加运费<input type="text" maxlength="8"/>元</span>
+					    	</div>
+					    	<div class="add_freight_list">
+<!--
+						    	<table align="center" border="1px">
+							    	<thead>
+								    	<tr>
+									    	<th width="50%">运送到</th>
+									    	<th width="10%">首件(件)</th>
+									    	<th width="10%">首费(元)</th>
+									    	<th width="10%">续件(件)</th>
+									    	<th width="10%">续费(元)</th>
+									    	<th width="10%">操作</th>
+								    	</tr>
+							    	</thead>
+							    	<tbody>
+								    	<tr>
+									    	<td><span class="delivery_area">未添加地区</span><span class="delivery_area_edit"><a href="javascript:void(0);">编辑</a></span></td>
+									    	<td><input type="number" maxlength="6" /></td>
+									    	<td><input type="number" /></td>
+									    	<td><input type="number" /></td>
+									    	<td><input type="number" /></td>
+									    	<td class="freight_del"><a href="javascript:void(0);">删除</a></td>
+								    	</tr>
+							    	</tbody>
+						    	</table>
+-->
+					    	</div>
+					    	<div class="add_spec"><a href="javascript:void(0);">为指定地区城市设置运费</a></div>
+				    	</div>
+			    	</div>
+			    	<div class="delivery" ref-param="ems">
+				    	<label><input type="checkbox" class="delivery_type"/>EMS</label>
+				    	<div class="delivery_type_set" style="display: none;">	
+					    	<div class="default">
+						    	<span>默认运费：<input type="text" maxlength="8" class="input_1"/>件内，<input type="text" maxlength="8" class="input_2"/>元，每增加<input type="text" maxlength="8" class="input_3"/>件，增加运费<input type="text" maxlength="8" class="input_4"/>元</span>
+					    	</div>
+					    	<div class="add_freight_list"></div>
+					    	<div class="add_spec"><a href="javascript:void(0);">为指定地区城市设置运费</a></div>
+				    	</div>
+			    	</div>
+			    	<div class="delivery" ref-param="mail">
+				    	<label><input type="checkbox" class="delivery_type"/>平邮</label>
+				    	<div class="delivery_type_set" style="display: none;">
+					    	<div class="default">
+						    	<span>默认运费：<input type="text" maxlength="8"/>件内，<input type="text" maxlength="8"/>元，每增加<input type="text" maxlength="8"/>件，增加运费<input type="text" maxlength="8"/>元</span>
+					    	</div>
+					    	<div class="add_freight_list"></div>
+					    	<div class="add_spec"><a href="javascript:void(0);">为指定地区城市设置运费</a></div>
+				    	</div>
+			    	</div>
+		    	</div>
+	    	</div>
+	    	<div>
+		    	<input type="button" value="保存" class="btn_save"/>
+	    	</div>
+    	</div>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+</div>
+<div class="area_option">
+<!--
+	<div class="area_province drop-down">
+		<span class="province_tit"><label><input type="checkbox" />江苏省<span></span></label><i></i></span>
+		<div class="area_cities">
+			<label><input type="checkbox" />南京市</label>
+			<label><input type="checkbox" />无锡市</label>
+			<label><input type="checkbox" />徐州市</label>
+			<label><input type="checkbox" />常州市</label>
+			<label><input type="checkbox" />苏州市</label>
+			<label><input type="checkbox" />南通市</label>
+			<label><input type="checkbox" />南京市</label>
+			<label><input type="checkbox" />无锡市</label>
+			<label><input type="checkbox" />徐州市</label>
+			<label><input type="checkbox" />常州市</label>
+			<div>
+				<input type="button" value="确定" />
+			</div>
+		</div>
+	</div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+	<div class="area_province"><label><input type="checkbox" />江苏省<span></span></label><i></i></div>
+-->
+	
+	
+</div>
+<script type="text/javascript">
+	var ctx = 'http://<?php echo($_SERVER['HTTP_HOST']); ?>';
+	window.seajs&&seajs.use('pc/freight.js',function(freight){freight.handleCnt.init(ctx)});
+</script>
+

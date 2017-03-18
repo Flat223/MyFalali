@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0">
+    <title>快讯</title>
+</head>
+<link rel="stylesheet" href="/css/mobile/head.css">
+<link rel="stylesheet" href="/css/mobile/fastInfomation.css">
+<link rel="stylesheet" href="/css/mobile/home.css">
+<style type="text/css">
+    .fast_context{
+        margin-left: 2%;
+        letter-spacing: 0.1rem;
+        font-size: 1.6rem;
+        font-family: 微软雅黑;
+        line-height: 23px;
+        position: relative;
+    }
+    .fast_tit{
+        display: block;
+        float: left;
+        border-bottom: 1px solid gray;
+        height: 73px;
+        margin: 10px;
+        width: 95%;
+    }
+</style>
+<body>
+    <div class="title">本周快讯</div>
+    <!--<div class="fi_date">本周</div>-->
+    <div>
+        <?php foreach($params['news'] as $v){ ?>
+            <li class="fast_tit" name="detail">
+                <a href="../news/articleDetail.html?id=<?php echo $v['id']; ?>">
+                    <div style="" class="fast_context">
+                        <span style="color:#333333"><?php echo $v['title']; ?></span>
+                    </div>
+                    <!--<div class="news_type">生物医药</div>-->
+                </a>
+            </li>
+        <?php } ?>
+    </div>
+    <div style="height: 15px;clear: both"></div>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/html/mobile/foot.html'); ?>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.tips{
+    color: #ff0000;
+    padding-top: 4px;
+    display: inline-block;
+    line-height: 26px;
+}
+#btn-shop-logo {
+    width: 99px;height: 99px;position: absolute;opacity: 0;
+}
+.shop-logo {
+    width: 100px;
+}
+.box-footer {
+    text-align: center;
+}
+.tips {
+    display: none;
+}

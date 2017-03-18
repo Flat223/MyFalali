@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>实验圈-视频</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <link rel="stylesheet" type="text/css" href="/css/pc/style.css"  />
+    <link rel="stylesheet" type="text/css" href="/css/pc/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pc/page.css">
+    <script type="text/javascript" src="/js/sea.js"></script>
+    <script type="text/javascript" src="/js/seaconfig.js"></script>
+    <style>
+        .ul_show{
+            display: block;
+        }
+         .nolab{
+             display: block;
+             width:800px;
+             height: 200px;
+             text-align: center;
+             padding-top:150px;
+             font-size: 20px;
+             color: #1CB177;
+             margin: auto;
+             border-radius: 4px;
+         }
+        /*.play_name img:hover {*/
+            /*border-color:grey;*/
+        /*}*/
+        .play_name:hover .ico_play{
+            background-image: url(/images/temp_pc/hover.png);
+        }
+        .ico_play {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: -95px;
+            width: 42px;
+            height: 42px;
+        }
+    h5{
+        line-height:30px;
+        font-size: 15px;
+    }
+        .extra{
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<div class="content">
+    <!--<span onclick="history.go(-1);" style="display:block;cursor:pointer;margin-left:220px;color: #16C5C0"><h3>《返回</h3></span>-->
+    <div class="w1200">
+        <div style="margin-left:150px">
+                <!--<span>-->
+                    <!--<?php echo $params['videoinfo']['title']; ?>-->
+                <!--</span>-->
+            <div class="list_con">
+                <div class="intro ">
+                    <?php if(count($params['videolist'])>0){ ?>
+                        <?php foreach($params['videolist'] as $v){ ?>
+                            <div style="cursor:pointer;float: left;margin-left:40px;margin-bottom:35px">
+                                    <div class="play_name" onclick="window.location.href='../info/video.html?id='+<?php echo $v['id']; ?>">
+                                    <img  height=160 width=240 src="<?php echo empty($v['img']['img'])?$v['country']:$v['img']['img'];?>" frameborder=0 'allowfullscreen'></img>                               </dt>
+                                        <div class="ico_play" ></div>
+                                    </div>
+                                    <h5 onclick="window.location.href='../info/video.html?id='+<?php echo $v['id']; ?>" ><?php echo mb_substr($v['title'],0,17,'utf-8').'..'; ?></h5>
+                                    <!--<span class="desc"><?php echo mb_substr($v['intro'],0,20,'utf-8'); ?></span>-->
+                                    <p class="extra">
+                                        <span><?php echo date('Y-m-d H:i',$v['time']); ?></span>
+
+                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $v['view_num']; ?>人看过</span>
+
+                                    </p>
+                            </div>
+
+                        <?php } ?>
+                    <?php }else{ ?>
+                    <div class="nolab">抱歉，该页暂无视频</div>
+                    <?php } ?>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clearfix" id="page">
+    <?php echo(Common::makePage($params['pager'],$params['baseurl'])); ?>
+    <p class="">
+        共<?php echo ceil($params['count']/12); ?>页
+    </p>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+
+<script>
+</script>
+
+
+
+
+

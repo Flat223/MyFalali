@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>实验圈-订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+	<link rel="stylesheet" type="text/css" href="/css/pc/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/pc/common.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/pc/myhome.css">
+	<link rel="stylesheet" type="text/css" href="/js/layer/skin/default/layer.css">
+	<link rel="stylesheet" type="text/css" href="/css/pc/order_detail.css">
+	
+	<script type="text/javascript" src="/js/sea.js"></script>
+	<script type="text/javascript" src="/js/seaconfig.js"></script>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/topbar.php'); ?>
+<div class="content w1200 clearfix">
+	<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/leftbar.php'); ?>
+	<div class="wrapper_r right">
+		<?php
+			$user = UserAgent::getUser();
+			$order = $params['order'];
+			$state = $order['state'];
+			$productArray = $order['product'];
+		?>
+		<p class="order_p">
+			<span>
+			<?php
+				switch ($params['type']) {
+					case '1':
+						echo '采购订单';
+						break;
+					case '2':
+						echo '高校订单';
+						break;
+				    case '3':
+						echo '个人订单';
+						break;
+				}
+			?>
+			</span>
+			<span>></span>
+			<span>订单详情</span>
+		</p>
+		<input name="order_type" type="hidden" value="<?php echo $params['type']?>"/>
+		<input name="order_code" type="hidden" value="<?php echo $order['order_code']?>"/>
+		<div class="order-process">
+		<?php
+			if($state == 1){		
+		?>
+			<img src="/images/pc/order1.png" alt="" />
+		<?php
+			}else if($state == 2){		
+		?>
+			<img src="/images/pc/order2.png" alt="" />
+		<?php
+			}else if($state == 3){		
+		?>
+			<img src="/images/pc/order3.png" alt="" />
+		<?php
+			}else if($state == 4){		
+		?>
+			<img src="/images/pc/order4.png" alt="" />
+		<?php
+			} else {		
+		?>	
+			<img src="/images/pc/order5.png" alt="" />
+		<?php
+			}
+		?>
+		</div>
+		<div class="tips-wrap">
+			<dl class="clearfix">
+				<dt class="left">
+					<img src="/images/pc/wanted.png" alt="" />
+				</dt>
+				<dd class="left">
+			<?php
+				if($state == 1){
+			?>
+					<h2>订单状态：商品已被拍下，等待买家付款!</h2>
+<!-- 					<p>买家必须在<i>00</i>天<i>24</i>时<i>00</i>分<i>00</i>秒内付款，超时订单将自动关闭</p> -->
+					<p>
+						<span class="pay submit-button">付款</span>
+						<span class="cancel submit-button2">取消订单</span>
+					</p>
+			<?php
+				} else if($state == 2){
+			?>	
+					<h2>订单状态 : 已完成付款,请等待商家发货</h2>
+					<p>货物将送至 : <?php echo $order['province_name'].$order['detail_address']?>  (收件人 : <?php echo $order['consignee'] ?>) <?php echo $order['mobile'] ?>
+					</p>
+					<p>
+						<span class="remind submit-button">提醒发货</span>
+<!-- 						<span class="refund submit-button2">申请退款</span> -->
+					</p>
+			<?php
+				} else if($state == 3){
+			?>	
+					<h2>订单状态：商品已发货, 等待买家确认收货!</h2>
+					<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+					<p>
+						<span class="confirm_accept submit-button">确认收货</span>
+<!-- 						<span class="refund submit-button2">申请退款</span> -->
+					</p>
+			<?php
+				} else if($state == 4){
+			?>	
+					<h2>订单状态:买家已确认收货,交易完成!</h2>
+					<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+				<?php
+					if(count($productArray) == 1){
+						$product = $productArray[0];
+				?>
+					<p>
+						<span class="comment submit-button"
+							pid="<?php echo $product['pid'] ?>"
+							>
+							评价
+						</span>
+<!-- 						<span class="refund submit-button2">申请退款</span> -->
+					</p>
+			<?php
+					}
+				} else if($state == 5){
+			?>	
+					<h2>订单状态:已评价!</h2>
+					<p>物流: <?php echo $order['logistics_name']?> 快递单号 : <?php echo $order['logistics_code']?></p>
+			<?php
+				} else if($state == 6){
+			?>
+					<h2>订单状态:已上传线下付款凭证,请等待卖家审核!</h2>
+			<?php
+				} else if($state == 7){
+			?>
+					<h2>订单状态:您的线下付款凭证被驳回!</h2>
+					<h2 style="color: gray"><?php echo "拒绝原因:  ".$order['remarks'] ?></h2>
+					<span style="float: left;margin-top: 76px;margin-left: -70px">重新上传:&nbsp;&nbsp;</span>	
+					<div id="uploadimg" style="display: none;"></div>
+					<img id="voucher" style="width: 150px;height: 150px;margin-top: 20px;cursor: pointer" src="/images/pc/b_bg_40.png">
+					<p style="margin-top: 20px">
+						<input type="submit" name="submit_voucher" value="提交" />
+					</p>	
+			<?php
+				} else if($state == 8){
+			?>
+					<h2>订单状态:已申请退款,请等待卖家审核!</h2>		
+			<?php
+				} else if($state == 9){
+			?>
+					<h2>订单状态:退款中!</h2>
+			<?php
+				} else if($state == 10){
+			?>
+					<h2>订单状态:退款成功!</h2>
+			<?php
+				} else if($state == 11){
+					$refund = $params['refund'];
+			?>
+					<h2>订单状态:您的退款申请被驳回!</h2>
+					<h2 style="color: gray"><?php echo "拒绝原因:  ".$refund['reply'] ?></h2>
+			<?php
+				}
+			?>
+					</dd>
+			</dl>
+			
+			<table border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+			    <th class="order-title">商品信息</th>
+			    <th>单价(元)</th>
+			    <th>数量</th>
+			    <th>总计</th>
+			    <th>订单状态</th>
+			  </tr>
+			  <tr class="cells">
+			  	<td><?php echo date('Y-m-d H:i:s',$order['time']); ?>&nbsp;&nbsp;&nbsp;订单号:<?php echo $order['order_code']; ?>
+						</td>
+			  	<td></td>
+			  	<td></td>
+			  	<td></td>
+			  	<td></td>
+			  </tr>
+	<?php
+		for($i=0;$i<count($productArray);$i++){
+			$product = $productArray[$i];
+	?>
+			<tr>
+			    <td class="commodity_inof">
+			    	<dl>
+			    		<dt>
+							<?php $imgArr = explode(",",$product['images']) ?>
+							<a href="/goods/detail.html?pid=<?php echo $product['pid'] ?>">
+								<img style="width:100px;height:100px;"; src="<?php echo $imgArr[0] ?>" alt="" />
+							</a>
+						</dt>
+						<dd>
+							<a href="/goods/detail.html?pid=<?php echo $product['pid'] ?>">
+								<?php echo $product['name'];?>
+							</a>
+					<?php
+						foreach($product['props'] as $prop){
+					?>									
+							<p>
+								<span><?php echo($prop['proname']." : ".$prop['proval']); ?></span>
+							</p>
+					<?php
+						}
+					?>
+						</dd>
+			    	</dl>
+			    <td><?php echo "¥".$product['price'];?></td>
+				<td><?php echo $product['num'];?></td>
+		<?php
+			if(count($productArray) == 1){
+		?>
+				<td><?php echo "¥".$order['tot_fee'];?></td>
+			    <td>
+				    <?php
+						switch ($state) {
+							case '1':
+								echo '待付款';
+								break;
+							case '1.5':
+								echo '已付首款';
+								break;
+							case '2':
+								echo '已付款';
+								break;
+						    case '3':
+								echo '已发货';
+								break;
+							case '4':
+								echo '已收货';
+								break;
+							case '5':
+								echo '已完成';
+								break;
+							case '6':
+								echo '已上传线下付款凭证';
+								break;
+							case '7':
+								echo '付款凭证被驳回';
+								break;
+							
+						}
+					?>
+				</td>
+		<?php
+			} else if($i == 0){
+		?>
+			   	<td class="merge" colspan="2" 
+				   	rowspan="<?php echo(count($productArray));?>">
+					<span><?php echo ("¥".$order['tot_fee']);?></span>
+					<div class="order_state">
+					<?php
+						switch ($state) {
+							case '1':
+								echo '待付款';
+								break;
+							case '1.5':
+								echo '已付首款';
+								break;
+							case '2':
+								echo '已付款';
+								break;
+						    case '3':
+								echo '已发货';
+								break;
+							case '4':
+								echo '已收货';
+								break;
+						}
+					?>
+					</div>
+				</td>
+		   	</tr>
+	<?php
+			}
+		}
+	?>
+			</table>	
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/pc/_common/footer.php'); ?>
+
+<script type="text/javascript">
+	window.seajs&&seajs.use('pc/user/orderDetail.js');
+</script>
+
+
+
+

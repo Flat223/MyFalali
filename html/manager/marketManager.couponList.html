@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-优惠券列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>营销管理</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>代金券列表</a></li>
+            <input name="pages" type="hidden" value="<?php echo $params['pages']; ?>" />
+
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                </div>
+                <div class="right">
+                    <div class="sear-item">
+                        <input type="text" id="keyword" placeholder="输入代金券名称或关键词">
+                        <span id="search" style="cursor: pointer">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th width="10%">名称</th>
+                    <th width="20%">开始时间</th>
+                    <th width="20%">结束时间</th>
+                    <th width="12.5%">剩余数量</th>
+                    <th width="12.5%">金额</th>
+                    <th width="12.5%">限额</th>
+                    <th width="12.5%">操作</th>
+                </tr>
+                <?php foreach($params['cash'] as $v){ ?>
+                <tr>
+                    <td><?php echo $v['name']; ?></td>
+                    <td>
+                        <?php echo($v['start_time']);?>
+                    </td>
+                    <td><?php echo($v['end_time']);?></td>
+                    <td><?php echo $v['num']; ?></td>
+                    <td style="text-align: center"><?php echo $v['money']; ?></td>
+                    <td><?php echo $v['min_limit']; ?></td>
+ 
+
+                    <td>
+          
+                        <span newsid="<?php echo $v['id']; ?>" name="sendcash" style="cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;text-align: center;display: inline-block;">
+                            发放</span>
+                        </a>
+                        <span name="delete" newsid="<?php echo $v['id']; ?>" style="cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;text-align: center;display: inline-block;">
+                            删除</span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    window.seajs&&seajs.use('manager/couponlist.js');
+</script>
+<script type="text/javascript">
+    var pages=$('input[name=pages]').val();
+    var page=GetQueryString('page');
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = '../goodsmanager/couponList.html?page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+</script>

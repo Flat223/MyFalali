@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>实验圈-后台首页</title>
+	<meta name="keywords" content="实验圈">
+	<meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/index.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <title></title>
+</head>
+<body>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+	<div class="content">
+	<?php
+		$admin = UserAgent::getAdmin();
+	?>
+		<div class="bread">
+			<ul>
+				<li><a href="index.html"><i></i>后台首页</a></li>
+			</ul>
+		</div>
+		<div class="mainContent" style="margin:15px;">
+			<div class="col-4-wrapp">
+				<div class="col-4-item clearfix">
+					<a href="/checkManager/researchFundManager.html"><div class="col-1 clearfix">
+						<div class="col-1-color left"></div>
+						<div class="col-item left">
+							<p>今日待审科研基金</p>
+							<p class="count"><?php echo $params['fund'] ;?></p>
+						</div>
+					</div></a>
+					<a href="/release/release.html"><div class="col-3 clearfix">
+						<div class="col-3-color left"></div>
+						<div class="col-item left">
+							<p>今日待审产品需求</p>
+							<p class="count"><?php echo $params['rel'] ;?></p>
+						</div>
+					</div></a>
+					<a href="/labmanager/labListing.html"><div class="col-4 clearfix">
+						<div class="col-4-color left"></div>
+						<div class="col-item left">
+							<p>今日待审实验室</p>
+							<p class="count"><?php echo $params['lab'] ;?></p>
+						</div>
+					</div></a>
+				</div>
+			</div>
+			<div style="margin-top: 10px" class="col-4-wrapp">
+				<div class="col-4-item clearfix">
+					<a href="/ordermanager/requireOrder.html"><div class="col-1 clearfix">
+						<div class="col-1-color left"></div>
+						<div class="col-item left">
+							<p>今日订单</p>
+							<p class="count"><?php echo $params['order'] ;?></p>
+						</div>
+					</div></a>
+					<a href="/media/companynews.html"><div class="col-3 clearfix">
+						<div class="col-3-color left"></div>
+						<div class="col-item left">
+							<p>今日媒体</p>
+							<p class="count"><?php echo $params['med'] ;?></p>
+						</div>
+					</div></a>
+					<div class="col-4 clearfix">
+						<div class="col-4-color left"></div>
+						<div class="col-item left">
+							<p>今日新增会员</p>
+							<p class="count"><?php echo $params['vip'] ;?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--<div class="count-today">
+				<p>今日统计</p>
+				<div class="count-list">
+					<span>今日订单：100</span>
+					<span>新增会员：1</span>
+					&lt;!&ndash;<span>今日媒体：1</span>&ndash;&gt;
+					&lt;!&ndash;<span>质量异常：1</span>&ndash;&gt;
+				</div>
+			</div>-->
+			<div class="systinfo">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>服务器操作系统：</td>
+						<td>Linux</td>
+						<td></td>
+						<td></td>
+						<td>服务器环境：</td>
+						<td>nginx/1.10.0</td>
+					</tr>
+					<tr>
+						<td>PHP版本：</td>
+						<td>5.6.22</td>
+						<td></td>
+						<td></td>
+						<td>GD版本：</td>
+						<td>bundled（2.1.0 compatible）</td>
+					</tr>
+					<tr>
+						<td>文件上传限制：</td>
+						<td>50M</td>
+						<td></td>
+						<td></td>
+						<td>最大执行时间：</td>
+						<td>300s</td>
+					</tr>
+					<tr>
+						<td>安全模式：</td>
+						<td>NO</td>
+						<td></td>
+						<td></td>
+						<td>Curl支持</td>
+						<td>YES</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+</script>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>实验圈-圈子列表</title>
+    <meta name="keywords" content="实验圈">
+    <meta name="description" content="实验圈">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/manager/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/news.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/manager/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/layui/css/layui.css">
+    <title></title>
+</head>
+<body>
+<!--<?php-->
+<!--echo '<pre>';-->
+<!--print_r($params);-->
+<!--exit();-->
+<!--?>-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/core/module/manager/_common/menu.php'); ?>
+
+<div class="content">
+    <div class="bread">
+        <ul>
+            <li><a href="/index.html"><i></i>后台首页</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>圈子</a></li>
+            <li><span>/</span></li>
+            <li><a href="javascript:;"><i></i>圈子列表</a></li>
+            <input name="pages" type="hidden" value="<?php echo $params['pages']; ?>" />
+
+    </div>
+    <div class="mainContent">
+        <div class="main-wrapp">
+            <div class="search-wrapp clearfix">
+                <div class="left">
+                    <div class="add-item">
+                        <span><a href="addcircle.html">添加圈子</a></span>
+                    </div>
+                </div>
+                <!--<div class="right">
+                    <div class="sear-item">
+                        <input type="text" placeholder="输入商家名称或关键词搜索">
+                        <span>搜索</span>
+                    </div>
+                </div>-->
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="8%">LOGO</th>
+                    <th width="10%">标题</th>
+                    <th width="24%">简介</th>
+                    <th width="15%">创建日期</th>
+                    <th width="5%">点击</th>
+                    <th width="13%">标签</th>
+                    <th width="10%">操作</th>
+                </tr>
+                <?php foreach($params['circle'] as $v){ ?>
+                <tr>
+                    <td><?php echo $v['circle_id']; ?></td>
+                    <td>
+                        <img style="width:120px;height:105px" src="<?php echo empty($v['logo'])?'/images/manager/product.jpg':$v['logo']; ?>" alt="">
+                    </td>
+                    <td><a href="http://d27.ichuk.com/info/news.html?id=<?php echo $v['id']; ?>" ><?php echo $v['name']; ?></a></td>
+                    <td><?php echo $v['intro']; ?></td>
+                    <td style="text-align: center"><?php echo date('Y-m-d H:i:s',$v['time']); ?></td>
+                    <td><?php echo $v['view_num']; ?></td>
+                    <td><?php foreach($v['label'] as $s){ echo $s['name'].','; } ?></td>
+
+                    <td>
+                        <!--<button class="layui-btn layui-btn-small layui-btn-look">
+                          <i class="layui-icon"></i>
+                        </button>
+                        <button class="layui-btn layui-btn-small layui-btn-edit" onclick="window.location.href='../media/updatenews.html?id='+<?php echo $v['id']; ?>">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>-->
+                        <a href="/circle/circleDetail.html?id=<?php echo $v['circle_id']?>"><span style="cursor: pointer;color: white;background: #00bfb8;width: 100px;height: 30px;line-height: 30px;text-align: center;display: inline-block;">
+                            圈友</span>
+                        </a>
+                        <span name="delete" newsid="<?php echo $v['circle_id']; ?>" style="margin-right: 0px; cursor: pointer;color: white;background: #ff6838;width: 100px;height: 30px;line-height: 30px;text-align: center;display: inline-block;">
+                            删除</span>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <div class="boot-wrapp clearfix">
+                <div id="page" class="left"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    window.seajs&&seajs.use('manager/circlelist.js');
+</script>
+<script type="text/javascript">
+    var pages=$('input[name=pages]').val();
+    var page=GetQueryString('page');
+//    $(".menu-wrapp li").on("click",function() {
+//        $(this).find("ul").slideToggle("slow");
+//    })
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        laypage({
+            cont: 'page',
+            pages: parseInt(pages),
+            curr:parseInt(page),
+            skip: true,
+            jump:function (obj,first){
+                if(!first) {
+                    window.location.href = '../circle/circlelist.html?page='+obj.curr;
+                }
+            }
+        });
+    });
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    };
+
+</script>

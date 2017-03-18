@@ -1,0 +1,37 @@
+.content{
+	margin-top: 20px;
+}
+.menu-item ul li{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+	width: 215px;
+	text-align: left;
+	position: relative;
+	text-indent: 10px;
+}
+.menu-item ul li  i{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: #00bfb8;
+    top: 50%;
+    margin-top: -4.5px;
+    border-radius: 50%;
+}
+.menu-item ul li a{
+	padding-left:20px; 
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 15px;
+}
+.menu-item ul li a:hover{
+	color: #525252; 
+}
+.menu-item ul .menu-act a{
+	color: #00bfb8;
+}
+.content-item{
+	width: 950px;
+	font-family: 'Microsoft Yahei',sans-serif,arial,tahoma,'\5b8b\4f53';
+	font-size: 15px;
+}
